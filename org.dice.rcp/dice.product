@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="DICE" uid="org.dice.rcp.dice" id="org.dice.rcp.dice" application="org.eclipse.ui.ide.workbench" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
+
+   <aboutInfo>
+      <image path="/org.dice.rcp/icons/120.gif"/>
+      <text>
+         DICE Platform
+
+Version: 1.0.0
+
+All rights reserved.
+New code and modifications are made available under the terms of the Eclipse Public License v1.0.
+      </text>
+   </aboutInfo>
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <vmArgs>-Xms256m
+-Xmx1024m
+      </vmArgs>
+   </launcherArgs>
+
+   <windowImages i16="/org.dice.rcp/icons/16.gif" i32="/org.dice.rcp/icons/32.gif" i48="/org.dice.rcp/icons/48.gif" i64="/org.dice.rcp/icons/64.gif" i128="/org.dice.rcp/icons/128.gif" i256="/org.dice.rcp/icons/256.gif"/>
+
+   <splash
+      location="org.dice.rcp"
+      startupProgressRect="5,145,570,15"
+      startupMessageRect="5,125,570,20"
+      startupForegroundColor="FFFF80" />
+   <launcher name="DICE">
+      <linux icon="/org.dice.rcp/icons/icon.xpm"/>
+      <macosx icon="/org.dice.rcp/icons/icon.icns"/>
+      <solaris/>
+      <win useIco="false">
+         <bmp
+            winSmallHigh="/org.dice.rcp/icons/16-32b.bmp"
+            winSmallLow="/org.dice.rcp/icons/16-8b.bmp"
+            winMediumHigh="/org.dice.rcp/icons/32-32b.bmp"
+            winMediumLow="/org.dice.rcp/icons/32-8b.bmp"
+            winLargeHigh="/org.dice.rcp/icons/48-32b.bmp"
+            winLargeLow="/org.dice.rcp/icons/48-8b.bmp"
+            winExtraLargeHigh="/org.dice.rcp/icons/256-32b.bmp"/>
+      </win>
+   </launcher>
+
+   <vm>
+   </vm>
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="org.dice.features.base"/>
+      <feature id="org.dice.features.emf"/>
+      <feature id="org.dice.features.gmf"/>
+      <feature id="org.dice.features.subversion"/>
+      <feature id="org.dice.features.uml2"/>
+      <feature id="org.dice.features.ocl"/>
+      <feature id="org.dice.features.papyrus"/>
+      <feature id="org.dice.features.qvto"/>
+      <feature id="org.dice.features.dam"/>
+      <feature id="org.dice.features.pnml"/>
+      <feature id="org.dice.features.acceleo"/>
+      <feature id="org.dice.features.simulation"/>
+      <feature id="org.dice.features.xtext"/>
+      <feature id="org.dice.features.mwe"/>
+      <feature id="org.dice.features.xpand"/>
+      <feature id="org.dice.features.wst"/>
+      <feature id="org.dice.features.atl"/>
+   </features>
+
+   <configurations>
+      <plugin id="org.dice.rcp" autoStart="false" startLevel="5" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.p2.reconciler.dropins" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+   </configurations>
+
+   <repositories>
+      <repository location="http://subclipse.tigris.org/update_1.12.xaaaa" enabled="true" />
+   </repositories>
+
+   <preferencesInfo>
+      <targetfile overwrite="false"/>
+   </preferencesInfo>
+
+   <cssInfo>
+   </cssInfo>
+
+</product>

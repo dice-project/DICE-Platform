@@ -1,0 +1,8 @@
+instructions.configure=\
+        addRepository(type:0,location:http${#58}//download.moskitt.org/moskitt/1.3/updates/,name:MOSKitt 1.3 Updates);\
+        addRepository(type:0,location:http${#58}//download.moskitt.org/moskitt/geo/updates/,name:MOSKitt Geo Updates);\
+        addRepository(type:0,location:http${#58}//download.moskitt.org/moskitt/sketcher/updates/,name:MOSKitt Sketcher Updates);\
+        addRepository(type:1,location:http${#58}//download.moskitt.org/moskitt/1.3/updates/,name:MOSKitt 1.3 Updates);\
+        addRepository(type:1,location:http${#58}//download.moskitt.org/moskitt/geo/updates/,name:MOSKitt Geo Updates);\
+        addRepository(type:1,location:http${#58}//download.moskitt.org/moskitt/sketcher/updates/,name:MOSKitt Sketcher Updates)
+        
