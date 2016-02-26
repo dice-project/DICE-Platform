@@ -50,6 +50,8 @@ If you want to build your own DICE IDE, you need to follow these steps:
 
 # Exporting for Mac platform
 
+There is a bug in Eclipse 4.5.1 when exporting to MacOSX. Eclipse commiters say that it's solven on Eclipse 4.5.2 and 4.6 (https://bugs.eclipse.org/bugs/show_bug.cgi?id=468131)
+
 If you want to build your own product, and your target platform is MacOSX, there is a bug on the build process, at least doing it from a Windows platform (not tested on Mac platform, maybe it works fine).
 
 After the build process is completed, you need to go to the generated folder and check the folder structure, because there are some file and folder not placed in the correct location.
