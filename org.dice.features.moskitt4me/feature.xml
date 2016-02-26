@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.dice.features.wst"
-      label="DICE RCP WST Feature"
+      id="org.dice.features.moskitt4me"
+      label="DICE RCP MOSKitt4me Feature"
       version="1.0.0.qualifier"
       provider-name="DICE Project">
 
@@ -218,31 +218,46 @@ litigation
    </license>
 
    <includes
-         id="org.eclipse.wst.common.fproj"
+         id="es.cv.gvcase.features.moskitt4me.processeditor"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.wst.common_core.feature"
+         id="org.eclipse.graphiti.feature"
          version="0.0.0"/>
 
-   <includes
-         id="org.eclipse.wst.xml_core.feature"
-         version="0.0.0"/>
+   <plugin
+         id="org.apache.lucene"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <includes
-         id="org.eclipse.wst.xml_ui.feature"
-         version="0.0.0"/>
+   <plugin
+         id="org.apache.lucene.analysis"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <includes
-         id="org.eclipse.wst.server_core.feature"
-         version="0.0.0"/>
+   <plugin
+         id="org.apache.lucene.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <includes
-         id="org.eclipse.xsd.edit"
-         version="0.0.0"/>
+   <plugin
+         id="org.apache.lucene.misc"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <includes
-         id="org.eclipse.wst.server_ui.feature"
-         version="0.0.0"/>
+   <plugin
+         id="org.apache.lucene.queries"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>

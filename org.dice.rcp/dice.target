@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="81">
+<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="105">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="fr.lip6.pnml.framework.symmetricnet.feature.feature.group" version="2.2.9"/>
-<unit id="fr.lip6.pnml.framework.pthlpng.feature.feature.group" version="2.2.9"/>
-<unit id="fr.lip6.pnml.nupn.toolinfo.feature.feature.group" version="2.2.9"/>
-<unit id="fr.lip6.pnml.framework.coremodel.feature.feature.group" version="2.2.9"/>
-<unit id="fr.lip6.pnml.framework.ptnet.feature.feature.group" version="2.2.9"/>
-<unit id="fr.lip6.pnml.framework.utils.feature.feature.group" version="2.2.9"/>
-<unit id="fr.lip6.pnml.framework.3rdPart.feature.feature.group" version="2.2.9"/>
-<unit id="fr.lip6.pnml.framework.hlpn.feature.feature.group" version="2.2.9"/>
-<repository location="http://pnml.lip6.fr/pnmlframework/updatesite"/>
+<unit id="org.tigris.subversion.clientadapter.svnkit.feature.feature.group" version="1.8.9"/>
+<unit id="org.tigris.subversion.subclipse.feature.group" version="1.10.11"/>
+<unit id="com.collabnet.subversion.merge.feature.feature.group" version="4.1.0"/>
+<unit id="org.tigris.subversion.clientadapter.feature.feature.group" version="1.10.3"/>
+<unit id="org.tigris.subversion.subclipse.graph.feature.feature.group" version="1.1.1"/>
+<unit id="net.java.dev.jna.feature.group" version="4.1.0.v06022015_1911"/>
+<unit id="org.tigris.subversion.subclipse.mylyn.feature.group" version="3.0.0"/>
+<unit id="org.tmatesoft.svnkit.feature.group" version="1.8.12.r10533_v20160129_0158"/>
+<unit id="org.tigris.subversion.clientadapter.javahl.feature.feature.group" version="1.9.3"/>
+<repository location="http://subclipse.tigris.org/update_1.12.x"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.m2m.atl.feature.group" version="3.6.0.v201505180909"/>
+<unit id="org.eclipse.m2m.atl.profiler.feature.group" version="3.6.0.v201505180909"/>
+<repository location="http://download.eclipse.org/mmt/atl/updates/releases/3.6/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.papyrus.extra.marte.properties.feature.feature.group" version="1.1.3.201511250947"/>
@@ -48,8 +54,8 @@
 </location>
 <location path="${eclipse_home}" type="Profile"/>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.recommenders.3rd.feature.feature.group" version="2.2.6.v20160201-0902"/>
-<repository location="http://download.eclipse.org/recommenders/updates/stable"/>
+<unit id="es.cv.gvcase.features.moskitt4me.processeditor.feature.group" version="1.0.0.201509111147"/>
+<repository location="http://www.pros.upv.es/moskitt4me/Updates/site.xml"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.xwt.workbench.feature.feature.group" version="1.1.0.v20150608-1518"/>
@@ -58,15 +64,22 @@
 <repository location="http://download.eclipse.org/xwt/updates/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.ocl.examples.feature.group" version="6.0.1.v20150908-1239"/>
+<unit id="org.eclipse.ocl.master.feature.group" version="6.0.1.v20150908-1239"/>
+<unit id="org.eclipse.ocl.examples.classic.feature.group" version="5.1.0.v20150624-0903"/>
+<unit id="org.eclipse.ocl.examples.unified.feature.group" version="4.0.1.v20150908-1239"/>
+<repository location="http://download.eclipse.org/modeling/mdt/ocl/updates/releases"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.m2e.wtp.feature.feature.group" version="1.2.1.20150819-2220"/>
 <unit id="org.sonatype.m2e.mavenarchiver.feature.feature.group" version="0.17.0.201502101659-signed-20150525172209"/>
 <unit id="org.eclipse.datatools.enablement.sdk.feature.feature.group" version="1.12.0.v201406061321-7IAB-FE9JgeWjZZhMd-z0vb1ifD4"/>
-<unit id="org.eclipse.jst.enterprise_ui.feature.feature.group" version="3.7.0.v201505131719"/>
 <unit id="org.eclipse.jst.ws.axis2tools.feature.feature.group" version="1.1.301.v201410160332"/>
+<unit id="org.eclipse.jst.enterprise_ui.feature.feature.group" version="3.7.0.v201505131719"/>
 <unit id="org.eclipse.jsf.feature.feature.group" version="3.8.0.v201505112336"/>
 <unit id="org.eclipse.m2e.wtp.jpa.feature.feature.group" version="1.2.1.20150819-2224"/>
-<unit id="org.eclipse.jst.ws.jaxws.feature.feature.group" version="1.2.202.v201504291921"/>
 <unit id="org.eclipse.jpt.jaxb.feature.feature.group" version="1.5.2.v201501171820"/>
+<unit id="org.eclipse.jst.ws.jaxws.feature.feature.group" version="1.2.202.v201504291921"/>
 <unit id="org.eclipse.jst.jsf.apache.trinidad.tagsupport.feature.feature.group" version="2.6.0.v201410101748"/>
 <unit id="org.eclipse.jst.web_ui.feature.feature.group" version="3.7.1.v201509021802"/>
 <unit id="org.eclipse.jpt.jaxb.eclipselink.feature.feature.group" version="1.4.102.v201501171820"/>
@@ -75,6 +88,7 @@
 <unit id="org.eclipse.m2e.wtp.jsf.feature.feature.group" version="1.2.1.20150819-2220"/>
 <unit id="org.eclipse.wst.xml_ui.feature.feature.group" version="3.7.1.v201508271605"/>
 <unit id="org.eclipse.jst.ws.jaxws.dom.feature.feature.group" version="1.0.302.v201504272154"/>
+<unit id="org.eclipse.graphiti.feature.feature.group" version="0.12.1.v20150916-0905"/>
 <unit id="org.eclipse.jpt.dbws.eclipselink.feature.feature.group" version="1.2.101.v201501152048"/>
 <unit id="org.eclipse.wst.jsdt.feature.feature.group" version="1.6.201.v201508262249"/>
 <unit id="org.eclipse.jst.webpageeditor.feature.feature.group" version="2.7.1.v201508270443"/>
@@ -90,16 +104,9 @@
 <unit id="org.eclipse.jst.server_ui.feature.feature.group" version="3.4.200.v201503102136"/>
 <unit id="org.eclipse.wst.xsl.feature.feature.group" version="1.3.401.v201409111855"/>
 <unit id="org.eclipse.gmf.tooling.feature.group" version="3.3.1.201509020853"/>
-<unit id="org.eclipse.wst.web_ui.feature.feature.group" version="3.7.1.v201509022125"/>
 <unit id="org.eclipse.jst.ws.cxf.feature.feature.group" version="1.1.203.v201503151903"/>
+<unit id="org.eclipse.wst.web_ui.feature.feature.group" version="3.7.1.v201509022125"/>
 <repository location="http://download.eclipse.org/releases/mars"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.ocl.examples.feature.group" version="6.0.1.v20150908-1239"/>
-<unit id="org.eclipse.ocl.master.feature.group" version="6.0.1.v20150908-1239"/>
-<unit id="org.eclipse.ocl.examples.classic.feature.group" version="5.1.0.v20150624-0903"/>
-<unit id="org.eclipse.ocl.examples.unified.feature.group" version="4.0.1.v20150908-1239"/>
-<repository location="http://download.eclipse.org/modeling/mdt/ocl/updates/releases"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.acceleo.query.feature.group" version="4.1.0.201602090916"/>
@@ -155,21 +162,28 @@
 <repository location="http://download.eclipse.org/modeling/m2t/xpand/updates/releases/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.tigris.subversion.clientadapter.svnkit.feature.feature.group" version="1.8.9"/>
-<unit id="org.tigris.subversion.subclipse.feature.group" version="1.10.11"/>
-<unit id="com.collabnet.subversion.merge.feature.feature.group" version="4.1.0"/>
-<unit id="org.tigris.subversion.clientadapter.feature.feature.group" version="1.10.3"/>
-<unit id="org.tigris.subversion.subclipse.graph.feature.feature.group" version="1.1.1"/>
-<unit id="net.java.dev.jna.feature.group" version="4.1.0.v06022015_1911"/>
-<unit id="org.tigris.subversion.subclipse.mylyn.feature.group" version="3.0.0"/>
-<unit id="org.tmatesoft.svnkit.feature.group" version="1.8.12.r10533_v20160129_0158"/>
-<unit id="org.tigris.subversion.clientadapter.javahl.feature.feature.group" version="1.9.3"/>
-<repository location="http://subclipse.tigris.org/update_1.12.x"/>
+<unit id="fr.lip6.pnml.framework.symmetricnet.feature.feature.group" version="2.2.10"/>
+<unit id="fr.lip6.pnml.framework.pthlpng.feature.feature.group" version="2.2.10"/>
+<unit id="fr.lip6.pnml.framework.sdk.feature.group" version="2.2.10"/>
+<unit id="fr.lip6.pnml.nupn.toolinfo.feature.feature.group" version="2.2.10"/>
+<unit id="fr.lip6.pnml.framework.coremodel.feature.feature.group" version="2.2.10"/>
+<unit id="fr.lip6.pnml.framework.ptnet.feature.feature.group" version="2.2.10"/>
+<unit id="fr.lip6.pnml.framework.utils.feature.feature.group" version="2.2.10"/>
+<unit id="fr.lip6.pnml.framework.3rdPart.feature.feature.group" version="2.2.10"/>
+<unit id="fr.lip6.pnml.framework.hlpn.feature.feature.group" version="2.2.10"/>
+<repository location="http://pnml.lip6.fr/pnmlframework/updatesite"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.m2m.atl.feature.group" version="3.6.0.v201505180909"/>
-<unit id="org.eclipse.m2m.atl.profiler.feature.group" version="3.6.0.v201505180909"/>
-<repository location="http://download.eclipse.org/mmt/atl/updates/releases/3.6/"/>
+<unit id="com.google.inject.assistedinject" version="3.0.0.v201402270930"/>
+<unit id="org.apache.lucene.misc" version="3.5.0.v20120725-1805"/>
+<unit id="org.apache.lucene.queries" version="3.5.0.v20120725-1805"/>
+<unit id="org.apache.lucene" version="3.5.0.v20120725-1805"/>
+<unit id="com.google.inject.source" version="3.0.0.v201312141243"/>
+<unit id="org.apache.lucene.analysis" version="3.5.0.v20120725-1805"/>
+<unit id="com.google.inject" version="3.0.0.v201312141243"/>
+<unit id="org.apache.lucene.core" version="3.5.0.v20120725-1805"/>
+<unit id="com.google.inject.multibindings.source" version="3.0.0.v201402270930"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20151221205849/repository/"/>
 </location>
 </locations>
 <environment>
