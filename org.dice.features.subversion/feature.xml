@@ -217,32 +217,74 @@ Each party waives its rights to a jury trial in any resulting
 litigation
    </license>
 
-   <includes
-         id="org.tigris.subversion.clientadapter.feature"
-         version="0.0.0"/>
+   <plugin
+         id="com.collabnet.subversion.merge"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <includes
-         id="org.tigris.subversion.clientadapter.javahl.feature"
-         version="0.0.0"/>
+   <plugin
+         id="org.tigris.subversion.clientadapter"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <includes
-         id="org.tigris.subversion.clientadapter.svnkit.feature"
-         version="0.0.0"/>
+   <plugin
+         id="org.tigris.subversion.clientadapter.javahl"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <includes
-         id="org.tigris.subversion.subclipse"
-         version="0.0.0"/>
+   <plugin
+         id="org.tigris.subversion.clientadapter.javahl.win32"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"/>
 
-   <includes
-         id="org.tigris.subversion.subclipse.graph.feature"
-         version="0.0.0"/>
+   <plugin
+         id="org.tigris.subversion.clientadapter.javahl.win64"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"/>
 
-   <includes
-         id="org.tigris.subversion.subclipse.mylyn"
-         version="0.0.0"/>
+   <plugin
+         id="org.tigris.subversion.subclipse.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <includes
-         id="org.tmatesoft.svnkit"
-         version="0.0.0"/>
+   <plugin
+         id="org.tigris.subversion.subclipse.doc"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.tigris.subversion.subclipse.graph"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.tigris.subversion.subclipse.tools.usage"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.tigris.subversion.subclipse.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>

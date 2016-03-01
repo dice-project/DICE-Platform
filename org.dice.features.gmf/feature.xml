@@ -393,28 +393,28 @@ litigation
          id="org.apache.batik.bridge"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.6.0.v201011041432"
          unpack="false"/>
 
    <plugin
          id="org.apache.batik.ext.awt"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.6.0.v201011041432"
          unpack="false"/>
 
    <plugin
          id="org.apache.batik.pdf"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.6.0.v201105071520"
          unpack="false"/>
 
    <plugin
          id="org.apache.batik.transcoder"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.6.0.v201011041432"
          unpack="false"/>
 
    <plugin
@@ -499,6 +499,41 @@ litigation
          download-size="0"
          install-size="0"
          version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.batik.dom.svg"
+         download-size="0"
+         install-size="0"
+         version="1.6.0.v201011041432"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.gmf.runtime.common.ui.action.ide"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.batik.dom"
+         download-size="0"
+         install-size="0"
+         version="1.6.1.v201505192100"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.batik.parser"
+         download-size="0"
+         install-size="0"
+         version="1.6.0.v201011041432"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.batik.xml"
+         download-size="0"
+         install-size="0"
+         version="1.6.0.v201011041432"
          unpack="false"/>
 
 </feature>

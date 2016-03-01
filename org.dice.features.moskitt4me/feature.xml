@@ -218,11 +218,7 @@ litigation
    </license>
 
    <includes
-         id="es.cv.gvcase.features.moskitt4me.processeditor"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.graphiti.feature"
+         id="org.dice.features.emf"
          version="0.0.0"/>
 
    <plugin
@@ -255,6 +251,374 @@ litigation
 
    <plugin
          id="org.apache.lucene.queries"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="moskitt4me.repositoryClient.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="moskitt4me.repositoryClient.fragmentIntegration"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="moskitt4me.spem2bpmn"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="moskitt4me.toolGenerator"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.activiti.designer.eclipse"
+         download-size="0"
+         install-size="0"
+         version="5.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.activiti.designer.export.bpmn20"
+         download-size="0"
+         install-size="0"
+         version="5.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.activiti.designer.export.image"
+         download-size="0"
+         install-size="0"
+         version="5.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.activiti.designer.gui"
+         download-size="0"
+         install-size="0"
+         version="5.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.activiti.designer.help"
+         download-size="0"
+         install-size="0"
+         version="5.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.activiti.designer.integration"
+         download-size="0"
+         install-size="0"
+         version="5.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.activiti.designer.model"
+         download-size="0"
+         install-size="0"
+         version="5.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.activiti.designer.validation.bpmn20"
+         download-size="0"
+         install-size="0"
+         version="5.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.authoring.ui"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.base"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"/>
+
+   <plugin
+         id="org.eclipse.epf.common"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"/>
+
+   <plugin
+         id="org.eclipse.epf.common.html"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"/>
+
+   <plugin
+         id="org.eclipse.epf.common.service"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.common.ui"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.dataexchange"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.diagram.ad"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.diagram.add"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.diagram.core"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.diagram.edit"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.diagram.model"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.diagram.ui"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.diagram.wpdd"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.doc"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"/>
+
+   <plugin
+         id="org.eclipse.epf.help.doc"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"/>
+
+   <plugin
+         id="org.eclipse.epf.library"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.library.edit"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.library.edit.ui"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.library.persistence"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.library.ui"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.library.ui.xmi"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.library.xmi"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.migration.diagram"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.msproject"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.platform"
+         download-size="0"
+         install-size="0"
+         version="1.2.0.201509111147"/>
+
+   <plugin
+         id="org.eclipse.epf.publish.layout"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"/>
+
+   <plugin
+         id="org.eclipse.epf.richtext"
+         download-size="0"
+         install-size="0"
+         version="1.6.0.201509111147"/>
+
+   <plugin
+         id="org.eclipse.epf.search"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.search.ui"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.services"
+         download-size="0"
+         install-size="0"
+         version="1.2.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.ui"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.ui.intro"
+         download-size="0"
+         install-size="0"
+         version="1.2.0.201509111147"/>
+
+   <plugin
+         id="org.eclipse.epf.uma"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.uma.ecore"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.uma.edit"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"/>
+
+   <plugin
+         id="org.eclipse.epf.validation"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.xml.uma"
+         download-size="0"
+         install-size="0"
+         version="1.2.0.201509111147"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.graphiti"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.graphiti.mm"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.graphiti.pattern"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.graphiti.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"

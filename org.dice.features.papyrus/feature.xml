@@ -2435,21 +2435,21 @@ litigation
          id="org.apache.batik.dom"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.7.1.v201505191845"
          unpack="false"/>
 
    <plugin
          id="org.apache.batik.dom.svg"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.7.0.v201011041433"
          unpack="false"/>
 
    <plugin
          id="org.apache.batik.svggen"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.7.0.v201011041433"
          unpack="false"/>
 
    <plugin
@@ -2463,7 +2463,7 @@ litigation
          id="org.apache.batik.xml"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.6.0.v201011041432"
          unpack="false"/>
 
    <plugin
@@ -2484,14 +2484,14 @@ litigation
          id="org.apache.batik.parser"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.7.0.v201011041433"
          unpack="false"/>
 
    <plugin
          id="org.apache.batik.ext.awt"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.7.0.v201011041433"
          unpack="false"/>
 
    <plugin
@@ -2541,6 +2541,13 @@ litigation
          download-size="0"
          install-size="0"
          version="3.2.0.v201101311130"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.batik.xml.source"
+         download-size="0"
+         install-size="0"
+         version="1.7.0.v201011041433"
          unpack="false"/>
 
 </feature>

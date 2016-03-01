@@ -217,12 +217,18 @@ Each party waives its rights to a jury trial in any resulting
 litigation
    </license>
 
-   <includes
-         id="com.masdes.dam.profile"
-         version="0.0.0"/>
+   <plugin
+         id="com.masdes.dam.static.profile"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <includes
-         id="com.masdes.dam.profile.ui.feature"
-         version="0.0.0"/>
+   <plugin
+         id="com.masdes.dam.static.profile.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>
