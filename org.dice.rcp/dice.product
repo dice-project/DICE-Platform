@@ -58,6 +58,7 @@ New code and modifications are made available under the terms of the Eclipse Pub
    <features>
       <feature id="org.dice.features.base" version="1.0.0.qualifier"/>
       <feature id="org.dice.features.simulation" version="1.0.0.qualifier"/>
+      <feature id="org.dice.features.moskitt4me" version="1.0.0.qualifier"/>
    </features>
 
    <configurations>

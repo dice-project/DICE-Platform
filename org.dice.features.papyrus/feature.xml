@@ -233,6 +233,14 @@ litigation
          id="org.dice.features.qvto"
          version="0.0.0"/>
 
+   <includes
+         id="org.dice.features.wst"
+         version="0.0.0"/>
+
+   <includes
+         id="org.dice.features.xtext"
+         version="0.0.0"/>
+
    <plugin
          id="org.eclipse.papyrus.cdo.ui.doc"
          download-size="0"
@@ -2463,7 +2471,7 @@ litigation
          id="org.apache.batik.xml"
          download-size="0"
          install-size="0"
-         version="1.6.0.v201011041432"
+         version="1.7.0.v201011041433"
          unpack="false"/>
 
    <plugin
@@ -2548,6 +2556,13 @@ litigation
          download-size="0"
          install-size="0"
          version="1.7.0.v201011041433"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.xwt"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>

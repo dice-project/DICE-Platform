@@ -404,13 +404,6 @@ litigation
          unpack="false"/>
 
    <plugin
-         id="org.apache.batik.pdf"
-         download-size="0"
-         install-size="0"
-         version="1.6.0.v201105071520"
-         unpack="false"/>
-
-   <plugin
          id="org.apache.batik.transcoder"
          download-size="0"
          install-size="0"
@@ -534,6 +527,34 @@ litigation
          download-size="0"
          install-size="0"
          version="1.6.0.v201011041432"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.batik.svggen"
+         download-size="0"
+         install-size="0"
+         version="1.6.0.v201011041432"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.batik.pdf"
+         download-size="0"
+         install-size="0"
+         version="1.6.0.v201105071520"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.gmf.runtime.diagram.ui.geoshapes"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.gmf.runtime.notation.providers"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>
