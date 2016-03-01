@@ -218,7 +218,18 @@ litigation
    </license>
 
    <includes
-         id="org.eclipse.xpand"
+         id="org.dice.features.mwe"
          version="0.0.0"/>
+
+   <includes
+         id="org.dice.features.jdt"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.xpand"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>

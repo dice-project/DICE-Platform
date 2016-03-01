@@ -218,23 +218,77 @@ litigation
    </license>
 
    <includes
+         id="org.dice.features.emf"
+         version="0.0.0"/>
+
+   <plugin
          id="org.eclipse.uml2"
-         version="0.0.0"/>
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <includes
+   <plugin
          id="org.eclipse.uml2.uml"
-         version="0.0.0"/>
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <includes
-         id="org.eclipse.uml2.uml.edit"
-         version="0.0.0"/>
-
-   <includes
+   <plugin
          id="org.eclipse.uml2.common"
-         version="0.0.0"/>
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <includes
+   <plugin
+         id="org.eclipse.uml2.types"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.uml2.uml.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
          id="org.eclipse.uml2.common.edit"
-         version="0.0.0"/>
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.uml2.uml.editor"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.uml2.codegen.ecore"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.uml2.uml.profile.standard"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.uml2.uml.resources"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>

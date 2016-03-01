@@ -218,31 +218,123 @@ litigation
    </license>
 
    <includes
-         id="es.unizar.disco.simulation.feature"
+         id="org.dice.features.pnml"
          version="0.0.0"/>
 
    <includes
-         id="es.unizar.disco.simulation.greatspn.feature"
+         id="org.dice.features.qvto"
          version="0.0.0"/>
 
    <includes
-         id="es.unizar.disco.simulation.quickstart.feature"
+         id="org.dice.features.acceleo"
          version="0.0.0"/>
 
    <includes
-         id="es.unizar.disco.simulation.ui.feature"
+         id="org.dice.features.papyrus"
          version="0.0.0"/>
 
-   <includes
-         id="es.unizar.disco.ssh.feature"
+   <plugin
+         id="es.unizar.disco.simulation"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="es.unizar.disco.simulation.greatspn.ssh"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="es.unizar.disco.simulation.quickstart"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="es.unizar.disco.simulation.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="es.unizar.disco.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="es.unizar.disco.core.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="es.unizar.disco.pnconfig"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="es.unizar.disco.pnextensions"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="es.unizar.disco.pnml.m2m"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="es.unizar.disco.pnml.m2t"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="es.unizar.disco.ssh"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="es.unizar.disco.ssh.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.hierynomus.sshj"
+         download-size="0"
+         install-size="0"
          version="0.0.0"/>
 
-   <includes
-         id="es.unizar.dsico.ssh.ui.feature"
-         version="0.0.0"/>
+   <plugin
+         id="org.eclipse.core.databinding.beans"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <includes
-         id="com.hierynomus.sshj.feature"
-         version="0.0.0"/>
+   <plugin
+         id="org.eclipse.ui.intro.universal"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>

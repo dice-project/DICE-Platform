@@ -56,32 +56,11 @@ New code and modifications are made available under the terms of the Eclipse Pub
    </plugins>
 
    <features>
-      <feature id="org.dice.features.base"/>
-      <feature id="org.dice.features.emf"/>
-      <feature id="org.dice.features.gmf"/>
-      <feature id="org.dice.features.subversion"/>
-      <feature id="org.dice.features.uml2"/>
-      <feature id="org.dice.features.ocl"/>
-      <feature id="org.dice.features.papyrus"/>
-      <feature id="org.dice.features.qvto"/>
-      <feature id="org.dice.features.dam"/>
-      <feature id="org.dice.features.pnml"/>
-      <feature id="org.dice.features.acceleo"/>
-      <feature id="org.dice.features.simulation"/>
-      <feature id="org.dice.features.xtext"/>
-      <feature id="org.dice.features.mwe"/>
-      <feature id="org.dice.features.xpand"/>
-      <feature id="org.dice.features.wst"/>
-      <feature id="org.dice.features.atl"/>
-      <feature id="org.dice.features.moskitt4me"/>
+      <feature id="org.dice.features.base" version="1.0.0.qualifier"/>
+      <feature id="org.dice.features.simulation" version="1.0.0.qualifier"/>
    </features>
 
    <configurations>
-      <plugin id="org.dice.rcp" autoStart="false" startLevel="5" />
-      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="4" />
-      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.p2.reconciler.dropins" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
    </configurations>

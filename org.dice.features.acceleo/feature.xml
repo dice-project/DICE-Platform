@@ -218,27 +218,39 @@ litigation
    </license>
 
    <includes
-         id="org.eclipse.acceleo"
+         id="org.dice.features.emf"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.acceleo.query"
+         id="org.dice.features.ocl"
          version="0.0.0"/>
 
-   <includes
-         id="org.eclipse.acceleo.runtime"
-         version="0.0.0"/>
+   <plugin
+         id="org.eclipse.acceleo.common"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <includes
-         id="org.eclipse.acceleo.ui.capabilities"
-         version="0.0.0"/>
+   <plugin
+         id="org.eclipse.acceleo.engine"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <includes
-         id="org.eclipse.acceleo.ui.interpreter.completeocl"
-         version="0.0.0"/>
+   <plugin
+         id="org.eclipse.acceleo.model"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <includes
-         id="org.eclipse.acceleo.ui.interpreter.ocl"
-         version="0.0.0"/>
+   <plugin
+         id="org.eclipse.acceleo.profiler"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>
