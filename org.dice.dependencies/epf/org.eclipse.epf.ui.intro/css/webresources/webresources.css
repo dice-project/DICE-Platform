@@ -1,0 +1,51 @@
+/*
+ * Copyright (c) 2005, 2006 IBM Corporation and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ *
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ * IBM Corporation - initial implementation
+ */
+
+/*
+ * webresources.css is a template for the group specific css settings
+ */
+ 
+/*
+ * background watermark - group specific
+ */
+
+body {
+	background-image : url(graphics/contentpage/webrsrc_wtr.jpg);
+}
+
+.page { min-height : 700px; }
+
+/*
+ * show the "selected" image for this page - This is group specific
+ */
+
+#navigation-links a#web img, #navigation-links a#web:hover img { background-image : url(../graphics/icons/ctool/webrsrc48sel.gif); }
+
+/* 
+ * Set up the Overview links to be displayed in two columns
+ * that are centered in the middle of the page.
+ */
+
+#web-links {	text-align : left;	width : 760px;	/* To center in Moz (have to use text-align for IE) */	margin : 0px auto;}
+#web-links a { 	width : 370px;	text-align : left; 	margin-left : 5px;	margin-right : 5px;	margin-top : 5px;	margin-bottom : -20px;	vertical-align : top;}
+#web-links > a { vertical-align : middle; }
+#web-links a img {	height : 57px;	width : 57px;	vertical-align : middle;}	
+#web-links a .link-label {	display : block;	width : 300px;	position : relative;	top : -50px;	left : 60px;}
+#web-links a p .text {	display : block;	width : 300px;	position : relative;	top : -45px;	left : 53px;}
+
+/* Special case for Mozilla, because the links are displayed
+   in 1 vertical column instead of 2 centered columns */
+#web-links > a { 	width : 700px; }
+#web-links a > .link-label { width : 700px; }
+#web-links a p > .text { width : 700px; }
+
+#web-links a:hover { border-right : 5px; }

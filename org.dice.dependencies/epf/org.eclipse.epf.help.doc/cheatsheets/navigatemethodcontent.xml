@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Copyright (c) 2005, 2006 IBM Corporation and others.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+    Contributors:
+    IBM Corporation - initial implementation
+-->
+
+<cheatsheet title="Navigate Method Content">
+	<intro href="/org.eclipse.epf.help.doc/topics/r_user_interface.html">
+		<description>There are two ways to navigate method content: by using the physical library structure in the library view or by using the logical categorization of method content in the configuration view.  This cheat sheet walks you through both scenarios.</description>
+	</intro>
+	<item href="/org.eclipse.epf.help.doc/topics/c_authoring_perspective.html" title="Switch to Authoring Perspective" skip="true">
+		<description>You can work with two perspectives: the authoring perspective and the browsing perspective. A perspective defines a set of views and functions to be available for specific tasks. The authoring perspective provides views and functions to navigate and author method content and processes, while the browsing perspective allows you to preview and browse a method configuration. This cheat sheet refers to the authoring perspective.<br/><br/>Click the "Open Perspective" button or the Window-&gt;Open Perspective menu and then select "Authoring" to switch to the authoring perspective.</description>
+	</item>
+	<item href="/org.eclipse.epf.help.doc/topics/c_library_view.html" title="Open the Library View" skip="true">
+		<description>If you do not see a tree-browser view labeled "Library" in your authoring perspective click the Window-&gt;Reset Perspective menu.</description>
+	</item>
+	<item href="/org.eclipse.epf.help.doc/topics/c_method_content_package.html" title="Drill into Method Content Packages" skip="false">
+		<description>Within the library view tree-browser, expand a plug-in and drill into the packages "Method Content"-&gt;"Content Packages" and its sub-packages. Examine the contents.
+		</description>
+	</item>
+	<item title="Review Content Packages" skip="false">
+		<description>Every content package contains different types of method content elements which are sorted into different categories. The categories are roles, tasks, work products, and guidance.</description>
+	</item>
+	<item href="/org.eclipse.epf.help.doc/topics/c_method_content_categories.html" title="Open a Method Content Element Editor" skip="false">
+		<description>Select a method element, such as a task, and double click to open its editor.<br/><br/>The editor provides tabs and forms to organize textual description for the element.  Select the different tabs and the bottom of every editor and review the different forms displayed.</description>
+	</item>
+	<item href="/org.eclipse.epf.help.doc/topics/c_method_content_categories.html" title="Examine Categories" skip="false">
+		<description>Within the library view tree-browser, expand the packages to the same level as content packages until you find the "Custom Categories" and "Standard Categories" packages. Drill into these packages and then examine their contents.<br/><br/>Every category listed here is a content element as well.  Open the description of a category such as a discipline or a domain by double clicking the category which opens the category editor.</description>
+	</item>
+	<item href="/org.eclipse.epf.help.doc/topics/c_configuration_view.html" title="Select a Configuration for the Configuration View" skip="true">
+		<description>Because the method library can contain large numbers of elements, you may want to limit your work to a user-defined subset of the library called method configuration. A configuration defines a working set of packages within the method library that helps you limit your view to a subset of all elements. The elements that are part of a selected configuration are displayed in the configuration view.<br/><br/>The configuration view displays categorized method elements of the currently selected configuration.  This is the configuration that has been selected in the unlabeled combo box in the tool bar.  Use this combo box to select a configuration.<br/><br/>After selecting a configuration the configuration view is (re-)populated with new trees showing elements from that configuration.</description>
+	</item>
+	<item title="Drill into Categories in Configuration View" skip="false">
+		<description>Drill into the configuration view's categories folders and examine the elements listed there.<br/><br/>As in the library view you can open elements listed here via a double-click. However, the configuration view computes so-called contributions and replacements of method content elements (see "Variability Overview" in the online help for more details). If an element has contributing elements then a double click will show you a dialog with all the elements participating in the contribution.  Select one element to open its editor.</description>
+	</item>
+	<item title="Done">
+		<description/>
+	</item>
+</cheatsheet>

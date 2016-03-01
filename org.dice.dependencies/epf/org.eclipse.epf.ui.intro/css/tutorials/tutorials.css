@@ -1,0 +1,28 @@
+/*
+ * Copyright (c) 2005, 2006 IBM Corporation and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ *
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ * IBM Corporation - initial implementation
+ */
+
+body {
+	background-image : url(../graphics/contentpage/tutorials_wtr.jpg);
+}
+
+.page { min-height : 700px; }
+
+/* show the "selected" image for this page */
+#navigation-links a#tutorials img, #navigation-links a#tutorials:hover img { background-image : url(../graphics/icons/ctool/tutorials48sel.gif); }
+
+/* 
+ * Set up the content of the tutorials page into two
+ * columns that are centered in the page
+ */
+
+
+#tutorials-links {	text-align : left;	width : 760px;	/* To center in Moz (have to use text-align for IE) */	margin : 0px auto;}#tutorials-links a { 	width : 370px;	text-align : left; 	margin-left : 5px;	margin-right : 5px;	margin-top : 5px;	margin-bottom : -20px;	vertical-align : top;}#tutorials-links > a { vertical-align : middle; }#tutorials-links a img {	height : 57px;	width : 57px;	vertical-align : middle;}	#tutorials-links a .link-label {	display : block;	width : 300px;	position : relative;	top : -50px;	left : 60px;}#tutorials-links a p .text {	display : block;	width : 300px;	position : relative;	top : -45px;	left : 53px;}/* Special case for Mozilla, because the links are displayed   in 1 vertical column instead of 2 centered columns */#tutorials-links > a { 	width : 700px; }#tutorials-links a > .link-label { width : 700px; }#tutorials-links a p > .text { width : 700px; }#tutorials-links a:hover { border-right : 5px; }a#basics img { background-image : url(../graphics/icons/obj48/wbbasics_obj.gif); }a#basics:hover img { background-image : url(../graphics/icons/obj48/wbbasicshov_obj.gif); }a#team img { background-image : url(../graphics/icons/obj48/teamsup_obj.gif); }a#team:hover img { background-image : url(../graphics/icons/obj48/teamsuphov_obj.gif); }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension-point id="textReferenceReplacer" name="Text Reference Replacer" schema="schema/textReferenceReplacer.exsd"/>
+   <extension-point id="diagramManager" name="Diagram Manager" schema="schema/diagramManager.exsd"/>
+   <extension-point id="commandListeners" name="Command Listeners" schema="schema/commandListeners.exsd"/>
+   <extension-point id="libraryInspector" name="Library Inspector" schema="schema/libraryInspector.exsd"/>
+   <extension-point id="nestedCommandProviders" name="Nested Command Providers" schema="schema/nestedCommandProviders.exsd"/>
+   <extension-point id="oppositeFeatureLoaders" name="OppositeFeature Loaders" schema="schema/oppositeFeatureLoaders.exsd"/>
+   <extension-point id="userInteractionHandler" name="User Interaction Handler" schema="schema/userInteractionHandler.exsd"/>
+   <extension-point id="validationSupport" name="Validation Support" schema="schema/validationSupport.exsd"/>
+   <extension-point id="uiHelper" name="UI Helper" schema="schema/uiHelper.exsd"/>
+   <extension-point id="adapterFactories" name="Adapter Factories" schema="schema/adapterFactories.exsd"/>
+   <extension-point id="libraryEditUtilProvider" name="LibraryEditUtilProvider" schema="schema/libraryEditUtilProvider.exsd"/>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http:///com/ibm/uma/edit/tng/util/model.ecore" 
+       class = "org.eclipse.epf.library.edit.util.model.ModelPackage" />
+  </extension>
+
+</plugin>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?NLS  TYPE="org.eclipse.help.toc"?>
+<toc label="Eclipse Process Framework (EPF) Composer" topic="topics/a_product_overview.html">
+   <topic label="Overview of EPF Composer" href="topics/a_product_overview.html"/>
+   <topic label="Method content authoring overview" href="topics/a_method_content_authoring_overview.html"/>
+   <topic label="Process authoring overview" href="topics/a_process_authoring_overview.html"/>
+   <topic label="Method configurations overview" href="topics/a_method_configurations_overview.html"/>
+   <topic label="Key concepts">
+      <topic label="Method library" href="topics/c_method_library.html"/>
+      <topic label="Method content" href="topics/c_method_content.html"/>
+      <topic label="Method content package" href="topics/c_method_content_package.html"/>
+      <topic label="Method configurations" href="topics/c_method_configurations.html"/>
+      <topic label="Method plug-in" href="topics/c_method_plugin.html"/>
+      <topic label="Guidance" href="topics/c_guidance.html"/>
+      <topic label="Process" href="topics/c_process.html"/>
+      <topic label="Method content variability" href="topics/c_variability.html"/>
+      <topic label="User roles and role-specific tasks" href="topics/c_user_roles.html"/>
+      <topic label="Work Product slot fulfillment" href="topics/c_wp_slot_fulfilmnt.html"/>
+   </topic>
+   <topic label="Getting started with authoring">
+      <topic label="User interface reference" href="topics/r_user_interface.html"/>
+      <topic label="Preferences" href="topics/r_preferences.html"/>
+      <topic label="Authoring perspective" href="topics/c_authoring_perspective.html"/>
+      <topic label="Browsing perspective" href="topics/c_browsing_perspective.html"/>
+      <topic label="Library view" href="topics/c_library_view.html"/>
+      <topic label="Configuration view" href="topics/c_configuration_view.html"/>
+      <topic label="Browsing and previewing method content" href="topics/t_browse_content.html"/>
+      <topic label="Searching for content" href="topics/t_search_content.html"/>
+      <topic label="Creating a method plug-in" href="topics/t_create_method_plugin.html"/>
+      <topic label="Creating a content package" href="topics/t_create_content_package.html"/>
+      <topic label="Creating new method configurations" href="topics/t_method_configuration_new.html"/>
+      <topic label="Creating copy of a method configuration" href="topics/t_method_configuration_copy.html"/>
+   </topic>
+   <topic label="Creating reusable method content">
+      <topic label="Create Method content" href="topics/t_create_method_content.html"/>
+      <topic label="Creating a role" href="topics/t_create_role.html"/>
+      <topic label="Creating a task" href="topics/t_create_task.html"/>
+      <topic label="Creating a work product" href="topics/t_create_workproduct.html"/>
+      <topic label="Creating guidance" href="topics/t_create_guidance.html"/>
+      <topic label="Creating practice guidance" href="topics/t_create_practice_guide.html"/>
+      <topic label="Guidance relationships" href="topics/r_guidance_relationships.html"/>
+      <topic label="Rich text editor" href="topics/c_richtext_editor.html">
+         <topic label="Adding references or hyperlinks" href="topics/t_add_hyperlink.html"/>
+      </topic>
+      <topic label="Method content variability" href="topics/c_variability.html">
+         <topic label="Contributes variability" href="topics/c_variability_contributes.html"/>
+         <topic label="Extends variability" href="topics/c_variability_extends.html"/>
+         <topic label="Replaces variability" href="topics/c_variability_replaces.html"/>
+         <topic label="Extends and replaces variability" href="topics/c_variability_extend_replace.html"/>
+         <topic label="Associations impacted by variability" href="topics/r_variability_associations.html"/>
+         <topic label="Browsing variability relationships" href="topics/t_variability_browsing.html"/>
+      </topic>
+      <topic label="Browsing and previewing method content" href="topics/t_browse_content.html"/>
+      <topic label="Creating index entries" href="topics/r_index_syntax.html"/>
+      <topic label="Changing feedback addresses" href="topics/c_changing_feedback.html"/>
+      <topic label="Web site search" href="topics/c_site_search.html"/>
+      <topic label="Glossary entries" href="topics/c_glossary.html">
+         <topic label="Creating glossary entries" href="topics/t_glossary_create.html"/>
+         <topic label="Editing glossary entries" href="topics/t_glossary_edit.html"/>
+         <topic label="Deleting glossary entries" href="topics/t_glossary_delete.html"/>
+      </topic>
+      <topic label="Copyright notices" href="topics/c_copyright.html">
+         <topic label="Creating copyright notices in new method plug-ins" href="topics/t_copyright_new_plugin.html"/>
+         <topic label="Changing default copyright notice" href="topics/t_copyright_changing_default.html"/>
+         <topic label="Overriding the copyright notice in a method plug-in" href="topics/t_copyright_overriding_default.html"/>
+      </topic>
+   </topic>
+   <topic label="Categorizing content">
+      <topic label="Standard categories" href="topics/c_method_content_categories.html"/>
+      <topic label="Custom categories" href="topics/t_create_custom_categories.html">
+         <topic label="Creating custom categories" href="topics/t_create_custom_cat.html"/>
+         <topic label="Editing custom categories" href="topics/t_edit_custom_categories.html"/>
+         <topic label="Assigning categorized elements" href="topics/t_assgn_cat_elmnt.html"/>
+         <topic label="Using deep copy" href="topics/t_deep_copy_custom_cat.html"/>
+      </topic>
+   </topic>
+   <topic label="Creating processes">
+      <topic label="Creating reusable capability patterns" href="topics/t_capability_pattern_create.html"/>
+      <topic label="Creating a delivery process" href="topics/t_create_delivery_process.html"/>
+      <topic label="Developing Work Breakdown Structures" href="topics/t_develop_wbs.html"/>
+      <topic label="Developing team allocation structures" href="topics/t_develop_team_structure.html"/>
+      <topic label="Develop a Work Product Usage structure" href="topics/t_develop_workproduct_structure.html"/>
+      <topic label="Capability patterns" href="topics/c_capability_pattern.html">
+         <topic label="Copying capability patterns" href="topics/t_capability_pattern_copy.html"/>
+         <topic label="Extending capability patterns" href="topics/t_capability_pattern_extend.html"/>
+         <topic label="Deep copying a capability pattern" href="topics/t_capability_pattern_deep_copy.html"/>
+      </topic>
+      <topic label="Process element properties view" href="topics/c_properties_view.html"/>
+      <topic label="Activity variability" href="topics/c_activity_variability.html"/>
+      <topic label="Using process to method synchronization" href="topics/t_using_synchronization.html"/>
+      <topic label="Working with process diagrams" href="topics/c_process_diagrams.html">
+         <topic label="Working with activity diagrams" href="topics/c_activity_diagrams.html"/>
+         <topic label="Using activity detail diagrams" href="topics/c_activity_detail_diagrams.html"/>
+      </topic>
+   </topic>
+   <topic label="Publishing and exporting">
+      <topic label="Publishing configurations as Web sites" href="topics/t_publishing_html.html"/>
+      <topic label="Exporting to Microsoft Project" href="topics/t_msproject_export.html"/>
+      <topic label="Exporting a library configuration" href="topics/t_configuration_export.html"/>
+      <topic label="Importing a library configuration" href="topics/t_configuration_import.html"/>
+      <topic label="Exporting a method plug-in" href="topics/t_plugin_export.html"/>
+      <topic label="Importing a method plug-in" href="topics/t_plugin_import.html"/>
+      <topic label="Exporting XML" href="topics/t_xml_export.html"/>
+      <topic label="Importing XML" href="topics/t_xml_import.html"/>
+   </topic>
+   <topic label="Sharing method libraries and elements with version control systems">
+      <topic label="Using Rational ClearCase to share libraries and elements">
+         <topic label="Integration with Rational ClearCase" href="topics/c_clearcase_overview.html"/>
+         <topic label="Installing and configuring the Rational ClearCase SCM adapter" href="topics/t_clearcase_install.html"/>
+         <topic label="Installing and configuring Rational ClearCase Remote Client" href="topics/t_clearcase_ccrc_install.html"/>
+         <topic label="Creating a view using Rational ClearCase Remote Client (CCRC)" href="topics/t_clearcase_new_view.html"/>
+         <topic label="Creating a Rational ClearCase view with the SCM adaptor" href="topics/t_clearcase_create_view.html"/>
+         <topic label="Using Rational ClearCase dynamic views" href="topics/t_clearcase_dynamic_views.html"/>
+         <topic label="Adding a new library to Rational ClearCase version control" href="topics/t_clearcase_new_library.html"/>
+         <topic label="Adding existing libraries to Rational ClearCase" href="topics/t_clearcase_existing_library.html"/>
+         <topic label="Importing a library configuration with Rational ClearCase" href="topics/t_clearcase_import_configuration.html"/>
+         <topic label="Adding plug-ins to Rational ClearCase version control" href="topics/t_clearcase_add_plugin.html"/>
+         <topic label="Creating a new configuration with Rational ClearCase" href="topics/t_clearcase_new_configuration.html"/>
+         <topic label="Adding content packages to Rational ClearCase" href="topics/t_clearcase_content_package.html"/>
+         <topic label="Adding new method elements to Rational ClearCase" href="topics/t_clearcase_add_element.html"/>
+         <topic label="Editing method elements with Rational ClearCase" href="topics/t_clearcase_edit_element.html"/>
+         <topic label="Deleting method elements with Rational ClearCase" href="topics/t_clearcase_delete_element.html"/>
+         <topic label="Moving method elements with Rational ClearCase" href="topics/t_clearcase_move_element.html"/>
+         <topic label="Creating capability patterns with Rational ClearCase" href="topics/t_clearcase_capability_pattern.html"/>
+         <topic label="Multiuser scenarios with IBM Rational ClearCase" href="topics/c_clearcase_multiuser.html"/>
+         <topic label="Disabling Rational ClearCase Remote Client" href="topics/t_clearcase_ccrc_disable.html"/>
+      </topic>
+      <topic label="Using CVS to share libraries and elements">
+         <topic label="Installing CVS" href="topics/t_cvs_install.html"/>
+         <topic label="Creating a new view with CVS" href="topics/t_cvs_new_view.html"/>
+         <topic label="Adding new libraries to CVS" href="topics/t_cvs_new_library.html"/>
+         <topic label="Adding a method plug-in to CVS" href="topics/t_cvs_add_plugin.html"/>
+         <topic label="Adding elements to CVS" href="topics/t_cvs_add_element.html"/>
+         <topic label="Deleting elements under CVS" href="topics/t_cvs_delete_element.html"/>
+         <topic label="Editing elements under CVS" href="topics/t_cvs_edit_element.html"/>
+         <topic label="Moving elements under CVS" href="topics/t_cvs_move_element.html"/>
+      </topic>
+      <topic label="Version control reference">
+         <topic label="Version control for specific files" href="topics/r_clearcase_files.html"/>
+         <topic label="Common actions impact on specific files" href="topics/r_clearcase_actions.html"/>
+      </topic>
+   </topic>
+   <topic label="Accessibility">
+      <topic label="Accessibility overview" href="topics/c_accessibility.html"/>
+      <topic label="Setting accessibility preferences" href="topics/t_accessibility_preferences.html"/>
+      <topic label="Setting an alternate help browser" href="topics/t_accessibility_set_browser.html"/>
+      <topic label="Shortcuts for process authoring and publishing" href="topics/r_accessibility_navigation.html"/>
+      <topic label="Fonts and colors" href="topics/r_accessibility_fonts.html"/>
+   </topic>
+   <topic label="Glossary" href="topics/g_glossary.html"/>
+   <topic label="Tutorials">
+      <topic label="Explore the EPF Composer workbench" href="tutorials/tut1_intro.html">
+         <topic label="Concepts" href="tutorials/tut1_concepts.html"/>
+         <topic label="Basic navigation" href="tutorials/tut1_ex1.html"/>
+         <topic label="Browse method content" href="tutorials/tut1_ex2.html"/>
+         <topic label="Browse process content" href="tutorials/tut1_ex3.html"/>
+         <topic label="Browse while authoring" href="tutorials/tut1_ex4.html"/>
+         <topic label="Search" href="tutorials/tut1_ex5.html"/>
+      </topic>
+      <topic label="Create method content" href="tutorials/tut2_intro.html">
+         <topic label="Concepts" href="tutorials/tut2_concepts.html"/>
+         <topic label="Create a method plug-in" href="tutorials/tut2_ex1.html"/>
+         <topic label="Create a content package" href="tutorials/tut2_ex2.html"/>
+         <topic label="Create a work product" href="tutorials/tut2_ex3.html"/>
+         <topic label="Create a role" href="tutorials/tut2_ex4.html"/>
+         <topic label="Create a task" href="tutorials/tut2_ex5.html"/>
+         <topic label="Work with steps" href="tutorials/tut2_ex6.html"/>
+         <topic label="Create guidance elements" href="tutorials/tut2_ex7.html"/>
+         <topic label="Apply guidance" href="tutorials/tut2_ex8.html"/>
+         <topic label="Create a standard category" href="tutorials/tut2_ex9.html"/>
+         <topic label="Add a method plug-in to a configuration" href="tutorials/tut2_ex10.html"/>
+      </topic>
+      <topic label="Reuse method content" href="tutorials/tut3_intro.html">
+         <topic label="Concepts" href="tutorials/tut3_concepts.html"/>
+         <topic label="Contribute to a role" href="tutorials/tut3_ex1.html"/>
+         <topic label="Contribute to a work product" href="tutorials/tut3_ex2.html"/>
+         <topic label="Contribute to a task" href="tutorials/tut3_ex3.html"/>
+         <topic label="Extend a role" href="tutorials/tut3_ex4.html"/>
+         <topic label="Extend a work product" href="tutorials/tut3_ex5.html"/>
+         <topic label="Extend a task" href="tutorials/tut3_ex6.html"/>
+         <topic label="Replace a role" href="tutorials/tut3_ex7.html"/>
+         <topic label="Extend and replace a role" href="tutorials/tut3_ex8.html"/>
+      </topic>
+      <topic label="Work with processes" href="tutorials/tut4_intro.html">
+         <topic label="Concepts" href="tutorials/tut4_concepts.html"/>
+         <topic label="Browse process content" href="tutorials/tut4_ex1.html"/>
+         <topic label="Create a delivery process" href="tutorials/tut4_ex3.html"/>
+         <topic label="Use capability patterns" href="tutorials/tut4_ex4.html"/>
+         <topic label="Create a process diagram" href="tutorials/tut4_ex5.html"/>
+      </topic>
+      <topic label="Publish method content" href="tutorials/tut5_intro.html">
+         <topic label="Concepts" href="tutorials/tut5_concepts.html"/>
+         <topic label="Publish a method configuration" href="tutorials/tut5_ex1.html"/>
+         <topic label="Create a custom category" href="tutorials/tut5_ex2.html"/>
+         <topic label="Create a custom method configuration" href="tutorials/tut5_ex3.html"/>
+         <topic label="Publish a custom method configuration" href="tutorials/tut5_ex4.html"/>
+      </topic>
+   </topic>
+</toc>

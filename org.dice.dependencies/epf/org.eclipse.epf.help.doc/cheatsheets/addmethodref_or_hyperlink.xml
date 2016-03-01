@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!-- 
+    Copyright (c) 2005, 2006 IBM Corporation and others.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+    Contributors:
+    IBM Corporation - initial implementation
+-->
+
+<cheatsheet title="Add a Method Reference or Hyperlink (URL)">
+	<intro 
+		href="/org.eclipse.epf.help.doc/topics/t_add_hyperlink.html">
+		<description>There are two types of references or hyperlinks to other content within your content text: references  to other elements in the method library or references to external text outside the method library with a URL. This cheat sheet walks you through creating both types.</description>
+	</intro>
+
+	<item
+		title="Create a Hyperlink to another element in the Method Library"
+		skip="false">
+		<description>You can recognize a text field that supports hyperlinks by the little triangle next to the text field's label.  This triangle allows you to expand the text field into a full size editor with an editor toolbar providing rich text editing functionality such as font styles, bullet points, etc.<br/><br/>To insert a hyperlink to another element in the method library in the text field simply find the element in the library or configuration view and drag it into an expanded or collapsed form field.<br/><br/>Alternatively, you can also position the cursor where you want the link to be added and click the Add Link button in the tool bar. It opens the Add Link dialog that provides you amongst others with three options for creating links to other content elements by selecting the element via the "Browse..." button.  Every option offers a different way for displaying the link's name:<br/><br/>"Method Element": links that displays the element name."<br/><br/>"Method with type prefix": link that displays the element name and type.<br/><br/>"Method element with custom text": link that displays a user defined text. To define this text manipulate the text in between the &lt;a&gt;&lt;/a&gt; tags in the URL text field once you have selected an element using the "Browse..." button.</description>
+	</item>
+
+	<item
+		title="Create a Hyperlink to an External page using a URL"
+		skip="false">
+		<description>To insert a hyperlink to an external URL, expand the editor, position the cursor where you want the link to be added and then click the "Add Link" button in the tool bar. Fill in the dialog with the link URL details and then click OK.</description>
+	</item>
+	<item title="Done"><description></description></item>
+</cheatsheet>

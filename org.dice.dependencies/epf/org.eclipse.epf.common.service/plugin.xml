@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension-point id="version" name="Version" schema="schema/org.eclipse.epf.common.version.exsd"/>
+   <extension-point id="commandLineRunners" name="CommandLineRunners" schema="schema/commandLineRunners.exsd"/>
+   <extension
+         id="epf"
+         point="org.eclipse.epf.common.service.version">
+         <versions
+         	class="org.eclipse.epf.common.service.versioning.EPFVersions"/>
+   </extension>
+
+</plugin>

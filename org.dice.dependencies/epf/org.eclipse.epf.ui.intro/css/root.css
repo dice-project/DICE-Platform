@@ -1,0 +1,296 @@
+/*
+ * Copyright (c) 2005, 2006 IBM Corporation and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ *
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ * IBM Corporation - initial implementation
+ */
+
+/* 
+ * Set up general font colours, sizes, etc.  Some of these will override
+ * settings from the shared CSS 
+ */
+
+.intro-header H1 {
+	font-size : 18pt;
+}
+
+#page-links a .link-label, #action-links a .link-label {
+	font-size : 13pt;	font-weight : 600;	color : #E5E5E5;
+}
+
+#page-links a p .text, #action-links a p .text {
+	font-size : 13pt;	font-weight : 500;	color : #E5E5E5;
+}
+
+#role-title-content {
+	font-size : 12pt;
+}
+
+#role-description-content {
+	font-size : 9pt;
+}
+
+#role-text-content {
+	font-size : 11pt;
+	font-weight : bold;
+	color : #FFFFFF;
+}
+
+#role-guy-description #enable-title {
+	font-size : 12pt;
+	color : #FFFFee;
+	font-weight : 600;
+	display:block;}
+
+#role-guy-description #enable-description{
+	font-size : 12pt;
+	color : #FFFFee;
+}
+
+#category-description {
+	font-size : 11pt;
+	color : #FFFFee;
+}
+
+
+/*
+ * Set up the content for the root page.
+ */
+
+body {
+	min-width : 770px;	/* since IE doesn't support min-width, use expression */
+	width:expression(document.body.clientWidth < 770? "770px": "auto" );	background-image : url(graphics/rootpage/background.jpg);	background-repeat : no-repeat;	background-position : top left;	background-color : #7169D1;
+}
+
+#root {
+	background-image : url(graphics/rootpage/brandmark.gif);	background-repeat : no-repeat;	background-position : bottom left;	min-height : 450px;	height : 100%;	height : expression(document.body.clientHeight < 450? "450px": "100%" );
+	}
+
+/* 
+ * Set up the navigation bar.  It should be centered in the middle
+ * of the page
+ */
+
+#links-background {
+	background-image : url(graphics/rootpage/dots.gif);	background-repeat : repeat-x;	width : 100%;	height : 177px;	margin-top : 18%;	text-align : center;
+	z-index : -1;
+	}
+
+/* specify a width for Moz so we can center.  
+ * **Important** If additional links are added, we will have to increase this width 
+ * to accomodate them, otherwise they will wrap to a new line. */
+#links-background > #page-links {
+	width : 42em;	margin : 0 auto;
+}
+
+
+#page-links {
+	width: 100%;
+	position : relative;	top : 50px;
+	margin-bottom : 25%;
+	margin-right:0px;
+}
+
+#page-links a {
+	position : relative;	width : 86px;	margin-left : 0.5em;	margin-right : 0.5em;	text-align : center;	vertical-align: top;
+}
+
+/* float left for Moz so the items all appear inline */
+
+#page-links > a {
+	float : left;	position : relative;
+}
+
+#page-links a img {
+	height : 86px;	width : 86px;	vertical-align : middle;
+}
+
+/* properly align the link label and text based on class (left vs. right) */
+
+#page-links a:hover {
+	/* This is needed for IE to force the hover pseudo selectors below to work. Reset an existing property.*/	padding : 0em;
+}
+
+/* Hide both the label and the description of the link and remove them from static HTML flow, until user hovers over link */
+
+/* First, set the width of both the label and the description to a max of 15 em. */
+/* This can be changed when translated to different country locals. */
+
+#page-links a span {
+	width : 18em;}
+
+/* Set up left links orientation first. */
+
+#page-links a.left:link .link-label,
+#page-links a.left:visited .link-label {
+	display: none;
+}
+
+#page-links a.left:hover .link-label,
+#page-links a.left:focus .link-label,
+#page-links a.left:active .link-label {
+	text-align: left;	display: block;	position: absolute;	top : 120%;	left : 0;
+}
+
+/* hide description and remove it from static HTML flow, until user hovers over link */
+
+#page-links a.left:link .text,
+#page-links a.left:visited .text {
+	display: none;
+}
+
+#page-links a.left:hover .text,
+#page-links a.left:focus .text,
+#page-links a.left:active .text {
+	text-align: left;	display: block;	position: absolute;	left : 0;	top: 145%;
+}
+
+/* Set up right links orientation now. */
+
+#page-links a.right:link .link-label,
+#page-links a.right:visited .link-label {
+	display: none;
+}
+
+#page-links a.right:hover .link-label,
+#page-links a.right:focus .link-label,
+#page-links a.right:active .link-label {
+	text-align: right;	display: block;	position: absolute;	top : 120%;	right : 0;
+}
+
+/* hide description and remove it from static HTML flow, until user hovers over link */
+
+#page-links a.right:link .text,
+#page-links a.right:visited .text {
+	display: none;
+}
+
+#page-links a.right:hover .text,
+#page-links a.right:focus .text,
+#page-links a.right:active .text {
+	text-align: right;	display: block;	position: absolute;	right : 0;	top: 145%;
+}
+
+
+
+/* properties for each of the page-links  */
+
+/*#page-links a.left {
+	height: 86px; 
+	background-image : url(graphics/icons/ctool/overview72.gif);
+background-repeat: no-repeat;
+background-position: center center;
+margin: 0em;
+padding: 0em;}  */
+
+a#overview img {
+	background-image : url(graphics/icons/etool/overview72.gif);
+}
+
+a#overview:hover img,
+a#overview:focus img,
+a#overview:active img {
+	background-image : url(graphics/icons/ctool/overview72.gif);}
+
+a#tutorials img {
+	background-image : url(graphics/icons/etool/tutorials72.gif);
+}
+
+a#tutorials:hover img,
+a#tutorials:focus img,
+a#tutorials:active img {
+	background-image : url(graphics/icons/ctool/tutorials72.gif);}
+
+a#samples img {
+	background-image : url(graphics/icons/etool/samples72.gif);
+}
+
+a#samples:hover img,
+a#samples:focus img,
+a#samples:active img {
+	background-image : url(graphics/icons/ctool/samples72.gif);}
+
+a#news img {
+	background-image : url(graphics/icons/etool/retuser72.gif);
+}
+
+a#news:hover img,
+a#news:focus img,
+a#news:active img {
+	background-image : url(graphics/icons/ctool/retuser72.gif);}
+
+a#web img {
+	background-image : url(graphics/icons/etool/webrsrc72.gif);
+}
+
+a#web:hover img,
+a#web:focus img,
+a#web:active img {
+	background-image : url(graphics/icons/ctool/webrsrc72.gif);
+}
+
+a#steps img {
+	background-image : url(graphics/icons/etool/firsteps72.gif);
+}
+
+a#steps:hover img,
+a#steps:focus img,
+a#steps:active img {
+	background-image : url(graphics/icons/ctool/firsteps72.gif);
+}
+
+/*
+ * Set up the action links
+ */
+#action-links {
+	width : 98%;	position : absolute;	left : 0px;	top : 35px;
+}
+
+a#workbench {
+	position : absolute;	top : -16px;	right : -8px;	text-align : right;
+}
+
+a#workbench img {
+	background-image : url(graphics/icons/etool/wb48.gif);
+	height : 56px;	width : 56px;	text-align : center;}
+/* special case for mozilla */
+#action-links a > .background-image,
+#action-links a > #workbench_img {
+	vertical-align : middle;
+}
+a#workbench:hover img,
+a#workbench:focus img,
+a#workbench:active img {
+	background-image : url(graphics/icons/ctool/wb48.gif);	height : 56px;
+	width : 56px;
+}
+
+/* hide the link and description until users hover over the link */
+
+#action-links a p .text, 
+#action-links a .link-label {
+	display : none;
+}
+
+#action-links a:hover .link-label,
+#action-links a:focus .link-label,
+#action-links a:active .link-label {
+	display : block;	width : 16em;
+}
+
+#action-links a:hover p .text,
+#action-links a:focus p .text,
+#action-links a:active p .text {
+	display : block;	width : 16em;
+}
+
+#action-links a:hover,
+#action-links a:focus,
+#action-links a:active {
+	border-right : 0px;
+}

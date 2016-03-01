@@ -1,0 +1,9 @@
+
+<plugin>
+	<extension id="Publish" point="org.eclipse.core.runtime.applications">
+      <application>
+         <run class="org.eclipse.epf.publishing.cmdline.Publish"/>
+      </application>
+   </extension>
+</plugin>
+   

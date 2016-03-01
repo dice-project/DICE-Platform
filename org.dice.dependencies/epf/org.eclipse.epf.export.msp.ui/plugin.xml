@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.exportWizards">
+      <wizard
+            category="org.eclipse.epf.ui.exportWizards.category"
+            class="org.eclipse.epf.export.msp.ui.wizards.ExportMSPWizard"
+            icon="icons/etool16/exp_ms_prj.gif"
+            id="org.eclipse.epf.export.msp.ui.wizards.ExportMSPWizard"
+            name="%exportProjectTemplateWizardName">
+         <description>
+               %exportProjectTemplateWizardDescription
+         </description>
+      </wizard>
+   </extension>
+   
+   <extension-point
+         id="exportMSPWizard"
+         name="Export Microsoft Project Wizard Extension"
+         schema="schema/ExportMSPWizard.exsd" />
+
+   <extension
+         point="org.eclipse.epf.ui.exportWizards">
+      <wizard id="org.eclipse.epf.export.msp.ui.wizards.ExportMSPWizard"/>
+   </extension>
+
+</plugin>

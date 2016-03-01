@@ -1,0 +1,2 @@
+# Turn on debug trace for the XMI Library plug-in
+org.eclipse.epf.library.xmi/debug=true

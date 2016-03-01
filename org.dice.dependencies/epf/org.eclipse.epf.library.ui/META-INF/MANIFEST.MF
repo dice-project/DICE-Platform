@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.epf.library.ui; singleton:=true
+Bundle-Version: 1.5.0.qualifier
+Bundle-Activator: org.eclipse.epf.library.ui.LibraryUIPlugin
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.epf.library;visibility:=reexport,
+ org.eclipse.core.resources,
+ org.eclipse.core.runtime,
+ org.eclipse.epf.library.xmi,
+ org.eclipse.epf.ui;visibility:=reexport,
+ org.eclipse.jface.text;visibility:=reexport,
+ org.eclipse.ui;visibility:=reexport,
+ org.eclipse.ui.ide;visibility:=reexport,
+ org.eclipse.epf.common.ui,
+ org.eclipse.emf.edit.ui
+Eclipse-LazyStart: true
+Export-Package: org.eclipse.epf.library.ui,
+ org.eclipse.epf.library.ui.actions,
+ org.eclipse.epf.library.ui.dialogs,
+ org.eclipse.epf.library.ui.preferences,
+ org.eclipse.epf.library.ui.providers,
+ org.eclipse.epf.library.ui.util,
+ org.eclipse.epf.library.ui.views,
+ org.eclipse.epf.library.ui.wizards
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+

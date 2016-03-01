@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.epf.library.xmi; singleton:=true
+Bundle-Version: 1.5.0.qualifier
+Bundle-Activator: org.eclipse.epf.library.xmi.XMILibraryPlugin
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.epf.library,
+ org.eclipse.emf.edit.ui
+Eclipse-LazyStart: true
+Bundle-Vendor: %providerName
+Export-Package: org.eclipse.epf.library.xmi,
+ org.eclipse.epf.library.xmi.preferences
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.epf.publish.layout
+Bundle-Version: 1.5.0.qualifier
+Bundle-ClassPath: layout.jar
+Bundle-Activator: org.eclipse.epf.publish.layout.LayoutPlugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.epf.common
+Eclipse-LazyStart: true
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: org.eclipse.epf.publish.layout

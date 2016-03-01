@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmftool:ToolRegistry xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
+  <palette>
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Flows"
+        description="Creation tool for flows"
+        collapsible="true">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Control Flow"
+          description="Create new Control Flow">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/ControlFlow.gif"
+            bundle="org.eclipse.epf.diagramming"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+    </tools>
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Nodes"
+        description="Creation tool group for nodes"
+        collapsible="true"
+        active="//@palette/@tools.1">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Activity Partition"
+          description="Create new Activity Partition">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/ActivityPartition.gif"
+            bundle="org.eclipse.epf.diagramming"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Start Node"
+          description="Create new Start Node">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/InitialNode.gif"
+            bundle="org.eclipse.epf.diagramming"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Fork Node"
+          description="Create new Fork Node">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/ForkNode.gif"
+            bundle="org.eclipse.epf.diagramming"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Merge Node"
+          description="Create new Merge Node">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/MergeNode.gif"
+            bundle="org.eclipse.epf.diagramming"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Decision Node"
+          description="Create new Decision Node">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/DecisionNode.gif"
+            bundle="org.eclipse.epf.diagramming"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="End Node"
+          description="Create new End Node">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/ActivityFinalNode.gif"
+            bundle="org.eclipse.epf.diagramming"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Join Node"
+          description="Create new Join Node">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/JoinNode.gif"
+            bundle="org.eclipse.epf.diagramming"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:PaletteSeparator"/>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Activity"
+          description="Create new Activity">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/Activity.gif"
+            bundle="org.eclipse.epf.diagramming"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Phase"
+          description="Create new Phase">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/Phase.gif"
+            bundle="org.eclipse.epf.diagramming"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Iteration"
+          description="Create new Iteration">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/Iteration.gif"
+            bundle="org.eclipse.epf.diagramming"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Task Descriptor"
+          description="Create new Task Descriptor">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/TaskDescriptor.gif"
+            bundle="org.eclipse.epf.diagramming"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Milestone"
+          description="Create new Milestone">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/Milestone.gif"
+            bundle="org.eclipse.epf.diagramming"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+    </tools>
+  </palette>
+</gmftool:ToolRegistry>

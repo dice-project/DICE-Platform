@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.epf.xml.uma; singleton:=true
+Bundle-Version: 1.2.0.qualifier
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: org.eclipse.epf.xml.uma,
+ org.eclipse.epf.xml.uma.impl,
+ org.eclipse.epf.xml.uma.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi;visibility:=reexport,
+ org.eclipse.epf.uma.ecore
+Eclipse-LazyStart: true
+Import-Package: org.eclipse.epf.common.serviceability
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

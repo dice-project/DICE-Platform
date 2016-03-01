@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.epf.library.ui.newLibraryWizardPages">
+      <newLibraryWizardPage
+            class="org.eclipse.epf.library.ui.xmi.NewXMILibraryWizardPage"
+            type="xmi"
+            title="%newXMILibraryWizardPageTitle"
+            description="%newXMILibraryWizardPageDescription">
+      </newLibraryWizardPage>
+   </extension>
+   
+   <extension
+         point="org.eclipse.epf.library.ui.openLibraryWizardPages">
+      <openLibraryWizardPage
+            class="org.eclipse.epf.library.ui.xmi.OpenXMILibraryWizardPage"
+            type="xmi"
+            title="%openXMILibraryWizardPageTitle"
+            description="%openXMILibraryWizardPageDescription">
+      </openLibraryWizardPage>
+   </extension>   
+
+   <extension
+         point="org.eclipse.epf.library.persistence.migrators">
+      <migrator
+            class="org.eclipse.epf.library.ui.xmi.internal.migration.Uma106Migrator102"
+            libNsURI="http://www.ibm.com/uma/1.0.2/uma.ecore"/>
+      <migrator
+            class="org.eclipse.epf.library.ui.xmi.internal.migration.Uma106Migrator103"
+            libNsURI="http://www.eclipse.org/epf/uma/1.0.3/uma.ecore"/>
+      <migrator
+            class="org.eclipse.epf.library.ui.xmi.internal.migration.Uma106Migrator104"
+            libNsURI="http://www.eclipse.org/epf/uma/1.0.4/uma.ecore"/>
+      <migrator
+            class="org.eclipse.epf.library.ui.xmi.internal.migration.Uma106Migrator105"
+            libNsURI="http://www.eclipse.org/epf/uma/1.0.5/uma.ecore"/>               
+   </extension>
+</plugin>

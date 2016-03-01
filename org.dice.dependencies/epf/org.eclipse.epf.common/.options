@@ -1,0 +1,2 @@
+# Turn on debug trace for the Common plug-in
+org.eclipse.epf.common/debug=true

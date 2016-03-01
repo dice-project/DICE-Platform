@@ -1,0 +1,2 @@
+# Turn on debug trace for the diagram migration plug-in
+org.eclipse.epf.migration.diagram/debug=true

@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.epf.ui; singleton:=true
+Bundle-Version: 1.5.0.qualifier
+Bundle-Activator: org.eclipse.epf.ui.EPFUIPlugin
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.epf.common,
+ org.eclipse.jface.text,
+ org.eclipse.ui,
+ org.eclipse.epf.common.ui
+Eclipse-LazyStart: true
+Bundle-Vendor: %providerName
+Export-Package: org.eclipse.epf.ui,
+ org.eclipse.epf.ui.actions,
+ org.eclipse.epf.ui.dialogs,
+ org.eclipse.epf.ui.editors,
+ org.eclipse.epf.ui.preferences,
+ org.eclipse.epf.ui.util,
+ org.eclipse.epf.ui.wizards
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

@@ -1,0 +1,119 @@
+//------------------------------------------------------------------------------
+// Copyright (c) 2005, 2007 IBM Corporation and others.
+// All rights reserved. This program and the accompanying materials
+// are made available under the terms of the Eclipse Public License v1.0
+// which accompanies this distribution, and is available at
+// http://www.eclipse.org/legal/epl-v10.html
+//
+// Contributors:
+// IBM Corporation - initial implementation
+//------------------------------------------------------------------------------
+package org.eclipse.epf.diagram.ad.edit.parts;
+
+import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
+import org.eclipse.gmf.runtime.notation.Edge;
+import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.draw2d.Connection;
+
+import org.eclipse.draw2d.PolylineDecoration;
+import org.eclipse.draw2d.geometry.PointList;
+import org.eclipse.epf.diagram.ad.edit.policies.ControlFlowItemSemanticEditPolicy;
+import org.eclipse.epf.diagram.core.util.DiagramConstants;
+import org.eclipse.epf.diagram.core.util.DiagramCoreUtil;
+import org.eclipse.epf.diagram.core.util.DiagramCoreValidation;
+
+import org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionNodeEditPart;
+import org.eclipse.swt.graphics.Color;
+
+/**
+ * @generated
+ */
+public class ControlFlowEditPart extends ConnectionNodeEditPart {
+
+	/**
+	 * @generated
+	 */
+	public static final int VISUAL_ID = 3001;
+
+	/**
+	 * @generated
+	 */
+	public ControlFlowEditPart(View view) {
+		super(view);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected void createDefaultEditPolicies() {
+		super.createDefaultEditPolicies();
+		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
+				new ControlFlowItemSemanticEditPolicy());
+	}
+
+	/**
+	 * Creates figure for this edit part.
+	 * 
+	 * Body of this method does not depend on settings in generation model
+	 * so you may safely remove <i>generated</i> tag and modify it.
+	 * 
+	 * @generated
+	 */
+	protected Connection createConnectionFigure() {
+
+		return new ControlFlowFigure();
+	}
+
+	/**
+	 * @generated
+	 */
+	public class ControlFlowFigure extends PolylineConnectionEx {
+
+		/**
+		 * @generated
+		 */
+		public ControlFlowFigure() {
+
+			setTargetDecoration(createTargetDecoration());
+		}
+
+		/**
+		 * @generated
+		 */
+		private PolylineDecoration createTargetDecoration() {
+			PolylineDecoration df = new PolylineDecoration();
+			// dispatchNext?
+
+			PointList pl = new PointList();
+			pl.addPoint(-1, 1);
+			pl.addPoint(0, 0);
+			pl.addPoint(-1, -1);
+			df.setTemplate(pl);
+			df.setScale(getMapMode().DPtoLP(7), getMapMode().DPtoLP(3));
+
+			return df;
+		}
+
+	}
+
+	@Override
+	protected void refreshForegroundColor() {
+		// TODO Auto-generated method stub
+		super.refreshForegroundColor();
+	}
+
+	@Override
+	protected void refreshVisuals() {
+		super.refreshVisuals();
+		if (DiagramCoreValidation.checkDelete((Edge) getModel()) != null) {
+			this.disableEditMode();
+		}
+	}
+
+	@Override
+	protected void setForegroundColor(Color color) {
+		Color overrideColor = DiagramCoreUtil.getLinkOverrideColor((Edge) getModel());
+		super.setForegroundColor(overrideColor != null ? overrideColor : color);
+	}
+}

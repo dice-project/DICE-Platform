@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!-- 
+    Copyright (c) 2005, 2006 IBM Corporation and others.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+    Contributors:
+    IBM Corporation - initial implementation
+-->
+
+<cheatsheet title="Replace Existing Method Elements (Roles, Tasks, Work Products, or Guidance)">
+
+	<intro 
+		href="/org.eclipse.epf.help.doc/topics/c_variability.html">
+		<description>You can tailor existing method elements, such as an element that is defined in a locked plug-in, without directly modifying it, but by replacing it with one of your own elements defined in your own method plug-in. This cheat sheet walks you through the steps of creating such a replacement.  See the online help section "Variability Overview" for an introduction on variability and replacements.<br/><br/>Replacements can also be applied within the same method plug-in between method content elements from different content packages.  This is useful in the case where you want to provide alternative content that can be selected using different method configurations.</description>
+	</intro>
+
+	<item
+		title="Plan your Replacement"
+		skip="false">
+		<description>When defining the replacement of an existing method element you need to know where the existing element that you want to replace is physically located within its method plug-in. You also need to decide were to create and place the replacing element. Typically you create the replacing element within a specific content package in your own method plug-in. Finally, you need to know what the replacing element's content is, because all of the replaced element’s content (i.e. its text attributes as well as its relationships that point to other elements) will be removed.</description>
+	</item>
+
+	<item
+		href="/org.eclipse.epf.help.doc/topics/t_create_method_content.html"
+		title="Create a Replacing Content Element"
+		skip="false">
+		<description>Create a method content element in your method plug-in that you intend to be the replacing content element. Remember, you must provide this element with its own content because all attributes of the replaced element will be replaced with empty fields, if you do not provide new descriptions.<br/><br/>Go to cheat sheet "Add a new Method Content such as Roles, Tasks, Work Products, or Guidance" to be guided through these steps.</description>
+	</item>
+
+	<item
+		href="/org.eclipse.epf.help.doc/topics/c_variability_replaces.html" 
+		title="Specify the Replacement Relationship"
+		skip="false">
+		<description>Go to the "Content Variability" section of the elements description tab. Select "Replaces" from the combo box. Click the "Select..." button of the base role field and select the element that your new element replaces.</description>
+	</item>
+
+	<item
+		href="/org.eclipse.epf.help.doc/topics/c_browsing_perspective.html" 
+		title="Review your Replaced Element"
+		skip="false">
+		<description>To review your replaced element, select a method configuration in the current configuration combo box in the tool bar that contains the method plug-ins and content packages of both elements participating in your replacement. In other words, the configuration must contain the replacing element as well as the replaced base element.<br/><br/>Switch to the Browsing perspective. Find and select the replacing element (i.e. your new element) in the configuration view. The content window displays the results of the replacement. Review an element that referred to the replaced element. In other words, if you replaced an artifact, find a task that used this artifact as an input or output. Make sure this element now refers to the replacing element.</description>
+	</item>
+	<item title="Done"><description></description></item>
+</cheatsheet>
+

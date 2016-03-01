@@ -1,0 +1,58 @@
+<html>
+<!-- 
+    Copyright (c) 2005, 2006 IBM Corporation and others.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+    Contributors:
+    IBM Corporation - initial implementation
+-->
+<head>
+<title>Configuration and Publishing</title>
+</head>
+<body>
+<h3>Method Configurations Overview</h3>
+<p>Eclipse Process Framework Composer ships with a lot of content out of the box. It includes
+  the Open Unified Process (OpenUP) framework and various plug-ins extending
+  OpenUP/Basic. No organization or project requires all of this
+  documentation all at once, but would work with a selection of specific subsets.</p>
+<p> Eclipse Process Framework (EPF) Composer manages for that purpose so-called method
+  configurations, which allow you to specify working sets of content and processes
+  for a specific context, such as a specific variant of the RUP framework that
+  you want to publish and deploy for a given software project or as a foundation
+  for a development organization. All content and processes in EPF Composer are organized
+  in method plug-ins, which are organized into method packages. A method configuration
+  is simply a selection of the method plug-ins and packages.</p>
+<p><img src="css/conf.gif"></p>
+<p>You create and specify a configuration using the configuration editor depicted
+  in the figure above. You could start creating your own method configuration
+  by copying one of the configurations that ship with EPF Composer and modify it to fit
+  your specific needs. You can add or remove whole method plug-ins as well as
+  make selection with each plug-in by checking or un-checking packages. </p>
+<p> You can use the resulting configuration as your working set for your EPF Composer
+  work. The actual content of the configuration, i.e. the included method content
+  and process elements are always accessible in the Configuration view. Use the
+  combo box in the toolbar to select the currently used method configuration.</p>
+<h3>Publishing Overview</h3>
+<p>Method configurations are the basis for publishing method content and processes.
+  A published configuration is an html Web site that presents all the method
+  content and processes of the method configuration in a navigable and searchable
+  way. It uses the relationships established during method content and process
+  authoring to generate hyperlinks between elements as well as provides tree
+  browsers based on the configuration view and user-defined categorizations of
+  the content. The figure below shows an example of the published 'Classic RUP'
+  method configuration.</p>
+<p><img src="css/pub.gif"></p>
+<p>For publishing simply create and select a configuration. The publication wizard
+  will do the rest for you and only publish content that is part of the method
+  configuration. It will also automatically adopt content to the configuration
+  such as removing
+  references of method content elements to elements outside of the configuration
+  or removing activities from your processes that only contain work defined outside
+  of the configuration set. Hence, publishing will only include the content that
+  you really need. You can always preview a published configuration using EPF Composer's
+browsing perspective.</p>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.epf.publishing.ui; singleton:=true
+Bundle-Version: 1.5.0.qualifier
+Bundle-Activator: org.eclipse.epf.publishing.ui.PublishingUIPlugin
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.resources,
+ org.eclipse.core.runtime,
+ org.eclipse.epf.authoring.ui;visibility:=reexport,
+ org.eclipse.epf.publishing;visibility:=reexport,
+ org.eclipse.jface.text,
+ org.eclipse.help.base,
+ org.eclipse.ui.browser,
+ org.eclipse.epf.common.ui,
+ org.eclipse.epf.library.edit.ui
+Eclipse-LazyStart: true
+Export-Package: org.eclipse.epf.publishing.ui,
+ org.eclipse.epf.publishing.ui.preferences,
+ org.eclipse.epf.publishing.ui.wizards
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

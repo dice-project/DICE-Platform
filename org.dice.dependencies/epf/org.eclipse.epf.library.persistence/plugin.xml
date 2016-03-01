@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension-point id="migrators" name="Migrators" schema="schema/migrators.exsd"/>
+   <extension-point id="resourceSetFactories" name="Library Resource Set Factories" schema="schema/resourceSetFactories.exsd"/>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http:///com/ibm/uma/resourcemanager.ecore" 
+       class = "org.eclipse.epf.resourcemanager.ResourcemanagerPackage" />
+    <package
+          class="org.eclipse.epf.resourcemanager.ResourcemanagerPackage"
+          uri="http:///org/eclipse/epf/uma/resourcemanager.ecore"/>
+  </extension>
+  <extension
+        point="org.eclipse.epf.library.persistence.migrators">
+     <migrator
+           class="org.eclipse.epf.persistence.migration.internal.Migrator"
+           libNsURI="http:///com/ibm/uma.ecore"/>
+  </extension>
+  <extension
+        point="org.eclipse.epf.services.serviceProviders">
+     <accessController class="org.eclipse.epf.library.persistence.internal.AccessController"/>
+     <libraryPersister
+           class="org.eclipse.epf.persistence.XMILibraryPersister"
+           default="false"
+           type="xmi"/>
+     <fileManager class="org.eclipse.epf.persistence.DelegateFileManager"/>
+  </extension>
+  <extension
+        point="org.eclipse.epf.library.persistence.resourceSetFactories">
+     <resourceSetFactory
+           class="org.eclipse.epf.persistence.XMILibraryResourceSetFactory"
+           type="xmi"/>
+  </extension>
+  <extension
+        id="unresolvedProxyMarker"
+        point="org.eclipse.core.resources.markers" name="%PersistenceMarkerTypeName">
+     <persistent
+           value="false">
+     </persistent>
+     <super
+           type="org.eclipse.core.resources.problemmarker">
+     </super>
+     <attribute
+           name="proxyURI">
+     </attribute>
+     <attribute
+           name="ownerGUID">
+     </attribute>
+  </extension>
+
+</plugin>

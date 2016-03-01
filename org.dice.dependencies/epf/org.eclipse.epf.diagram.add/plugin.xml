@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+   <extension point="org.eclipse.core.runtime.preferences">
+      <initializer class="org.eclipse.epf.diagram.add.part.DiagramDiagramPreferenceInitializer"/>
+   </extension>
+
+  <extension point="org.eclipse.team.core.fileTypes">
+      <fileTypes
+         type="text"
+         extension="add">
+      </fileTypes>
+  </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+         type="add"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+   <!--
+     <editor
+        id="org.eclipse.epf.diagram.add.part.ActivityDetailDiagramEditorID"
+        name="GMF Activity Detail Diagram Editor"
+        icon="icons/obj16/ModelDiagramFile.gif"
+        extensions="add"
+        default="true"
+        class="org.eclipse.epf.diagram.add.part.ActivityDetailDiagramEditor"
+        matchingStrategy="org.eclipse.epf.diagram.add.part.DiagramMatchingStrategy"
+        contributorClass="org.eclipse.epf.diagram.add.part.DiagramDiagramActionBarContributor">
+     </editor>
+   -->
+     <editor
+        id="org.eclipse.epf.diagram.add.part.ActivityDetailDiagramEditorID"
+        name="Activity Detail Diagram Editor"
+        icon="icons/full/etool16/ADDEditor.gif"
+        extensions="add"
+        default="true"
+        class="org.eclipse.epf.diagram.add.part.ADDiagramEditor"
+        matchingStrategy="org.eclipse.epf.diagram.add.part.DiagramMatchingStrategy"
+        contributorClass="org.eclipse.epf.diagram.add.part.DiagramDiagramActionBarContributor">
+     </editor>    
+   </extension>
+
+   <!-- <extension point="org.eclipse.ui.newWizards">
+  	  <wizard
+  	     name="Activity Detail Diagram"
+  	     icon="icons/obj16/ModelDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="org.eclipse.epf.diagram.add.part.DiagramCreationWizard"
+  	     id="org.eclipse.epf.diagram.add.part.DiagramCreationWizardID">
+  	  	 <description>
+  	  		Creates Activity Detail Diagram.
+  	  	 </description>  
+      </wizard>
+   </extension> -->
+
+   <extension point="org.eclipse.ui.popupMenus">
+      <!-- <objectContribution
+            id="org.eclipse.epf.diagram.add.ui.objectContribution.IFile1"
+            nameFilter="*.model"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="Initialize add diagram file"
+               class="org.eclipse.epf.diagram.add.part.DiagramInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="org.eclipse.epf.diagram.add.part.DiagramInitDiagramFileActionID">
+         </action>
+      </objectContribution>  
+      <objectContribution
+            adaptable="false"
+            id="org.eclipse.epf.diagram.add.ui.objectContribution.ActivityDetailDiagramEditPart2"
+            objectClass="org.eclipse.epf.diagram.add.edit.parts.ActivityDetailDiagramEditPart">
+         <action
+               class="org.eclipse.epf.diagram.add.part.DiagramLoadResourceAction"
+               enablesFor="1"
+               id="org.eclipse.epf.diagram.add.part.DiagramLoadResourceActionID"
+               label="Load Resource..."
+               menubarPath="additions">
+         </action>
+      </objectContribution>    
+      <objectContribution
+            adaptable="true"
+            id="org.eclipse.epf.diagram.add.DeleteDiagram"
+            objectClass="org.eclipse.epf.diagram.add.edit.parts.ActivityDetailDiagramEditPart">
+         <action
+               class="org.eclipse.epf.diagram.core.actions.DeleteDiagramAction"
+               enablesFor="1"
+               id="org.eclipse.epf.diagram.core.actions.DeleteDiagramAction"
+               label="%DeleteDiagram_text"
+               menubarPath="additions"
+               state="false"
+               style="push"
+               tooltip="%DeleteDiagram_text"/>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="org.eclipse.epf.diagram.add.RefreshFromBaseAction"
+            objectClass="org.eclipse.epf.diagram.add.edit.parts.ActivityDetailDiagramEditPart">
+         <action
+               class="org.eclipse.epf.diagram.core.actions.RefreshFromBaseAction"
+               enablesFor="1"
+               id="org.eclipse.epf.diagram.core.actions.RefreshFromBaseAction"
+               label="%refreshFromBaseActivity_text"
+               menubarPath="additions"
+               state="false"
+               style="push"
+               tooltip="%refreshFromBaseActivity_text"/>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="org.eclipse.epf.diagram.add.RefreshAction"
+            objectClass="org.eclipse.epf.diagram.add.edit.parts.ActivityDetailDiagramEditPart">
+         <action
+               class="org.eclipse.epf.diagram.core.actions.RefreshAction"
+               enablesFor="1"
+               id="org.eclipse.epf.diagram.core.actions.RefreshAction"
+               label="%refresh_text"
+               menubarPath="additions"
+               state="false"
+               style="push"
+               tooltip="%refresh_text"/>
+      </objectContribution>         -->           
+  </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.contributionItemProviders">
+      <contributionItemProvider class="org.eclipse.epf.diagram.add.providers.DiagramContributionItemProvider">
+         <Priority name="Low">
+         </Priority>
+         <partContribution id="org.eclipse.epf.diagram.add.part.ActivityDetailDiagramEditorID">
+            <partAction menubarPath="/file/print" id="printPreviewAction">
+            </partAction>
+         </partContribution>
+      </contributionItemProvider>
+      <contributionItemProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContributionItemProvider"
+            checkPluginLoaded="false">
+         <Priority name="Low"/>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.add.edit.parts.RoleNodeEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.add.edit.parts.RoleNodeNameEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.add.edit.parts.TaskNodeEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.add.edit.parts.TaskNodeNameEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.add.edit.parts.WorkProductDescriptorNodeEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.add.edit.parts.WorkProductDescriptorNodeNameEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.add.edit.parts.RoleTaskCompositeEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.add.edit.parts.WorkProductCompositeEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.add.edit.parts.LinkEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+                  <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.add.edit.parts.LinkNameEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+            <popupPredefinedItem id="deleteFromModelAction" remove="true"/>
+         </popupContribution>
+      </contributionItemProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders">
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="ADDPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="org.eclipse.epf.diagram.add.part.ActivityDetailDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.printing.render.providers.DiagramWithPrintGlobalActionHandlerProvider"
+         id="ADDPresentationPrint">
+         <Priority name="Lowest"/>
+         <ViewId id="org.eclipse.epf.diagram.add.part.ActivityDetailDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="print"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="ADDPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="org.eclipse.epf.diagram.add.part.ActivityDetailDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <!--
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="ADDRender">
+         <Priority name="Lowest"/>
+         <ViewId id="org.eclipse.epf.diagram.add.part.ActivityDetailDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      -->
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders">
+      <viewProvider class="org.eclipse.epf.diagram.add.providers.DiagramViewProvider">
+         <Priority name="Lowest"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="ADD"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints=""/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints=""/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders">
+      <editpartProvider class="org.eclipse.epf.diagram.add.providers.DiagramEditPartProvider">
+         <Priority name="Lowest"/>
+      </editpartProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.paletteProviders">
+      <paletteProvider class="org.eclipse.epf.diagram.add.providers.DiagramPaletteProvider">
+         <Priority name="Lowest"/>
+         <editor id="org.eclipse.epf.diagram.add.part.ActivityDetailDiagramEditorID"/>
+      </paletteProvider>
+      <paletteProvider
+			class="org.eclipse.gmf.runtime.diagram.ui.providers.DefaultPaletteProvider">
+        <Priority name="Medium"/>
+        <editor id="org.eclipse.epf.diagram.add.part.ActivityDetailDiagramEditorID"/>
+        <contribution>
+            <predefinedEntry    
+            	id="geoshapeDrawer"   path="/">
+            	<expand force="true"/>
+             </predefinedEntry> 
+        </contribution>
+      </paletteProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders">
+      <modelingAssistantProvider class="org.eclipse.epf.diagram.add.providers.DiagramModelingAssistantProvider">
+         <Priority name="Lowest"/>
+      </modelingAssistantProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.properties.propertiesProviders">
+      <PropertiesProvider
+            verifyPluginLoaded="false"
+            class="org.eclipse.epf.diagram.add.providers.DiagramPropertyProvider">
+         <Priority name="Lowest"/>
+      </PropertiesProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders">
+      <IconProvider class="org.eclipse.epf.diagram.add.providers.DiagramIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+      <IconProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.geoshapes.internal.providers.GeoShapeIconProvider">
+         <Priority
+               name="Medium">
+         </Priority>
+         <object class="org.eclipse.gmf.runtime.notation.View(org.eclipse.gmf.runtime.notation)" id="GeoShape">
+        	 <method name="getType()" value="oval,triangle,rectangle,shadowRectangle,rectangle3D,roundRectangle,hexagon,octagon,pentagon,diamond,cylinder,line"/>
+	     </object>
+         <context elements="GeoShape">
+         </context>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders">
+      <ParserProvider class="org.eclipse.epf.diagram.add.providers.DiagramParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes">
+
+      <metamodel nsURI="http://www.eclipse.org/epf/diagram/1.0.0/diagram.ecore">
+         <metamodelType
+               id="org.eclipse.epf.diagram.add.ActivityDetailDiagram_79"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ActivityDetailDiagram"
+               edithelper="org.eclipse.epf.diagram.add.edit.helpers.ActivityDetailDiagramEditHelper">
+            <param name="semanticHint" value="79"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http://www.eclipse.org/epf/diagram/1.0.0/diagram.ecore">
+         <metamodelType
+               id="org.eclipse.epf.diagram.add.RoleNode_2001"
+               name="RoleNode"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="RoleNode"
+               edithelper="org.eclipse.epf.diagram.add.edit.helpers.RoleNodeEditHelper">
+            <param name="semanticHint" value="2001"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http://www.eclipse.org/epf/diagram/1.0.0/diagram.ecore">
+         <metamodelType
+               id="org.eclipse.epf.diagram.add.TaskNode_2002"
+               name="TaskNode"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="TaskNode"
+               edithelper="org.eclipse.epf.diagram.add.edit.helpers.TaskNodeEditHelper">
+            <param name="semanticHint" value="2002"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http://www.eclipse.org/epf/diagram/1.0.0/diagram.ecore">
+         <metamodelType
+               id="org.eclipse.epf.diagram.add.WorkProductDescriptorNode_2003"
+               name="WorkProductDescriptorNode"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="WorkProductDescriptorNode"
+               edithelper="org.eclipse.epf.diagram.add.edit.helpers.WorkProductDescriptorNodeEditHelper">
+            <param name="semanticHint" value="2003"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http://www.eclipse.org/epf/diagram/1.0.0/diagram.ecore">
+         <metamodelType
+               id="org.eclipse.epf.diagram.add.RoleTaskComposite_1001"
+               name="RoleTaskComposite"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="RoleTaskComposite"
+               edithelper="org.eclipse.epf.diagram.add.edit.helpers.RoleTaskCompositeEditHelper">
+            <param name="semanticHint" value="1001"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http://www.eclipse.org/epf/diagram/1.0.0/diagram.ecore">
+         <metamodelType
+               id="org.eclipse.epf.diagram.add.WorkProductComposite_1002"
+               name="WorkProductComposite"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="WorkProductComposite"
+               edithelper="org.eclipse.epf.diagram.add.edit.helpers.WorkProductCompositeEditHelper">
+            <param name="semanticHint" value="1002"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http://www.eclipse.org/epf/diagram/1.0.0/diagram.ecore">
+         <metamodelType
+               id="org.eclipse.epf.diagram.add.Link_3001"
+               name="%element_type_control_flow"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Link"
+               edithelper="org.eclipse.epf.diagram.add.edit.helpers.LinkEditHelper">
+            <param name="semanticHint" value="3001"/>
+         </metamodelType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings">
+      <clientContext id="ADDClientContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="org.eclipse.epf.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="ADDClientContext">
+         <elementType ref="org.eclipse.epf.diagram.add.ActivityDetailDiagram_79"/>
+         <elementType ref="org.eclipse.epf.diagram.add.RoleNode_2001"/>
+         <elementType ref="org.eclipse.epf.diagram.add.TaskNode_2002"/>
+         <elementType ref="org.eclipse.epf.diagram.add.WorkProductDescriptorNode_2003"/>
+         <elementType ref="org.eclipse.epf.diagram.add.RoleTaskComposite_1001"/>
+         <elementType ref="org.eclipse.epf.diagram.add.WorkProductComposite_1002"/>
+         <elementType ref="org.eclipse.epf.diagram.add.Link_3001"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+         <elementType pattern=".*"/>
+      </binding>
+   </extension>
+
+</plugin>

@@ -1,0 +1,3 @@
+# Turn on debug trace for the Publishing plug-in
+org.eclipse.epf.publishing/debug=true
+org.eclipse.epf.publishing/profiling=true

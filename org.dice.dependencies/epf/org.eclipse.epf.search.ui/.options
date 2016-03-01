@@ -1,0 +1,2 @@
+# Turn on debug trace for the Search UI plug-in
+org.eclipse.epf.search.ui/debug=true

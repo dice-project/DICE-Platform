@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.epf.library.persistence/src"
+    editDirectory="/org.eclipse.epf.resourcemanager.edit/src" editorDirectory="/org.eclipse.epf.resourcemanager.editor/src"
+    modelPluginID="org.eclipse.epf.resourcemanager" templateDirectory="/org.eclipse.epf.uma.ecore/templates"
+    runtimeJar="true" dynamicTemplates="true" modelName="Resourcemanager" editPluginClass="org.eclipse.epf.resourcemanager.provider.ResourcemanagerEditPlugin"
+    editorPluginClass="org.eclipse.epf.resourcemanager.presentation.ResourcemanagerEditorPlugin"
+    nonNLSMarkers="true" rootExtendsClass="org.eclipse.epf.uma.ecore.impl.MultiResourceEObject"
+    rootImplementsInterface="" suppressEMFTypes="true" featureMapWrapperInterface=""
+    featureMapWrapperInternalInterface="" featureMapWrapperClass="" containmentProxies="true"
+    complianceLevel="5.0">
+  <foreignModel>C:\CC_Views\ple_TNG_Authoring\tng_authoring\TNG UML Models\resourcemanager.mdl</foreignModel>
+  <genPackages prefix="Resourcemanager" basePackage="org.eclipse.epf" ecorePackage="resourcemanager.ecore#/">
+    <genClasses ecoreClass="resourcemanager.ecore#//ResourceDescriptor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourcemanager.ecore#//ResourceDescriptor/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourcemanager.ecore#//ResourceDescriptor/uri"/>
+    </genClasses>
+    <genClasses ecoreClass="resourcemanager.ecore#//ResourceManager">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourcemanager.ecore#//ResourceManager/guid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourcemanager.ecore#//ResourceManager/uriBase"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resourcemanager.ecore#//ResourceManager/subManagers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resourcemanager.ecore#//ResourceManager/resourceDescriptors"/>
+      <genOperations ecoreOperation="resourcemanager.ecore#//ResourceManager/getResourceDescriptor">
+        <genParameters ecoreParameter="resourcemanager.ecore#//ResourceManager/getResourceDescriptor/guid"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

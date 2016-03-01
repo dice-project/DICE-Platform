@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.epf.common.html;singleton:=true
+Bundle-Version: 1.5.0.qualifier
+Bundle-ClassPath: commonHTML.jar,lib/Tidy.jar
+Bundle-Activator: org.eclipse.epf.common.html.CommonHTMLPlugin
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.epf.common
+Eclipse-LazyStart: true
+Export-Package: org.eclipse.epf.common.html
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+

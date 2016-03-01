@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+  <servlet>
+  	<servlet-name>SearchServlet</servlet-name>
+  	<servlet-class>org.eclipse.epf.web.servlet.SearchServlet</servlet-class>
+  	<init-param>
+  		<param-name>searchIndex</param-name>
+  		<param-value>/search/index</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>xslFile</param-name>
+  		<param-value>/search/search_result.xsl</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  <!-- note: don't change the servlet mapping here since the string is used in other files as well -->
+  	<servlet-name>SearchServlet</servlet-name>
+  	<url-pattern>/SearchServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.epf.import; singleton:=true
+Bundle-Version: 1.5.0.qualifier
+Bundle-Activator: org.eclipse.epf.importing.ImportPlugin
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Eclipse-LazyStart: true
+Export-Package: org.eclipse.epf.importing,
+ org.eclipse.epf.importing.services,
+ org.eclipse.epf.importing.wizards
+Require-Bundle: org.apache.ant,
+ org.eclipse.core.runtime,
+ org.eclipse.epf.authoring.ui,
+ org.eclipse.epf.dataexchange,
+ org.eclipse.epf.export,
+ org.eclipse.epf.services,
+ org.eclipse.epf.library.xmi,
+ org.eclipse.epf.common.ui
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

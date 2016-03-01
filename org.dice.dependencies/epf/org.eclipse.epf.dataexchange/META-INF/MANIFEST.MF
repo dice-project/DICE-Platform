@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.epf.dataexchange
+Bundle-Version: 1.5.0.qualifier
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.epf.library
+Export-Package: org.eclipse.epf.dataexchange.importing,
+ org.eclipse.epf.dataexchange.internal.importing,
+ org.eclipse.epf.dataexchange.util
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Library Edit UI Plug-in
+Bundle-SymbolicName: org.eclipse.epf.library.edit.ui;singleton:=true
+Bundle-Version: 1.5.0.qualifier
+Bundle-Activator: org.eclipse.epf.library.edit.ui.LibraryEditUIPlugin
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.epf.common.ui,
+ org.eclipse.epf.library.edit,
+ org.eclipse.emf.edit.ui
+Eclipse-LazyStart: true
+Export-Package: org.eclipse.epf.library.edit.ui
+Bundle-Vendor: %providerName

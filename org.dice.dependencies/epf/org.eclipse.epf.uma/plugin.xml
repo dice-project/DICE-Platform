@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package 
+            uri = "http://www.ibm.com/uma/1.0.2/uma.ecore" 
+            class = "org.eclipse.epf.uma.UmaPackage" />
+      <package
+            class="org.eclipse.epf.uma.UmaPackage"
+            uri="http://www.eclipse.org/epf/uma/1.0.3/uma.ecore"/>
+      <package
+            class="org.eclipse.epf.uma.UmaPackage"
+            uri="http://www.eclipse.org/epf/uma/1.0.4/uma.ecore"/>  
+      <package
+            class="org.eclipse.epf.uma.UmaPackage"
+            uri="http://www.eclipse.org/epf/uma/1.0.5/uma.ecore"/>             
+  </extension>
+
+</plugin>
+

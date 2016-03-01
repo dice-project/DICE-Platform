@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>           
+
+   <extension-point
+         id="newLibraryWizardPages"
+         name="EPF New Method Library Wizard Pages"
+         schema="schema/NewLibraryWizardPages.exsd"/>
+
+   <extension-point
+         id="openLibraryWizardPages"
+         name="EPF Open Method Library Wizard Pages"
+         schema="schema/OpenLibraryWizardPages.exsd"/>
+
+   <extension-point
+         id="openLibraryWizard"
+         name="Open Method Library Wizard Extension"
+         schema="schema/OpenLibraryWizard.exsd" />
+         
+   <extension point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="org.eclipse.epf.library.ui.actionSet"
+            label="%actionSetLabel"
+            visible="true">
+         <menu
+               id="org.eclipse.epf.library.ui.menu.fileOpenMenu"
+               label="%fileOpenMenuLabel"
+               path="file/new.ext">
+            <separator name="groupm1"/>
+            <separator name="groupm2"/>
+         </menu>
+         <action
+               class="org.eclipse.epf.library.ui.actions.OpenLibraryAction"
+               helpContextId="file_open_library_context"
+               icon="icons/full/obj16/MethodLibrary.gif"
+               id="org.eclipse.epf.library.ui.actions.OpenLibraryAction"
+               label="%openLibraryActionlabel"
+               menubarPath="file/org.eclipse.epf.library.ui.menu.fileOpenMenu/groupm1"
+               tooltip="%openLibraryActionTooltip"/>
+      </actionSet>
+   </extension>
+  
+</plugin>

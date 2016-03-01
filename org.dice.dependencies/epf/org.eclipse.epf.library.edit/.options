@@ -1,0 +1,4 @@
+# Turn on debug trace
+org.eclipse.epf.library.edit/debug=true
+org.eclipse.epf.library.edit/UiDebug=true
+org.eclipse.epf.library.edit/UdtDebug=true

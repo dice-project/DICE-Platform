@@ -1,0 +1,24 @@
+relativepath	..
+wwwroot	..
+mainresultfile	/index/index.htm
+indexresultfile	/index/navig.htm
+keywordresultfile	/index/contents.htm
+maintitle	Index - Basic Unified Process
+target	ory_doc
+indextarget	index_t
+keywordtarget	keyword_t
+indexheight	25
+headerfile	keywordpreamble.txt
+footerfile	keywordpostamble.txt
+keywordfile	keywords.txt
+leaveDir	_borders
+mulitdocumentkeyword	false
+showdocumenttitle	false
+prefix	XE_
+levelseparator	__
+see	, See
+seealso	, See also
+levelstyle	defaultstyle	indexlevel2
+levelstyle	1	indexlevel1
+levelstyle	2	indexlevel2
+levelstyle	headlinestyle	indexheading 

@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.epf.search.ui; singleton:=true
+Bundle-Version: 1.5.0.qualifier
+Bundle-Activator: org.eclipse.epf.search.ui.SearchUIPlugin
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.epf.authoring.ui;visibility:=reexport,
+ org.eclipse.core.runtime,
+ org.eclipse.jface.text,
+ org.eclipse.search;visibility:=reexport,
+ org.eclipse.epf.common.ui
+Eclipse-LazyStart: true
+Export-Package: org.eclipse.epf.search.ui,
+ org.eclipse.epf.search.ui.internal,
+ org.eclipse.epf.search.ui.preferences
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

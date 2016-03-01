@@ -1,0 +1,85 @@
+//------------------------------------------------------------------------------
+// Copyright (c) 2005, 2007 IBM Corporation and others.
+// All rights reserved. This program and the accompanying materials
+// are made available under the terms of the Eclipse Public License v1.0
+// which accompanies this distribution, and is available at
+// http://www.eclipse.org/legal/epl-v10.html
+//
+// Contributors:
+// IBM Corporation - initial implementation
+//------------------------------------------------------------------------------
+package org.eclipse.epf.library.services;
+
+/**
+ * 
+ * This class is depricated. use FileNameGenerator instead
+ *
+ */
+public class ElementFile implements Comparable {
+	private String guid;
+	private String fileName;
+	private static int indexCounter = 0;
+	
+	public ElementFile(String guid, String fileName) {
+		this.guid = guid;
+		this.fileName = fileName;
+		indexCounter = 0;
+	}
+	
+	public boolean equals(Object e)	{
+		ElementFile eFile = (ElementFile) e;
+		
+		if (!(getGuid().equals(eFile.getGuid())) 
+				&& getFileName().equals(eFile.getFileName())) {			
+			return appendIndex();
+		}
+		indexCounter++;
+		return getFileName().equals(eFile.getFileName());
+	}
+	
+	public int hashCode() {
+		return fileName.hashCode();
+	}
+	
+	public int compareTo(Object e) {		
+		if (e instanceof ElementFile)
+		{
+			ElementFile aFile = (ElementFile) e;
+			return fileName.compareTo(aFile.getFileName());
+		}
+		return 1;
+	}
+	
+	public void setFileName(String fName) {
+		fileName = fName;
+	}
+	
+	public String getFileName()	{
+		return fileName;
+	}
+	
+	public String getGuid()	{
+		return guid;
+	}
+	
+	private boolean appendIndex() {
+		StringBuffer tString = new StringBuffer(getFileName());
+		int begindIdx = getFileName().lastIndexOf("-");
+		int endIdx = getFileName().lastIndexOf(".htm");
+		if (begindIdx > -1 && endIdx > -1) {
+			if (indexCounter > 0) {
+				tString.replace(begindIdx+1, endIdx, Integer.toString(++indexCounter));	
+				setFileName(tString.toString());
+				//indexCounter = 0;
+				return false;
+			}
+			return true;
+		} else if (endIdx > -1) {			
+			tString.insert(endIdx, "-" + Integer.toString(++indexCounter));
+			setFileName(tString.toString());
+			//indexCounter = 0;
+			return false;
+		}
+		return true;
+	}
+}

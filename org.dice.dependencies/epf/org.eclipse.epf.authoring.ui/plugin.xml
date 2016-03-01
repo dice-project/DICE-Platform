@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension-point
+         id="newPluginWizard"
+         name="New Method Plug-in Wizard Extension"
+         schema="schema/NewPluginWizard.exsd" />
+         
+   <extension-point
+         id="newConfigurationWizard"
+         name="New Method Configuration Wizard Extension"
+         schema="schema/NewConfigurationWizard.exsd" />         
+   
+   <extension-point
+         id="descriptionPageColumnProvider"
+         name="Editor Description Page Column Provider"
+         schema="schema/descriptionPageColumnProvider.exsd"/>
+         
+   <extension-point
+         id="descriptionPageSectionProvider"
+         name="Editor Description Page Section Provider"
+         schema="schema/descriptionPageSectionProvider.exsd"/>
+         
+  <extension-point
+         id="configurationViewMenuProvider"
+         name="Configuration View Menu Provider"
+         schema="schema/configurationViewMenuProvider.exsd"/>
+
+   <extension-point
+         id="wizardRegistryProvider"
+         name="Wizard Registery Provider"
+         schema="schema/wizardRegistryProvider.exsd"/>
+   <extension-point id="EditorOpener" name="Editor Opener" schema="schema/editorOpener.exsd"/>
+   <extension-point id="CustomizedLocker" name="Customized Locker" schema="schema/CustomizedLocker.exsd"/>
+   <extension-point id="methodRichText" name="Method Rich Text Extension" schema="schema/methodRichText.exsd"/>
+   <extension-point id="methodRichTextEditor" name="Method Rich Text Editor Extension" schema="schema/methodRichTextEditor.exsd"/>
+   <extension-point id="contentProviderFactories" name="Content Provider Factories" schema="schema/contentProviderFactories.exsd"/>
+   <extension-point id="MethodElementEditorPageProviders" name="Method Element Editor Page Providers" schema="schema/MethodElementEditorPageProviders.exsd"/>
+   
+   <extension point="org.eclipse.ui.perspectives">
+      <perspective
+            class="org.eclipse.epf.authoring.ui.AuthoringPerspective"
+            fixed="false"
+            icon="icons/full/view16/AuthoringPerspective.gif"
+            id="org.eclipse.epf.authoring.ui.AuthoringPerspective"
+            name="%authoringPerspectiveName"/>
+      <perspective
+            class="org.eclipse.epf.authoring.ui.BrowsingPerspective"
+            fixed="false"
+            icon="icons/full/view16/BrowsingPerspective.gif"
+            id="org.eclipse.epf.authoring.ui.BrowsingPerspective"
+            name="%browsingPerspectiveName"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.views">
+      <view
+            category="org.eclipse.epf.ui.views.category"
+            class="org.eclipse.epf.authoring.ui.views.LibraryView"
+            icon="icons/full/view16/LibraryView.gif"
+            id="org.eclipse.epf.authoring.ui.views.LibraryView"
+            name="%libraryViewName"/>
+      <view
+            category="org.eclipse.epf.ui.views.category"
+            class="org.eclipse.epf.authoring.ui.views.ConfigurationView"
+            icon="icons/full/view16/ConfigurationView.gif"
+            id="org.eclipse.epf.authoring.ui.views.ConfigurationView"
+            name="%configurationViewName"/>
+      <view
+            category="org.eclipse.epf.ui.views.category"
+            class="org.eclipse.epf.authoring.ui.views.ContentView"
+            icon="icons/full/view16/ContentView.gif"
+            id="org.eclipse.epf.authoring.ui.views.ContentView"
+            name="%contentViewName"/>
+    </extension>
+   
+   <extension point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.epf.authoring.ui.AuthoringPerspective">
+         <view
+               id="org.eclipse.epf.authoring.ui.views.ConfigurationView"
+               moveable="true"
+               ratio="0.5f"
+               relationship="bottom"
+               relative="org.eclipse.epf.authoring.ui.views.LibraryView"/>
+         <viewShortcut
+               id="org.eclipse.epf.authoring.ui.views.LibraryView"/>
+         <viewShortcut
+               id="org.eclipse.epf.authoring.ui.views.ConfigurationView"/>
+         <showInPart id="org.eclipse.epf.authoring.ui.views.LibraryView"/>
+      </perspectiveExtension>
+      
+      <perspectiveExtension
+            targetID="org.eclipse.epf.authoring.ui.BrowsingPerspective">
+         <view
+               closeable="false"
+               id="org.eclipse.epf.authoring.ui.views.ContentView"
+               moveable="true"
+               ratio="0.70f"
+               relationship="right"
+               relative="org.eclipse.ui.editorss"/>
+      </perspectiveExtension>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            class="org.eclipse.epf.authoring.ui.editors.MethodElementEditor"
+            contributorClass="org.eclipse.epf.authoring.ui.actions.MethodLibraryActionBarContributor"
+            icon="icons/full/obj16/MethodElement.gif"
+            id="org.eclipse.epf.authoring.ui.editors.MethodElementEditor"
+            name="%methodElementEditorName"
+            matchingStrategy="org.eclipse.epf.authoring.ui.editors.MethodElementEditorMatchingStrategy"/>
+      <editor
+            class="org.eclipse.epf.authoring.ui.editors.ConfigurationEditor"
+            icon="icons/full/obj16/MethodConfiguration.gif"
+            id="org.eclipse.epf.authoring.ui.editors.ConfigurationEditor"
+            name="%configurationEditorName"
+            matchingStrategy="org.eclipse.epf.authoring.ui.editors.MethodElementEditorMatchingStrategy"/>
+      <editor
+            class="org.eclipse.epf.authoring.ui.editors.ProcessEditor"
+            contributorClass="org.eclipse.epf.authoring.ui.editors.ProcessEditorActionBarContributor"
+            icon="icons/full/obj16/Process.gif"
+            id="org.eclipse.epf.authoring.ui.editors.ProcessEditor"
+            name="%processEditorName"
+            matchingStrategy="org.eclipse.epf.authoring.ui.editors.MethodElementEditorMatchingStrategy"/>
+      <editor
+            class="org.eclipse.epf.authoring.ui.editors.GraphicalWorkflowEditor"
+            icon="icons/full/obj16/Activity.gif"
+            id="org.eclipse.epf.authoring.ui.editors.GraphicalWorkflowEditor"
+            name="%activityDiagramEditorName"/>
+      <editor
+            class="org.eclipse.epf.authoring.ui.editors.ActivityDetailDiagramEditor"
+            icon="icons/full/obj16/Activity.gif"
+            id="org.eclipse.epf.authoring.ui.editors.ActivityDetailDiagramEditor"
+            name="%activityDetailDiagramEditorName"/>
+      <editor
+            class="org.eclipse.epf.authoring.ui.editors.GraphicalWPDependencyEditor"
+            icon="icons/full/obj16/WorkProductDescriptor.gif"
+            id="org.eclipse.epf.authoring.ui.editors.GraphicalWPDependencyEditor"
+            name="%workProductDepedencyDiagramEditorName"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            category="org.eclipse.epf.ui.newWizards.category"
+            class="org.eclipse.epf.authoring.ui.wizards.NewLibraryWizard"
+            icon="icons/full/obj16/MethodLibrary.gif"
+            id="org.eclipse.epf.authoring.ui.wizards.NewLibraryWizard"
+            name="%newMethodLibraryWizardName">
+         <description>
+               %newMethodLibraryWizardDescription
+         </description>
+      </wizard>       
+      <wizard
+            category="org.eclipse.epf.ui.newWizards.category"
+            class="org.eclipse.epf.authoring.ui.wizards.NewPluginWizard"
+            icon="icons/full/obj16/MethodPlugin.gif"
+            id="org.eclipse.epf.authoring.ui.wizards.NewPluginWizard"
+            name="%newMethodPluginWizardName">
+         <description>
+               %newMethodPluginWizardDescription
+         </description>
+      </wizard>
+      <wizard
+            category="org.eclipse.epf.ui.newWizards.category"
+            class="org.eclipse.epf.authoring.ui.wizards.NewConfigurationWizard"
+            icon="icons/full/obj16/MethodConfiguration.gif"
+            id="org.eclipse.epf.authoring.ui.wizards.NewConfigurationWizard"
+            name="%newConfigurationWizardName">
+         <description>
+               %newConfigurationWizardDescription
+         </description>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+      <propertyContributor
+            typeMapper="org.eclipse.epf.authoring.ui.properties.ElementTypeMapper"
+            contributorId="org.eclipse.epf.authoring.ui.editors.ProcessEditor"
+            labelProvider="org.eclipse.epf.authoring.ui.properties.ElementLabelProvider">
+         <propertyCategory category="element"/>
+         <propertyCategory category="other"/>
+      </propertyContributor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs
+            contributorId="org.eclipse.epf.authoring.ui.editors.ProcessEditor">
+         <!-- START GENERAL -->
+         <propertyTab
+               label="%_UI_Properties_General"
+               category="element"
+               id="properties.tab.BreakdownElement.General"/>
+         <propertyTab
+               label="%_UI_Properties_General"
+               category="element"
+               id="properties.tab.WorkBreakdownElement.General"/>
+         <propertyTab
+               label="%_UI_Properties_General"
+               category="element"
+               id="properties.tab.Activity.General"/>
+         <propertyTab
+               label="%_UI_Properties_General"
+               category="element"
+               id="properties.tab.TaskDescriptor.General"/>
+         <propertyTab
+               label="%_UI_Properties_General"
+               category="element"
+               id="properties.tab.RoleDescriptor.General"/>
+         <propertyTab
+               label="%_UI_Properties_General"
+               category="element"
+               id="properties.tab.WorkProductDescriptor.General"/>
+		 <!-- END GENERAL-->
+         
+         <!-- START DOCUMENTATION -->
+         <propertyTab
+               label="%_UI_Properties_Documentation"
+               category="element"
+               id="properties.tab.BreakdownElement.Documentation"
+               afterTab="properties.tab.BreakdownElement.General"/>
+         <propertyTab
+               label="%_UI_Properties_Documentation"
+               category="element"
+               id="properties.tab.Activity.Documentation"
+               afterTab="properties.tab.Activity.General"/>
+         <propertyTab
+               label="%_UI_Properties_Documentation"
+               category="element"
+               id="properties.tab.Descriptor.Documentation"
+               afterTab="properties.tab.TaskDescriptor.General"/>
+		 <!-- END DOCUMENTATION -->
+		
+		 <!-- START GUIDANCE -->
+		  <propertyTab
+               label="%_UI_Properties_Guidance"
+               category="element"
+               afterTab="properties.tab.BreakdownElement.Documentation"
+               id="properties.tab.BreakdownElement.Guidance"/>  
+          <propertyTab
+               label="%_UI_Properties_Guidance"
+               category="element"
+               afterTab="properties.tab.Activity.Documentation"
+               id="properties.tab.Activity.Guidance"/> 
+         <!-- END GUIDANCE-->
+         
+		 <!-- ACTIVITY -->       
+         <propertyTab
+               label="%_UI_Properties_Work_Rollup"
+               category="element"
+               afterTab="properties.tab.Activity.Guidance"
+               id="properties.tab.Activity.WorkRollup"/>
+         <propertyTab
+               label="%_UI_Properties_Team_Rollup"
+               category="element"
+               afterTab="properties.tab.Activity.WorkRollup"
+               id="properties.tab.Activity.TeamRollup"/>
+         <propertyTab
+               label="%_UI_Properties_WP_Rollup"
+               category="element"
+               afterTab="properties.tab.Activity.TeamRollup"
+               id="properties.tab.Activity.WorkProductsRollup"/>
+        
+         <!-- TASK DESCRIPTOR -->
+         <propertyTab
+               label="%_UI_Properties_Roles"
+               category="element"
+               afterTab="properties.tab.Descriptor.Documentation"
+               id="properties.tab.TaskDescriptor.Role"/>
+         <propertyTab
+               label="%_UI_Properties_WorkProducts"
+               category="element"
+               afterTab="properties.tab.TaskDescriptor.Role"
+               id="properties.tab.TaskDescriptor.WorkProduct"/>
+         <propertyTab
+               label="%_UI_Properties_Steps"
+               category="element"
+               afterTab="properties.tab.TaskDescriptor Relation"
+               id="properties.tab.TaskDescriptor.Step"/>
+         
+         <!-- ROLE DESCRIPTOR -->
+         <propertyTab
+               label="%_UI_Properties_WorkProducts"
+               category="element"
+               afterTab="properties.tab.RoleDescriptor.Task"
+               id="properties.tab.RoleDescriptor.WorkProduct"/>
+         <propertyTab
+               label="%_UI_Properties_Teams"
+               category="element"
+               afterTab="properties.tab.RoleDescriptor.WorkProduct"
+               id="properties.tab.RoleDescriptor.Team"/>
+                           
+         <!-- Milestone -->
+         <propertyTab
+               label="%_UI_Properties_WorkProducts"
+               category="element"
+               afterTab="properties.tab.BreakdownElement.Guidance"
+               id="properties.tab.Milestone.WorkProduct"/>
+         
+         <!-- TEAM PROFILE -->
+         <propertyTab
+               label="%_UI_Properties_Roles"
+               category="element"
+               afterTab="properties.tab.TeamProfile.Documentation"
+               id="properties.tab.TeamProfile.Role"/>
+         
+         <!-- COMPOSITE ROLE -->
+         <propertyTab
+               label="%_UI_Properties_Roles"
+               category="element"
+               afterTab="properties.tab.RoleDescriptor.Team"
+               id="properties.tab.CompositeRole.Role"/>
+      </propertyTabs>
+   </extension>
+   
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections
+            contributorId="org.eclipse.epf.authoring.ui.editors.ProcessEditor">
+         <!-- START GENERAL SECTION -->
+         <propertySection
+               tab="properties.tab.Activity.General"
+               class="org.eclipse.epf.authoring.ui.properties.ActivityGeneralSection"
+               id="properties.section.Activity.General">
+            <input type="org.eclipse.epf.uma.Activity"/>
+            <input type="org.eclipse.epf.library.edit.process.ActivityWrapperItemProvider"/>
+         </propertySection>
+         <propertySection
+               tab="properties.tab.TaskDescriptor.General"
+               class="org.eclipse.epf.authoring.ui.properties.TaskDescriptorGeneralSection"
+               id="properties.section.TaskDescriptor.General">
+            <input type="org.eclipse.epf.uma.TaskDescriptor"/>
+            <input type="org.eclipse.epf.library.edit.process.TaskDescriptorWrapperItemProvider"/>
+         </propertySection> 
+         <propertySection
+               class="org.eclipse.epf.authoring.ui.properties.RoleDescriptorGeneralSection"
+               id="properties.section.RoleDescriptor.General"
+               tab="properties.tab.RoleDescriptor.General">
+            <input type="org.eclipse.epf.uma.RoleDescriptor"/>
+            <input type="org.eclipse.epf.library.edit.process.RoleDescriptorWrapperItemProvider"/>
+         </propertySection>
+         <propertySection
+               class="org.eclipse.epf.authoring.ui.properties.WorkProductDescriptorGeneralSection"
+               id="properties.section.WorkProductDescriptor.General"
+               tab="properties.tab.WorkProductDescriptor.General">      
+            <input type="org.eclipse.epf.uma.WorkProductDescriptor"/>
+            <input type="org.eclipse.epf.library.edit.process.WorkProductDescriptorWrapperItemProvider"/>
+         </propertySection>       
+         <propertySection
+               tab="properties.tab.WorkBreakdownElement.General"
+               class="org.eclipse.epf.authoring.ui.properties.WorkBreakdownElementGeneralSection"
+               id="properties.section.WorkBreakdownElement.General">
+            <input type="org.eclipse.epf.uma.Milestone"/>
+            <input type="org.eclipse.epf.library.edit.process.MilestoneWrapperItemProvider"/>
+         </propertySection>
+         <propertySection
+               tab="properties.tab.BreakdownElement.General"
+               class="org.eclipse.epf.authoring.ui.properties.BreakdownElementGeneralSection"
+               id="properties.section.BreakdownElement.General">
+            <input type="org.eclipse.epf.uma.TeamProfile"/>
+            <input type="org.eclipse.epf.library.edit.process.TeamProfileWrapperItemProvider"/>
+         </propertySection>
+         <!-- END GENERAL SECTION -->
+        
+         <!-- START DOCUMENTATION SECTION -->
+         <propertySection
+               tab="properties.tab.Activity.Documentation"
+               class="org.eclipse.epf.authoring.ui.properties.ActivityDocumentSection"
+               id="properties.section.Activity.Documentation">
+            <input type="org.eclipse.epf.uma.Activity"/>
+            <input type="org.eclipse.epf.library.edit.process.ActivityWrapperItemProvider"/>
+         </propertySection>
+         <propertySection
+               tab="properties.tab.Descriptor.Documentation"
+               class="org.eclipse.epf.authoring.ui.properties.DescriptorDocumentSection"
+               id="properties.section.Descriptor.Documentation">
+            <input type="org.eclipse.epf.uma.Descriptor"/>
+            <input type="org.eclipse.epf.library.edit.process.TaskDescriptorWrapperItemProvider"/>
+            <input type="org.eclipse.epf.library.edit.process.RoleDescriptorWrapperItemProvider"/>
+            <input type="org.eclipse.epf.library.edit.process.WorkProductDescriptorWrapperItemProvider"/>
+         </propertySection> 
+         <propertySection
+               tab="properties.tab.BreakdownElement.Documentation"
+               class="org.eclipse.epf.authoring.ui.properties.MilestoneDocumentSection"
+               id="properties.section.BreakdownElement.Document">
+            <input type="org.eclipse.epf.uma.Milestone"/>
+            <input type="org.eclipse.epf.uma.TeamProfile"/>
+            <input type="org.eclipse.epf.library.edit.process.MilestoneWrapperItemProvider"/>
+            <input type="org.eclipse.epf.library.edit.process.TeamProfileWrapperItemProvider"/>
+         </propertySection>       
+         <!-- END DOCUMENTATION SECTION -->
+      
+         <!-- START GUIDANCE SECTION -->
+         <propertySection
+               tab="properties.tab.BreakdownElement.Guidance"
+               class="org.eclipse.epf.authoring.ui.properties.BreakdownElementGuidanceSection"
+               id="properties.section.BreakdownElement.Guidance">
+            <input type="org.eclipse.epf.uma.Milestone"/>
+            <input type="org.eclipse.epf.uma.TeamProfile"/>
+            <input type="org.eclipse.epf.uma.Descriptor"/>
+            <input type="org.eclipse.epf.library.edit.process.TaskDescriptorWrapperItemProvider"/>
+            <input type="org.eclipse.epf.library.edit.process.RoleDescriptorWrapperItemProvider"/>
+            <input type="org.eclipse.epf.library.edit.process.WorkProductDescriptorWrapperItemProvider"/>
+            <input type="org.eclipse.epf.library.edit.process.MilestoneWrapperItemProvider"/>
+            <input type="org.eclipse.epf.library.edit.process.TeamProfileWrapperItemProvider"/>
+         </propertySection>
+         <propertySection
+               tab="properties.tab.Activity.Guidance"
+               class="org.eclipse.epf.authoring.ui.properties.ActivityGuidanceSection"
+               id="properties.section.Activity.Guidance">
+            <input type="org.eclipse.epf.uma.Activity"/>
+            <input type="org.eclipse.epf.library.edit.process.ActivityWrapperItemProvider"/>
+         </propertySection>
+         <!-- END GUIDANCE SECTION -->
+         
+         <!-- ACTIVITY -->    
+         <propertySection
+               tab="properties.tab.Activity.WorkRollup"
+               class="org.eclipse.epf.authoring.ui.properties.ActivityWorkRollupSection"
+               id="properties.section.Activity.WorkRollup">
+            <input type="org.eclipse.epf.uma.Activity"/>
+            <input type="org.eclipse.epf.library.edit.process.ActivityWrapperItemProvider"/>
+         </propertySection>
+         <propertySection
+               tab="properties.tab.Activity.TeamRollup"
+               class="org.eclipse.epf.authoring.ui.properties.ActivityTeamRollupSection"
+               id="properties.section.Activity.TeamRollup">
+            <input type="org.eclipse.epf.uma.Activity"/>
+            <input type="org.eclipse.epf.library.edit.process.ActivityWrapperItemProvider"/>
+         </propertySection>
+         <propertySection
+               tab="properties.tab.Activity.WorkProductsRollup"
+               class="org.eclipse.epf.authoring.ui.properties.ActivityWorkProductsRollupSection"
+               id="properties.section.Activity.WorkProductsRollup">
+            <input type="org.eclipse.epf.uma.Activity"/>
+            <input type="org.eclipse.epf.library.edit.process.ActivityWrapperItemProvider"/>
+         </propertySection>
+         <!-- END ACTIVITY -->
+         
+         <!-- Sections for TaskDescriptor -->
+         <propertySection
+               tab="properties.tab.TaskDescriptor.Role"
+               class="org.eclipse.epf.authoring.ui.properties.TaskDescriptorRoleSection"
+               id="properties.section.TaskDescriptor.Role">
+            <input type="org.eclipse.epf.uma.TaskDescriptor"/>
+            <input type="org.eclipse.epf.library.edit.process.TaskDescriptorWrapperItemProvider"/>
+         </propertySection>  
+         <propertySection
+               tab="properties.tab.TaskDescriptor.WorkProduct"
+               class="org.eclipse.epf.authoring.ui.properties.TaskDescriptorWorkProductSection"
+               id="properties.section.TaskDescriptor.WorkProduct">
+            <input type="org.eclipse.epf.uma.TaskDescriptor"/>
+            <input type="org.eclipse.epf.library.edit.process.TaskDescriptorWrapperItemProvider"/>
+         </propertySection> 
+         <propertySection
+               tab="properties.tab.TaskDescriptor.Step"
+               class="org.eclipse.epf.authoring.ui.properties.TaskDescriptorStepSection"
+               id="properties.section.TaskDescriptor.Step">
+            <input type="org.eclipse.epf.uma.TaskDescriptor"/>
+            <input type="org.eclipse.epf.library.edit.process.TaskDescriptorWrapperItemProvider"/>
+         </propertySection> 
+         
+         <!-- Sections for RoleDescriptor -->
+         <propertySection
+               tab="properties.tab.RoleDescriptor.WorkProduct"
+               class="org.eclipse.epf.authoring.ui.properties.RoleDescriptorWorkProductSection"
+               id="properties.section.RoleDescriptor.WorkProduct">
+            <input type="org.eclipse.epf.uma.RoleDescriptor"/>
+            <input type="org.eclipse.epf.library.edit.process.RoleDescriptorWrapperItemProvider"/>
+         </propertySection>  
+         <propertySection
+               tab="properties.tab.RoleDescriptor.Team"
+               class="org.eclipse.epf.authoring.ui.properties.RoleDescriptorTeamSection"
+               id="properties.section.RoleDescriptor.Team">
+            <input type="org.eclipse.epf.uma.RoleDescriptor"/>
+            <input type="org.eclipse.epf.library.edit.process.RoleDescriptorWrapperItemProvider"/>
+         </propertySection> 
+      
+        <!-- Sections for Milestone -->
+         <propertySection
+               tab="properties.tab.Milestone.WorkProduct"
+               class="org.eclipse.epf.authoring.ui.properties.MilestoneWorkProductSection"
+               id="properties.section.Milestone.WorkProduct">
+            <input type="org.eclipse.epf.uma.Milestone"/>
+            <input type="org.eclipse.epf.library.edit.process.MilestoneWrapperItemProvider"/>
+         </propertySection> 
+
+         <!-- Section for TeamProfile -->
+         <propertySection
+               tab="properties.tab.TeamProfile.Role"
+               class="org.eclipse.epf.authoring.ui.properties.TeamProfileRoleSection"
+               id="properties.section.TeamProfile.Role">
+            <input type="org.eclipse.epf.uma.TeamProfile"/>
+            <input type="org.eclipse.epf.library.edit.process.TeamProfileWrapperItemProvider"/>
+         </propertySection> 
+         
+         <!-- Section for CompositeRole -->
+         <propertySection
+               tab="properties.tab.CompositeRole.Role"
+               class="org.eclipse.epf.authoring.ui.properties.CompositeRoleRoleSection"
+               id="properties.section.CompositeRole.Role">
+            <input type="org.eclipse.epf.uma.CompositeRole"/>
+            <input type="org.eclipse.epf.library.edit.process.CompositeRoleWrapperItemProvider"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+   
+   <extension point="org.eclipse.ui.preferencePages">
+      <page
+            id="org.eclipse.epf.authoring.ui.preferences.AuthoringPreferencePage"
+            class="org.eclipse.epf.authoring.ui.preferences.AuthoringPreferencePage"
+            category="org.eclipse.epf.ui.preferences.RootPreferencePage"
+            name="%authoringPreferencePage"/>
+      <page
+            id="org.eclipse.epf.authoring.ui.preferences.ProcessEditorPreferencePage"
+            class="org.eclipse.epf.authoring.ui.preferences.ProcessEditorPreferencePage"
+            category="org.eclipse.epf.authoring.ui.preferences.AuthoringPreferencePage"
+            name="%processEditor"/>
+      <page
+            id="org.eclipse.epf.authoring.ui.preferences.BreakdownElementPrefPage"
+            class="org.eclipse.epf.authoring.ui.preferences.BreakdownElementPrefPage"
+            category="org.eclipse.epf.authoring.ui.preferences.ProcessEditorPreferencePage"            
+            name="%breakdownElementAttributes"/>            
+      <page
+            category="org.eclipse.epf.authoring.ui.preferences.AuthoringPreferencePage"
+            class="org.eclipse.epf.authoring.ui.preferences.LibraryViewPrefPage"
+            id="org.eclipse.epf.authoring.ui.preferences.LibraryViewPrefPage"
+            name="%libraryViewOptions"/>            
+       <page
+            category="org.eclipse.epf.authoring.ui.preferences.AuthoringPreferencePage"
+            class="org.eclipse.epf.authoring.ui.preferences.ActivityDiagramPrefPage"
+            id="org.eclipse.epf.authoring.ui.preferences.ActivityDiagramPrefPage"
+            name="%activityDiagram"/>
+        <page
+            category="org.eclipse.epf.authoring.ui.preferences.AuthoringPreferencePage"
+            class="org.eclipse.epf.authoring.ui.preferences.AuthoringValidationPrefPage"
+            id="org.eclipse.epf.authoring.ui.preferences.AuthoringValidationPrefPage"
+            name="%validation"/>  
+      <!--
+      <page
+            class="org.eclipse.epf.authoring.ui.preferences.RootPrefPage"
+            name="%methodAuthoringPage"
+            id="org.eclipse.epf.authoring.ui.preferences.rootprefpage"/>
+      <page
+            category="org.eclipse.epf.authoring.ui.preferences.rootprefpage"
+            class="org.eclipse.epf.authoring.ui.preferences.LibraryPrefPage"
+            id="org.eclipse.epf.authoring.ui.preferences.libraryprefpage"
+            name="%libraryOptions"/>
+      <page
+            category="org.eclipse.epf.authoring.ui.preferences.rootprefpage"
+            class="org.eclipse.epf.authoring.ui.preferences.DebugPrefPage"
+            id="org.eclipse.epf.authoring.ui.preferences.DebugPrefPage"
+            name="%debug"/>
+      <page
+            category="org.eclipse.epf.authoring.ui.preferences.rootprefpage"
+            class="org.eclipse.epf.authoring.ui.preferences.ModelingOptionsPrefPage"
+            id="org.eclipse.epf.authoring.ui.preferences.ModelingOptionsPrefPage"
+            name="%modelingOptions"/>
+      -->
+
+   </extension>
+   
+   <extension point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.eclipse.epf.authoring.ui.preferences.LibraryPreferenceInitializer"/>
+      <initializer
+            class="org.eclipse.epf.authoring.ui.preferences.AuthoringPreferenceInitializer"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.viewActions">
+      <viewContribution
+            id="org.eclipse.epf.authoring.ui.viewContribution.refreshConfiguration"
+            targetID="org.eclipse.epf.authoring.ui.views.ConfigurationView">
+         <action
+               class="org.eclipse.epf.authoring.ui.actions.RefreshConfiguration"
+               disabledIcon="icons/full/etool16/Refresh.gif"
+               enablesFor="+"
+               icon="icons/full/etool16/Refresh.gif"
+               id="org.eclipse.epf.authoring.ui.actions.refresh"
+               label="%refreshConfig"
+               menubarPath="additions"
+               style="push"
+               toolbarPath="additions"
+               tooltip="%refreshConfigTooltip"/>
+      </viewContribution>
+      <viewContribution
+            id="org.eclipse.epf.authoring.ui.viewContribution.linkWithEditor"
+            targetID="org.eclipse.epf.authoring.ui.views.LibraryView">
+         <action
+               class="org.eclipse.epf.authoring.ui.actions.LinkWithEditor"
+               disabledIcon="icons/full/etool16/synced.gif"
+               icon="icons/full/etool16/synced.gif"
+               id="org.eclipse.epf.authoring.ui.actions.linkWithEditor"
+               label="%linkWithEditor"
+               menubarPath="additions"
+               style="toggle"
+               toolbarPath="additions"
+               tooltip="%linkWithEditorTooltip"/>
+      </viewContribution>
+      <viewContribution
+            id="org.eclipse.epf.authoring.ui.viewContribution.showPresNames"
+            targetID="org.eclipse.epf.authoring.ui.views.LibraryView">
+         <action
+               class="org.eclipse.epf.authoring.ui.actions.ShowPresentationNames"
+               disabledIcon="icons/full/etool16/Pres_name_toggle.gif"
+               icon="icons/full/etool16/Pres_name_toggle.gif"
+               id="org.eclipse.epf.authoring.ui.actions.showPresNames"
+               label="%showPresentationNames"
+               menubarPath="additions"
+               style="toggle"
+               toolbarPath="additions"
+               tooltip="%showPresentationNamesTooltip"/>
+      </viewContribution>
+   </extension>
+   
+   <extension point="org.eclipse.ui.commands">
+      <command
+            categoryId="org.eclipse.ui.category.edit"
+            defaultHandler="org.eclipse.ui.internal.handlers.SelectAllHandler"
+            description="%selectAll"
+            id="org.eclipse.ui.edit.selectAllB"
+            name="selectAll"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings">
+      <key
+            commandId="org.eclipse.ui.edit.selectAllB"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="Ctrl+A"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <actionSet
+            label="%cheatSheetsActionSet"
+            visible="true"
+            id="org.eclipse.ui.cheatsheets.actionSet">
+         <action
+            label="%openCheatSheets"
+            class="org.eclipse.ui.internal.cheatsheets.actions.CheatSheetHelpMenuAction"
+            menubarPath="help/group.assist" id="org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction">
+         </action>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.decorators">
+      <decorator
+            class="org.eclipse.epf.authoring.ui.providers.MethodElementLightweightLabelDecorator"
+            id="org.eclipse.epf.authoring.ui.providers.MethodElementLightweightLabelDecorator"
+            label="Method Element Lightweight Label Decorator"
+            lightweight="true"
+            location="TOP_LEFT"
+            state="true"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.ide.markerResolution">
+      <markerResolutionGenerator class="org.eclipse.epf.authoring.ui.util.MarkerResolutionGenerator"
+      	markerType="org.eclipse.epf.library.persistence.unresolvedProxyMarker"/>
+   </extension>
+   <extension id="methodRichText" point="org.eclipse.core.resources.markers" name="%RichTextMarkerTypeName"> 
+      <persistent value="false"/> 
+      <super type="org.eclipse.core.resources.problemmarker"/> 
+      <attribute name="guid"/>
+      <attribute name="MethodFieldName"/>
+   </extension>
+   <extension id="configuration" point="org.eclipse.core.resources.markers" name="%ConfigurationMarkerTypeName"> 
+      <persistent value="false"/> 
+      <super type="org.eclipse.core.resources.problemmarker"/> 
+      <attribute name="errorID"/>
+      <attribute name="configGuid"/>
+      <attribute name="elementGuid"/> 
+      <attribute name="causeGuid"/>
+   </extension>      
+   
+   <extension
+         point="org.eclipse.ui.ide.markerResolution">
+      <markerResolutionGenerator class="org.eclipse.epf.authoring.ui.util.LibraryProblemMarkerResolutionGenerator"
+      markerType="org.eclipse.epf.library.unresolvedBasePlugins"/>
+   </extension>  
+   <extension
+         point="org.eclipse.ui.ide.markerResolution">
+      <markerResolutionGenerator class="org.eclipse.epf.authoring.ui.util.LibraryProblemMarkerResolutionGenerator"
+      markerType="org.eclipse.epf.library.multipleReplacers"/>
+   </extension>  
+   <extension
+         point="org.eclipse.ui.ide.markerResolution">
+      <markerResolutionGenerator class="org.eclipse.epf.authoring.ui.util.ConfigurationMarkerResolutionGenerator"
+      markerType="org.eclipse.epf.authoring.ui.configuration"/>
+   </extension>
+   
+   <extension
+      	point="org.eclipse.ui.ide.markerResolution">
+      <markerResolutionGenerator class="org.eclipse.epf.authoring.ui.util.ValidationMarkerResolutionGenerator"
+      markerType="org.eclipse.epf.library.validation"/>
+   </extension>  
+   
+   <extension
+         point="org.eclipse.epf.library.edit.userInteractionHandler">
+      <userInteractionHandler class="org.eclipse.epf.authoring.ui.actions.UserInteractionHandler"/>
+   </extension>
+   <extension
+         point="org.eclipse.epf.authoring.ui.methodRichText">
+      <methodRichText
+            class="org.eclipse.epf.authoring.ui.editors.MethodRichText"
+            version="0">
+      </methodRichText>
+   </extension>
+   <extension
+         point="org.eclipse.epf.authoring.ui.methodRichTextEditor">
+      <methodRichTextEditor
+            class="org.eclipse.epf.authoring.ui.editors.MethodRichTextEditor"
+            version="0">
+      </methodRichTextEditor>
+   </extension>
+   
+    <extension point="org.eclipse.ui.popupMenus">
+      <viewerContribution id="org.eclipse.epf.authoring.ui.actions.ClearValidationMarkers" targetID="org.eclipse.ui.views.ProblemView">
+         <action class="org.eclipse.epf.authoring.ui.actions.ClearValidationMarkersAction" id="org.eclipse.epf.authoring.ui.actions.ClearValidationMarkers" label="%ClearAllValidationItems" menubarPath="additions">
+         </action>
+      </viewerContribution>
+   </extension>
+</plugin>

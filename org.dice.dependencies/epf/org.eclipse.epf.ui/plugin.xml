@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="org.eclipse.epf.ui.views.category"
+            name="%viewCategoryName">
+      </category>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id = "org.eclipse.epf.ui.newWizards.category"
+            name="%wizardCategoryName">
+      </category>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.exportWizards">
+      <category
+            id = "org.eclipse.epf.ui.exportWizards.category"
+            name="%wizardCategoryName">
+      </category>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.importWizards">
+      <category
+            id = "org.eclipse.epf.ui.importWizards.category"
+            name="%wizardCategoryName">
+      </category>
+   </extension>
+
+   <extension-point
+         id="exportWizards"
+         name="EPF Export Wizards"
+         schema="schema/ExportWizards.exsd"/>
+
+   <extension-point
+         id="importWizards"
+         name="EPF Import Wizards"
+         schema="schema/ImportWizards.exsd"/>
+
+   <extension point="org.eclipse.ui.preferencePages">
+      <page
+            id="org.eclipse.epf.ui.preferences.RootPreferencePage"
+            class="org.eclipse.epf.ui.preferences.RootPreferencePage"
+            name="%rootPreferencePageName"/>
+   </extension>
+
+</plugin>

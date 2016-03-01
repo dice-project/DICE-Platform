@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Copyright (c) 2005, 2006 IBM Corporation and others.
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+
+ Contributors:
+ IBM Corporation - initial implementation
+
+-->
+<plugin>
+
+	<extension point="org.eclipse.core.runtime.preferences">
+	      <initializer class="org.eclipse.epf.diagram.ad.part.UMLDiagramPreferenceInitializer"/>
+	</extension>
+	<extension point="org.eclipse.ui.preferencePages">
+		<page
+            category="org.eclipse.epf.authoring.ui.preferences.ActivityDiagramPrefPage"
+            class="org.eclipse.epf.diagram.ad.preferences.DiagramConnectionsPreferencePage"
+            id="org.eclipse.epf.diagram.ad.preferences.DiagramConnectionsPreferencePage"
+            name="%preferences.connections"/>      
+    </extension>
+    <extension point="org.eclipse.team.core.fileTypes">
+      <fileTypes
+         type="text"
+         extension="xmi">
+      </fileTypes>
+    </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+         type="xmi"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+     <editor
+        id="org.eclipse.epf.diagram.ad.part.ActivityDiagramEditorID"
+        name="Activity Diagram Editor"
+        icon="icons/full/etool16/ADEditor.gif"
+        class="org.eclipse.epf.diagram.ad.part.ActivityDiagramEditor"
+        matchingStrategy="org.eclipse.epf.diagram.ad.part.UMLMatchingStrategy"
+        contributorClass="org.eclipse.epf.diagram.ad.part.UMLDiagramActionBarContributor">
+     </editor>
+   </extension>
+
+  <!-- <extension point="org.eclipse.ui.newWizards">
+  	  <wizard
+  	     name="Activity Diagram"
+  	     icon="icons/obj16/UMLDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="org.eclipse.epf.diagram.ad.part.UMLCreationWizard"
+  	     id="org.eclipse.epf.diagram.ad.part.UMLCreationWizardID">
+  	  	 <description>
+  	  		Creates Activity diagram.
+  	  	 </description>  
+      </wizard>
+   </extension> -->
+
+   <extension point="org.eclipse.ui.popupMenus">
+     	<!-- <objectContribution
+            id="org.eclipse.epf.diagram.ad.ui.objectContribution.IFile1"
+            nameFilter="*.uml"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="Initialize xmi diagram file"
+               class="org.eclipse.epf.diagram.ad.part.UMLInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="org.eclipse.epf.diagram.ad.part.UMLInitDiagramFileActionID">
+         </action>
+      </objectContribution>  
+      <objectContribution
+            adaptable="false"
+            id="org.eclipse.epf.diagram.ad.ui.objectContribution.ActivityEditPart2"
+            objectClass="org.eclipse.epf.diagram.ad.edit.parts.ActivityEditPart">
+         <action
+               class="org.eclipse.epf.diagram.ad.part.UMLLoadResourceAction"
+               enablesFor="1"
+               id="org.eclipse.epf.diagram.ad.part.UMLLoadResourceActionID"
+               label="Load Resource..."
+               menubarPath="additions">
+         </action>
+      </objectContribution> 
+ -->
+  </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.contributionItemProviders">
+  	 <contributionItemProvider class="org.eclipse.epf.diagram.ad.providers.DiagramContributionItemProvider">
+         <Priority name="Low">
+         </Priority>
+         <partContribution id="org.eclipse.epf.diagram.ad.part.ActivityDiagramEditorID">
+            <partAction menubarPath="/file/print" id="printPreviewAction">
+            </partAction>
+         </partContribution>
+      </contributionItemProvider>
+      <contributionItemProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContributionItemProvider"
+            checkPluginLoaded="false">
+         <Priority name="Low"/>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.ActivityPartition2EditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.ActivityPartitionNameEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.ActivityFinalNodeEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.ActivityFinalNodeNameEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+            <popupPredefinedItem id="deleteFromModelAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.MergeNodeEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.MergeNodeNameEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.ForkNodeEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.InitialNodeEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.InitialNodeNameEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+            <popupPredefinedItem id="deleteFromModelAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.DecisionNodeEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.DecisionNodeNameEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.JoinNodeEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.StructuredActivityNodeEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.StructuredActivityNodeNameEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.ActivityPartitionEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.ActivityPartitionName2EditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.ActivityParameterNodeEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.ActivityParameterNodeNameEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.StructuredActivityNode2EditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.StructuredActivityNodeName2EditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.StructuredActivityNode3EditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.StructuredActivityNodeName3EditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.ActivityParameterNode2EditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.ActivityParameterNodeName2EditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.ControlFlowEditPart"/>
+            <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/>
+         </popupContribution>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria objectClass="org.eclipse.epf.diagram.ad.edit.parts.ControlFlowNameEditPart"/>
+			<popupPredefinedItem id="deleteFromDiagramAction" remove="true"/> 
+            <popupPredefinedItem id="deleteFromModelAction" remove="true"/>
+         </popupContribution>
+      </contributionItemProvider> 
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders">
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="ADPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="org.eclipse.epf.diagram.ad.part.ActivityDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+       <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.printing.render.providers.DiagramWithPrintGlobalActionHandlerProvider"
+         id="ADPresentationPrint">
+         <Priority name="Lowest"/>
+         <ViewId id="org.eclipse.epf.diagram.ad.part.ActivityDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="print"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="ADPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="org.eclipse.epf.diagram.ad.part.ActivityDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <!--
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="ADRender">
+         <Priority name="Lowest"/>
+         <ViewId id="org.eclipse.epf.diagram.ad.part.ActivityDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      -->
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders">
+      <viewProvider class="org.eclipse.epf.diagram.ad.providers.UMLViewProvider">
+         <Priority name="Lowest"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="AD"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints=""/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints=""/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders">
+      <editpartProvider class="org.eclipse.epf.diagram.ad.providers.UMLEditPartProvider">
+         <Priority name="Lowest"/>
+      </editpartProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.paletteProviders">
+      <paletteProvider class="org.eclipse.epf.diagram.ad.providers.UMLPaletteProvider">
+         <Priority name="Lowest"/>
+         <editor id="org.eclipse.epf.diagram.ad.part.ActivityDiagramEditorID"/>
+      </paletteProvider>
+      <paletteProvider
+			class="org.eclipse.gmf.runtime.diagram.ui.providers.DefaultPaletteProvider">
+        <Priority name="Medium"/>
+        <editor id="org.eclipse.epf.diagram.ad.part.ActivityDiagramEditorID"/>
+        <contribution>
+            <predefinedEntry    
+            	id="geoshapeDrawer" path="/">
+             </predefinedEntry> 
+        </contribution>
+      </paletteProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders">
+      <modelingAssistantProvider class="org.eclipse.epf.diagram.ad.providers.UMLModelingAssistantProvider">
+         <Priority name="Lowest"/>
+      </modelingAssistantProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.properties.propertiesProviders">
+      <PropertiesProvider
+            verifyPluginLoaded="false"
+            class="org.eclipse.epf.diagram.ad.providers.UMLPropertyProvider">
+         <Priority name="Lowest"/>
+      </PropertiesProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders">
+      <IconProvider class="org.eclipse.epf.diagram.ad.providers.UMLIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+      <IconProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.geoshapes.internal.providers.GeoShapeIconProvider">
+         <Priority
+               name="Medium">
+         </Priority>
+         <object class="org.eclipse.gmf.runtime.notation.View(org.eclipse.gmf.runtime.notation)" id="GeoShape">
+        	 <method name="getType()" value="oval,triangle,rectangle,shadowRectangle,rectangle3D,roundRectangle,hexagon,octagon,pentagon,diamond,cylinder,line"/>
+	     </object>
+         <context elements="GeoShape">
+         </context>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders">
+      <ParserProvider class="org.eclipse.epf.diagram.ad.providers.UMLParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes">
+
+      <metamodel nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <metamodelType
+               id="org.eclipse.epf.diagram.ad.Activity_79"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Activity"
+               edithelper="org.eclipse.epf.diagram.ad.edit.helpers.ActivityEditHelper">
+            <param name="semanticHint" value="79"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="org.eclipse.epf.diagram.ad.ActivityPartition_2001"
+               name="%element_type_activity_partition"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               edithelperadvice="org.eclipse.epf.diagram.ad.edit.helpers.ActivityPartitionEditHelperAdvice">
+            <specializes id="org.eclipse.epf.diagram.ad.ActivityPartition_1008"/>
+            <param name="semanticHint" value="2001"/>
+         </specializationType>
+      </metamodel>
+
+      <metamodel nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <metamodelType
+               id="org.eclipse.epf.diagram.ad.ActivityFinalNode_1001"
+               name="%element_type_end_node"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ActivityFinalNode"
+               edithelper="org.eclipse.epf.diagram.ad.edit.helpers.ActivityFinalNodeEditHelper">
+            <param name="semanticHint" value="1001"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <metamodelType
+               id="org.eclipse.epf.diagram.ad.MergeNode_1002"
+               name="%element_type_merge_node"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="MergeNode"
+               edithelper="org.eclipse.epf.diagram.ad.edit.helpers.MergeNodeEditHelper">
+            <param name="semanticHint" value="1002"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <metamodelType
+               id="org.eclipse.epf.diagram.ad.ForkNode_1003"
+               name="%element_type_fork_node"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ForkNode"
+               edithelper="org.eclipse.epf.diagram.ad.edit.helpers.ForkNodeEditHelper">
+            <param name="semanticHint" value="1003"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <metamodelType
+               id="org.eclipse.epf.diagram.ad.InitialNode_1004"
+               name="%element_type_start_node"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="InitialNode"
+               edithelper="org.eclipse.epf.diagram.ad.edit.helpers.InitialNodeEditHelper">
+            <param name="semanticHint" value="1004"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <metamodelType
+               id="org.eclipse.epf.diagram.ad.DecisionNode_1005"
+               name="%element_type_decision_node"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="DecisionNode"
+               edithelper="org.eclipse.epf.diagram.ad.edit.helpers.DecisionNodeEditHelper">
+            <param name="semanticHint" value="1005"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <metamodelType
+               id="org.eclipse.epf.diagram.ad.JoinNode_1006"
+               name="%element_type_join_node"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="JoinNode"
+               edithelper="org.eclipse.epf.diagram.ad.edit.helpers.JoinNodeEditHelper">
+            <param name="semanticHint" value="1006"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <metamodelType
+               id="org.eclipse.epf.diagram.ad.StructuredActivityNode_1007"
+               name="%element_type_activity"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="StructuredActivityNode"
+               edithelper="org.eclipse.epf.diagram.ad.edit.helpers.StructuredActivityNodeEditHelper">
+            <param name="semanticHint" value="1007"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <metamodelType
+               id="org.eclipse.epf.diagram.ad.ActivityPartition_1008"
+               name="%element_type_activity_partition"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ActivityPartition"
+               edithelper="org.eclipse.epf.diagram.ad.edit.helpers.ActivityPartitionEditHelper">
+            <param name="semanticHint" value="1008"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <metamodelType
+               id="org.eclipse.epf.diagram.ad.ActivityParameterNode_1009"
+               name="%element_type_task_descriptor"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ActivityParameterNode"
+               edithelper="org.eclipse.epf.diagram.ad.edit.helpers.ActivityParameterNodeEditHelper">
+            <param name="semanticHint" value="1009"/>
+         </metamodelType>
+      </metamodel>
+
+      <metamodel nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="org.eclipse.epf.diagram.ad.StructuredActivityNode_1010"
+               name="%element_type_phase"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               edithelperadvice="org.eclipse.epf.diagram.ad.edit.helpers.StructuredActivityNodeEditHelperAdvice">
+            <specializes id="org.eclipse.epf.diagram.ad.StructuredActivityNode_1007"/>
+            <param name="semanticHint" value="1010"/>
+         </specializationType>
+      </metamodel>
+
+      <metamodel nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="org.eclipse.epf.diagram.ad.StructuredActivityNode_1011"
+               name="%element_type_iteration"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               edithelperadvice="org.eclipse.epf.diagram.ad.edit.helpers.StructuredActivityNode2EditHelperAdvice">
+            <specializes id="org.eclipse.epf.diagram.ad.StructuredActivityNode_1007"/>
+            <param name="semanticHint" value="1011"/>
+         </specializationType>
+      </metamodel>
+
+      <metamodel nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="org.eclipse.epf.diagram.ad.ActivityParameterNode_1012"
+               name="%element_type_milestone"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               edithelperadvice="org.eclipse.epf.diagram.ad.edit.helpers.ActivityParameterNodeEditHelperAdvice">
+            <specializes id="org.eclipse.epf.diagram.ad.ActivityParameterNode_1009"/>
+            <param name="semanticHint" value="1012"/>
+         </specializationType>
+      </metamodel>
+
+      <metamodel nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <metamodelType
+               id="org.eclipse.epf.diagram.ad.ControlFlow_3001"
+               name="%element_type_control_flow"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ControlFlow"
+               edithelper="org.eclipse.epf.diagram.ad.edit.helpers.ControlFlowEditHelper">
+            <param name="semanticHint" value="3001"/>
+         </metamodelType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings">
+      <clientContext id="ADClientContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="org.eclipse.epf.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="ADClientContext">
+         <elementType ref="org.eclipse.epf.diagram.ad.Activity_79"/>
+         <elementType ref="org.eclipse.epf.diagram.ad.ActivityPartition_2001"/>
+         <elementType ref="org.eclipse.epf.diagram.ad.ActivityFinalNode_1001"/>
+         <elementType ref="org.eclipse.epf.diagram.ad.MergeNode_1002"/>
+         <elementType ref="org.eclipse.epf.diagram.ad.ForkNode_1003"/>
+         <elementType ref="org.eclipse.epf.diagram.ad.InitialNode_1004"/>
+         <elementType ref="org.eclipse.epf.diagram.ad.DecisionNode_1005"/>
+         <elementType ref="org.eclipse.epf.diagram.ad.JoinNode_1006"/>
+         <elementType ref="org.eclipse.epf.diagram.ad.StructuredActivityNode_1007"/>
+         <elementType ref="org.eclipse.epf.diagram.ad.ActivityPartition_1008"/>
+         <elementType ref="org.eclipse.epf.diagram.ad.ActivityParameterNode_1009"/>
+         <elementType ref="org.eclipse.epf.diagram.ad.StructuredActivityNode_1010"/>
+         <elementType ref="org.eclipse.epf.diagram.ad.StructuredActivityNode_1011"/>
+         <elementType ref="org.eclipse.epf.diagram.ad.ActivityParameterNode_1012"/>
+         <elementType ref="org.eclipse.epf.diagram.ad.ControlFlow_3001"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+         <elementType pattern=".*"/>
+      </binding>
+   </extension>
+   <extension
+         point="org.eclipse.epf.library.edit.nestedCommandProviders">
+      <nestedCommandProvider
+            class="org.eclipse.epf.diagram.ad.commands.NestedCommandProvider">
+      </nestedCommandProvider>
+   </extension>
+</plugin>
+

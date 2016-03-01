@@ -1,0 +1,193 @@
+//------------------------------------------------------------------------------
+// Copyright (c) 2005, 2006 IBM Corporation and others.
+// All rights reserved. This program and the accompanying materials
+// are made available under the terms of the Eclipse Public License v1.0
+// which accompanies this distribution, and is available at
+// http://www.eclipse.org/legal/epl-v10.html
+//
+// Contributors:
+// IBM Corporation - initial implementation
+//------------------------------------------------------------------------------
+package org.eclipse.epf.library.configuration;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import org.eclipse.emf.common.notify.AdapterFactory;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
+import org.eclipse.epf.library.events.ILibraryChangeListener;
+import org.eclipse.epf.library.layout.ElementLayoutManager;
+import org.eclipse.epf.library.services.DependencyManager;
+import org.eclipse.epf.library.services.LibraryProcessor;
+import org.eclipse.epf.uma.MethodConfiguration;
+import org.eclipse.epf.uma.MethodLibrary;
+import org.eclipse.epf.uma.MethodPlugin;
+
+
+/**
+ * @author Jinhua Xi
+ * @sice 1.0
+ */
+public class ConfigurationFactory {
+
+	protected AdapterFactoryContentProvider afcp = null;
+
+	// map of MethodConfiguration name to Coniguration object
+	private Map configMap = new HashMap();
+
+	private LibraryProcessor libraryProc = null;
+
+	private String currentConfigName = null;
+
+	// map of config name to layout manager
+	// each config has it's own layout manager
+	private Map layoutMgrMap = new HashMap();
+
+	private DependencyManager depMgr = null;
+
+	public ConfigurationFactory(LibraryProcessor libraryProc) {
+
+		this.libraryProc = libraryProc;
+
+		afcp = new AdapterFactoryContentProvider(libraryProc
+				.getAdapterFactory());
+
+		libraryProc.addListener(new ILibraryChangeListener() {
+			public void libraryChanged(int option, Collection collection) {
+				if (option == ILibraryChangeListener.OPTION_CREATED
+						|| option == ILibraryChangeListener.OPTION_LOADED) {
+					clear();
+				}
+			}
+
+		});
+
+		clear();
+	}
+
+	public void clear() {
+		currentConfigName = null;
+		if (configMap.size() > 0) {
+			for (Iterator it = configMap.values().iterator(); it.hasNext();) {
+				((ConfigurationClosure) it.next()).dispose();
+			}
+		}
+		configMap.clear();
+
+		if (layoutMgrMap.size() > 0) {
+			for (Iterator it = layoutMgrMap.values().iterator(); it.hasNext();) {
+				((ElementLayoutManager) it.next()).clear();
+			}
+		}
+
+		layoutMgrMap.clear();
+
+		if (depMgr != null) {
+			depMgr.clear();
+			depMgr = null;
+		}
+	}
+
+	public MethodLibrary getLibrary() {
+		return libraryProc.getLibrary();
+	}
+
+	public URI getLibraryUri() {
+		return libraryProc.getLibraryURI();
+	}
+
+	public AdapterFactory getAdapterFactory() {
+		return libraryProc.getAdapterFactory();
+	}
+
+	public AdapterFactoryContentProvider getContentProvider() {
+		return afcp;
+	}
+
+	public DependencyManager getDependencyManager() {
+		// return libraryProc.getDependencyManager();
+		if (this.depMgr == null) {
+			depMgr = new DependencyManager(libraryProc);
+		}
+
+		return depMgr;
+	}
+
+	public List getMethodPlugins() {
+		List items = new ArrayList();
+		EList elements = libraryProc.getLibrary().eContents();
+		if (elements != null) {
+			for (Iterator it = elements.iterator(); it.hasNext();) {
+				EObject element = (EObject) it.next();
+				if (element instanceof MethodPlugin) {
+					items.add(element);
+				}
+			}
+		}
+
+		return items;
+	}
+
+	public void setCurrentConfiguration(String configName) {
+		this.currentConfigName = configName;
+	}
+
+	public String getCurrentConfiguration() {
+		return currentConfigName;
+	}
+
+	public ElementLayoutManager getLayoutManager() {
+		return getLayoutManager(this.currentConfigName);
+	}
+
+	public ElementLayoutManager getLayoutManager(String configName) {
+		ElementLayoutManager mgr = null;
+		if (configName == null) {
+			mgr = libraryProc.getLayoutManager();
+		} else {
+			mgr = (ElementLayoutManager) layoutMgrMap.get(configName);
+			if (mgr == null) {
+				MethodConfiguration config = libraryProc
+						.getConfiguration(configName);
+				mgr = new ElementLayoutManager(config);
+				layoutMgrMap.put(configName, mgr);
+			}
+		}
+
+		return mgr;
+	}
+
+	public ConfigurationClosure getClosure() {
+		return getClosure(currentConfigName);
+	}
+
+	public ConfigurationClosure getClosure(String configName) {
+		ConfigurationClosure config = null;
+		if (configName != null) {
+			config = (ConfigurationClosure) configMap.get(configName);
+			if (config == null) {
+				MethodConfiguration modelConfig = libraryProc
+						.getConfiguration(configName);
+				config = new ConfigurationClosure(this, modelConfig);
+				configMap.put(configName, config);
+			}
+		}
+
+		return config;
+	}
+
+	public void makeClosure() {
+		ConfigurationClosure c = getClosure(currentConfigName);
+		if (c != null) {
+			c.makeClosure();
+		}
+	}
+
+}

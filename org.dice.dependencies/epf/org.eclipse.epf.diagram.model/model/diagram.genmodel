@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.epf.diagram.model/src"
+    editDirectory="/org.eclipse.epf.diagram.edit/src" modelPluginID="org.eclipse.epf.diagram.model"
+    modelName="Diagram" nonNLSMarkers="true" importerID="org.eclipse.emf.importer.java"
+    complianceLevel="5.0" copyrightFields="false" usedGenPackages="../../org.eclipse.epf.uma/model/1.0.4/uma.genmodel#//uma">
+  <foreignModel>@model</foreignModel>
+  <genPackages prefix="Model" basePackage="org.eclipse.epf.diagram" disposableProviderFactory="true"
+      ecorePackage="diagram.ecore#/">
+    <genDataTypes ecoreDataType="diagram.ecore#//AbsoluteBendpoint"/>
+    <genDataTypes ecoreDataType="diagram.ecore#//Point"/>
+    <genDataTypes ecoreDataType="diagram.ecore#//RoleDescriptor"/>
+    <genClasses ecoreClass="diagram.ecore#//Diagram" labelFeature="#//model/Node/location"/>
+    <genClasses ecoreClass="diagram.ecore#//Link">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//Link/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference diagram.ecore#//Link/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diagram.ecore#//Link/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//Link/bendpoints"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//Link/sourceEndPoint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//Link/targetEndPoint"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="diagram.ecore#//LinkedObject">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diagram.ecore#//LinkedObject/linkedElement"/>
+    </genClasses>
+    <genClasses ecoreClass="diagram.ecore#//NamedNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//NamedNode/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="diagram.ecore#//Node">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//Node/location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//Node/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//Node/height"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diagram.ecore#//Node/incomingConnections"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diagram.ecore#//Node/outgoingConnections"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//Node/readOnly"/>
+    </genClasses>
+    <genClasses ecoreClass="diagram.ecore#//ActivityDiagram"/>
+    <genClasses ecoreClass="diagram.ecore#//TypedNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//TypedNode/type"/>
+    </genClasses>
+    <genClasses ecoreClass="diagram.ecore#//WorkProductDependencyDiagram"/>
+    <genClasses ecoreClass="diagram.ecore#//WorkProductNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//WorkProductNode/type"/>
+    </genClasses>
+    <genClasses ecoreClass="diagram.ecore#//ActivityDetailDiagram">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//ActivityDetailDiagram/autoLayout"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="diagram.ecore#//NodeContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diagram.ecore#//NodeContainer/nodes"/>
+    </genClasses>
+    <genClasses ecoreClass="diagram.ecore#//RoleNode"/>
+    <genClasses ecoreClass="diagram.ecore#//RoleTaskComposite">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//RoleTaskComposite/rowIndex"/>
+    </genClasses>
+    <genClasses ecoreClass="diagram.ecore#//TaskNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//TaskNode/index"/>
+    </genClasses>
+    <genClasses ecoreClass="diagram.ecore#//WorkProductDescriptorNode"/>
+    <genClasses ecoreClass="diagram.ecore#//WorkBreakdownElementNode"/>
+    <genClasses ecoreClass="diagram.ecore#//WorkProductComposite">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagram.ecore#//WorkProductComposite/type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,2 @@
+# Turn on debug trace for the xml export plug-in
+org.eclipse.epf.export.xml/debug=true

@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: EPF Services Plug-in
+Bundle-SymbolicName: org.eclipse.epf.services;singleton:=true
+Bundle-Version: 1.2.0.qualifier
+Bundle-Activator: org.eclipse.epf.services.Activator
+Bundle-Vendor: Eclipse.org
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore,
+ org.eclipse.epf.uma
+Eclipse-LazyStart: true
+Export-Package: org.eclipse.epf.services
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

@@ -1,0 +1,11 @@
+Bundle-Name: Cmdline Publishing Plug-in
+Bundle-SymbolicName: org.eclipse.epf.publishing.cmdline;singleton:=true
+Bundle-Version: 1.5.0.qualifier
+Bundle-Activator: org.eclipse.epf.publishing.cmdline.CmdlinePlugin
+Bundle-Vendor: Eclipse.org, TietoEnator
+Require-Bundle: org.eclipse.epf.library.xmi,
+ org.eclipse.epf.publishing,
+ org.eclipse.epf.authoring.ui
+Eclipse-LazyStart: true
+Provide-Package: org.eclipse.epf.publishing.cmdline
+Bundle-ClassPath: cmdline.jar

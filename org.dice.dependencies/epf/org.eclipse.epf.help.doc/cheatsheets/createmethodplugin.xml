@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!-- Copyright (c) 2004, 2005 IBM Corporation.  All Rights Reserved. -->
+<cheatsheet title="Create your own Method Plug-in">
+
+	<intro 
+		href="/org.eclipse.epf.help.doc/topics/t_create_method_plugin.html">
+		<description>Because the plug-ins shipped with the method library are locked and read-only, all your changes, additions, and extensions to existing method content and processes have to be placed in your own method plug-ins. However, you can use various capabilities to logically merge your plug-in contents into other plug-ins allowing you, as a result, to publish extended methods and processes that seamlessly incorporate your method elements. To create your own method plug-ins follow these steps.</description>
+	</intro>
+
+	<item
+		title="Use the Method Plug-in Wizard"
+		skip="false">
+		<description>Create a new method plug-in using the "New Method Plug-in" wizard. To open the wizard select File -&gt; New -&gt; Method Plug-in. Specify at least the name for your new method plug-in and select the check box for any other method plug-ins which content you wish to extend or reuse.</description>
+	</item>
+
+	<item
+		title="Open the Method Plugin Editor"
+		skip="false">
+		<description>After you have created the plug-in, you can make changes to its specifications in the method plug-in editor. In the library view, double click the method plug-in that you just created to open the editor.</description>
+	</item>
+
+	<item
+		title="Specify Version Information"
+		skip="false">
+		<description>In addition to the information already specified in the method plug-in wizard, you can provide information about the current version of the plug-in.</description>
+	</item>
+
+	<item
+		title="Select the Default Copyright Definition File"
+		skip="false">
+		<description>Use the "Select" button to specify which page of the type "Supporting Material" contains the copyright information for elements of this plug-in.  The contents of this file will be appended to every page that gets published based on an element from this plug-in.  Note, that individual method elements can override this standard selection with the copyright field in their own editors.</description>
+	</item>
+	<item title="Done"><description></description></item>
+</cheatsheet>
+
