@@ -23,6 +23,7 @@ package org.eclipse.epf.richtext;
 import java.io.File;
 import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Field;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Hashtable;
@@ -125,8 +126,7 @@ public class RichText implements IRichText {
 	protected static final int STATUS_REFORMAT_LINKS = 10;
 
 	// The default base path used for resolving links (<href>, <img>, etc.)
-	private static final String DEFAULT_BASE_PATH = System
-			.getProperty("user.home") //$NON-NLS-1$
+	private static final String DEFAULT_BASE_PATH = System.getProperty("user.home") //$NON-NLS-1$
 			+ System.getProperty("file.separator") + "rte"; //$NON-NLS-1$ //$NON-NLS-2$
 
 	// If true, log debugging info.
@@ -170,7 +170,7 @@ public class RichText implements IRichText {
 	// The control's current text.
 	protected String currentText = ""; //$NON-NLS-1$
 
-	private String currentRawText = "";	//$NON-NLS-1$
+	private String currentRawText = ""; //$NON-NLS-1$
 
 	// The control's editable flag.
 	protected boolean editable = true;
@@ -210,18 +210,18 @@ public class RichText implements IRichText {
 
 	// The control's find/replace text action
 	protected FindReplaceAction findReplaceAction;
-	
+
 	// The control's IE flag
 	protected boolean isIE = false;
-	
+
 	// A event type indicate control has been initialized
 	public static final int RICH_TEXT_INITIALIZED_WIN32 = 98979695;
 	public static final int RICH_TEXT_INITIALIZED_LINUX = 98979694;
-	
+
 	protected static final int STATUS_SELECT_TABLE = 51;
 	// The table selection flag
 	protected boolean tableSelection;
-	
+
 	/**
 	 * Creates a new instance.
 	 * 
@@ -236,7 +236,7 @@ public class RichText implements IRichText {
 		debug = RichTextPlugin.getDefault().isDebugging();
 		logger = RichTextPlugin.getDefault().getLogger();
 		findReplaceAction = new FindReplaceAction(this);
-		rteFolder = RichTextPlugin.getDefault().getInstallPath() + "rte/"; //$NON-NLS-1$		
+		rteFolder = RichTextPlugin.getDefault().getInstallPath() + "rte/"; //$NON-NLS-1$
 		rteURL = XMLUtil.escape("file://" + rteFolder); //$NON-NLS-1$
 		setBasePath(basePath);
 
@@ -287,16 +287,13 @@ public class RichText implements IRichText {
 	protected void setBasePath(String path) {
 		if (path != null && path.length() > 0) {
 			if (path.startsWith(FileUtil.UNC_PATH_PREFIX)) {
-				basePath = FileUtil.UNC_PATH_PREFIX
-						+ FileUtil.appendSeparator(path.substring(
-								FileUtil.UNC_PATH_PREFIX_LENGTH).replace('\\',
-								'/'), "/"); //$NON-NLS-1$
+				basePath = FileUtil.UNC_PATH_PREFIX + FileUtil
+						.appendSeparator(path.substring(FileUtil.UNC_PATH_PREFIX_LENGTH).replace('\\', '/'), "/"); //$NON-NLS-1$
 			} else {
 				basePath = FileUtil.appendSeparator(path).replace('\\', '/');
 			}
 		} else {
-			basePath = FileUtil.appendSeparator(DEFAULT_BASE_PATH).replace(
-					'\\', '/');
+			basePath = FileUtil.appendSeparator(DEFAULT_BASE_PATH).replace('\\', '/');
 		}
 	}
 
@@ -339,9 +336,9 @@ public class RichText implements IRichText {
 				printDebugMessage("init", "added listeners"); //$NON-NLS-1$ //$NON-NLS-2$
 			}
 
-//			htmlFormatter = new HTMLFormatter();
-			htmlFormatter = (IHTMLFormatter) ExtensionHelper.createExtensionForJTidy(
-					CommonPlugin.getDefault().getId(), "htmlFormatter"); //$NON-NLS-1$
+			// htmlFormatter = new HTMLFormatter();
+			htmlFormatter = (IHTMLFormatter) ExtensionHelper.createExtensionForJTidy(CommonPlugin.getDefault().getId(),
+					"htmlFormatter"); //$NON-NLS-1$
 			if (debug) {
 				printDebugMessage("init", "instantiated HTMLFormatter"); //$NON-NLS-1$ //$NON-NLS-2$
 			}
@@ -396,7 +393,8 @@ public class RichText implements IRichText {
 			if (initialized) {
 				if (!editor.isFocusControl()) {
 					if (!Platform.getOS().equals("win32")) { //$NON-NLS-1$
-						// Workaround for Mozilla and Firefox rich text editor focus
+						// Workaround for Mozilla and Firefox rich text editor
+						// focus
 						// issue.
 						editor.setFocus();
 					}
@@ -519,8 +517,7 @@ public class RichText implements IRichText {
 			try {
 				executeCommand(RichTextCommand.GET_TEXT);
 				if (currentText != null && currentText.length() > 0) {
-					currentText = currentText.replaceAll(
-							"<P>&nbsp;</P>", "<br/>"); //$NON-NLS-1$ //$NON-NLS-2$			
+					currentText = currentText.replaceAll("<P>&nbsp;</P>", "<br/>"); //$NON-NLS-1$ //$NON-NLS-2$
 					currentText = tidyText(currentText);
 					currentText = formatHTML(currentText);
 				} else {
@@ -565,7 +562,7 @@ public class RichText implements IRichText {
 			}
 
 			setCurrentRawText(text);
-			
+
 			String newText = text;
 			if (newText != null) {
 				newText = tidyText(newText);
@@ -584,14 +581,13 @@ public class RichText implements IRichText {
 			}
 
 			if (debug) {
-				printDebugMessage(
-						"setText", "modified=" + modified + ", newText=", newText); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+				printDebugMessage("setText", "modified=" + modified + ", newText=", newText); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 			}
 
 			if (initialized) {
 				try {
 					executeCommand(RichTextCommand.SET_TEXT, workaroundForObjectParamNode(newText));
-					executeCommand(RichTextCommand.SET_EDITABLE, "" + editable); //$NON-NLS-1$				
+					executeCommand(RichTextCommand.SET_EDITABLE, "" + editable); //$NON-NLS-1$
 				} catch (Exception e) {
 					logger.logError(e);
 				}
@@ -612,8 +608,7 @@ public class RichText implements IRichText {
 	/**
 	 * Returns the currently selected text.
 	 * 
-	 * @return the selected text or <code>""</code> if there is no
-	 *         hasSelection
+	 * @return the selected text or <code>""</code> if there is no hasSelection
 	 */
 	public String getSelectedText() {
 		// executeCommand(RichTextCommand.GET_SELECTED_TEXT);
@@ -634,8 +629,8 @@ public class RichText implements IRichText {
 	 * 
 	 * @param key
 	 *            the name of the property
-	 * @return the value of the property or <code>null</code> if it has not
-	 *         been set
+	 * @return the value of the property or <code>null</code> if it has not been
+	 *         set
 	 */
 	public Object getData(String key) {
 		if (editor != null) {
@@ -686,7 +681,7 @@ public class RichText implements IRichText {
 					editor.execute(script);
 				}
 				if (debug) {
-					printDebugMessage("execute", script); //$NON-NLS-1$				
+					printDebugMessage("execute", script); //$NON-NLS-1$
 				}
 			} catch (Exception e) {
 				String msg = "Failed to execute " + script; //$NON-NLS-1$
@@ -704,8 +699,9 @@ public class RichText implements IRichText {
 	 * Executes the given rich text command. The supported command strings are
 	 * defined in <code>RichTextCommand<code>.
 	 * 
-	 * @param	command		a rich text command string.
-	 * @return	a status code returned by the executed command
+	 * @param command
+	 *            a rich text command string.
+	 * @return a status code returned by the executed command
 	 */
 	public int executeCommand(String command) {
 		status = 0;
@@ -726,9 +722,10 @@ public class RichText implements IRichText {
 	 * Executes the given rich text command with a single parameter. The
 	 * supported command strings are defined in <code>RichTextCommand<code>.
 	 * 
-	 * @param	command		a rich text command string
+	 * &#64;param	command		a rich text command string
 	 * @param	param		a parameter for the command or <code>null</code>
-	 * @return	a status code returned by the executed command
+	 * 
+	 * @return a status code returned by the executed command
 	 */
 	public int executeCommand(String command, String param) {
 		if (param == null) {
@@ -741,9 +738,10 @@ public class RichText implements IRichText {
 	 * Executes the given rich text command with an array of parameters. The
 	 * supported command strings are defined in <code>RichTextCommand<code>.
 	 * 
-	 * @param	command		a rich text command string
+	 * &#64;param	command		a rich text command string
 	 * @param	params		an array of parameters for the command or <code>null</code>
-	 * @return	a status code returned by the executed command
+	 * 
+	 * @return a status code returned by the executed command
 	 */
 	public int executeCommand(String command, String[] params) {
 		if (params == null || params.length == 0) {
@@ -838,8 +836,7 @@ public class RichText implements IRichText {
 	 *            the listener which should be notified
 	 */
 	public void addModifyListener(ModifyListener listener) {
-		if (editor != null && listener != null
-				&& !modifyListeners.contains(listener)) {
+		if (editor != null && listener != null && !modifyListeners.contains(listener)) {
 			modifyListeners.add(listener);
 		}
 	}
@@ -852,8 +849,7 @@ public class RichText implements IRichText {
 	 *            the listener which should no longer be notified
 	 */
 	public void removeModifyListener(ModifyListener listener) {
-		if (editor != null && listener != null
-				&& modifyListeners.contains(listener)) {
+		if (editor != null && listener != null && modifyListeners.contains(listener)) {
 			modifyListeners.remove(listener);
 		}
 	}
@@ -922,10 +918,8 @@ public class RichText implements IRichText {
 	public void addListener(int eventType, Listener listener) {
 		if (editor != null && !listeners.containsKey(listener)) {
 			if (eventType != SWT.SELECTED) {
-				if (editorControl == null
-						|| (eventType != SWT.Activate
-								&& eventType != SWT.Deactivate
-								&& eventType != SWT.FocusIn && eventType != SWT.FocusOut)) {
+				if (editorControl == null || (eventType != SWT.Activate && eventType != SWT.Deactivate
+						&& eventType != SWT.FocusIn && eventType != SWT.FocusOut)) {
 					editor.addListener(eventType, listener);
 				}
 			}
@@ -945,10 +939,8 @@ public class RichText implements IRichText {
 	 */
 	public void removeListener(int eventType, Listener listener) {
 		if (editor != null && listeners.containsKey(listener)) {
-			if (editorControl == null
-					|| (eventType != SWT.Activate
-							&& eventType != SWT.Deactivate
-							&& eventType != SWT.FocusIn && eventType != SWT.FocusOut)) {
+			if (editorControl == null || (eventType != SWT.Activate && eventType != SWT.Deactivate
+					&& eventType != SWT.FocusIn && eventType != SWT.FocusOut)) {
 				editor.removeListener(eventType, listener);
 			}
 			listeners.remove(listener);
@@ -974,18 +966,15 @@ public class RichText implements IRichText {
 			public void changed(StatusTextEvent event) {
 				String eventText = event.text;
 				int eventTextLength = eventText.length();
-				if (eventText.startsWith(STATUS_PREFIX)
-						&& eventTextLength > STATUS_PREFIX_LENGTH) {
+				if (eventText.startsWith(STATUS_PREFIX) && eventTextLength > STATUS_PREFIX_LENGTH) {
 					try {
 						processingJSEvent = true;
 						int endStatusIndex = STATUS_PREFIX_LENGTH + 1;
 						if (eventText.length() > STATUS_PREFIX_LENGTH + 1
-								&& Character.isDigit(eventText
-										.charAt(endStatusIndex))) {
+								&& Character.isDigit(eventText.charAt(endStatusIndex))) {
 							endStatusIndex++;
 						}
-						int statusType = Integer.parseInt(eventText.substring(
-								STATUS_PREFIX_LENGTH, endStatusIndex));
+						int statusType = Integer.parseInt(eventText.substring(STATUS_PREFIX_LENGTH, endStatusIndex));
 						switch (statusType) {
 						case STATUS_NOP:
 							break;
@@ -993,26 +982,21 @@ public class RichText implements IRichText {
 							if (!initialized) {
 								initialized = true;
 								if (debug) {
-									printDebugMessage(
-											"statusTextListener", "STATUS_INITIALIZED"); //$NON-NLS-1$ //$NON-NLS-2$
+									printDebugMessage("statusTextListener", "STATUS_INITIALIZED"); //$NON-NLS-1$ //$NON-NLS-2$
 								}
 								if (!Platform.getOS().equals("win32")) { //$NON-NLS-1$
 									// Workaround Mozilla'a IFRAME
 									// height issue.
-									executeCommand(RichTextCommand.SET_HEIGHT,
-											"" + editor.getBounds().height); //$NON-NLS-1$
+									executeCommand(RichTextCommand.SET_HEIGHT, "" + editor.getBounds().height); //$NON-NLS-1$
 								}
-								executeCommand(RichTextCommand.SET_TEXT,
-										workaroundForObjectParamNode(currentText));
+								executeCommand(RichTextCommand.SET_TEXT, workaroundForObjectParamNode(currentText));
 								if (initializedWithFocus) {
 									setFocus();
 								}
 								if (!editable) {
-									executeCommand(
-											RichTextCommand.SET_EDITABLE,
-											"" + editable); //$NON-NLS-1$
-								}								
-								
+									executeCommand(RichTextCommand.SET_EDITABLE, "" + editable); //$NON-NLS-1$
+								}
+
 								if (Platform.getOS().equals(Platform.OS_WIN32)) {
 									notifyListeners(RichText.RICH_TEXT_INITIALIZED_WIN32, new Event());
 								}
@@ -1020,30 +1004,26 @@ public class RichText implements IRichText {
 							break;
 						case STATUS_MODIFIED:
 							if (debug) {
-								printDebugMessage(
-										"statusTextListener", "STATUS_MODIFIED"); //$NON-NLS-1$ //$NON-NLS-2$
+								printDebugMessage("statusTextListener", "STATUS_MODIFIED"); //$NON-NLS-1$ //$NON-NLS-2$
 							}
 							checkModify();
 							break;
 						case STATUS_GET_TEXT:
 							if (eventTextLength >= STATUS_PREFIX_LENGTH + 2) {
-								currentText = eventText
-										.substring(STATUS_PREFIX_LENGTH + 2);
-								
-								currentText = unWorkaroundForObjectParamNode(currentText); 
+								currentText = eventText.substring(STATUS_PREFIX_LENGTH + 2);
+
+								currentText = unWorkaroundForObjectParamNode(currentText);
 							} else {
 								currentText = ""; //$NON-NLS-1$
 							}
 							if (debug) {
-								printDebugMessage(
-										"statusTextListener", //$NON-NLS-1$
+								printDebugMessage("statusTextListener", //$NON-NLS-1$
 										"STATUS_GET_TEXT, currentText=", currentText); //$NON-NLS-1$
 							}
 							break;
 						case STATUS_KEY_DOWN:
 							if (eventTextLength >= STATUS_PREFIX_LENGTH + 2) {
-								String cmd = eventText
-										.substring(STATUS_PREFIX_LENGTH + 2);
+								String cmd = eventText.substring(STATUS_PREFIX_LENGTH + 2);
 								if (debug) {
 									printDebugMessage("statusTextListener", //$NON-NLS-1$
 											"STATUS_KEY_DOWN, cmd=" + cmd); //$NON-NLS-1$
@@ -1052,27 +1032,19 @@ public class RichText implements IRichText {
 									setCopyURL();
 								} else if (cmd.equals(RichTextCommand.CUT)) {
 									setCopyURL();
-									CutAction action = new CutAction(
-											RichText.this);
+									CutAction action = new CutAction(RichText.this);
 									action.execute(RichText.this);
-								} else if (cmd
-										.equals(RichTextCommand.FIND_TEXT)) {
-									getFindReplaceAction().execute(
-											RichText.this);
+								} else if (cmd.equals(RichTextCommand.FIND_TEXT)) {
+									getFindReplaceAction().execute(RichText.this);
 								} else if (cmd.equals(RichTextCommand.PASTE)) {
-									PasteAction action = new PasteAction(
-											RichText.this);
+									PasteAction action = new PasteAction(RichText.this);
 									action.execute(RichText.this);
 								} else if (cmd.equals(RichTextCommand.SAVE)) {
-									PlatformUI.getWorkbench()
-											.getActiveWorkbenchWindow()
-											.getActivePage().getActiveEditor()
-											.doSave(null);
+									PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage()
+											.getActiveEditor().doSave(null);
 								} else if (cmd.equals(RichTextCommand.SAVE_ALL)) {
-									PlatformUI.getWorkbench()
-											.getActiveWorkbenchWindow()
-											.getActivePage().saveAllEditors(
-													false);
+									PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage()
+											.saveAllEditors(false);
 								}
 							}
 							break;
@@ -1085,36 +1057,32 @@ public class RichText implements IRichText {
 							break;
 						case STATUS_SELECT_TABLE:
 							tableSelection = true;
-							
+
 							if (hasFocus())
 								notifyListeners(SWT.SELECTED, new Event());
 							break;
 						case STATUS_SELECT_TEXT:
 							if (eventTextLength >= STATUS_PREFIX_LENGTH + 2) {
-								String[] strings = eventText.substring(
-										STATUS_PREFIX_LENGTH + 2).split(
-										"\\$", 5); //$NON-NLS-1$
+								String[] strings = eventText.substring(STATUS_PREFIX_LENGTH + 2).split("\\$", 5); //$NON-NLS-1$
 								try {
 									richTextSelection.setFontName(strings[0]);
 									richTextSelection.setFontSize(strings[1]);
 									richTextSelection.setBlockStyle(strings[2]);
-									richTextSelection.setFlags(Integer
-											.parseInt(strings[3]));
+									richTextSelection.setFlags(Integer.parseInt(strings[3]));
 									richTextSelection.setText(strings[4]);
 								} catch (NumberFormatException e) {
 									logger.logError(e);
 								}
 								if (debug) {
-									printDebugMessage(
-											"selectionStatusListener", //$NON-NLS-1$
+									printDebugMessage("selectionStatusListener", //$NON-NLS-1$
 											"current selection is=" + richTextSelection); //$NON-NLS-1$
 								}
-								if(strings[4].length() == 0) {
+								if (strings[4].length() == 0) {
 									hasSelection = false;
 								} else {
 									hasSelection = true;
 								}
-								
+
 								if (hasFocus())
 									notifyListeners(SWT.SELECTED, new Event());
 							} else {
@@ -1122,8 +1090,7 @@ public class RichText implements IRichText {
 								hasSelection = false;
 							}
 							if (debug) {
-								printDebugMessage(
-										"statusTextListener", //$NON-NLS-1$
+								printDebugMessage("statusTextListener", //$NON-NLS-1$
 										"STATUS_SELECT_TEXT, selectedText=", richTextSelection.getText()); //$NON-NLS-1$
 							}
 							tableSelection = false;
@@ -1146,10 +1113,8 @@ public class RichText implements IRichText {
 						case STATUS_EXEC_CMD:
 							if (eventTextLength >= STATUS_PREFIX_LENGTH + 3) {
 								try {
-									status = Integer.parseInt(eventText
-											.substring(
-													STATUS_PREFIX_LENGTH + 2,
-													STATUS_PREFIX_LENGTH + 3));
+									status = Integer.parseInt(
+											eventText.substring(STATUS_PREFIX_LENGTH + 2, STATUS_PREFIX_LENGTH + 3));
 								} catch (Exception e) {
 									status = -1;
 								}
@@ -1161,16 +1126,15 @@ public class RichText implements IRichText {
 							break;
 						case STATUS_REFORMAT_LINKS:
 							if (debug) {
-								printDebugMessage(
-										"statusTextListener", "STATUS_REFORMAT_LINKS"); //$NON-NLS-1$ //$NON-NLS-2$
+								printDebugMessage("statusTextListener", "STATUS_REFORMAT_LINKS"); //$NON-NLS-1$ //$NON-NLS-2$
 							}
-							if (Platform.getOS().equals("win32")) { //$NON-NLS-1$ 
+							if (Platform.getOS().equals("win32")) { //$NON-NLS-1$
 								// Workaround the drag and drop issue with DBCS
 								// characters.
-//								if (modified) {
-//									setText(getText());
-//									modified = true;
-//								}
+								// if (modified) {
+								// setText(getText());
+								// modified = true;
+								// }
 							}
 							checkModify();
 							break;
@@ -1192,10 +1156,8 @@ public class RichText implements IRichText {
 	protected String generateEditorHTML() throws Exception {
 		String escapedBasePath = basePath;
 		if (escapedBasePath.startsWith(FileUtil.UNC_PATH_PREFIX))
-			escapedBasePath = escapedBasePath.replaceFirst(
-					"^\\\\\\\\", "\\\\\\\\\\\\\\\\"); //$NON-NLS-1$ //$NON-NLS-2$
-		escapedBasePath = XMLUtil
-				.escape("file://" + escapedBasePath.replaceAll("'", "\\\\'")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+			escapedBasePath = escapedBasePath.replaceFirst("^\\\\\\\\", "\\\\\\\\\\\\\\\\"); //$NON-NLS-1$ //$NON-NLS-2$
+		escapedBasePath = XMLUtil.escape("file://" + escapedBasePath.replaceAll("'", "\\\\'")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		String escapedRteUTL = rteURL.replaceAll("&apos;", "%27"); //$NON-NLS-1$ //$NON-NLS-2$
 
 		StringBuffer rteXML = new StringBuffer();
@@ -1205,8 +1167,7 @@ public class RichText implements IRichText {
 				.append("\" baseURL=\"").append(escapedBasePath) //$NON-NLS-1$
 				.append("\"/>"); //$NON-NLS-1$
 		StringWriter result = new StringWriter();
-		XSLTProcessor.transform(
-				rteFolder + "rte.xsl", rteXML.toString(), result); //$NON-NLS-1$
+		XSLTProcessor.transform(rteFolder + "rte.xsl", rteXML.toString(), result); //$NON-NLS-1$
 		return result.toString();
 	}
 
@@ -1250,14 +1211,13 @@ public class RichText implements IRichText {
 		pastePlainTextItem.setImage(RichTextImages.IMG_PASTE_PLAIN_TEXT);
 		pastePlainTextItem.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent event) {
-				PastePlainTextAction action = new PastePlainTextAction(
-						RichText.this);
+				PastePlainTextAction action = new PastePlainTextAction(RichText.this);
 				action.execute(RichText.this);
 			}
 		});
 
 		final MenuItem sperate1 = new MenuItem(contextMenu, SWT.SEPARATOR);
-		
+
 		final MenuItem addRowItem = new MenuItem(contextMenu, SWT.PUSH);
 		addRowItem.setText(RichTextResources.addRowAction_text);
 		addRowItem.setImage(RichTextImages.IMG_ADD_ROW);
@@ -1267,7 +1227,7 @@ public class RichText implements IRichText {
 				action.execute(RichText.this);
 			}
 		});
-		
+
 		final MenuItem addColumnItem = new MenuItem(contextMenu, SWT.PUSH);
 		addColumnItem.setText(RichTextResources.addColumnAction_text);
 		addColumnItem.setImage(RichTextImages.IMG_ADD_COLUMN);
@@ -1277,7 +1237,7 @@ public class RichText implements IRichText {
 				action.execute(RichText.this);
 			}
 		});
-		
+
 		final MenuItem deleteLastRowItem = new MenuItem(contextMenu, SWT.PUSH);
 		deleteLastRowItem.setText(RichTextResources.deleteLastRowAction_text);
 		deleteLastRowItem.setImage(RichTextImages.IMG_DELETE_ROW);
@@ -1287,7 +1247,7 @@ public class RichText implements IRichText {
 				action.execute(RichText.this);
 			}
 		});
-		
+
 		final MenuItem deleteLastColumnItem = new MenuItem(contextMenu, SWT.PUSH);
 		deleteLastColumnItem.setText(RichTextResources.deleteLastColumnAction_text);
 		deleteLastColumnItem.setImage(RichTextImages.IMG_DELETE_COLUMN);
@@ -1297,17 +1257,15 @@ public class RichText implements IRichText {
 				action.execute(RichText.this);
 			}
 		});
-		
+
 		contextMenu.addMenuListener(new MenuListener() {
 			public void menuHidden(MenuEvent e) {
 			}
 
 			public void menuShown(MenuEvent e) {
 				Clipboard clipboard = new Clipboard(Display.getCurrent());
-				String html = (String) clipboard.getContents(HTMLTransfer
-						.getInstance());
-				String text = (String) clipboard.getContents(TextTransfer
-						.getInstance());
+				String html = (String) clipboard.getContents(HTMLTransfer.getInstance());
+				String text = (String) clipboard.getContents(TextTransfer.getInstance());
 				cutItem.setEnabled(editable && hasSelection);
 				copyItem.setEnabled(hasSelection);
 				pasteItem.setEnabled(editable && (html != null));
@@ -1327,13 +1285,12 @@ public class RichText implements IRichText {
 		editorControl = getControlSite(editor);
 		if (editorControl != null) {
 			if (debug) {
-				printDebugMessage(
-						"init", "editorControl=" + editorControl.getClass().getName()); //$NON-NLS-1$ //$NON-NLS-2$
+				printDebugMessage("init", "editorControl=" + editorControl.getClass().getName()); //$NON-NLS-1$ //$NON-NLS-2$
 			}
-			
+
 			// only IE (win32) has the editorControl != null
 			isIE = true;
-			
+
 			editorControl.addListener(SWT.Activate, new Listener() {
 				public void handleEvent(Event event) {
 					if (debug) {
@@ -1359,83 +1316,93 @@ public class RichText implements IRichText {
 					if (debug) {
 						printDebugMessage("focusInListener"); //$NON-NLS-1$
 					}
-					executeCommand("updateSelection"); //$NON-NLS-1$					
+					executeCommand("updateSelection"); //$NON-NLS-1$
 					notifyListeners(SWT.FocusIn, event);
 				}
 			});
 
-	        editorControl.addKeyListener(new KeyAdapter() {
-	        	   public void keyReleased(KeyEvent event) {
-						int keyCode = event.keyCode;
-						int stateMask = event.stateMask;
-						if (debug) {
-							printDebugMessage(
-									"keyUpListener", "keyCode=" + keyCode //$NON-NLS-1$ //$NON-NLS-2$
-											+ ", stateMask=" + stateMask + ", editable=" + editable); //$NON-NLS-1$ //$NON-NLS-2$
-						}
-						
-						if ( stateMask == SWT.CTRL && event.keyCode == 0x11 ) { //0x11 is for all Control key, such as ctrl-b, ctrl-I, ctrl-c, etc.. 
-							executeCommand("updateSelection");
-						} 
-						
-						if ((stateMask & SWT.CTRL) > 0
-								|| (stateMask & SWT.ALT) > 0
-								|| ((stateMask & SWT.SHIFT) > 0 && keyCode == stateMask)) {
+			editorControl.addKeyListener(new KeyAdapter() {
+				public void keyReleased(KeyEvent event) {
+					int keyCode = event.keyCode;
+					int stateMask = event.stateMask;
+					if (debug) {
+						printDebugMessage("keyUpListener", "keyCode=" + keyCode //$NON-NLS-1$ //$NON-NLS-2$
+								+ ", stateMask=" + stateMask + ", editable=" + editable); //$NON-NLS-1$ //$NON-NLS-2$
+					}
+
+					if (stateMask == SWT.CTRL && event.keyCode == 0x11) { // 0x11
+																			// is
+																			// for
+																			// all
+																			// Control
+																			// key,
+																			// such
+																			// as
+																			// ctrl-b,
+																			// ctrl-I,
+																			// ctrl-c,
+																			// etc..
+						executeCommand("updateSelection");
+					}
+
+					if ((stateMask & SWT.CTRL) > 0 || (stateMask & SWT.ALT) > 0
+							|| ((stateMask & SWT.SHIFT) > 0 && keyCode == stateMask)) {
+						return;
+					}
+					if (editable) {
+						switch (event.keyCode) {
+						case SWT.ARROW_DOWN:
+						case SWT.ARROW_LEFT:
+						case SWT.ARROW_RIGHT:
+						case SWT.ARROW_UP:
+						case SWT.END:
+						case SWT.HOME:
+						case SWT.PAGE_DOWN:
+						case SWT.PAGE_UP:
+						case SWT.TAB:
 							return;
-						}
-						if (editable) {
-							switch (event.keyCode) {
-							case SWT.ARROW_DOWN:
-							case SWT.ARROW_LEFT:
-							case SWT.ARROW_RIGHT:
-							case SWT.ARROW_UP:
-							case SWT.END:
-							case SWT.HOME:
-							case SWT.PAGE_DOWN:
-							case SWT.PAGE_UP:
-							case SWT.TAB:
-								return;
-							default:
-								checkModify();
-								break;
-							}
+						default:
+							checkModify();
+							break;
 						}
 					}
-				});
-			
-//			editorControl.addListener(SWT.KeyUp, new Listener() {
-//				public void handleEvent(Event event) {
-//					int keyCode = event.keyCode;
-//					int stateMask = event.stateMask;
-//					if (debug) {
-//						printDebugMessage(
-//								"keyUpListener", "keyCode=" + keyCode //$NON-NLS-1$ //$NON-NLS-2$
-//										+ ", stateMask=" + stateMask + ", editable=" + editable); //$NON-NLS-1$ //$NON-NLS-2$
-//					}
-//					if ((stateMask & SWT.CTRL) > 0
-//							|| (stateMask & SWT.ALT) > 0
-//							|| ((stateMask & SWT.SHIFT) > 0 && keyCode == stateMask)) {
-//						return;
-//					}
-//					if (editable) {
-//						switch (event.keyCode) {
-//						case SWT.ARROW_DOWN:
-//						case SWT.ARROW_LEFT:
-//						case SWT.ARROW_RIGHT:
-//						case SWT.ARROW_UP:
-//						case SWT.END:
-//						case SWT.HOME:
-//						case SWT.PAGE_DOWN:
-//						case SWT.PAGE_UP:
-//						case SWT.TAB:
-//							return;
-//						default:
-//							checkModify();
-//							break;
-//						}
-//					}
-//				}
-//			});
+				}
+			});
+
+			// editorControl.addListener(SWT.KeyUp, new Listener() {
+			// public void handleEvent(Event event) {
+			// int keyCode = event.keyCode;
+			// int stateMask = event.stateMask;
+			// if (debug) {
+			// printDebugMessage(
+			// "keyUpListener", "keyCode=" + keyCode //$NON-NLS-1$ //$NON-NLS-2$
+			// + ", stateMask=" + stateMask + ", editable=" + editable);
+			// //$NON-NLS-1$ //$NON-NLS-2$
+			// }
+			// if ((stateMask & SWT.CTRL) > 0
+			// || (stateMask & SWT.ALT) > 0
+			// || ((stateMask & SWT.SHIFT) > 0 && keyCode == stateMask)) {
+			// return;
+			// }
+			// if (editable) {
+			// switch (event.keyCode) {
+			// case SWT.ARROW_DOWN:
+			// case SWT.ARROW_LEFT:
+			// case SWT.ARROW_RIGHT:
+			// case SWT.ARROW_UP:
+			// case SWT.END:
+			// case SWT.HOME:
+			// case SWT.PAGE_DOWN:
+			// case SWT.PAGE_UP:
+			// case SWT.TAB:
+			// return;
+			// default:
+			// checkModify();
+			// break;
+			// }
+			// }
+			// }
+			// });
 
 			editor.addLocationListener(new LocationAdapter() {
 				public void changing(LocationEvent event) {
@@ -1459,7 +1426,7 @@ public class RichText implements IRichText {
 					if (e.keyCode == SWT.TAB) {
 						if ((e.stateMask & SWT.SHIFT) != 0) {
 							editor.traverse(SWT.TRAVERSE_TAB_PREVIOUS);
-						} else if ((e.stateMask & SWT.CTRL) == 0 ){
+						} else if ((e.stateMask & SWT.CTRL) == 0) {
 							editor.traverse(SWT.TRAVERSE_TAB_NEXT);
 						}
 						return;
@@ -1470,8 +1437,7 @@ public class RichText implements IRichText {
 				}
 
 				public void keyReleased(KeyEvent e) {
-					if ((e.stateMask & SWT.CTRL) > 0
-							|| (e.stateMask & SWT.ALT) > 0)
+					if ((e.stateMask & SWT.CTRL) > 0 || (e.stateMask & SWT.ALT) > 0)
 						return;
 					if (editable) {
 						switch (e.keyCode) {
@@ -1498,7 +1464,7 @@ public class RichText implements IRichText {
 		editor.addDisposeListener(new DisposeListener() {
 			public void widgetDisposed(DisposeEvent e) {
 				if (debug) {
-					printDebugMessage("disposeListener"); //$NON-NLS-1$						
+					printDebugMessage("disposeListener"); //$NON-NLS-1$
 				}
 				dispose();
 			}
@@ -1525,18 +1491,17 @@ public class RichText implements IRichText {
 			event.display = Display.getCurrent();
 			event.widget = editor;
 
-			for (Iterator<RichTextListener> i = listeners.values().iterator(); i
-					.hasNext();) {
+			for (Iterator<RichTextListener> i = listeners.values().iterator(); i.hasNext();) {
 				RichTextListener listener = i.next();
 				if (listener.getEventType() == eventType) {
 					if (debug) {
-						printDebugMessage(
-								"notifyListeners", "notifying listener, " + listener + ", eventType=" + eventType); //$NON-NLS-1$ //$NON-NLS-2$	//$NON-NLS-3$	
+						printDebugMessage("notifyListeners", //$NON-NLS-1$
+								"notifying listener, " + listener + ", eventType=" + eventType); //$NON-NLS-1$ //$NON-NLS-2$
 					}
 					listener.getListener().handleEvent(event);
 					if (debug) {
-						printDebugMessage(
-								"notifyListeners", "notified listener, " + listener + ", eventType=" + eventType); //$NON-NLS-1$ //$NON-NLS-2$	//$NON-NLS-3$	
+						printDebugMessage("notifyListeners", //$NON-NLS-1$
+								"notified listener, " + listener + ", eventType=" + eventType); //$NON-NLS-1$ //$NON-NLS-2$
 					}
 				}
 			}
@@ -1554,17 +1519,14 @@ public class RichText implements IRichText {
 		event.display = Display.getCurrent();
 		event.widget = editor;
 
-		for (Iterator<ModifyListener> i = modifyListeners.iterator(); i
-				.hasNext();) {
+		for (Iterator<ModifyListener> i = modifyListeners.iterator(); i.hasNext();) {
 			ModifyListener listener = i.next();
 			if (debug) {
-				printDebugMessage(
-						"notifyModifyListeners", "notifying listener, " + listener); //$NON-NLS-1$ //$NON-NLS-2$	
+				printDebugMessage("notifyModifyListeners", "notifying listener, " + listener); //$NON-NLS-1$ //$NON-NLS-2$
 			}
 			listener.modifyText(new ModifyEvent(event));
 			if (debug) {
-				printDebugMessage(
-						"notifyModifyListeners", "notified listener, " + listener); //$NON-NLS-1$ //$NON-NLS-2$	
+				printDebugMessage("notifyModifyListeners", "notified listener, " + listener); //$NON-NLS-1$ //$NON-NLS-2$
 			}
 		}
 
@@ -1600,7 +1562,7 @@ public class RichText implements IRichText {
 					}
 				}
 				if (debug) {
-					printDebugMessage("checkModify", "modified=" + modified); //$NON-NLS-1$ //$NON-NLS-2$	
+					printDebugMessage("checkModify", "modified=" + modified); //$NON-NLS-1$ //$NON-NLS-2$
 				}
 			}
 		} finally {
@@ -1655,8 +1617,8 @@ public class RichText implements IRichText {
 	}
 
 	/**
-	 * Returns the child <code>OleControlSite</code> contained within the
-	 * given <code>Composite</code>.
+	 * Returns the child <code>OleControlSite</code> contained within the given
+	 * <code>Composite</code>.
 	 * 
 	 * @param composite
 	 *            a <code>Composite</code> object, presumably a
@@ -1683,8 +1645,18 @@ public class RichText implements IRichText {
 	 */
 	protected void printDebugMessage(String method, String msg, String text) {
 		StringBuffer strBuf = new StringBuffer();
-		strBuf.append("RichText[").append(editor.handle).append(']') //$NON-NLS-1$
-				.append('.').append(method);
+		try {
+			Field handleField = editor.getClass().getField("handle");
+			if (handleField != null) {
+				long handleValue = handleField.getLong(editor);
+				strBuf.append("RichText[").append(handleValue).append(']') //$NON-NLS-1$
+						.append('.').append(method);
+			}
+		} catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
+		}
+		// strBuf.append("RichText[").append(editor.handle).append(']')
+		// //$NON-NLS-1$
+		// .append('.').append(method);
 		if (msg != null && msg.length() > 0) {
 			strBuf.append(": ").append(msg); //$NON-NLS-1$
 		}
@@ -1714,8 +1686,7 @@ public class RichText implements IRichText {
 
 	public void setFindReplaceAction(FindReplaceAction findReplaceAction) {
 		if (findReplaceAction != null) {
-			if (this.findReplaceAction != null
-					&& this.findReplaceAction != findReplaceAction) {
+			if (this.findReplaceAction != null && this.findReplaceAction != findReplaceAction) {
 				this.findReplaceAction.dispose();
 			}
 			this.findReplaceAction = findReplaceAction;
@@ -1728,29 +1699,29 @@ public class RichText implements IRichText {
 		initialText = text == null ? "" : text; //$NON-NLS-1$
 		modified = false;
 	}
-	
+
 	public boolean hasError() {
 		return htmlFormatter.getLastErrorStr() != null;
 	}
-	
+
 	public static String workaroundForObjectParamNode(String html) {
 		String result = html.replaceAll("<param", "<paramTemp"); //$NON-NLS-1$ //$NON-NLS-2$
-		
+
 		return result;
 	}
-	
+
 	private String unWorkaroundForObjectParamNode(String html) {
-		String result = html.replaceAll("<paramTemp", "<param"); //$NON-NLS-1$ //$NON-NLS-2$		
-				
+		String result = html.replaceAll("<paramTemp", "<param"); //$NON-NLS-1$ //$NON-NLS-2$
+
 		return result;
 	}
-	
+
 	public String getCurrentRawText() {
 		return currentRawText;
 	}
 
 	private void setCurrentRawText(String currentRawText) {
-		this.currentRawText = currentRawText == null ? "" : currentRawText;	//$NON-NLS-1		
+		this.currentRawText = currentRawText == null ? "" : currentRawText; // $NON-NLS-1
 	}
 
 }
