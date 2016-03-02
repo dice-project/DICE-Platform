@@ -222,10 +222,6 @@ litigation
          version="0.0.0"/>
 
    <includes
-         id="org.dice.features.base"
-         version="0.0.0"/>
-
-   <includes
          id="org.dice.features.activiti"
          version="0.0.0"/>
 

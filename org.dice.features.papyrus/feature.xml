@@ -222,10 +222,6 @@ litigation
          version="0.0.0"/>
 
    <includes
-         id="org.dice.features.emf"
-         version="0.0.0"/>
-
-   <includes
          id="org.dice.features.uml2"
          version="0.0.0"/>
 

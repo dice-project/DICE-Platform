@@ -217,6 +217,10 @@ Each party waives its rights to a jury trial in any resulting
 litigation
    </license>
 
+   <includes
+         id="org.dice.features.emf"
+         version="0.0.0"/>
+
    <plugin
          id="org.eclipse.wst.xml.core"
          download-size="0"

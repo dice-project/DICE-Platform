@@ -218,10 +218,6 @@ litigation
    </license>
 
    <includes
-         id="org.dice.features.emf"
-         version="0.0.0"/>
-
-   <includes
          id="org.dice.features.ocl"
          version="0.0.0"/>
 
