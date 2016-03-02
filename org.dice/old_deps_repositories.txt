@@ -1,0 +1,9 @@
+﻿http://archive.eclipse.org/graphiti/updates/0.7.1
+	Graphiti (Incubation) 0.7.1
+http://download.eclipse.org/tools/gef/updates/releases/
+	Graphical Editing Framework Draw2d 3.6.2
+	Graphical Editing Framework GEF 3.6.2
+http://download.eclipse.org/tools/orbit/downloads/drops/R20120526062928/repository/
+	Intenational Components For Unicode for Java (ICU4J) 4.4.2
+http://www.pros.upv.es/moskitt4me/Updates/site.xml
+	MOSKitt4ME 1.0.0
