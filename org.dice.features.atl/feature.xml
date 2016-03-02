@@ -218,7 +218,147 @@ litigation
    </license>
 
    <includes
-         id="org.eclipse.m2m.atl"
+         id="org.dice.features.emf"
          version="0.0.0"/>
+
+   <plugin
+         id="org.antlr.runtime"
+         download-size="0"
+         install-size="0"
+         version="3.0.0.v200803061811"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl"
+         download-size="12"
+         install-size="17"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.adt"
+         download-size="65"
+         install-size="140"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.adt.debug"
+         download-size="27"
+         install-size="46"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.adt.editor"
+         download-size="556"
+         install-size="1187"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.adt.ui"
+         download-size="107"
+         install-size="210"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.common"
+         download-size="26"
+         install-size="68"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.core"
+         download-size="25"
+         install-size="56"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.core.ant"
+         download-size="34"
+         install-size="42"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.core.emf"
+         download-size="24"
+         install-size="47"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.core.ui"
+         download-size="83"
+         install-size="166"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.core.ui.vm"
+         download-size="46"
+         install-size="97"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.debug.core"
+         download-size="58"
+         install-size="116"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.drivers.emf4atl"
+         download-size="39"
+         install-size="81"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.drivers.uml24atl"
+         download-size="17"
+         install-size="28"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.dsls"
+         download-size="314"
+         install-size="1373"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.engine"
+         download-size="387"
+         install-size="3041"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.engine.emfvm"
+         download-size="271"
+         install-size="523"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.engine.emfvm.launch"
+         download-size="33"
+         install-size="64"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.engine.vm"
+         download-size="190"
+         install-size="420"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>
