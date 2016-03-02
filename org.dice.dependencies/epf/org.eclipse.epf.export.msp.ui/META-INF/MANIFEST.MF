@@ -17,4 +17,4 @@ Bundle-ClassPath: exportmspui.jar
 Export-Package: org.eclipse.epf.export.msp.ui,
  org.eclipse.epf.export.msp.ui.preferences,
  org.eclipse.epf.export.msp.ui.wizards
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

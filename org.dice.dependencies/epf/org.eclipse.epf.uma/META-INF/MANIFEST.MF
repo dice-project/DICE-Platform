@@ -13,4 +13,4 @@ Eclipse-LazyStart: true
 Export-Package: org.eclipse.epf.uma,
  org.eclipse.epf.uma.impl,
  org.eclipse.epf.uma.util
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

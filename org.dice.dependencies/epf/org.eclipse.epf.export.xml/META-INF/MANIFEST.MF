@@ -18,4 +18,4 @@ Export-Package: org.eclipse.epf.export.xml,
  org.eclipse.epf.export.xml.preferences,
  org.eclipse.epf.export.xml.services,
  org.eclipse.epf.export.xml.wizards
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

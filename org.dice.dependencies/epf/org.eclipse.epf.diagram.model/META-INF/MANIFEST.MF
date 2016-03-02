@@ -15,5 +15,5 @@ Eclipse-LazyStart: true
 Export-Package: org.eclipse.epf.diagram.model,
  org.eclipse.epf.diagram.model.impl,
  org.eclipse.epf.diagram.model.util
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-Activator: org.eclipse.epf.diagram.model.util.DiagramModelPlugin

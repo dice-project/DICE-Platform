@@ -9,4 +9,4 @@ Require-Bundle: org.eclipse.epf.library
 Export-Package: org.eclipse.epf.dataexchange.importing,
  org.eclipse.epf.dataexchange.internal.importing,
  org.eclipse.epf.dataexchange.util
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

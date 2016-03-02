@@ -15,4 +15,4 @@ Eclipse-LazyStart: true
 Export-Package: org.eclipse.epf.search.ui,
  org.eclipse.epf.search.ui.internal,
  org.eclipse.epf.search.ui.preferences
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

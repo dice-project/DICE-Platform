@@ -36,4 +36,4 @@ Export-Package: org.eclipse.epf.library.edit,
  org.eclipse.epf.library.edit.util.model.util,
  org.eclipse.epf.library.edit.validation,
  org.eclipse.epf.library.edit.validation.internal
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

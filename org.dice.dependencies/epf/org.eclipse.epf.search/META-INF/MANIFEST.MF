@@ -17,4 +17,4 @@ Eclipse-LazyStart: true
 Export-Package: org.eclipse.epf.search,
  org.eclipse.epf.search.analysis,
  org.eclipse.epf.search.configuration
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

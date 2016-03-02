@@ -9,3 +9,4 @@ Require-Bundle: org.eclipse.epf.library.xmi,
 Eclipse-LazyStart: true
 Provide-Package: org.eclipse.epf.publishing.cmdline
 Bundle-ClassPath: cmdline.jar
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

@@ -51,5 +51,5 @@ Export-Package: org.eclipse.epf.authoring.gef.commands,
  org.eclipse.epf.authoring.ui.util,
  org.eclipse.epf.authoring.ui.views,
  org.eclipse.epf.authoring.ui.wizards
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Import-Package: org.eclipse.epf.authoring.ui.wizards

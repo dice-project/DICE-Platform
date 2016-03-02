@@ -19,4 +19,4 @@ Export-Package: org.eclipse.epf.richtext,
  org.eclipse.epf.richtext.dialogs,
  org.eclipse.epf.richtext.html,
  org.eclipse.epf.richtext.preferences
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

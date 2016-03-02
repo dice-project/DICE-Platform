@@ -31,4 +31,4 @@ Export-Package: org.eclipse.epf.library.persistence,
  org.eclipse.epf.resourcemanager.impl,
  org.eclipse.epf.resourcemanager.util
 Bundle-Activator: org.eclipse.epf.persistence.PersistencePlugin
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

@@ -12,4 +12,4 @@ Eclipse-LazyStart: true
 Export-Package: org.eclipse.epf.uma.ecore,
  org.eclipse.epf.uma.ecore.impl,
  org.eclipse.epf.uma.ecore.util
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

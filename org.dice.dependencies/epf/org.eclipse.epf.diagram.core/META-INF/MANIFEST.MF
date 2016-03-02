@@ -27,4 +27,4 @@ Export-Package: org.eclipse.epf.diagram.core,
  org.eclipse.epf.diagram.core.services,
  org.eclipse.epf.diagram.core.util
 Bundle-Vendor: %providerName
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

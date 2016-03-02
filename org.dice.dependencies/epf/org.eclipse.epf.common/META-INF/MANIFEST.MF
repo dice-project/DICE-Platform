@@ -17,5 +17,5 @@ Export-Package: org.eclipse.epf.common,
  org.eclipse.epf.common.serviceability,
  org.eclipse.epf.common.utils,
  org.eclipse.epf.common.xml
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 

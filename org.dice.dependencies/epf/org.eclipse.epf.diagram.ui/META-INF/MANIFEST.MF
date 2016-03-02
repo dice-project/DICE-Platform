@@ -19,4 +19,4 @@ Eclipse-LazyStart: true
 Export-Package: org.eclipse.epf.diagram.ui,
  org.eclipse.epf.diagram.ui.service,
  org.eclipse.epf.diagram.ui.viewer
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

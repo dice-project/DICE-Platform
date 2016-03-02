@@ -17,4 +17,4 @@ Eclipse-LazyStart: true
 Bundle-Vendor: %providerName
 Bundle-ClassPath: exportmsp.jar
 Export-Package: org.eclipse.epf.export.msp
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

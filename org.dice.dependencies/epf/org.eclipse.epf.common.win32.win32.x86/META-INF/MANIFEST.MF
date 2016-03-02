@@ -7,4 +7,4 @@ Bundle-Localization: plugin
 Require-Bundle: org.eclipse.swt
 Bundle-Vendor: %providerName
 Eclipse-PlatformFilter: (& (osgi.ws=win32) (osgi.os=win32) (osgi.arch=x86))
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

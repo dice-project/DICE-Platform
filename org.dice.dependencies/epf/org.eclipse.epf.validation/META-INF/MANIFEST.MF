@@ -15,4 +15,4 @@ Export-Package: org.eclipse.epf.validation,
  org.eclipse.epf.validation.constraints,
  org.eclipse.epf.validation.util
 Bundle-Vendor: %providerName
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

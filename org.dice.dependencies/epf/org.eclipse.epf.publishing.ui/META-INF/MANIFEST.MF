@@ -19,4 +19,4 @@ Eclipse-LazyStart: true
 Export-Package: org.eclipse.epf.publishing.ui,
  org.eclipse.epf.publishing.ui.preferences,
  org.eclipse.epf.publishing.ui.wizards
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

@@ -18,4 +18,4 @@ Require-Bundle: org.apache.ant,
  org.eclipse.epf.services,
  org.eclipse.epf.library.xmi,
  org.eclipse.epf.common.ui
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

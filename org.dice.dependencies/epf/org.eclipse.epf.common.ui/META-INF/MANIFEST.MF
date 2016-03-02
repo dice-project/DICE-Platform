@@ -13,3 +13,4 @@ Export-Package: org.eclipse.epf.common.ui,
  org.eclipse.epf.common.ui.actions,
  org.eclipse.epf.common.ui.util
 Bundle-Vendor: %providerName
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

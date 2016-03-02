@@ -18,4 +18,4 @@ Export-Package: org.eclipse.epf.publishing,
  org.eclipse.epf.publishing.services.search,
  org.eclipse.epf.publishing.util,
  org.eclipse.epf.publishing.util.http
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
