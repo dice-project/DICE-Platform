@@ -61,7 +61,7 @@ New code and modifications are made available under the terms of the Eclipse Pub
       <feature id="org.dice.features.dam" version="1.0.0.qualifier"/>
       <feature id="org.dice.features.atl" version="1.0.0.qualifier"/>
       <feature id="org.dice.features.git" version="1.0.0.qualifier"/>
-      <feature id="org.dice.features.subversion" version="1.0.0.qualifier"/>
+      <feature id="org.dice.features.svn" version="1.0.0.qualifier"/>
    </features>
 
    <configurations>
