@@ -9,7 +9,7 @@
          <command
                commandId="org.dice.ui.monitoringCommand"
                icon="icons/16.gif"
-               label="Monitoring Tools"
+               label="Open DICE Monitoring Service"
                style="push">
          </command>
       </menuContribution>
@@ -19,7 +19,7 @@
       <command
             defaultHandler="org.dice.ui.handlers.MonitoringHandler"
             id="org.dice.ui.monitoringCommand"
-            name="Monitoring Tools">
+            name="Open DICE Monitoring Service">
       </command>
    </extension>
    <extension
