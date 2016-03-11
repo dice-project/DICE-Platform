@@ -1,0 +1,7 @@
+# Debugging options for the org.eclipse.epf.diagram.wpdd plug-in
+
+# Turn on general debugging for the org.eclipse.epf.diagram.wpdd plug-in
+org.eclipse.epf.diagram.wpdd/debug=false
+
+# Turn on debugging of visualID processing
+org.eclipse.epf.diagram.wpdd/debug/visualID=true

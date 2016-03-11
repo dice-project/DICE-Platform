@@ -1,0 +1,1242 @@
+//------------------------------------------------------------------------------
+// Copyright (c) 2005, 2006 IBM Corporation and others.
+// All rights reserved. This program and the accompanying materials
+// are made available under the terms of the Eclipse Public License v1.0
+// which accompanies this distribution, and is available at
+// http://www.eclipse.org/legal/epl-v10.html
+//
+// Contributors:
+// IBM Corporation - initial implementation
+//------------------------------------------------------------------------------
+package org.eclipse.epf.library.xmi.internal;
+
+import java.io.File;
+import java.nio.channels.FileLock;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.EventObject;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
+import org.eclipse.emf.common.command.BasicCommandStack;
+import org.eclipse.emf.common.command.Command;
+import org.eclipse.emf.common.command.CommandStack;
+import org.eclipse.emf.common.command.CommandStackListener;
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.impl.AdapterImpl;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.common.util.WrappedException;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.edit.command.AddCommand;
+import org.eclipse.emf.edit.command.CreateChildCommand;
+import org.eclipse.emf.edit.command.PasteFromClipboardCommand;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
+import org.eclipse.emf.edit.provider.INotifyChangedListener;
+import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory;
+import org.eclipse.emf.edit.provider.resource.ResourceItemProviderAdapterFactory;
+import org.eclipse.epf.common.utils.FileUtil;
+import org.eclipse.epf.library.LibraryPlugin;
+import org.eclipse.epf.library.LibraryResources;
+import org.eclipse.epf.library.edit.TngAdapterFactory;
+import org.eclipse.epf.library.edit.command.IActionManager;
+import org.eclipse.epf.library.edit.itemsfilter.FilterConstants;
+import org.eclipse.epf.library.events.ILibraryChangeListener;
+import org.eclipse.epf.library.layout.ElementLayoutManager;
+import org.eclipse.epf.library.layout.LayoutResources;
+import org.eclipse.epf.library.prefs.PreferenceConstants;
+import org.eclipse.epf.library.services.LibraryModificationHelper;
+import org.eclipse.epf.library.services.SafeUpdateController;
+import org.eclipse.epf.library.services.VersionManager;
+import org.eclipse.epf.library.util.CopyAttachmentsToNewLocation;
+import org.eclipse.epf.library.util.LibraryUtil;
+import org.eclipse.epf.library.util.Log;
+import org.eclipse.epf.library.util.ModelStorage;
+import org.eclipse.epf.library.util.ResourceUtil;
+import org.eclipse.epf.persistence.FileManager;
+import org.eclipse.epf.persistence.MethodLibraryPersister;
+import org.eclipse.epf.persistence.MultiFileResourceSetImpl;
+import org.eclipse.epf.persistence.MultiFileXMISaveImpl;
+import org.eclipse.epf.persistence.refresh.IRefreshEvent;
+import org.eclipse.epf.persistence.refresh.IRefreshListener;
+import org.eclipse.epf.persistence.refresh.RefreshJob;
+import org.eclipse.epf.uma.MethodConfiguration;
+import org.eclipse.epf.uma.MethodElement;
+import org.eclipse.epf.uma.MethodLibrary;
+import org.eclipse.epf.uma.MethodPackage;
+import org.eclipse.epf.uma.MethodPlugin;
+import org.eclipse.epf.uma.ProcessFamily;
+import org.eclipse.epf.uma.UmaPackage;
+import org.eclipse.epf.uma.ecore.impl.MultiResourceEObject;
+import org.eclipse.epf.uma.util.AssociationHelper;
+import org.eclipse.epf.services.util.ContentDescriptionFactory;
+import org.eclipse.epf.uma.util.IMethodLibraryPersister;
+import org.eclipse.epf.uma.util.UmaUtil;
+import org.eclipse.jface.util.IPropertyChangeListener;
+import org.eclipse.jface.util.ListenerList;
+import org.eclipse.jface.util.PropertyChangeEvent;
+import org.eclipse.ui.IPropertyListener;
+
+/**
+ * Manages a Method Library.
+ * 
+ * @author Jinhua Xi
+ * @author Phong Nguyen Le
+ * @author Kelvin Low
+ * @since 1.0
+ */
+public class LibraryProcessor {
+
+	public static final int PROP_DIRTY = 1;
+
+	public static LibraryProcessor instance = null;
+
+	protected AdapterFactoryEditingDomain editingDomain;
+
+	// maintain the currently selected configuration
+	// user should call set/getCurrentConfiguration() methods
+	// protected String currentConfigName = null;
+
+	private Map saveOptions;
+
+	// private Map saveAsOptions;
+	// private Set eClasses;
+
+	private List listeners = new ArrayList();
+
+	// keep the listeners to be deleted, do the delete before each notification
+	// and empty this list.
+	// don't delete in the middle of the notification since we don't want to
+	// change the listener list at this time
+	private List tmp_listeners_tobe_deleted = new ArrayList();
+
+	// private boolean isMultipleFiles = false;
+
+	// private boolean dirty = false;
+
+	boolean loaded = false;
+
+	private boolean inOperation = false;
+
+	private VersionManager versionMgr = null;
+
+	private ElementLayoutManager layoutMgr = null;;
+
+	// RATLC00384598 - Export: Infinite loop NullpointerException after
+	// exporting and unchecking rup plugin in configuration
+	// add this flag to treat the instance as singleton instacne or not
+	// only the singleton instance can dispose shared objects.
+	private boolean isSingletonInstance = false;
+
+	// the lock on the library's .project file
+	private FileLock lock;
+
+	//TODO: find a better way to notify the change in library instead of relying on the command stack listener
+	private CommandStackListener commandStackListener = new CommandStackListener() {
+		public void commandStackChanged(final EventObject event) {
+			if (!inOperation) {
+				SafeUpdateController.asyncExec(new Runnable() {
+					public void run() {
+						// Try to select the affected objects.
+						//
+						Command mostRecentCommand = LibraryUtil
+								.unwrap(((CommandStack) event.getSource())
+										.getMostRecentCommand());
+
+						if (mostRecentCommand != null) {
+							if (mostRecentCommand instanceof AddCommand) {
+								AddCommand cmd = (AddCommand) mostRecentCommand;
+								EObject owner = cmd.getOwner();
+								if (owner instanceof MethodConfiguration) {
+									Collection objs = new ArrayList();
+									objs.add(owner);
+									notifyListeners(
+											ILibraryChangeListener.OPTION_CHANGED,
+											objs);
+								} else {
+									Collection objs = mostRecentCommand.getResult();
+									notifyListeners(
+											ILibraryChangeListener.OPTION_NEWCHILD,
+											objs);
+									
+									// update the configuration selection if the
+									// object is a newly added method package
+									//
+									if (owner instanceof MethodPackage) {
+										objs = LibraryUtil.getContainedElements(owner, objs);
+										if(!objs.isEmpty()) {
+											addNewPackagesToConfiguration(objs);
+										}
+									}
+								}
+
+							} 
+							else if(mostRecentCommand instanceof PasteFromClipboardCommand) {
+								Collection objs = mostRecentCommand.getResult();
+								notifyListeners(ILibraryChangeListener.OPTION_NEWCHILD, objs);	
+								PasteFromClipboardCommand cmd = ((PasteFromClipboardCommand)mostRecentCommand);
+								
+								// update the configuration selection if the
+								// object is a newly added method package
+								//
+								if (cmd.getOwner() instanceof MethodPackage) {
+									objs = LibraryUtil.getContainedElements(cmd.getOwner(), objs);
+									if(!objs.isEmpty()) {
+										addNewPackagesToConfiguration(objs);
+									}
+								}
+							}
+							else if (mostRecentCommand instanceof CreateChildCommand) {
+								notifyListeners(
+										ILibraryChangeListener.OPTION_NEWCHILD,
+										mostRecentCommand.getAffectedObjects());
+							} else if (mostRecentCommand != null) {
+								notifyListeners(
+										ILibraryChangeListener.OPTION_CHANGED,
+										mostRecentCommand.getAffectedObjects());
+							}
+						}
+					}
+				});
+			}
+		}
+	};
+
+	/**
+	 * add the new packages into the configurations if the parent is in the
+	 * configuration
+	 * 
+	 * @param newobjs
+	 */
+	private void addNewPackagesToConfiguration(Collection newobjs) {
+		if (newobjs == null || newobjs.size() == 0) {
+			return;
+		}
+
+		LibraryModificationHelper helper = new LibraryModificationHelper();
+
+		try {
+			EObject e, parent;
+			for (Iterator it = newobjs.iterator(); it.hasNext();) {
+				e = (EObject) it.next();
+				if ((e instanceof MethodPackage)
+						&& ((parent = e.eContainer()) != null)
+						&& (parent instanceof MethodPackage)) {
+					Object configs = ((MultiResourceEObject) parent)
+							.getOppositeFeatureValue(AssociationHelper.MethodPackage_MethodConfigurations);
+					if (configs instanceof List) {
+						for (Iterator itconfig = ((List) configs).iterator(); itconfig
+								.hasNext();) {
+							MethodConfiguration config = (MethodConfiguration) itconfig
+									.next();
+							List pkgs = config.getMethodPackageSelection();
+							if (!pkgs.contains(e)) {
+								// pkgs.add(e);
+								helper
+										.getActionManager()
+										.doAction(
+												IActionManager.ADD,
+												config,
+												UmaPackage.eINSTANCE
+														.getMethodConfiguration_MethodPackageSelection(),
+												e, -1);
+							}
+						}
+					}
+				}
+			}
+
+			helper.save();
+
+		} catch (RuntimeException e) {
+			LibraryPlugin.getDefault().getLogger().logError(e);
+		} finally {
+			helper.dispose();
+		}
+	}
+
+	private INotifyChangedListener notifyChangedListener = new INotifyChangedListener() {
+		public void notifyChanged(Notification notification) {
+			if (!inOperation) {
+				int eventType = notification.getEventType();
+				switch (eventType) {
+				case Notification.ADD: {
+					// only for add MethodPlugin, or maybe some other missing
+					// stuff (if any) that are not created by a command.
+					// anything created by a command are handled by the
+					// commandStackListener
+					Object notifier = notification.getNotifier();
+					Object v = notification.getNewValue();
+					if ((notifier instanceof MethodLibrary)
+							&& (v instanceof MethodPlugin)) {
+						Collection affectedObjects = new ArrayList();
+						affectedObjects.add(v);
+						notifyListeners(ILibraryChangeListener.OPTION_NEWCHILD,
+								affectedObjects);
+					}
+					break;
+				}
+
+				case Notification.SET: {
+					Object notifier = notification.getNotifier();
+					if (notifier != null) {
+						Collection affectedObjects = new ArrayList();
+						affectedObjects.add(notifier);
+						notifyListeners(ILibraryChangeListener.OPTION_CHANGED,
+								affectedObjects);
+					}
+					break;
+				}
+
+				// note: this is the remove of elements from the parent,
+				// it might be a delete action, or might be just a remove of
+				// references
+				// for delete action, the deleted element has no container
+				// for removed reference, the removed element still have it's
+				// parent
+				case Notification.REMOVE: {
+					Object notifier = notification.getNotifier();
+					Object oldValue = notification.getOldValue();
+					Collection affectedObjects = new ArrayList();
+					if (oldValue instanceof EObject
+							&& ((EObject) oldValue).eContainer() == null) {
+						// the element is deleted, sent a delete event
+						affectedObjects.add(oldValue);
+						notifyListeners(ILibraryChangeListener.OPTION_DELETED,
+								affectedObjects);
+					} else {
+						// otherwise, it's just a remove of references, the
+						// notifier is the changed element
+						affectedObjects.add(notifier);
+						notifyListeners(ILibraryChangeListener.OPTION_CHANGED,
+								affectedObjects);
+					}
+					break;
+				}
+				case Notification.REMOVE_MANY: {
+					List oldValue = new ArrayList((Collection) notification
+							.getOldValue());
+					ArrayList deletedElements = new ArrayList();
+					ArrayList removedReferences = new ArrayList();
+					if (!oldValue.isEmpty()) {
+						for (Iterator iter = oldValue.iterator(); iter
+								.hasNext();) {
+							Object element = iter.next();
+							if (element instanceof EObject) {
+								if (((EObject) element).eContainer() == null) {
+									deletedElements.add(element);
+								} else {
+									removedReferences.add(element);
+								}
+							}
+						}
+					}
+					if (!deletedElements.isEmpty()) {
+						// the element is deleted, sent a delete event
+						notifyListeners(ILibraryChangeListener.OPTION_DELETED,
+								deletedElements);
+					}
+					if (!removedReferences.isEmpty()) {
+						// otherwise, it's just a remove of references, the
+						// notifier is the changed element
+						notifyListeners(ILibraryChangeListener.OPTION_CHANGED,
+								removedReferences);
+					}
+					break;
+				}
+				}
+			}
+		}
+	};
+
+	private boolean listenerAdded = false;
+
+	private Adapter libChangedListener = new AdapterImpl() {
+		public void notifyChanged(Notification msg) {
+			switch (msg.getFeatureID(MethodLibrary.class)) {
+			case UmaPackage.METHOD_LIBRARY__METHOD_PLUGINS:
+				MethodPlugin plugin;
+				switch (msg.getEventType()) {
+				case Notification.ADD:
+					plugin = (MethodPlugin) msg.getNewValue();
+					plugin.eResource().eAdapters().add(resourceChangedListener);
+					break;
+				case Notification.ADD_MANY:
+					for (Iterator iter = ((Collection) msg.getNewValue())
+							.iterator(); iter.hasNext();) {
+						plugin = (MethodPlugin) iter.next();
+						plugin.eResource().eAdapters().add(
+								resourceChangedListener);
+					}
+					break;
+				case Notification.REMOVE:
+					plugin = (MethodPlugin) msg.getOldValue();
+					plugin.eResource().eAdapters().remove(
+							resourceChangedListener);
+					break;
+				case Notification.REMOVE_MANY:
+					for (Iterator iter = ((Collection) msg.getOldValue())
+							.iterator(); iter.hasNext();) {
+						plugin = (MethodPlugin) iter.next();
+						plugin.eResource().eAdapters().remove(
+								resourceChangedListener);
+					}
+					break;
+				}
+			}
+		}
+	};
+
+	private Adapter resourceChangedListener = new AdapterImpl() {
+		public void notifyChanged(org.eclipse.emf.common.notify.Notification msg) {
+			if (msg.getFeatureID(null) == Resource.RESOURCE__IS_MODIFIED
+					&& msg.getEventType() == org.eclipse.emf.common.notify.Notification.SET) {
+				// dirty = true;
+				firePropertyChange(msg.getNotifier(), PROP_DIRTY);
+			}
+		}
+	};
+
+	private ListenerList propChangeListeners = new ListenerList();
+
+	private IRefreshListener refreshListener = new IRefreshListener() {
+
+		public void notifyRefreshed(IRefreshEvent event) {
+			handleRefreshEvent(event);
+		}
+		
+	};
+
+	public static LibraryProcessor getInstance() {
+		if (instance == null) {
+			synchronized (LibraryProcessor.class) {
+				if (instance == null) {
+					instance = new LibraryProcessor();
+				}
+			}
+		}
+
+		return instance;
+	}
+
+	/**
+	 * @param event
+	 */
+	protected void handleRefreshEvent(IRefreshEvent event) {
+		if(Log.DEBUG) {
+			System.out.println("LibraryProcessor.handleRefreshEvent()"); //$NON-NLS-N$
+			System.out.println("  refreshed resources: " + event.getRefreshedResources());
+		}
+		if(!event.getUnloadedObjects().isEmpty()) {
+			TngAdapterFactory.INSTANCE.cleanUp();
+		}
+	}
+
+	private LibraryProcessor() {
+		init();
+
+		// this is the main instance, will be treated as singleton
+		isSingletonInstance = true;
+	}
+
+	public LibraryProcessor(Resource res) {
+		this();
+		if (res != null) {
+			setResource(res);
+		}
+
+		isSingletonInstance = false;
+	}
+
+	/**
+	 * this construct should be called only if you want to maintain your own
+	 * LibraryProcessor, such as when for library importing or exporting.
+	 * Otherwise, call the static getInstance() method to retrieve the singleton
+	 * 
+	 * @param libraryPath
+	 */
+	public LibraryProcessor(String libraryPath) throws Exception {
+		this();
+		openLibrary(libraryPath);
+
+		isSingletonInstance = false;
+	}
+	
+	public void addPropertyListener(IPropertyListener l) {
+		propChangeListeners.add(l);
+	}
+
+	public void removePropertyListener(IPropertyListener l) {
+		propChangeListeners.remove(l);
+	}
+
+	/**
+	 * Fires a property changed event.
+	 * 
+	 * @param propertyId
+	 *            the id of the property that changed
+	 */
+	protected void firePropertyChange(final Object source, final int propertyId) {
+		Object[] array = propChangeListeners.getListeners();
+		for (int nX = 0; nX < array.length; nX++) {
+			final IPropertyListener l = (IPropertyListener) array[nX];
+
+			// since this will cause UI update, which must be executed in the UI
+			// thread
+			// otherwise, will cause Invalid Thread Access exception
+			SafeUpdateController.asyncExec(new Runnable() {
+				public void run() {
+					l.propertyChanged(source, propertyId);
+				}
+			});
+		}
+	}
+
+	private void addLibraryListeners() {
+		MethodLibrary library = getLibrary();
+
+		if (library == null || library.eResource() == null)
+			return;
+		// if(!library.eAdapters().contains(libChangedListener)) {
+		// library.eAdapters().add(libChangedListener);
+		// }
+		if (!library.eResource().eAdapters().contains(resourceChangedListener)) {
+			library.eResource().eAdapters().add(resourceChangedListener);
+		}
+		for (Iterator iter = library.getMethodPlugins().iterator(); iter
+				.hasNext();) {
+			MethodPlugin plugin = (MethodPlugin) iter.next();
+			if (!plugin.eResource().eAdapters().contains(
+					resourceChangedListener)) {
+				plugin.eResource().eAdapters().add(resourceChangedListener);
+			}
+		}
+	}
+
+	private void removeLibraryListeners() {
+		MethodLibrary library = getLibrary();
+
+		if (library == null || library.eResource() == null)
+			return;
+		// library.eAdapters().remove(libChangedListener);
+		library.eResource().eAdapters().remove(resourceChangedListener);
+		for (Iterator iter = library.getMethodPlugins().iterator(); iter
+				.hasNext();) {
+			MethodPlugin plugin = (MethodPlugin) iter.next();
+			plugin.eResource().eAdapters().remove(resourceChangedListener);
+		}
+	}
+
+	public void addListener(ILibraryChangeListener listener) {
+		synchronized (listeners) {
+			if (!listeners.contains(listener)) {
+				listeners.add(listener);
+			}
+		}
+	}
+
+	public void removeListener(ILibraryChangeListener listener) {
+		synchronized (tmp_listeners_tobe_deleted) {
+			// delay the remove till a notification is requested
+			if (!tmp_listeners_tobe_deleted.contains(listener)) {
+				tmp_listeners_tobe_deleted.add(listener);
+			}
+		}
+	}
+
+	private synchronized void notifyListeners(final int option,
+			final Collection collection) {
+		loaded = true;
+
+		try {
+			// remove the listeners to be deleted
+			if (tmp_listeners_tobe_deleted.size() > 0) {
+				for (Iterator it = tmp_listeners_tobe_deleted.iterator(); it
+						.hasNext();) {
+					Object l = it.next();
+					if (listeners.contains(l)) {
+						listeners.remove(l);
+					}
+				}
+				tmp_listeners_tobe_deleted.clear();
+			}
+
+			// notify listeners,
+			// note, the size may change since notify a listener may caused new
+			// listeners being added
+			// those new listeners will be added to the end of the list so we
+			// are ok
+			int i = 0;
+			while (i < listeners.size()) {
+				final ILibraryChangeListener listener = (ILibraryChangeListener) listeners
+						.get(i);
+				if (listener != null) {
+					// since this will cause UI update, which must be executed
+					// in the UI thread
+					// otherwise, will cause Invalid Thread Access exception
+
+					// execute it in sync mode, otherwise may cause problem
+					// since the notification might be executed too late.
+					// for example, after the listener object is disposed
+					SafeUpdateController.syncExec(new Runnable() {
+						public void run() {
+							listener.libraryChanged(option, collection);
+						}
+					});
+				}
+
+				i++;
+			}
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+	}
+
+	private void beginOperation() {
+		inOperation = true;
+	}
+
+	private void endOperation() {
+		inOperation = false;
+	}
+	
+	/**
+	 * Checks if the given object is valid in the current resource set
+	 * 
+	 * @param object
+	 * @return
+	 */
+	public boolean isValid(EObject object) {
+		if(object != null && object.eIsProxy()) {
+			EObject e = RefreshJob.getInstance().resolve(object);
+			return (e instanceof MethodElement
+					&& !e.eIsProxy()
+					&& UmaUtil.getMethodLibrary(e) == getLibrary());
+		}
+		return true;
+
+	}
+	
+	/**
+	 * Checks if the library's project is still open. If not, open it
+	 */
+	/*
+	public boolean ensureLibraryProjectOpen(IProgressMonitor monitor) {
+		MethodLibrary lib = getLibrary();
+		if(lib != null) {
+			IProject prj = ResourceUtil.findProject(lib);
+			if(prj != null && !prj.isOpen()) {
+				try {
+					prj.open(IResource.BACKGROUND_REFRESH, monitor);
+					return true;
+				} catch (CoreException e) {
+					LibraryPlugin.getDefault().getLogger().logError(e);
+				}
+			}
+		}
+		return false;
+	}
+	*/
+	
+	public void openLibrary() throws Exception {
+		String openLibrary = getLibraryRootPath().getAbsolutePath()
+				+ File.separator + "library.xmi"; //$NON-NLS-1$
+		if (openLibrary != null && !openLibrary.equals("")) { //$NON-NLS-1$
+			openLibrary(openLibrary);
+		}
+	}
+
+	public IStatus openLibrary(String libraryPath) throws Exception {
+		try {
+			beginOperation();
+			
+			// open the method library as a project in the workspace so it will
+			// show up in the Resource view.
+			//
+			File libDir = new File(libraryPath).getParentFile();
+			
+			// only close previous library if the new library's project was
+			// opened successfully
+			// close previous library's project only if it is different than the
+			// new one
+			closeOpenedLibrary();
+
+			// lock the library
+			//
+			lockLibrary(libDir);
+
+			ResourceUtil.open(libDir.getAbsolutePath(), null);
+
+			MultiFileResourceSetImpl resourceSet = ((MultiFileResourceSetImpl) editingDomain
+					.getResourceSet());
+			assignLibrary(resourceSet.loadLibrary(libraryPath));
+
+			IStatus status;
+			if (!resourceSet.hasUnresolvedProxy()) {
+				String msg = LibraryResources
+						.getString("Library.unresolvedProxyError.reason"); //$NON-NLS-1$
+				status = new Status(IStatus.WARNING, LibraryPlugin.getDefault()
+						.getId(), 0, msg, null);
+			} else {
+				status = Status.OK_STATUS;
+			}
+
+			notifyListeners(ILibraryChangeListener.OPTION_LOADED, null);
+			return status;
+		} finally {
+			endOperation();
+
+			// dirty = false;
+			firePropertyChange(getLibrary(), PROP_DIRTY);
+
+			// setCurrentConfiguration(null);
+		}
+
+	}
+
+	/**
+	 * Assigns library to a new value and attach the change listeners to it.
+	 * 
+	 * @param lib
+	 */
+	private void assignLibrary(MethodLibrary lib) {
+		removeLibraryListeners();
+		addLibraryListeners();
+	}
+
+	public void newLibrary(String libraryName, String libraryPath) throws Exception {
+		try {
+			closeOpenedLibrary();
+
+			// isMultipleFiles = bMultiple;
+			beginOperation();
+
+			File lib_path = new File(libraryPath);
+			libraryPath = lib_path.getAbsolutePath();
+
+			// open the method library as a project in the workspace so it will
+			// show up in the Resource view.
+			ResourceUtil.open(libraryPath, null);
+
+			MultiFileResourceSetImpl resourceSet = (MultiFileResourceSetImpl) editingDomain
+					.getResourceSet();
+			ModelStorage.newLibrary(resourceSet, libraryName, libraryPath, true);
+			assignLibrary(resourceSet.getMethodLibrary());
+
+			// lock the library
+			lockLibrary(lib_path);
+		} finally {
+			endOperation();
+			// setDirty(true);
+			// setCurrentConfiguration(null);
+			notifyListeners(ILibraryChangeListener.OPTION_CREATED, null);
+		}
+	}
+
+	/**
+	 * Saves the given resource if it belong to the currently open library
+	 * 
+	 * @param resource
+	 * @throws Exception
+	 */
+	public void save(Resource resource) throws Exception {
+		MultiFileResourceSetImpl resourceSet = ((MultiFileResourceSetImpl) editingDomain
+				.getResourceSet());
+		if (resourceSet.getResources().contains(resource)) {
+			resourceSet.save(resource, saveOptions);
+		}
+	}
+
+	public void saveLibrary() throws Exception {
+		MethodLibrary library = getLibrary();
+		if (library != null) {
+			doSave(saveOptions);
+			firePropertyChange(library, PROP_DIRTY);
+
+			notifyListeners(ILibraryChangeListener.OPTION_SAVED, null);
+		}
+	}
+
+	/**
+	 * Saves the open library under a new location
+	 * 
+	 * @param newDir
+	 *            directory to save the open library to
+	 * @param regenerateGUID
+	 *            if true, regenerate GUID for all MethodElements in the open
+	 *            library
+	 */
+	public void saveLibraryAs(String newDir, boolean regenerateGUID,
+			IProgressMonitor monitor) throws Exception {
+		String oldLibDir = getLibraryRootPath()
+				.getAbsolutePath();
+
+		// create new IProject
+		ResourceUtil.open(newDir, monitor);
+
+		MultiFileResourceSetImpl resourceSet = (MultiFileResourceSetImpl) getLibrary()
+				.eResource().getResourceSet();
+		resourceSet.saveAs(newDir, regenerateGUID, monitor);
+
+		// handle attachments here
+		CopyAttachmentsToNewLocation.copyAttachmentsLibrary(oldLibDir, newDir,
+				null, monitor);
+	}
+
+	/**
+	 * 
+	 * @param libraryPath
+	 * @param bMultiple
+	 * @throws Exception
+	 * @deprecated
+	 */
+	public void saveLibraryAs(String libraryPath, boolean bMultiple)
+			throws Exception {
+		// Resource res =
+		// ((Resource)editingDomain.getResourceSet().getResources().get(0));
+		// res.setURI(URI.createFileURI(libraryPath));
+		// res.setModified(true);
+		//
+		// setSaveAsMultipleFolder(bMultiple);
+		//        	
+		// doSave(saveAsOptions);
+		// setDirty(false);
+		// isMultipleFiles = bMultiple;
+		//        
+		// notifyListeners(ILibraryChangeListener.OPTION_SAVED, null);
+
+		throw new UnsupportedOperationException();
+	}
+
+	private void setResource(Resource res) {
+		if (res != null) {
+			MultiFileResourceSetImpl resourceSet = (MultiFileResourceSetImpl) editingDomain
+					.getResourceSet();
+			resourceSet.reset();
+			resourceSet.getResources().add(res);
+			assignLibrary(resourceSet.getMethodLibrary());
+			notifyListeners(ILibraryChangeListener.OPTION_CHANGED, null);
+		}
+	}
+
+	private Resource getLibraryResource() {
+		List res = getEditingDomain().getResourceSet().getResources();
+		if (res.size() > 0) {
+			return (Resource) res.get(0);
+		}
+
+		return null;
+	}
+
+	public MethodLibrary getLibrary() {
+		Resource resource = getLibraryResource();
+		if (resource != null && resource.getContents().size() > 0) {
+			for (Iterator it = resource.getContents().iterator(); it.hasNext();) {
+				Object o = it.next();
+				if (o instanceof MethodLibrary) {
+					return (MethodLibrary) o;
+				}
+			}
+		}
+
+		return null;
+	}
+
+	public URI getLibraryURI() {
+		Resource savedResource = getLibraryResource();
+		if (savedResource != null) {
+			return savedResource.getURI();
+		}
+
+		return null;
+	}
+
+	public URI getRelativeURI(MethodElement element) {
+		URI libURI = getLibraryURI();
+		URI elemetnURI = element.eResource().getURI();
+		URI relUri = elemetnURI.deresolve(libURI);
+
+		return relUri;
+	}
+
+	public synchronized ElementLayoutManager getLayoutManager() {
+		// no ElementLayoutManager id library is not loaded
+		if (layoutMgr == null) {
+			if (getLibrary() != null) {
+				layoutMgr = new ElementLayoutManager();
+			}
+		}
+
+		return layoutMgr;
+	}
+
+	/*
+	public VersionManager getVersionManager() {
+		if (versionMgr == null) {
+			synchronized (this) {
+				if (versionMgr == null) {
+					versionMgr = new VersionManager(this);
+				}
+			}
+		}
+
+		return versionMgr;
+	}
+	*/
+
+	public void setLibrary(MethodLibrary newLib) {
+		assignLibrary(newLib);
+		Resource res = (Resource) getEditingDomain().getResourceSet()
+				.getResources().get(0);
+		res.getContents().clear();
+		res.getContents().add(newLib);
+		notifyListeners(ILibraryChangeListener.OPTION_LOADED, null);
+	}
+
+	public AdapterFactoryEditingDomain getEditingDomain() {
+		return editingDomain;
+	}
+
+	private void init() {
+		LibraryPlugin.getDefault().getPreferenceStore()
+				.addPropertyChangeListener(new IPropertyChangeListener() {
+
+					public void propertyChange(PropertyChangeEvent event) {
+						if (event.getProperty().equals(
+								PreferenceConstants.PREF_BACK_UP_BEFORE_SAVE)) {
+							saveOptions.put(
+									MultiFileXMISaveImpl.BACK_UP_BEFORE_SAVE,
+									event.getNewValue());
+						} else if (event
+								.getProperty()
+								.equals(
+										PreferenceConstants.PREF_DISCARD_UNRESOLVED_REFERENCES)) {
+							saveOptions
+									.put(
+											MultiFileXMISaveImpl.DISCARD_UNRESOLVED_REFERENCES,
+											event.getNewValue());
+						}
+					}
+
+				});
+
+		// create the default editing domain for library operation
+		List factories = new ArrayList();
+		factories.add(new ResourceItemProviderAdapterFactory());
+		factories.add(new ReflectiveItemProviderAdapterFactory());
+
+		ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(
+				factories);
+
+		// Create the command stack that will notify this editor as commands are
+		// executed.
+		BasicCommandStack commandStack = new BasicCommandStack();
+
+		// Create the editing domain with a special command stack.
+		MultiFileResourceSetImpl resourceSet = new MultiFileResourceSetImpl();
+		
+		resourceSet.addRefreshListener(refreshListener);
+		RefreshJob.getInstance().setResourceSet(resourceSet);
+
+		saveOptions = resourceSet.getDefaultSaveOptions();
+		boolean b = LibraryPlugin.getDefault().getPreferenceStore().getBoolean(
+				PreferenceConstants.PREF_BACK_UP_BEFORE_SAVE);
+		saveOptions.put(MultiFileXMISaveImpl.BACK_UP_BEFORE_SAVE, Boolean
+				.valueOf(b));
+		b = LibraryPlugin.getDefault().getPreferenceStore().getBoolean(
+				PreferenceConstants.PREF_DISCARD_UNRESOLVED_REFERENCES);
+		saveOptions.put(MultiFileXMISaveImpl.DISCARD_UNRESOLVED_REFERENCES,
+				Boolean.valueOf(b));
+
+		editingDomain = new AdapterFactoryEditingDomain(adapterFactory,
+				commandStack, resourceSet);
+
+		// Create new IContentDescriptionPersister and set it to the
+		// ContentDescriptionFactory for use.
+		//
+		IMethodLibraryPersister contentDescPersister = new MethodLibraryPersister();
+		ContentDescriptionFactory
+				.setMethodLibraryPersister(contentDescPersister);
+
+		ContentDescriptionFactory.setFileManager(FileManager.getInstance());
+
+		registerEditingDomain(editingDomain);
+	}
+
+	public void doSave(Map options) throws Exception {
+		if (Log.DEBUG) {
+			System.out.println("Save options: " + options); //$NON-NLS-1$
+		}
+
+		// List removedResources = new ArrayList();
+
+		// File libDir = new
+		// File(((Resource)editingDomain.getResourceSet().getResources().get(0)).getURI().toFileString()).getParentFile();
+
+		try {
+			beginOperation();
+			MultiFileResourceSetImpl resourceSet = ((MultiFileResourceSetImpl) editingDomain
+					.getResourceSet());
+			// Save the resource(s)
+			//
+			resourceSet.save(options);
+
+			((BasicCommandStack) editingDomain.getCommandStack()).saveIsDone();
+		} catch (Exception exception) {
+			exception.printStackTrace();
+			throw exception;
+		} finally {
+			endOperation();
+
+		}
+	}
+
+	/*
+	public void discardChanges() {
+		for (Iterator iter = editingDomain.getResourceSet().getResources()
+				.iterator(); iter.hasNext();) {
+			Resource resource = (Resource) iter.next();
+			resource.setModified(false);
+		}
+	}
+	*/
+
+	public boolean isLibraryLoaded() {
+		return loaded;
+	}
+
+	public ComposedAdapterFactory getAdapterFactory() {
+		return (ComposedAdapterFactory) getEditingDomain().getAdapterFactory();
+	}
+
+	private List getMethodModels() {
+		MethodLibrary library = getLibrary();
+		return (library == null) ? new ArrayList() : library.getMethodPlugins();
+	}
+
+	public MethodPlugin getMethodPlugin(String guid) {
+		if (guid != null) {	
+			for (Iterator it = getMethodModels().iterator(); it.hasNext();) {
+				MethodPlugin p = (MethodPlugin) it.next();
+				if (guid.equals(p.getGuid())) {
+					return p;
+				}
+			}
+		}
+
+		return null;
+	}
+
+	/**
+	 * get process family by name
+	 * 
+	 * @param name
+	 * @return ProcessFamily
+	 */
+	public ProcessFamily getProcessFamily(String name) {
+		MethodConfiguration config;
+		MethodLibrary library = getLibrary();
+		if (library != null) {
+			List configs = library.getPredefinedConfigurations();
+			for (Iterator it = configs.iterator(); it.hasNext();) {
+				config = (MethodConfiguration) it.next();
+				if ((config instanceof ProcessFamily)
+						&& config.getName().equals(name)) {
+					return (ProcessFamily) config;
+				}
+			}
+		}
+
+		return null;
+	}
+
+	/**
+	 * register edting domain with this library
+	 * 
+	 * @param domain
+	 */
+	public void registerEditingDomain(AdapterFactoryEditingDomain domain) {
+		/**
+		 * this notifys all changes, not just the content change, only pick the
+		 * ones for element updates. The other operations are colvered by the
+		 * Command events
+		 */
+		((ComposedAdapterFactory) domain.getAdapterFactory())
+				.addListener(notifyChangedListener);
+
+		// Add a listener to set the most recent command's affected objects to
+		// be the selection of the viewer with focus.
+		domain.getCommandStack().addCommandStackListener(commandStackListener);
+
+	}
+
+	public void listenTo(ComposedAdapterFactory adapterFactory) {
+		adapterFactory.addListener(notifyChangedListener);
+	}
+
+	public void stopListeningTo(ComposedAdapterFactory adapterFactory) {
+		adapterFactory.removeListener(notifyChangedListener);
+	}
+
+	public void listenTo(CommandStack commandStack) {
+		commandStack.addCommandStackListener(commandStackListener);
+	}
+
+	public void stopListeningTo(CommandStack commandStack) {
+		commandStack.removeCommandStackListener(commandStackListener);
+	}
+
+	/**
+	 * @return Returns the saveOptions.
+	 */
+	public Map getSaveOptions() {
+		return saveOptions;
+	}
+
+	public File getLibraryRootPath() {
+		URI uri = this.getLibraryURI();
+		if (uri != null) {
+			String path = uri.toFileString();
+			File f = new File(path);
+			return f.getParentFile();
+		}
+
+		return null;
+	}
+
+	public void addMethodPlugin(final MethodPlugin model) {
+
+		// since this will cause UI update, which must be executed in the UI
+		// thread
+		// otherwise, will cause Invalid Thread Access exception
+		final Exception[] exceptions = new Exception[1];
+
+		SafeUpdateController.syncExec(new Runnable() {
+			public void run() {
+				getLibrary().getMethodPlugins().add(model);
+
+				IMethodLibraryPersister.FailSafeMethodLibraryPersister persister = ContentDescriptionFactory
+						.getMethodLibraryPersister().getFailSafePersister();
+				try {
+					persister.save(getLibrary().eResource());
+					persister.commit();
+				} catch (Exception e) {
+					persister.rollback();
+					exceptions[0] = e;
+					return;
+				}
+
+				model.eResource().eAdapters().add(resourceChangedListener);
+			}
+		});
+
+		if (exceptions[0] != null) {
+			throw new WrappedException(exceptions[0]);
+		}
+	}
+
+	/**
+	 * Enables/disables notification entirely.
+	 * 
+	 * @param b
+	 */
+	public void setNotificationEnabled(boolean b) {
+		editingDomain.getResourceSet().eSetDeliver(b);
+	}
+
+	public boolean isNotificationEnabled() {
+		return editingDomain.getResourceSet().eDeliver();
+	}
+
+	/**
+	 * call this method when the current library is to be closed. for example,
+	 * when you try to open a nother library for create a new library
+	 */
+	public void closeOpenedLibrary() {
+		notifyListeners(ILibraryChangeListener.OPTION_LIBRARY_CLOSED, null);
+
+		if (Log.DEBUG) {
+			System.out
+					.println("Used memory before closing library: " + (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())); //$NON-NLS-1$
+		}
+		// RATLC00384598 - Export: Infinite loop NullpointerException after
+		// exporting and unchecking rup plugin in configuration
+		// so don't dispose it if not the main singleton instance
+		if (isSingletonInstance) {
+			// dispose all item providers
+			//
+			TngAdapterFactory.INSTANCE.reset();
+
+			// clear filter constants hashMap
+			if (FilterConstants.hashMap != null) {
+				FilterConstants.hashMap.clear();
+			}
+		}
+
+		if (this.layoutMgr != null) {
+			this.layoutMgr.clear();
+		}
+
+
+		// clear the temp layout 
+		LayoutResources.clear();
+
+		/*
+		 * if ( this.depMgr != null ) { this.depMgr.clear(); } this.depMgr =
+		 * null;
+		 */
+
+		this.layoutMgr = null;
+
+		// this.invalidGuids.clear();
+
+		MultiFileResourceSetImpl resourceSet = (MultiFileResourceSetImpl) editingDomain
+				.getResourceSet();
+
+		resourceSet.clearErrors();
+		MethodLibrary library = getLibrary();
+
+		unlockLibrary();
+
+		resourceSet.reset();
+		RefreshJob.getInstance().reset();
+
+		Runtime.getRuntime().gc();
+		if (Log.DEBUG) {
+			System.out
+					.println("Used memory after closing library: " + (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())); //$NON-NLS-1$
+		}
+
+	}
+
+	private void unlockLibrary() {
+		// release lock on old lib's project
+		try {
+			if (lock != null) {
+				lock.release();
+				lock.channel().close();
+			}
+		} catch (Exception e) {
+			LibraryPlugin.getDefault().getLogger().logError(e);
+		}
+	}
+
+	/**
+	 * Locks the .lock file in the given path. Creates a .lock file if one does
+	 * not exist
+	 * 
+	 * @param file
+	 *            path to library
+	 */
+	public void lockLibrary(File libDirFile) {
+		File lockFile = new File(libDirFile, ResourceUtil.LOCK_FILENAME);
+		lock = FileUtil.lockFile(lockFile);
+	}
+
+}

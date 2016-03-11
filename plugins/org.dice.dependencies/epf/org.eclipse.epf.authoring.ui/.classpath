@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="com/ibm/uma/authoring/views/BSEditorView.java|com/ibm/uma/authoring/views/ContentPackageTab.java|com/ibm/uma/authoring/views/GuidanceTab.java|com/ibm/uma/authoring/views/ProductEditorView.java|com/ibm/uma/authoring/views/ProductViewer.java|com/ibm/uma/authoring/views/RoleDocumentationTab.java|com/ibm/uma/authoring/views/RoleTasksTab.java|com/ibm/uma/authoring/views/RoleWorkProductsTab.java|com/ibm/uma/authoring/views/TaskDisciplineTab.java|com/ibm/uma/authoring/views/TaskDocumentationTab.java|com/ibm/uma/authoring/views/TaskGuidancesTab.java|com/ibm/uma/authoring/views/TaskStepTab.java|com/ibm/uma/authoring/views/WorkProductDocumentationTab.java|com/ibm/uma/authoring/views/WorkProductGuidancesTab.java|com/ibm/uma/authoring/views/WorkProductTasksTab.java" kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

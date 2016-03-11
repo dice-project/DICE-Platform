@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!-- 
+    Copyright (c) 2005, 2006 IBM Corporation and others.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+    Contributors:
+    IBM Corporation - initial implementation
+-->
+
+<cheatsheet title="Create your own Method Configuration">
+	<intro href="/org.eclipse.epf.help.doc/topics/t_method_configuration_new.html">
+		<description>This cheat sheet guides you though the steps of creating your own method configuration. Because the method library can contain large numbers of elements, you may want to limit your work to a user-defined subset of the library called method configuration. A method configuration defines a working set of packages within the method library that helps you limit your view to a subset of all elements. Method configurations are not only used for creating processes (you drag and drop elements into a process from here), but also for publication, because a configuration defines which elements will be published in HTML and which will not.<br/><br/>The elements that are part of a selected configuration are displayed in the configuration view. The configuration view allows you to browse the collection of method elements that are part of the selected configuration, and to populate processes by dragging elements from the configuration view into the process editor.</description>
+	</intro>
+
+	<item
+		href="/org.eclipse.epf.help.doc/topics/t_method_configuration_new.html"
+		title="Prepare Creating a Method Configuration"
+		skip="false">
+		<description>Before creating a method configuration you should determine your needs and goals for the configuration. One scenario for creating a method configuration is that you have already created a new method plug-in in which you want to define method elements that extend an already existing plug-in. In this case, you need to create a configuration that includes your new plug-in as well as the existing plug-in. If you want to create your own method plug-in first then go the cheat "Create your own Method Plug-in".<br/><br/>Another scenario for creating a method configuration is that you want to define a new configuration for publication purposes on existing plug-ins, defining which elements to publish. For example, if the current set of configurations available does not meet your needs, you could now either customize an existing configuration or create a completely new configuration from scratch.<br/><br/>If you want to create a method configuration by copying an existing configuration go to the next step "Create a Method Configuration by copying an existing configuration".<br/><br/>If you want to create a completely new method configuration, skip to step "Create a new Method Configuration from scratch".</description>
+	</item>
+
+	<item
+		title="Create a Method Configuration by Copying an Existing Configuration"
+		skip="true">
+		<description>Expand the "Configurations" package at the end of the Library view. Right click the method configuration you want to copy, and then select "Copy" from the menu. Right click the configurations package and then select "Paste" from the menu.<br/><br/>A dialog prompts your for a new configuration name. Provide a name that reflects the character or purpose of this configuration. To continue specifying your method configuration, skip to step "Specify the Method Configuration".</description>
+	</item>
+
+	<item
+		title="Create a new Method Configuration from Scratch"
+		skip="true">
+		<description>Right click the configurations package and select New -&gt; Method Configuration from the menu. The new configuration is added to the list and its editor is opened. Change the name of the new configuration to reflect its character or purpose and then continue to the next step, "Specify the Method Configuration".</description>
+	</item>
+
+	<item
+		title="Specify the Method Configuration"
+		skip="false">
+		<description>Click the "Plug-in and Package Selection" tab in the method configuration editor to go to the configuration specification form. This form displays a list of all method plug-ins and for every plug-in all of its content packages as well as all processes. Use the check boxes to add or remove plug-ins, packages, and processes to or from your configuration.</description>
+	</item>
+	
+	<item
+		href="/org.eclipse.epf.help.doc/topics/c_configuration_view.html" 
+		title="Preview your Configuration in the Configuration View"
+		skip="false">
+		<description>You can immediately preview your method configuration using the configuration view. Refresh your configuration view by clicking the view's "Refresh All" icon. Drill into the tree structures displayed by the configuration view to see elements included in the configuration.</description>
+	</item>
+	
+	<item
+		href="/org.eclipse.epf.help.doc/topics/c_method_content_categories.html" 
+		title="Define Navigation Views for the Method Configuration"
+		skip="false">
+		<description>A navigation view is a navigation tree browser for a configuration published as HTML. Every published configuration can have several views that are displayed as stacked tree browser tabs. The structure of the navigation view is defined as custom categories. A custom category is a user-defined collection of categorizing elements, which may itself contain subcategories. This structure is what defines the structure for the tree browser. (For more information about Custom Categories, see the online help.) Therefore, to define a navigation view you select a custom category and all of this categories sub-elements make up the tree browser structure displayed by the view.<br/><br/>To add navigation views to your configuration click the "Views" tab in the configuration editor. Use the "Add View..." and "Remove View" buttons to select the custom categories you want to add and remove as a view, respectively. Click the tab of the views you just added to preview.<br/><br/>To select a view to display as the start-up view, click the "Make Default" button. The start-up view is the first view shown when a published configuration is displayed when starting up.</description>
+	</item>
+	<item title="Done"><description></description>
+	</item>
+</cheatsheet>
+

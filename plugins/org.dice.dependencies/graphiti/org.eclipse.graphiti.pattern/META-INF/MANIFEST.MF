@@ -1,0 +1,167 @@
+Manifest-Version: 1.0
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-SymbolicName: org.eclipse.graphiti.pattern;singleton:=true
+Require-Bundle: org.eclipse.graphiti;bundle-version="0.7.1"
+Export-Package: org.eclipse.graphiti.pattern;version="0.7.1",org.eclip
+ se.graphiti.pattern.config;version="0.7.1",org.eclipse.graphiti.patte
+ rn.mapping;version="0.7.1",org.eclipse.graphiti.pattern.mapping.data;
+ version="0.7.1"
+Bundle-Version: 0.7.1.v20110110-1225
+Ant-Version: Apache Ant 1.7.1
+Bundle-ClassPath: .
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Created-By: 16.3-b01 (Sun Microsystems Inc.)
+Import-Package: org.eclipse.graphiti.ui.features;version="0.7.1"
+Bundle-ManifestVersion: 2
+
+Name: org/eclipse/graphiti/pattern/CreateFeatureForPattern.class
+SHA1-Digest: 6LcEhyrn4Xw+LRbVTuyKBhvm4gI=
+
+Name: org/eclipse/graphiti/pattern/FeatureForPatternDelegate.class
+SHA1-Digest: ticsrWaf9wixUZ0bZq/1Htq8rKc=
+
+Name: org/eclipse/graphiti/pattern/CreateConnectionFeatureForPattern.c
+ lass
+SHA1-Digest: /947gotEiSvzxIOWiWE+Autgfxs=
+
+Name: org/eclipse/graphiti/pattern/config/IColorConfiguration.class
+SHA1-Digest: gA5n4/PfmKZIvgHTbSmrcExdVko=
+
+Name: org/eclipse/graphiti/pattern/ResizeShapeFeatureForPattern.class
+SHA1-Digest: NUMxmsOx8K5ZS9ky59yesDvtFJA=
+
+Name: org/eclipse/graphiti/pattern/mapping/data/TextDataMapping.class
+SHA1-Digest: XCpReH+1NmPEXpl9NOYqgCs20ww=
+
+Name: org/eclipse/graphiti/pattern/mapping/IStructureMappingGrid.class
+SHA1-Digest: pohgT5aF7zHv/tN988TAh2f/mmY=
+
+Name: org/eclipse/graphiti/pattern/mapping/IStructureMappingSingle.cla
+ ss
+SHA1-Digest: AQkHB7jPlvA+sAz8PVjBvwaxfNg=
+
+Name: org/eclipse/graphiti/pattern/mapping/IStructureMappingMulti.clas
+ s
+SHA1-Digest: oG4lgYb2/Pb5m6Scik1FIKXs6BQ=
+
+Name: org/eclipse/graphiti/pattern/ReconnectionFeatureForPattern.class
+SHA1-Digest: 0Mifrvr3ut7XNTuH/JRgj0poF2Q=
+
+Name: org/eclipse/graphiti/pattern/AbstractPattern.class
+SHA1-Digest: k6UDW1an+WZi6ol7T3fPSNjpgOU=
+
+Name: plugin.properties
+SHA1-Digest: jn57SrjbhXtI2+bnXxJn1MQe+6c=
+
+Name: org/eclipse/graphiti/pattern/mapping/ILinkCreationInfo.class
+SHA1-Digest: oxeUuuVbQJY09RLGMizM9hMA5IQ=
+
+Name: org/eclipse/graphiti/pattern/AbstractConnectionPattern.class
+SHA1-Digest: 1OXGpLXftYGKRU6qreR6SiR7hLg=
+
+Name: org/eclipse/graphiti/pattern/LayoutFeatureForPattern.class
+SHA1-Digest: mSPzQifBKzFdcn3/jzSL7Y5cO8Y=
+
+Name: org/eclipse/graphiti/pattern/UpdateFeatureForPattern.class
+SHA1-Digest: 9scK2/kI/va2mIw5J+PhhkP5Kns=
+
+Name: org/eclipse/graphiti/pattern/mapping/StructureMappingGrid.class
+SHA1-Digest: 0ntHg0VJAH/NrHZMDlm8NHwioHc=
+
+Name: org/eclipse/graphiti/pattern/internal/T.class
+SHA1-Digest: jPFfy4AKS4NjTSuPh972NZJLt7c=
+
+Name: org/eclipse/graphiti/pattern/mapping/StructureMappingSingle.clas
+ s
+SHA1-Digest: Vri57nqf1GdbFGDN6YJXkg8f1wI=
+
+Name: org/eclipse/graphiti/pattern/IPatternContainer.class
+SHA1-Digest: XGZK59NLHGbzDJ0UuJWmKDANnqc=
+
+Name: org/eclipse/graphiti/pattern/mapping/StructureMappingMulti.class
+SHA1-Digest: TWZk4qoyHGKYoO31y9FI0nt945g=
+
+Name: org/eclipse/graphiti/pattern/IPattern.class
+SHA1-Digest: XdL3/4uPgi1ifcydPy5TFxOGYwg=
+
+Name: org/eclipse/graphiti/pattern/mapping/LinkCreationInfo.class
+SHA1-Digest: mv3SpIs18ns9qH9eUjTuqzsVVR4=
+
+Name: org/eclipse/graphiti/pattern/mapping/data/IDataMapping.class
+SHA1-Digest: THVUzBqXDWI14vJSTxsnxzHZMiQ=
+
+Name: org/eclipse/graphiti/pattern/IConnectionPattern.class
+SHA1-Digest: CiPB9cVJgOb77O9L2ZfuKg1hCAo=
+
+Name: org/eclipse/graphiti/pattern/mapping/IStructureMapping.class
+SHA1-Digest: d78DwBfSbFaUaVp4ZwAQWQBudkk=
+
+Name: org/eclipse/graphiti/pattern/MoveShapeFeatureForPattern.class
+SHA1-Digest: qYfFInVK2EzZDY4e/4Op28SZfkM=
+
+Name: org/eclipse/graphiti/pattern/mapping/data/IImageDataMapping.clas
+ s
+SHA1-Digest: 9B9zCdSLlc0IEI2Q09LYbD+7nM0=
+
+Name: org/eclipse/graphiti/pattern/DirectEditingFeatureForPattern.clas
+ s
+SHA1-Digest: waSSJztSReO0qzmfy2QIFx0Q8J0=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: 09gN05tobgS/MdtqyTNQhOhB73M=
+
+Name: org/eclipse/graphiti/pattern/DefaultFeatureProviderWithPatterns.
+ class
+SHA1-Digest: C9UacEignopLsYwWlSQ6K+MIIxo=
+
+Name: org/eclipse/graphiti/pattern/IFeatureForPattern.class
+SHA1-Digest: 1tNmqwv4GMyWaadeceAmzhp+cAY=
+
+Name: org/eclipse/graphiti/pattern/mapping/data/ILabelDataMapping.clas
+ s
+SHA1-Digest: +ZUtBV7SsZw9Cux/0evXC6M/nvY=
+
+Name: about.html
+SHA1-Digest: sAXgWZYB7tT9O9w6pl6VraWFVhk=
+
+Name: org/eclipse/graphiti/pattern/mapping/data/ImageDataMapping.class
+SHA1-Digest: f3DIvsDj0rpZtvjZvf7ntuQXkPQ=
+
+Name: org/eclipse/graphiti/pattern/config/IIndentConfiguration.class
+SHA1-Digest: 03/1CTNt0XkFV08Xsqq/cXuTYhg=
+
+Name: org/eclipse/graphiti/pattern/mapping/MappingProviderProvider.cla
+ ss
+SHA1-Digest: XenLhcFoFzP4ZfrER1OSFwPIhek=
+
+Name: org/eclipse/graphiti/pattern/mapping/data/ITextDataMapping.class
+SHA1-Digest: YltHVAp+vTdcZy3ThaGOZiDcRfM=
+
+Name: org/eclipse/graphiti/pattern/mapping/StructureMapping.class
+SHA1-Digest: DnwTas7RYF8+xc4xJ6wNpHKQx8c=
+
+Name: org/eclipse/graphiti/pattern/AddFeatureForPattern.class
+SHA1-Digest: YerZm5mqJ1gQosCCZV1BXK/KO/s=
+
+Name: org/eclipse/graphiti/pattern/mapping/data/LabelDataMapping.class
+SHA1-Digest: FpY1dBI2WfTOZR3SyaTl0y/Db+4=
+
+Name: org/eclipse/graphiti/pattern/mapping/data/DataMapping.class
+SHA1-Digest: f++LKABi+mTjTgLlVEKmgb5jK70=
+
+Name: org/eclipse/graphiti/pattern/config/IPatternConfiguration.class
+SHA1-Digest: tqzuAf+7YPVT6bDAQbo6ErGWAVs=
+
+Name: org/eclipse/graphiti/pattern/config/IMinimumSizeConfiguration.cl
+ ass
+SHA1-Digest: oTeXNdy/nw3c18THScZ4txNmgaQ=
+
+Name: org/eclipse/graphiti/pattern/IFeatureProviderWithPatterns.class
+SHA1-Digest: Oz6LzIzL+e2AT+9GqjtuG8u5Puc=
+
+Name: org/eclipse/graphiti/pattern/AbstractBasePattern.class
+SHA1-Digest: FX1zUvNPNKz3XgLzenYoQmxxmVA=
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension-point id="operation" name="Method Search Operation" schema="schema/operation.exsd"/>
+   <extension-point id="searchInputFactories" name="Method Search Input Factories" schema="schema/searchInputFactories.exsd"/>
+   <extension-point id="searchScopeGroupFactory" name="Search Scope Group Factory" schema="schema/searchScopeGroupFactory.exsd"/>
+   <extension-point id="searchResultProviderFactory" name="Search Result Provider Factory" schema="schema/searchResultProviderFactory.exsd"/>
+   
+   <extension point="org.eclipse.search.searchPages">
+      <page id="org.eclipse.epf.search.ui.MethodSearchPage"
+            class="org.eclipse.epf.search.ui.MethodSearchPage"      
+            label="%methodSearchDialogLabel"
+            icon="icons/full/obj16/MethodSearch.gif"
+            sizeHint="250,160"
+            tabPosition="0"
+            extensions="*:1"
+            showScopeSection="false"		
+            canSearchEnclosingProjects="false">
+      </page>    
+   </extension>
+   
+   <extension
+         id="MethodSearchPage"
+         point="org.eclipse.search.searchResultViewPages">
+      <viewPage
+            id="org.eclipse.epf.search.ui.MethodSearchResultPage"
+			searchResultClass="org.eclipse.epf.search.ui.internal.MethodSearchResult"
+			class="org.eclipse.epf.search.ui.MethodSearchResultPage">
+      </viewPage>
+   </extension>   
+
+</plugin>

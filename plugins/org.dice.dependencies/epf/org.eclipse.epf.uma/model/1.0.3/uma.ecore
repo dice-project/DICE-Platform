@@ -1,0 +1,1229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="uma"
+    nsURI="http://www.eclipse.org/epf/uma/1.0.3/uma.ecore" nsPrefix="org.eclipse.epf.uma">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="03"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EDataType" name="Date" instanceClassName="java.util.Date">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Data type used for attributes of meta-model classes of the type Date."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Uri" instanceClassName="java.net.URI">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Data type used for attributes of meta-model classes that point to resources such as files."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="UnlimitedNatural" instanceClassName="int"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="String" instanceClassName="java.lang.String"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Set" instanceClassName="java.util.Set"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Sequence" instanceClassName="java.util.List"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Integer" instanceClassName="int"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Float" instanceClassName="java.lang.Float"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Classifier" abstract="true" eSuperTypes="#//Type">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="UML 2.0 meta-class Classifier."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Type" abstract="true" eSuperTypes="#//PackageableElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="UML 2.0 meta-class Type."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Element" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="UML 2.0 meta-class Element."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true" eSuperTypes="#//Element">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="UML 2.0 meta-class Named Element.  Defined that every element has a name."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" eType="#//String"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PackageableElement" abstract="true"
+      eSuperTypes="#//NamedElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="UML 2.0 meta-class Packagable Element."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Package" eSuperTypes="#//Namespace #//PackageableElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="UML 2.0 meta-class Package."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Namespace" abstract="true" eSuperTypes="#//NamedElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="UML 2.0 meta-class Namespace."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodElement" abstract="true" eSuperTypes="#//PackageableElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Every class defined in this specification is derived from Method Element.  In other words Method Element is the root generalization for all UMA classes and defines a common set of attributes inherited by every other element type of this model.  Method Element itself is derived from Packageable Element from the UML 2.0 Infrastructure.  Method Element inherits the Name attribute from Packageable Element's super class.  Every element defined as a UMA instance is derived from Model Element.  Every Method Element in-stance is at least defined by a unique id, a name, as well as brief description."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="guid" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Every instance of Method Element has a global unique id."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="briefDescription" unique="false"
+        eType="#//String" defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Every instance of Method Element shall be briefly described with one or two sentences summarizing the element."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedRules" ordered="false"
+        upperBound="-1" eType="#//Constraint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="suppressed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+        defaultValueLiteral="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="If a Variability Element is derived from another Variability Element using the Extends Variability Specialization then this attribute can be used to suppress inherited Method Elements that were part of the based-on Variability Element, which can be any type of Method Element.  In other words, if this attribute is set to true on a Method Element that has the same name than an inherited method element then it will not be regarded as inherited at all."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="orderingGuide" unique="false"
+        eType="#//String" defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This attribute is used for CASE tool realizations of this model to contain information about layout and ordering of the method element and its parts."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Constraint" eSuperTypes="#//MethodElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Constraint is a Method Element that represents a condition or restriction expressed in natural language text or in a machine readable language for the purpose of declaring some of the semantics of a Method Element."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="body" unique="false" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This attribute stores the definition of the constraint."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContentElement" abstract="true" eSuperTypes="#//DescribableElement #//VariabilityElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Content Element is a Describable Element that represents an abstract generalization for all elements that are considered to be and managed as Method Content.&#xD;&#xA;Content Elements represents reusable Method Content that is supposed to be managed in Content Packages.  The separation of Content Element from Process Element allows to clearly distinguish between pure method content from content that is represented in processes."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supportingMaterials" ordered="false"
+        upperBound="-1" eType="#//SupportingMaterial"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conceptsAndPapers" ordered="false"
+        upperBound="-1" eType="#//Concept"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="checklists" ordered="false"
+        upperBound="-1" eType="#//Checklist"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="guidelines" ordered="false"
+        upperBound="-1" eType="#//Guideline"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="examples" ordered="false"
+        upperBound="-1" eType="#//Example"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assets" ordered="false"
+        upperBound="-1" eType="#//ReusableAsset"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DescribableElement" abstract="true"
+      eSuperTypes="#//MethodElement #//Classifier">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Describable Element is an abstract generalization of Method Elements for which external presentation names as well as content descriptions have been defined, such as Roles or Work Products.  Presentation Name and Content Descriptions are typically localized using a resource allocation mechanism for its String type attributes.&#xD;&#xA;This abstraction represents all elements in the Method Content as well as Process space for which concrete textual descriptions are defined in the form of documenting attributes grouped in a matching Content Description instance (see Section 4.1.4).  Describable Elements are intended to be published in method or process publications (similar to the IBM Rational Unified Process web).  Describable Element defines that the element it represents will have content 'attached' to it.  Content Description is the abstraction for the actual places in which the content is being represented.  This separation allows a distinction between core method model elements describing the structure of the model from the actual description container providing, for example, the documentation of the content element in different alternatives languages, audiences, licensing levels, etc."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="presentationName" unique="false"
+        eType="#//String" defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Every Describable Element has a presentation name, which is used for external presentation of the element.  For example, name (the internal representation) might be set to &quot;rup_architecture_document&quot; to differentiate from a &quot;j2ee_architcture_document&quot; whereas the external presentation would always be &quot;Architecture Document&quot;."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="presentation" eType="#//ContentDescription"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="shapeicon" unique="false"
+        eType="#//Uri">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A reference to an icon that can be used for modeling with specific Content Element instances (as graphical stereotypes, e.g. a use case symbol for a use case artifact) as well as publication of content."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nodeicon" eType="#//Uri">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A reference to an icon that can be used in tree browser presentations and breakdown structures."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContentDescription" eSuperTypes="#//MethodUnit">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Content Description is a Method Element that is used to store the textual description for a Content Element.  It defines standard attributes applicable for all Content Element types.  Specific Content Element sub-types can define their own matching Content Description sub-types. "/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mainDescription" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This attribute store the main descriptive text for the Content Element.  All text that is not part of any of the more specific attributes shall be stored here.  If the Content Description is divided into sections using the Section class, then only the text from the 'start' of the content description to the first section will be stored here (similar to a normal document where you can place text between its beginning to its first diction heading)."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sections" ordered="false"
+        upperBound="-1" eType="#//Section" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="keyConsiderations" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Key Considerations provides advise and guidance of a critical nature for the content element as well as warnings, cautions, pitfalls, dangers."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Section" eSuperTypes="#//VariabilityElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Section is a special Method Element that represents structural subsections of a Content Description's sectionDescription attribute.  It is used for either large scale documentation of Content Elements organized into sections as well as to flexibly add new Sections to Content Elements using contribution variability added to the Section concept for Method Plug-ins."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sectionName" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Every Section has a name used for external presentation of the section, e.g. when published or when section heading are listed in a table of contents.  This attribute is similar to Presentation Name for Content Elements."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sectionDescription" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This attributes store the description text for a Content Description's Section."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subSections" ordered="false"
+        upperBound="-1" eType="#//Section" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="predecessor" eType="#//Section"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Role" eSuperTypes="#//ContentElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Role is a content element that defines a set of related skills, competencies, and responsibilities.  Roles are used by Tasks to define who performs them as well as define a set of work products they are responsible for.  &#xD;&#xA;A Role defines a set of related skills, competencies, and responsibilities of an individual or a set of individuals.  Roles are not individuals or resources.  Individual members of the development organization will wear different hats, or perform different roles. The mapping from individual to role, performed by the project manager when planning and staffing for a project, allows different individuals to act as several different roles, and for a role to be played by several individuals."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modifies" ordered="false"
+        upperBound="-1" eType="#//WorkProduct" changeable="false" volatile="true"
+        transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="responsibleFor" ordered="false"
+        upperBound="-1" eType="#//WorkProduct"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkProduct" abstract="true" eSuperTypes="#//ContentElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Work Product is an abstract class which provides a generalization for the content element types Artifact, Outcome, and Deliverable.  The meta-model class Work Product actually represents work product types, i.e. an instance of Work Product is a description of a specific type of work product and not an individual work product instance.  However, for simplicity reasons and because of low risk of misinterpretation we did not append the word 'type' to every meta-class.&#xD;&#xA;A work product is an abstraction for descriptions of content elements that are used to define anything used, produced, or modified by a task."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reports" ordered="false"
+        upperBound="-1" eType="#//Report"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="templates" ordered="false"
+        upperBound="-1" eType="#//Template"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toolMentors" ordered="false"
+        upperBound="-1" eType="#//ToolMentor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="estimationConsiderations"
+        ordered="false" upperBound="-1" eType="#//EstimationConsiderations"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="#//ContentElement #//WorkDefinition">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Task is a content element that describes work being performed by Roles.  It defines one default performing Role as well as many additional performers.  A Task is associated to input and output work products.  Inputs are differentiated in mandatory versus optional inputs.  The associations to Work Products are not instantiatable/variable-like parameters.  They rather express (hyper-)links to the descriptions of the work products types that are related to the Task as inputs and outputs.  In other words, these associations are not intended to be used to capture which concrete instances will be passed when instantiating the method in a project.  All of the Task's default associations can be overridden in an actual process definition.&#xD;&#xA;A Task describes an assignable unit of work.  Every Task is assigned to specific Roles.  The granularity of a Task is generally a few hours to a few days.  It usually affects one or only a small number of work products. A Task is used as an element of defining a process. Tasks are further used for planning and tracking progress; therefore, if they are defined too fine-grained, they will be neglected, and if they are too large, progress would have to be expressed in terms of a Task's parts (e.g. Steps, which is not recommended). &#xD;&#xA;A Task has a clear purpose in which the performing roles achieve a well defined goal.  It provides complete step-by-step explanations of doing all the work that needs to be done to achieve this goal.  This description is complete, independent of when in a process lifecycle the work would actually be done.  It therefore does not describe when you do what work at what point of time, but describes all the work that gets done throughout the development lifecycle that contributes to the achievement of this goal.  When the Task is being applied in a process then this process application (defined as Task Descriptor) provides the information of which pieces of the Task will actually be performed at any particular point in time. This assumes that the Task will be performed in the process over and over again, but each time with a slightly different emphasis on different steps or aspects of the task description. &#xD;&#xA;For example, a Task such as &quot;Develop Use Case Model&quot; describes all the work that needs to be done to develop a complete use case model. This would comprise of the identification and naming of use cases and actors, the writing of a brief description, the modeling of use cases and their relationships in diagrams, the detailed description of a basic flow, the detailed description of alternatives flows, performing of walkthroughs workshops and reviews, etc.  All of these parts contribute to the development goal of developing the use case model, but the parts will be performed at different points in time in a process.  Identification, naming, and brief descriptions would be performed early in a typical development process versus the writing of detailed alternative flows which would be performed much later.  All these parts or steps within the same Task define the &quot;method&quot; of Developing a Use Case Model.  Applying such a method in a lifecycle (i.e. in a process) is defining which steps are done when going from one iteration to the next."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="performedBy" eType="#//Role"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mandatoryInput" ordered="false"
+        upperBound="-1" eType="#//WorkProduct"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="output" ordered="false"
+        upperBound="-1" eType="#//WorkProduct"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="additionallyPerformedBy"
+        ordered="false" upperBound="-1" eType="#//Role"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="optionalInput" ordered="false"
+        upperBound="-1" eType="#//WorkProduct"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="steps" ordered="false"
+        upperBound="-1" eType="#//Step" changeable="false" volatile="true" transient="true"
+        derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toolMentors" ordered="false"
+        upperBound="-1" eType="#//ToolMentor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="estimationConsiderations"
+        ordered="false" upperBound="-1" eType="#//EstimationConsiderations"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkDefinition" abstract="true" eSuperTypes="#//MethodElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Work Definition is an abstract Method Element that generalizes all descriptions of work within the Unified Method Architecture.  This package introduces two concrete types of Work Definitions: Task and Step.  Work Definitions can contain sets of pre- and post-conditions defining constraints that need to be valid before the described work can begin or before it can be declared as finished.  Note that general ownedRules can be used to define additional constraints and rules for Work Definitions.&#xD;&#xA;Work Definitions represent behavioral descriptions for doing work.  These behavioral descriptions are not bound to one specific classifier, but represent an arbitrary definition of work.  For example, a Work Definition could represent work that is being performed by a specific Role (e.g. a Role performing a specific Task or Steps of a Task), by many Roles working in close collaboration (many Roles all working together on the same interdisciplinary Task), or complex work that is performed throughout the lifecycle (e.g. a process defining a breakdown structure for organizing larger composite units of work performed by many Roles working in collaboration)."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="precondition" eType="#//Constraint"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="postcondition" eType="#//Constraint"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Step" eSuperTypes="#//Section #//WorkDefinition">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Step is a Section and Work Definition that is used to organize Tasks into parts or subunits of work.  Steps inherit the subSections decomposition from Section and can therefore describe Sub-Steps nested into Steps.&#xD;&#xA;A Step describes a meaningful and consist part of the overall work described for a Task.  The collection of Steps defined for a Task represents all the work that should be done to achieve the overall development goal of the Task.  Not all steps are necessarily performed each time a Task is invoked in a Process (see Task Descriptor), so they can also be expressed in the form of alternate 'flows' of work.  Different ways of achieving the same development goal can then be 'assembled' by selecting different combinations of steps when applying the Task in a Process.  Typical kinds of steps a Task author should consider are: Thinking steps: where the individual roles understand the nature of the task, gathers and examines the input artifacts, and formulates the outcome. Performing steps: where the individual roles create or update some artifacts. Reviewing steps: where the individual roles inspects the results against some criteria."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Guidance" abstract="true" eSuperTypes="#//ContentElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Guidance is an abstract generalization of additional information related to content elements such as Roles, Tasks, and Work Products.  Examples for Guidance are Guidelines, Templates, Checklists, Tool Mentors, Estimates, Supporting Materials, Reports, Concepts, etc.  This package only contains the definition of the abstract Guidance class.  The package Guidance Types defines concrete guidance types."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Artifact" eSuperTypes="#//WorkProduct">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Artifact is a Work Product that provides a description and definition for tangible work product types. Artifacts may be composed of other artifacts. For example, a model artifact can be composed of model elements, which are also artifacts.&#xD;&#xA;Artifacts are tangible work products consumed, produced, or modified by Tasks.  It may serve as a basis for defining reusable assets.  Roles use Artifacts to perform Tasks and produce Artifacts in the course of performing Tasks.  Artifacts are the responsibility of a single Role, making responsibility easy to identify and understand, and promoting the idea that every piece of information produced in the method requires the appropriate set of skills. Even though one role might &quot;own&quot; a specific type of Artifacts, other roles can still use the Artifacts; perhaps even update them if the Role has been given permission to do so."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containerArtifact" eType="#//Artifact"
+        transient="true" eOpposite="#//Artifact/containedArtifacts"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containedArtifacts" ordered="false"
+        upperBound="-1" eType="#//Artifact" containment="true" eOpposite="#//Artifact/containerArtifact"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Deliverable" eSuperTypes="#//WorkProduct">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A deliverable is a Work Product that provides a description and definition for packaging other Work Products, and may be delivered to an internal or external party.  Therefore, a Deliverable aggregates other Work Products. Therefore, a Deliverable aggregates other Work Products.  A Deliverable is used to pre-define typical or recommended content in the form or work products that would be packaged for delivery.  The actual packaging of the Deliverable in an actual process or even project could be a modification of this recommendation.  Deliverables are used to represent an output from a process that has value, material or otherwise, to a client, customer or other stakeholder. "/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="deliveredWorkProducts"
+        ordered="false" upperBound="-1" eType="#//WorkProduct"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Outcome" eSuperTypes="#//WorkProduct">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="An outcome describes intangible work products that are a result or state. Outcomes may also be used to describe work products that are not formally defined.  A key differentiator for outcomes against artifacts is that outcomes are not candidates for harvesting as reusable assets."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodPackage" abstract="true" eSuperTypes="#//MethodElement #//Package">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Method Package is an abstract class for packaging Method Elements.  All Method Elements shall be located in exactly one of Method Package's concrete specializations (e.g. Content Package).   Method Package defines common properties for all of its specializations. Elements are organized in Method Packages to structure large scale of method content and processes as well as to define a mechanism for reuse.  Method Elements from one package can reuse element from other packages by defining a reusedPackages link.  For example, a work product defined in one package can be used as an input for Tasks defined in other packages.  By reusing it from one common place (i.e. the package in which it has been defined) ensures that no redundant definitions of the same elements are required.  Also maintenance of method content is greatly improved as changes can be performed in only one place.  Note, that other packages will introduce more specializations of Method Package, e.g. Process Package and Process Component."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="global" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+        defaultValueLiteral="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Method Packages can have a global scope.  This means that every element of every other Method Package can see the global package's contents.  Global Method Packages are primarily used to store commonly used category definitions such as for Disciplines or Domains, which are used by many Task and Work Products respectively."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reusedPackages" ordered="false"
+        upperBound="-1" eType="#//MethodPackage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="childPackages" ordered="false"
+        upperBound="-1" eType="#//MethodPackage" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContentPackage" eSuperTypes="#//MethodPackage">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Content Package is special Method Package that contains Content Elements and Content Elements, only.  Examples for Content Element are Artifacts, Tasks, Roles, etc.  A key separation of concerns in UMA is the distinction between Method Content and Process.  This separation is enforced by special package types, which do not allow the mixing of method content with processes."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contentElements" ordered="false"
+        upperBound="-1" eType="#//ContentElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArtifactDescription" eSuperTypes="#//WorkProductDescription">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="briefOutline" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Provides a brief description of the information that can be found in this artifact. For example, discusses the contents for key chapters of a document artifact or the key packages and modules of a model artifact."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="representationOptions"
+        eType="#//String" defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Discusses different possible alternative representations for the artifact. For example a design model can be represented as a UML model or an informal block diagram or by textual description only."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkProductDescription" eSuperTypes="#//ContentDescription">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="externalId" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="An external visible number that is used to reference this artifact. Used like a synonym."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="purpose" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Describes why the work product is produced and to what use it will be put."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="impactOfNotHaving" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Describes the consequences of not producing the work product.  This is intended to aid in the tailoring the method/process to the needs of a specific project."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reasonsForNotNeeding" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Describes the circumstances in which it is reasonable not to produce the work product.  This is intended to aid in the tailoring of the method/process to the needs of a specific project."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DeliverableDescription" eSuperTypes="#//WorkProductDescription">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="externalDescription" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The description of the Deliverable used for client documents (proposal, statements of work or contractual agreements).  It might use a different language and follow legal constraints."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="packagingGuidance" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Provides guidance on how to assemble the deliverable from all its required inputs.  This section describes the most common content medium and format.  Distribution of the deliverable is addressed in this section, if necessary."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleDescription" eSuperTypes="#//ContentDescription">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="skills" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Lists of set of required skills a person needs to possess to fulfill that Role."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="assignmentApproaches" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Provides guidance on for assigning individuals to the Role in terms of what other roles these individuals could perform and what responsibility different individuals assigned to this role might have.  The guidance can also describe different assignment approaches for different types of projects, e.g. for large versus small teams where individuals could be allocated to roles full time versus sharing roles within the team."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="synonyms" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Lists synonyms, i.e. other names the Role might be referred by.  Tool support for the meta-model might support that a Role name can be consistently be replaced with one of its synonyms throught a Process."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskDescription" eSuperTypes="#//ContentDescription">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="purpose" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Summarizes the main reason for performing this Task and what is intended to be achieved."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alternatives" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Comprises of summaries describing important exceptional and non-standard ways of achieving this Task's development goals that were not covered by the Task's Steps."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GuidanceDescription" eSuperTypes="#//ContentDescription">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attachments" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This field is primarily used for attachments augmenting the information provided for guidance.  In particular the attribute is used for Templates, Examples, and Reusable Assets to contain the actual attachment described in the mainDescription.  It can additionally contain representations of the guidance in just a third party format, e.g. PDF, MS Word, or Word Perfect."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PracticeDescription" eSuperTypes="#//ContentDescription">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="additionalInfo" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Any additional Information not covered by the other attributes."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="problem" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A description of the problem the Practice addresses."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="background" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Elaboration on the background and the context in which the problem occurs and where the solution described by this Practice will fit in."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="goals" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A summary of the overall goals to be addressed by the Practice."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="application" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Describes how the Practice is being applied or introduced into the context described in background."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="levelsOfAdoption" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Outlines the different forms or variants in which the practice could be realized. (e.g. full adoption verus a partial adoption of the Practice)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Point">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GraphElement" abstract="true" eSuperTypes="#//DiagramElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="#//Point"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contained" ordered="false"
+        upperBound="-1" eType="#//DiagramElement" containment="true" eOpposite="#//DiagramElement/container"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="link" ordered="false" upperBound="-1"
+        eType="#//DiagramLink" containment="true" eOpposite="#//DiagramLink/graphElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="anchorage" ordered="false"
+        upperBound="-1" eType="#//GraphConnector" containment="true" eOpposite="#//GraphConnector/graphElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="semanticModel" unique="false"
+        eType="#//SemanticModelBridge" containment="true" eOpposite="#//SemanticModelBridge/graphElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiagramElement" abstract="true" eSuperTypes="#//MethodElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isVisible" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="container" eType="#//GraphElement"
+        transient="true" eOpposite="#//GraphElement/contained"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reference" ordered="false"
+        upperBound="-1" eType="#//Reference" eOpposite="#//Reference/referenced"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="property" ordered="false"
+        upperBound="-1" eType="#//Property" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiagramLink" eSuperTypes="#//DiagramElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zoom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="viewport" eType="#//Point"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="graphElement" lowerBound="1"
+        eType="#//GraphElement" transient="true" eOpposite="#//GraphElement/link"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diagram" lowerBound="1"
+        eType="#//Diagram" eOpposite="#//Diagram/diagramLink"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GraphConnector" eSuperTypes="#//GraphElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="graphElement" lowerBound="1"
+        eType="#//GraphElement" transient="true" eOpposite="#//GraphElement/anchorage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="graphEdge" ordered="false"
+        upperBound="-1" eType="#//GraphEdge" eOpposite="#//GraphEdge/anchor"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SemanticModelBridge" abstract="true"
+      eSuperTypes="#//DiagramElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="presentation" eType="#//String"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="graphElement" eType="#//GraphElement"
+        transient="true" eOpposite="#//GraphElement/semanticModel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diagram" eType="#//Diagram"
+        transient="true" eOpposite="#//Diagram/namespace"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dimension">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Reference" eSuperTypes="#//DiagramElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isIndividualRepresentation"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referenced" lowerBound="1"
+        eType="#//DiagramElement" eOpposite="#//DiagramElement/reference"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Property" eSuperTypes="#//DiagramElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="#//String"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//String"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GraphEdge" eSuperTypes="#//GraphElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="anchor" ordered="false"
+        upperBound="2" eType="#//GraphConnector" eOpposite="#//GraphConnector/graphEdge"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="waypoints" ordered="false"
+        upperBound="-1" eType="#//Point" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Diagram" eSuperTypes="#//GraphNode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zoom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="viewpoint" eType="#//Point"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diagramLink" ordered="false"
+        upperBound="-1" eType="#//DiagramLink" eOpposite="#//DiagramLink/diagram"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="namespace" unique="false"
+        eType="#//SemanticModelBridge" containment="true" eOpposite="#//SemanticModelBridge/diagram"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GraphNode" eSuperTypes="#//GraphElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="size" eType="#//Dimension"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleSemanticModelElement" eSuperTypes="#//SemanticModelBridge">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeInfo" eType="#//String"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UMASemanticModelBridge" eSuperTypes="#//SemanticModelBridge">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="#//MethodElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CoreSemanticModelBridge" eSuperTypes="#//SemanticModelBridge">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" lowerBound="1"
+        eType="#//Element"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LeafElement" abstract="true" eSuperTypes="#//DiagramElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TextElement" eSuperTypes="#//LeafElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="#//String"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Image" eSuperTypes="#//LeafElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uri" eType="#//Uri"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mimeType" eType="#//String"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GraphicPrimitive" abstract="true" eSuperTypes="#//LeafElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Polyline" eSuperTypes="#//GraphicPrimitive">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="closed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="waypoints" ordered="false"
+        lowerBound="2" upperBound="-1" eType="#//Point" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Ellipse" eSuperTypes="#//GraphicPrimitive">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="radiusX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="radiusY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rotation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startAngle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endAngle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="center" eType="#//Point"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Activity" eSuperTypes="#//WorkBreakdownElement #//VariabilityElement #//WorkDefinition">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="An Activity is a Work Breakdown Element and Work Definition which supports the nesting and logical grouping of related Breakdown Elements forming breakdown structures.  Although Activity is a concrete meta-class, other classes which represent breakdown structures derive from it; such as Phase, Iteration, Delivery Process, or Capability Pattern.&#xD;&#xA;Activity represents a grouping element for other Breakdown Elements such as Activities, Descriptors, Milestones, etc.  It is not per-se a 'high-level' grouping of only work as in other meta-models, but groups any kind of Breakdown Elements.  For example, one can define valid Activities that group only Work Products Descriptors without any matching Task Descriptors.  Activities also inherit all properties from Work Breakdown Element and indirectly from Process Element; i.e. Activity is ready to have a full content description attached to it."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="breakdownElements" ordered="false"
+        upperBound="-1" eType="#//BreakdownElement" eOpposite="#//BreakdownElement/superActivities"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roadmaps" ordered="false"
+        upperBound="-1" eType="#//Roadmap"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supportingMaterials" ordered="false"
+        upperBound="-1" eType="#//SupportingMaterial"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="checklists" ordered="false"
+        upperBound="-1" eType="#//Checklist"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="concepts" ordered="false"
+        upperBound="-1" eType="#//Concept"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="examples" ordered="false"
+        upperBound="-1" eType="#//Example"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="guidelines" ordered="false"
+        upperBound="-1" eType="#//Guideline"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reusableAssets" ordered="false"
+        upperBound="-1" eType="#//ReusableAsset"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isEnactable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkBreakdownElement" abstract="true"
+      eSuperTypes="#//BreakdownElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Work Breakdown Element is a special Breakdown Element that provides specific properties for Breakdown Elements that represent or refer to Work Definitions.  For example its subclass Activity defines work as it is also a subclass of Work Definition.  Its subclass Task Descriptor does not define work by itself, but refers to a Work Definition and therefore can have the same common properties and Work Breakdown Element has."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isRepeatable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+        defaultValueLiteral="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This attribute is used to define repetition of work, e.g. iterations.  A Process Work Definition with this attribute set to True shall be repeated more than once on the same set of artifacts.  For example, for an instance of Iteration (defined as a special Process Work Definition below) this attribute is set to True by default indicating that every sub-Activity will be repeated more than once.  However, any Process Work Definition can set this attribute to True to define iterations (e.g. to iterate one Activity consisting of many sub-activities or even Phases, but to iterate just one Task)."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isOngoing" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+        defaultValueLiteral="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="If the isOngoing attribute is set to True for a Process Work Definition instance, then the element describes an ongoing piece of work without a fixed duration or end state.  For example, the Process Work Definition could represent work of an administrator continuously (e.g. 3h a day) working to ensure that systems are kept in a certain state.  Another example would be program management work overseeing many different projects being scheduled for one particular project at specific reoccurring intervals during the whole lifecycle of the project."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isEventDriven" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+        defaultValueLiteral="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The isEventDriven attribute indicates that the Process Work Definition describes an instance of work which is not started because it has been scheduled to start at a certain point of time, because preceding work is being completed, or input work products are available, but because another specific event has occurred.  Examples for such events are exceptions or problem situations which require specific work to be performed as a result.  Also change management work can be modeled as event driven work analyzing a change request or defect and allocating work dynamically to resources to deal with it following the work described with such Process Work Definition.  The events themselves are not modeled in this version of the specification.  They shall be described as part of the normal descriptions fields available.&#xD;&#xA;&#xD;&#xA;"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkToPredecessor" ordered="false"
+        upperBound="-1" eType="#//WorkOrder"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BreakdownElement" abstract="true" eSuperTypes="#//ProcessElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Breakdown Element is an abstract generalization for any type of Method Element that is part of a breakdown structure.  It defines a set of properties available to all of its specializations."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prefix" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Prefix represents an additional label that will be presented as a prefix to any Breakdown Element to indicate a user-defined sub-type for the element.  For example, if the process engineer would like to distinguish his Activities by 'Module' (as done in the IBM Rational Summit Ascendant Method), he can define a different prefix for every model to be used in addition to naming Activities, e.g. &quot;SRA.Establish Requirements&quot; with SRA indicating that this Activity belongs to the &quot;Software Requirements Analysis&quot; module.  Another common application for prefix is to qualify roles in Role Descriptors.  For example, &quot;Customer.Architect&quot; would define a &quot;Customer&quot; prefix for the Role Descriptor &quot;Architect&quot; expressing that this is an architect on the customer side and not the development team side."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isPlanned" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+        defaultValueLiteral="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A key application for Development Processes expressed with Breakdown structures is to generate a project plan from it.  A process as defined in UMA (cf. with Sections XX and 5.2) is a multi-dimensional structure defining what work is being performed at what time by which roles using which input and producing what outputs.  A project plan as it is represented in project planning tools such as IBM Rational Portfolio Manager or Microsoft Project normally does not need all this information and is normally limited to just representing a subset.  For example, a typical MS Project plan only represents the work breakdown consisting of Tasks and Activities (sometimes referred to as summary tasks).  It does not show the input and output Work Products for a Task, but it can show which roles shall be staffed for performing the Task.  However, such role allocation need to be replaced with concrete resources when instantiating the plan for a concrete project.  Sometimes project plans can then again be organized differently by organizing work by deliverables in which Work Products are mapped to the plan's summary tasks and Task that have these work products as output mapped below such as summary task.  Therefore, a process can make recommendations about which elements to include and which to exclude when generating a plan.  When the isPlanned attribute is set to False for an instance of a Breakdown Element, then this element shall not be not included when a concrete project plan is being generated from the breakdown structure that contains this element.&#xD;&#xA;&#xD;&#xA;"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hasMultipleOccurrences"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+        defaultValueLiteral="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Just as the isPlanned attribute the hasMultipleOccurrences attribute has an impact on generating plans from a Process.  When this attribute is set to True for a Breakdown Element then it will typically occur multiple times within the same Activity.  For example, a Task such as &quot;Detail Use Case&quot; would be performed for every use case identified for a particular Iteration or Activity.  Generating a plan would list one Task instance per use case."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isOptional" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+        defaultValueLiteral="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The isOptional attribute indicates that the Breakdown Element describes work, a work result, or even work resources, which inclusion is not mandatory when performing a project that is planned based on a process containing this element."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="presentedAfter" eType="#//BreakdownElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="presentedBefore" eType="#//BreakdownElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="planningData" eType="#//PlanningData"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superActivities" eType="#//Activity"
+        eOpposite="#//Activity/breakdownElements"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Milestone" eSuperTypes="#//WorkBreakdownElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Milestone describes a significant event in a development project, such as a major decision, completion of a deliverable, or meeting of a major dependency (like completion of a project phase).  Because, Milestone is commonly used to refer to both the event itself and the point in time at which the event is scheduled to happen, it is modeled as a Breakdown Element (i.e. it appears as part of a breakdown structure)."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Iteration" eSuperTypes="#//Activity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Iteration is a special Activity, which prescribes pre-defined values for its instances for the attributes prefix ('Iteration') and isRepeatable ('True').  It has been included into the meta-model for convenience and to provide a special stereotype, because it represents a very commonly used Activity type.&#xD;&#xA;Iteration groups a set of nested Activities that are repeated more than once.  It represents an important structuring element to organize work in repetitive cycles.  The concept of Iteration can be associated with different rules in different methods.  For example, the IBM Rational Unified Process method framework (RUP) defines a rule that Iterations are not allowed to span across Phases.  In contrast IBM Global Services Method (GSMethod) based method frameworks this rule does not apply and Iteration can be defined which nest Phases.  Rules like these, which play an important role for each individual method and are therefore not enforced by this meta-model.  Instead, process authors are expected to follow and check these rules manually.  (Note: Any Breakdown Element can be repeated; however, Iterations has been introduced as a special meta-model concept, because of its important role for many methods.)"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Phase" eSuperTypes="#//Activity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Phase is a special Activity, which prescribes pre-defined values for its instances for the attributes prefix ('Phase') and isRepeatable ('False').  It has been included into the meta-model for convenience and to provide a special stereotype, because it represents a very commonly used Activity type.&#xD;&#xA;Phase represent a significant period in a project, ending with major management checkpoint, milestone or set of Deliverables.  It is included in the model as a predefined special Activity, because of its significance in defining breakdowns."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TeamProfile" eSuperTypes="#//BreakdownElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Team Profile is a Breakdown Element that groups Role Descriptors or Resource Definitions defining a nested hierarchy of teams and team members.&#xD;&#xA;Work assignments and Work Product responsibilities can be different from Activity to Activity in a development project. Different phases require different staffing profiles, i.e. different skills and resources doing different types of work.  Therefore, a process needs to define such different profiles in a flexible manner.  Whereas Core Method Content defines standard responsibilities and assignments, a process express by a breakdown structures needs to be able refine and redefine these throughout its definition.  Role Descriptors, Resource Definitions, as well as Team Profiles provide the data structure necessary to achieve this flexibility and to provide a process user with the capability to define different teams and role relationships for every Activity (including Activities on any nesting-level as well as Iterations or Phases).&#xD;&#xA;Hence, in addition to the work breakdown and work product breakdown structures defined so far, Team Profiles are used to define a third type of breakdown structure: team breakdown structures.  These are created as an Activity specific hierarchy of Team Profiles comprising of Role Descriptors and Resource Definitions.  These structures can be presented as well-known Org-Charts.  Just as with any other Breakdown Element and Descriptors, Team Profiles can be defined within the scope of any Activity in a breakdown structure.  In other words every Activity can define its own Team Profiles consisting of Activity specific Role Descriptors and Resource Definitions.  Typically, Team Profiles are defined on the level of Iterations or Phases or other higher-level Activity."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="teamRoles" ordered="false"
+        upperBound="-1" eType="#//RoleDescriptor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superTeam" lowerBound="1"
+        eType="#//TeamProfile" eOpposite="#//TeamProfile/subTeam"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subTeam" ordered="false"
+        upperBound="-1" eType="#//TeamProfile" eOpposite="#//TeamProfile/superTeam"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleDescriptor" eSuperTypes="#//Descriptor">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Role Descriptor represents a Role in the context of one specific Activity.  Every breakdown structure can define different relationships of Role Descriptors to Task Descriptors and Work Product Descriptors.  Therefore one Role can be represented by many Role Descriptors each within the context of an Activity with its own set of relationships."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Role" eType="#//Role"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modifies" ordered="false"
+        upperBound="-1" eType="#//WorkProductDescriptor" changeable="false" volatile="true"
+        transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="responsibleFor" ordered="false"
+        upperBound="-1" eType="#//WorkProductDescriptor"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="WorkOrderType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Work Order represents a relationship between two Breakdown Element in which one Breakdown Element (referred to as (B) below) depends on the start or finish of another Breakdown Element (referred to as (A) below) in order to begin or end. This enumeration defines the different types of Work Order relationships available in UMA and is used to provide values for Work Order's linkType attribute."/>
+    </eAnnotations>
+    <eLiterals name="finishToStart"/>
+    <eLiterals name="finishToFinish" value="1"/>
+    <eLiterals name="startToStart" value="2"/>
+    <eLiterals name="startToFinish" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkOrder" eSuperTypes="#//ProcessElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Work Order is a Method Element that represents a relationship between two Breakdown Elements in which one Breakdown Elements depends on the start or finish of another Breakdown Elements in order to begin or end.  &#xD;&#xA;(Note, Work Order is not modeled as an Association Class to provide a straightforward mapping  to XMI and EMF.)&#xD;&#xA;The Work Order class defines predecessor and successor relations amongst Breakdown Elements.  This information is in particular critical for planning applications.  See more details on different types of Work Order relationships at Work Order Type."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="linkType" unique="false"
+        eType="#//WorkOrderType" defaultValueLiteral="finishToStart">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This attribute expresses the type of the Work Order relationship by assigning a value from the Work Order Type enumeration."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pred" lowerBound="1" eType="#//WorkBreakdownElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcessElement" abstract="true" eSuperTypes="#//DescribableElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Process Element is a Describable Element that represents an abstract generalization for all elements defined in the Process package.&#xD;&#xA;Process Elements represents Process specific elements that are supposed to be managed in Process Packages.  The separation of Process Element from Content Element allows to clearly distinguish between pure method content from content that is represented in processes. "/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PlanningData" eSuperTypes="#//ProcessElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Planning Data is a Method Element that adds planning data to Breakdown Elements when it is used for a Process Planning Template.  For Delivery Processes and Capability Patterns this class can either not be instantiated or populated with default data.&#xD;&#xA;Planning Data factors out specific optional data needed for representing planning templates.  This association allows to access planning data if it is stored for the Breakdown Element.&#xD;&#xA;(NOTE, THE ATTRIBUTES FOR THIS CLASS ARE NOT COMPLETE, YET)"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" unique="false"
+        eType="#//Date">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The default start date for a planed Task."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="finishDate" unique="false"
+        eType="#//Date">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The default finish date for a planed Task."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rank" unique="false" eType="#//Integer">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The default rank for a planed Task."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Descriptor" abstract="true" eSuperTypes="#//BreakdownElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Descriptor is an abstract generalization for special Breakdown Elements that references one concrete Content Element.  A descriptor provides a representation of a Content Element within breakdown structures.  In addition to just referencing Content Elements it allows overriding the Content Elements structural relationships by defining its own sets of associations.&#xD;&#xA;Descriptors are the key concept for realizing the separation of processes from method content.  A Descriptor can be characterized as a reference object for one particular Content Element, which has its own relationships and properties.  When a Descriptor is created it shall be provided with congruent copies of the relationships defined for the referenced content element.  However, a user can modify these relationships for the particular process situation for which the descriptor has been created. "/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isSynchronizedWithSource"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+        defaultValueLiteral="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkProductDescriptor" eSuperTypes="#//Descriptor">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Work Product Descriptor represents a Work Product in the context of one specific Activity.  Every breakdown structure can define different relationships of Work Product Descriptors to Task Descriptors and Role Descriptors.  Therefore one Work Product can be represented by many Work Product Descriptors each within the context of an Activity with its own set of relationships."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="activityEntryState" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Given that an instance of Work Product Descriptor has been created for a specific Activity, then the Activity Entry State attribute specifies the desired state of instances of the referenced Work Product when work on the Activity is initiated (i.e. work on the Activity's Task Descriptors is being initiated that use this Work Product Descriptor as input).  &#xD;&#xA;For some Work Products state is expressed in percentage of completion, compliance to work product checklist, informal state descriptions, etc.  Others have very specific states expressed as enumerations such as [identified, briefly described, outlined, detailed] for use cases.  Other Work Product states relate to some quality measures or lifecycle states such as [reviewed, implemented, tested]."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="activityExitState" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Given that an instance of Work Product Descriptor has been created for a specific Activity, then the Activity Exist State attribute specifies the desired state of instances of the referenced Work Product when work on the Activity is finished (i.e. work on the Activity's Task Descriptors has finished that have this Work Product Descriptor as output).&#xD;&#xA;For some Work Products state is expressed in percentage of completion, compliance to work product checklist, informal state descriptions, etc.  Others have very specific states expressed as enumerations such as [identified, briefly described, outlined, detailed] for use cases.  Other Work Product states relate to some quality measures or lifecycle states such as [reviewed, implemented, tested]."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="WorkProduct" eType="#//WorkProduct"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="impactedBy" ordered="false"
+        upperBound="-1" eType="#//WorkProductDescriptor" eOpposite="#//WorkProductDescriptor/impacts"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="impacts" ordered="false"
+        upperBound="-1" eType="#//WorkProductDescriptor" eOpposite="#//WorkProductDescriptor/impactedBy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="deliverableParts" ordered="false"
+        upperBound="-1" eType="#//WorkProductDescriptor"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskDescriptor" eSuperTypes="#//WorkBreakdownElement #//Descriptor">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Task Descriptor is a Descriptor and Work Breakdown Element that represents a proxy for a Task in the context of one specific Activity.  Every breakdown structure can define different relationships of Task Descriptors to Work Product Descriptors and Role Descriptors. Therefore one Task can be represented by many Task Descriptors each within the context of an Activity with its own set of relationships.&#xD;&#xA;A key difference between Method Content and Process is that a Content Element such as Task describes all aspects of doing work defined around this Task.  This description is managed in steps, which are modeled as Sections of the Tasks' Content Descriptions.  When applying a Task in a Process' Activity with a Task Descriptor a Process Engineer needs to indicate that at that particular point in time in the Process definition for which the Task Descriptor has been created, only a subset of steps shall be performed.  He defines this selection using the selectedSteps association.  If he wants to add steps to a Task Descriptor, he can describe these either pragmatically in the refinedDescription attribute or 'properly' create a contributing Task to the Task the Task Descriptor refers to.&#xD;&#xA;"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Task" eType="#//Task"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="additionallyPerformedBy"
+        ordered="false" upperBound="-1" eType="#//RoleDescriptor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assistedBy" ordered="false"
+        upperBound="-1" eType="#//RoleDescriptor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="externalInput" ordered="false"
+        upperBound="-1" eType="#//WorkProductDescriptor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mandatoryInput" ordered="false"
+        upperBound="-1" eType="#//WorkProductDescriptor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="optionalInput" ordered="false"
+        upperBound="-1" eType="#//WorkProductDescriptor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="output" ordered="false"
+        upperBound="-1" eType="#//WorkProductDescriptor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="performedPrimarilyBy" eType="#//RoleDescriptor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectedSteps" ordered="false"
+        upperBound="-1" eType="#//Section"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositeRole" eSuperTypes="#//RoleDescriptor">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Composite Role is a special Role Descriptor that relates to more then one Role.  It represents a grouping of Roles with the main purpose of simplification, i.e. reducing the number of roles for a process.&#xD;&#xA;A Composite Role is a grouping of Roles that can be used in an Activity or Process to reduce the number of Roles.  A typical application would be a process for a small team in which a standard set of roles from the method content would be all performed by one or more resource.  By using Composite Role the process would suggest a typical clustering of Roles to Resources.  A Composite Role could perform all Tasks defined for the Roles it refers to."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aggregatedRoles" ordered="false"
+        upperBound="-1" eType="#//Role"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BreakdownElementDescription" eSuperTypes="#//ContentDescription">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="usageGuidance" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Provides information and guidance on the meaning of the Boolean flag values and under what circumstances they should be overridden. For example, it describes why the breakdown element is optional or considerations for repeating it and differences in the individual occurrences of this Breakdown Element across the lifecycle."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActivityDescription" eSuperTypes="#//BreakdownElementDescription">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="purpose" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Summarizes the main reason for performing this Activity, describes what the activity as a whole is intended to achieve."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alternatives" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Comprises of summaries describing important exceptional and non-standard ways of doing the work of this Activity not covered by the Activity's Tasks."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="howtoStaff" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Provides background on who should be involved in this activity what are the required skills, experience,  and perhaps attitudes."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DeliveryProcessDescription" eSuperTypes="#//ProcessDescription">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="scale" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Outlines characteristics about the size of a typical project that performs this project expressed in team size, man years, etc."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="projectCharacteristics"
+        eType="#//String" defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Characterizes the project that would typically perform this Process"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="riskLevel" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Outlines typical project risks that are addressed with this process."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="estimatingTechnique" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Describes the Estimation Techniques provided for this Process."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="projectMemberExpertise"
+        eType="#//String" defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Provides a profile of a typical project team, the distribution of roles, skills required for a team performs a project based on this process."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeOfContract" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Provides background information about the contracts that need to be established between a project team that performs this process and a client (e.g. for an IGS engagement)."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcessDescription" eSuperTypes="#//ActivityDescription">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="externalId" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="An external visible number that is used to reference this delivery patterns and models. It is used like a synonym."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="scope" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Defines the scope of the Process, i.e. which types of projects does it address and which not."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="usageNotes" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Any additional notes on how to apply and instantiate this process for a project."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DescriptorDescription" eSuperTypes="#//BreakdownElementDescription">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="refinedDescription" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A Descriptor might add refinements to the main description of the Content Element it refers to.  For example, it could provide additional information about a Work Product relevant for the specific point in time in the process this Work Product type is being used.  It could describe additional skills needed for a Role at that particular point in time in a process, etc. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Concept" eSuperTypes="#//Guidance">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Concept is a specific type of guidance that outlines key ideas associated with basic principles underlying the referenced item. Concepts normally address more general topics than Guidelines and span across sev-eral work product and/or tasks/activities."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Checklist" eSuperTypes="#//Guidance">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Checklist is a specific type of guidance that identifies a series of items that need to be completed or veri-fied.  Checklists are often used in reviews such as walkthroughs or inspections. "/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Example" eSuperTypes="#//Guidance">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="An Example is a specific type of Guidance that represents a typical, partially completed, sample instance of one or more work products or scenario like descriptions of how Task may be performed. Examples can be related to Work Products as well as Tasks that produce them as well as any other Content Element."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Guideline" eSuperTypes="#//Guidance">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Guideline is a specific type of guidance that provides additional detail on how to perform a particular task or grouping of tasks (e.g. grouped together as activities) or that provides additional detail, rules, and recommendations on work products and their properties.  Amongst others, it can include details about best practices and different approaches for doing work, how to use particular types of work products, information on different subtypes and variants of the work product and how they evolve throughout a lifecycle, discussions on skills the performing roles should acquire or improve upon, measurements for progress and maturity, etc."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Report" eSuperTypes="#//Guidance">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Report is a predefined template of a result that is generated on the basis of other work products as an output from some form of tool automation. An example for a report would be a use case model survey, which is generated by extracting diagram information from a graphical model and textual information from documents and combines these two types of information into a report."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Template" eSuperTypes="#//Guidance">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Template is a specific type of guidance that provides for a work product a pre-defined table of contents, sections, packages, and/or headings, a standardized format, as well as descriptions how the sections and packages are supposed to be used and completed. Templates cannot only be provided for documents, but also for conceptual models or physical data stores."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SupportingMaterial" eSuperTypes="#//Guidance">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Supporting Materials is catchall for other types of guidance not specifically defined elsewhere. It can be related to all kinds of Content Elements, i.e. including other guidance elements."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToolMentor" eSuperTypes="#//Guidance">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Tool Mentor is a specific type of guidance that shows how to use a specific tool to accomplish some piece of work a Work Product either in the context of or independent from a Task or Activity."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Whitepaper" eSuperTypes="#//Concept">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Whitepapers are a special Concept guidance that have been externally reviewed or published and can be read and understood in isolation of other content elements and guidance."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TermDefinition" eSuperTypes="#//Guidance">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="TermDefinitions define concepts and are used to build up the Glossary. They are not directly related to ContentElements, but their relationship is being derived when the Term is used in the ContentElements description text."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Practice" eSuperTypes="#//Guidance">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Practice represents a proven way or strategy of doing work to achieve a goal that has a positive impact on work product or process quality.  Practices are defined orthogonal to methods and processes.  They could summarize aspects that impact many different parts of a method or specific processes.  Examples for practices would be &quot;Manage Risks&quot;, &quot;Continuously verify quality&quot;, &quot;Architecture-centric and component-based development&quot;, etc."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subPractices" ordered="false"
+        upperBound="-1" eType="#//Practice" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contentReferences" ordered="false"
+        upperBound="-1" eType="#//ContentElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activityReferences" ordered="false"
+        upperBound="-1" eType="#//Activity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EstimationConsiderations" eSuperTypes="#//Guidance">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Estimation Considerations qualify the usage and application of estimation metrics in the development of an actual estimate."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReusableAsset" eSuperTypes="#//Guidance">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Reusable Asset provides a solution to a problem for a given context. The asset may have a variability point, which is a location in the asset that may have a value provided or customized by the asset consumer. The asset has rules for usage which are the instructions describing&#xD;&#xA;how the asset should be used."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="State" eSuperTypes="#//Vertex">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="WorkProduct" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//WorkProduct"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Region" ordered="false"
+        upperBound="-1" eType="#//Region" containment="true" eOpposite="#//Region/State"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="submachine" eType="#//StateMachine"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vertex">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="container" eType="#//Region"
+        transient="true" eOpposite="#//Region/Vertex"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoing" ordered="false"
+        upperBound="-1" eType="#//Transition" eOpposite="#//Transition/source"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incoming" ordered="false"
+        upperBound="-1" eType="#//Transition" eOpposite="#//Transition/target"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Region">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Vertex" ordered="false"
+        upperBound="-1" eType="#//Vertex" containment="true" eOpposite="#//Vertex/container"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Transition" ordered="false"
+        upperBound="-1" eType="#//Transition" containment="true" eOpposite="#//Transition/container"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="State" eType="#//State"
+        transient="true" eOpposite="#//State/Region"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="StateMachine" eType="#//StateMachine"
+        transient="true" eOpposite="#//StateMachine/Region"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StateMachine" eSuperTypes="#//WorkDefinition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Region" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//Region" containment="true" eOpposite="#//Region/StateMachine"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Transition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="WorkDefinition" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//WorkDefinition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="container" lowerBound="1"
+        eType="#//Region" transient="true" eOpposite="#//Region/Transition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//Vertex" eOpposite="#//Vertex/outgoing"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//Vertex" eOpposite="#//Vertex/incoming"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PseudoState" eSuperTypes="#//Vertex"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="PseudoStateKind">
+    <eLiterals name="initial"/>
+    <eLiterals name="join" value="1"/>
+    <eLiterals name="fork" value="2"/>
+    <eLiterals name="junction" value="3"/>
+    <eLiterals name="choice" value="4"/>
+    <eLiterals name="entryPoint" value="5"/>
+    <eLiterals name="exitPoint" value="6"/>
+    <eLiterals name="terminate" value="7"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Discipline" eSuperTypes="#//ContentCategory">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Discipline is a categorization of work (i.e. Tasks for Method Content), based upon similarity of concerns and cooperation of work effort.&#xD;&#xA;A discipline is a collection of Tasks that are related to a major 'area of concern' within the overall project. The grouping of Tasks into disciplines is mainly an aid to understanding the project from a 'traditional' waterfall perspective. However, typically, for example, it is more common to perform certain requirements activities in close coordination with analysis and design activities. Separating these activities into separate disciplines makes the activities easier to comprehend."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tasks" ordered="false"
+        upperBound="-1" eType="#//Task"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subdiscipline" ordered="false"
+        upperBound="-1" eType="#//Discipline" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referenceWorkflows" ordered="false"
+        upperBound="-1" eType="#//Activity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContentCategory" abstract="true" eSuperTypes="#//ContentElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Content Category is an abstract class generalizing content category types."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleSet" eSuperTypes="#//ContentCategory">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Role Set organizes Roles into categories.  It is used to group roles together that have certain commonalities.  For example, the &quot;Analysts&quot; Role Set could group the &quot;Business Process Analyst&quot;, &quot;System Analyst&quot;, as well as &quot;Requirements Specifier&quot; roles.  All of these work with similar techniques and have overlapping skills, but are required as distinct roles for a method (e.g. the method the IBM Rational Unified Process is based on)."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roles" ordered="false"
+        upperBound="-1" eType="#//Role"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Domain" eSuperTypes="#//ContentCategory">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Domain is a refineable hierarchy grouping related work products.  In other words, Domains can be further divided into sub-domains, with work product elements to be categorized only at the leaf-level of this hierarchy.&#xD;&#xA;Domain is a logical grouping of work products that have an affinity to each other based on resources, timing, or relationship.  A Domain may be divided into subdomains.  For example, GS Method uses six predefined Domains for Work Products: Application, Architecture, Business, Engagement, Operations and Organization."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="workProducts" ordered="false"
+        upperBound="-1" eType="#//WorkProduct"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subdomains" ordered="false"
+        upperBound="-1" eType="#//Domain" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkProductType" eSuperTypes="#//ContentCategory">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Work Product Type is a second category for work products, which in contrast to Domain is more presentation oriented.  A work product can have many Work Product Types.  Examples, for a Work Product Type is &quot;Class Diagram&quot;, which categorizes the Artifacts Analysis Model, Design Model, User Experience Model, or &quot;Specification&quot;, which categorizes requirements specifications that define a system with a well-defined system boundary, such as use case or functional requirements specification.  A Work Product can be categorized to be of many Work Product Types.  For example, a use case model can be categorized as a Specification as well as Diagram Work Product Type."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="workProducts" ordered="false"
+        upperBound="-1" eType="#//WorkProduct"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DisciplineGrouping" eSuperTypes="#//ContentCategory">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Discipline Groupings are used to group Disciplines.  For example, the Discipline Grouping &quot;Software Disciplines&quot; would be the group of all disciplines related to developing software such as &quot;Requirements Management&quot; or &quot;Testing&quot;; &quot;IT Infrastructure Management&quot; would be a Disciplines Grouping for disciplines such as &quot;IT Operational Services&quot;, &quot;IT Customer Relationships&quot;, or &quot;IT Enabling Services&quot;.  Disciplines can be associated to more than one Discipline Grouping."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="disciplines" ordered="false"
+        upperBound="-1" eType="#//Discipline"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tool" eSuperTypes="#//ContentCategory">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Tool is a container/aggregate for ToolMentors.  It can also provide general descriptions of the tool and its general capabilities."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toolMentors" ordered="false"
+        upperBound="-1" eType="#//ToolMentor"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleSetGrouping" eSuperTypes="#//ContentCategory">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Role Sets can be categorized into Role Set Groupings.  For example, different methods might define similar Role Sets, which however need to be distinguished from each other on a global scale.  Thus, Role Set Groupings allow distinguishing, for example, Software Services Manager Role Sets from Software Development Organization Manager Role Sets."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roleSets" ordered="false"
+        upperBound="-1" eType="#//RoleSet"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CustomCategory" eSuperTypes="#//ContentCategory">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Custom Category is a category introduced by a method content author to structure any number of method Content Elements of any subtype based on user-defined criteria.  Because Content Categories (and therefore Custom Categories, too) are Content Elements themselves, Custom Categories can be used to recursively categorize Content Categories as well.  Custom Categories can also be nested with any Content Category.  Custom categories can be used to categorize content based on the user's criteria as well as to define whole tree-structures of nested categories allowing the user to systematically navigate and browse method content and processes based on these categories.  For example, one could create a custom category to logically organize content relevant for the user's development organization departments; e.g. a &quot;Testing&quot; category that groups together all roles, work products, tasks, and guidance element relevant to testing.  Another example would be categories that express licensing levels of the content grouping freely distributable method content versus content that represent intellectual property and requires a license to be purchased to be able to use it."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="categorizedElements" ordered="false"
+        upperBound="-1" eType="#//DescribableElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subCategories" ordered="false"
+        upperBound="-1" eType="#//ContentCategory"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DeliveryProcess" eSuperTypes="#//Process">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Delivery Processes is a special Process describing a complete and integrated approach for performing a specific project type.  It describes a complete project lifecycle end-to-end and shall be used as a reference for running projects with similar characteristics as defined for the process.  A Delivery Process is related to specific supporting information such as Roadmaps (inherited via Activity) as well as Communications and Education Material.&#xD;&#xA;A Delivery Process is a Process that covers a whole development lifecycle from beginning to end.  A Delivery Process shall be used as a template for planning and running a project.  It provides a complete lifecycle model with predefined phases, iterations, and activities that have been detailed by sequencing referencing method content in breakdown structures.  It is defined on the basis of experience with past projects or engagements, and/or the best practice use of a development or delivery approach.  It defines what gets produced, how those items are produced, and the required staffing in the form of integrated Work, Work Product, and Team Breakdown Structures.  For example, a process engineer can define alternative Delivery Processes for software development projects that differ in the scale of the engagement and staffing necessary, the type of the software application to be developed, the development methods and technologies to be used, etc.  Although, the Delivery Process aims to cover a whole project it keeps certain decision that are too project specific open.  For example, the breakdown structure defines which Breakdown Elements have multiple occurrences or is repeatable via it respective attributes, but does not say how many occurrences and how many repeats/iterations it will have.  These decisions have to be done by a project manager when planning a concrete project, project phase, or project iterations.  A Delivery Process is always a complete description of a process in terms of completeness of the lifecycle, as well as in terms of all three views on the process which are the Work Breakdown Structure, Work Product Breakdown Structure, and Team Breakdown Structure have to be fully and consistently populated.  Consistency of a Delivery Process is actually ensured by the fact that all three breakdowns are represented by one single data structure and one particular breakdown such as Team Breakdown is just a view on that data structure."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="educationMaterials" ordered="false"
+        upperBound="-1" eType="#//SupportingMaterial"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="communicationsMaterials"
+        ordered="false" upperBound="-1" eType="#//SupportingMaterial"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Process" abstract="true" eSuperTypes="#//Activity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Process is a special Activity that describes a structure for particular types of development projects.  To perform such a development project a Processes would be 'instantiated' and adapted for the specific situation.  Process is an abstract class and this meta-model defines different special types of Processes for different process management applications and different situations of process reuse.  Every Process comprises of and is the top-level element of an n-level breakdown structure using the Nesting association defined on Activity.&#xD;&#xA;Core Method Content provides step-by-step explanations, describing how very specific development goals are achieved independent of the placement of these steps within a development lifecycle.  Processes take these method elements and relate them into semi-ordered sequences that are customized to specific types of projects.  Thus, a process is a set of partially ordered work descriptions intended to reach a higher development goal, such as the release of a specific software system.  A process and the process meta-model structure defined in this specification focuses on the lifecycle and the sequencing of work in breakdown structures.  To achieve this it uses the Descriptor concept referencing method content and allowing defining time-specific customizations of the referenced content (e.g. defining a focus on different steps of the same Task and providing input Work Products in different states within the different Phases of a process lifecycle in which the same Task is performed)."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="includesPatterns" ordered="false"
+        upperBound="-1" eType="#//CapabilityPattern"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defaultContext" lowerBound="1"
+        eType="#//MethodConfiguration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="validContext" ordered="false"
+        upperBound="-1" eType="#//MethodConfiguration"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CapabilityPattern" eSuperTypes="#//Process">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Capability Pattern is a special Process that describes a reusable cluster of doing work in common process areas.  Capabilities Patterns express and communicate process knowledge for a key area of interest such as a Discipline and can be directly used by process practitioner to guide his work.  They are also used as building blocks to assemble Delivery Processes or larger Capability Patterns ensuring optimal reuse and application of the key practices they express.&#xD;&#xA;A Capability Pattern is a special Process that describes a reusable cluster of doing work in a general process area that provides a consistent development approach to common problems.  Examples for Capability Pattern could be 'use case-based requirements management', 'use case analysis', or 'unit testing'. Typically but not necessarily, Capability Patterns have the scope of one discipline providing a breakdown of reusable complex Activities, relationships to the Roles which perform Tasks within these Activities, as well as to the Work Products that are used and produced.  A capability pattern does not relate to any specific phase or iteration of a development lifecycle, and should not imply any.  In other words, a pattern should be designed in a way that it is applicable anywhere in a Delivery Process.  This enables its Activities to be flexibly assigned to whatever phases there are in the Delivery Process to which it is being applied.  It is a good practice to design a Capability Pattern to produce one or more generic Deliverables.  The typical configuration is that each Activity in the Capability Pattern produces one Deliverable, and the last Task Descriptor in the Activity explicitly outputs just this Deliverable.  This enables the process engineer to select Patterns or just Activities by deciding which Deliverables are required.  It also offers a simple integration approach: an Activity from a capability pattern is linked to the Phase or Iteration which is required to produce the Activity's Deliverable.  Key applications areas of / areas of reuse for Capability Patterns are:&#xD;&#xA;- To serve as building blocks for assembling Delivery Processes or larger Capability Patterns.  Normally developing a Delivery Process is not done from scratch but by systematically applying and binding patterns.  In addition to the standard pattern application of 'copy-and-modify', which allows the process engineer to individually customize the pattern's content to the particular situation it is applied for, the Plugin meta-model package (Section 6.1) introduces even more sophisticated inheritance relationships that support dynamic binding of patterns (i.e. the pattern is referenced and not copied).  This unique new way of reusing process knowledge allows to factor out commonly reoccurring Activities into patterns and to apply them over and over again for a process.  When the pattern is being revised or updated, all changes will be automatically reflected in all pattern application in all processes because of the dynamic binding.&#xD;&#xA;- To support direct execution in a development project that does not work following a well-defined process, but works based on loosely connected process fragments of best practices in a flexible manner (e.g. Agile Development).&#xD;&#xA;- To support process education by describing knowledge for a key area such as best practices on how to perform the work for a Discipline (e.g. Requirements Management), for a specific development technique (aspect-oriented development), or a specific technical area (e.g. relational database design), which is used for education and teaching."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcessPlanningTemplate" eSuperTypes="#//Process">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Process Planning Template is a special Process that is prepared for instantiation by a project planning tool.  Typically, it is created based on a Process such as a Delivery Process as a whole (e.g. in case of a waterfall-based development approach) or in parts (e.g. in case of an iterative development approach).&#xD;&#xA;A Process Planning Template represents a partially finished plan for a concrete project.  It uses the same information structures as all other Process Types to represent templates for project plans.  However, certain planning decisions have already been applied to the template as well as information has been removed and/or reformatted to be ready for export to a specific planning tool.  Examples for such decisions are: a template has been created to represent a plan for a particular Iteration in an iterative development project, which fr example distinguishes early from late iterations in the Elaboration phase of a project; if the targeted planning tool cannot represent input and output of Task, then these have been removed from the structure; certain repetitions have been already applied, e.g. stating that a cycle of specific Task grouped in an Activity have to be repeated n-times; etc."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="basedOnProcesses" ordered="false"
+        upperBound="-1" eType="#//Process"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Roadmap" eSuperTypes="#//Guidance">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Roadmap is a special Guidance Type which is only related to Activates and therefore has been added by this package to the list of Guidance Types rather than listed in the Guidance Types package.  A Roadmap represents a linear walkthrough of an Activity, typically a Process.&#xD;&#xA;An instance of a Roadmap represents important documentation for the Activity or Process it is related to.  Often a complex Activity such as a Process can be much easier understood by providing a walkthrough with a linear thread of a typical instantiation of this Activity.  In addition to making the process practitioner understand how work in the process is being performed, a Roadmap provides additional information about how Activities and Tasks relate to each other over time.  Roadmaps are also used to show how specific aspects are distributed over a whole process providing a kind of filter on the process for this information."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcessComponent" eSuperTypes="#//ProcessPackage #//MethodUnit">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Process Component is a special Process Package that applies the principles of encapsulation.  A Process Component realizes one or more Interfaces which specify inputs and outputs of the component. There might be many components realizing the same interfaces, but using different techniques to achieve similar outputs for similar inputs.  Whereas the Component Interfaces represent component specifications (black box descriptions of the component), good candidates for component realizations can be found in Capability Patterns (white box descriptions for the component).&#xD;&#xA;UMA supports replaceable and reusable Process Components realizing the principles of encapsulation. Certain situations in a software development project might require that concrete realizations of parts of the process remain undecided or will be decided by the executing team itself (e.g. in outsourcing situations).  UMA provides a unique component concept defining interfaces for work product input and output, allowing treating the actual definition of the work that produces the outputs as a &quot;black box&quot;.  At any point during a project the component &quot;realization&quot; detailing the work can be added to the process.  The component approach also allows that different styles or techniques of doing work can be replaced with one another.  For example, a software code output of a component could be produced with a model-driven development or a code-centric technique.  The component concept encapsulates the actual work and lets the development team choose the appropriate technique and fill the component's realization with their choice of Activities that produce the required outputs."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" ordered="false"
+        upperBound="-1" eType="#//ProcessComponentInterface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="process" lowerBound="1"
+        eType="#//Process" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcessPackage" eSuperTypes="#//MethodPackage">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Process Package is a special Method Package that contains Process Elements, only.&#xD;&#xA;A key separation of concerns in UMA is the distinction between Method Content and Process.  This separation is enforced by special package types, which do not allow the mixing of method content with processes."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="processElements" ordered="false"
+        upperBound="-1" eType="#//ProcessElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diagrams" ordered="false"
+        upperBound="-1" eType="#//Diagram" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcessComponentInterface" eSuperTypes="#//BreakdownElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Process Component Interface comprises of a list of interface specifications (similar to operation declarations) that express inputs and outputs for a process component.  These interface specifications are expressed using Task Descriptors which are not linked to Tasks that are related to Work Product Descriptors as well as optional a Role Descriptor."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceSpecifications"
+        ordered="false" upperBound="-1" eType="#//TaskDescriptor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceIO" ordered="false"
+        upperBound="-1" eType="#//WorkProductDescriptor" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcessComponentDescriptor" eSuperTypes="#//Descriptor">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Process Component Descriptor represents a Process Component application in a Process, i.e. the breakdown structure defining the Process.  The Process Component Descriptor is used to encapsulate the details of the component in a breakdown structure and to provide its own set of relationships such as it own predecessors and successors."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ProcessComponent" lowerBound="1"
+        eType="#//ProcessComponent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodPlugin" eSuperTypes="#//MethodUnit #//Package">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Method Plugin is a Method Element that represents a physical container for Method Packages.  It defines a granularity level for the modularization and organization of method content and processes.  A Method Plugin can extend many other Method Plugins and it can be extended by many Method Plugins.  It can also be used stand-alone, i.e. with no Extension relationship to other plug-ins.&#xD;&#xA;Method Plugin conceptually represents a unit for configuration, modularization, extension, packaging, and deployment of method content and processes.  A Process Engineer shall design his Plugins and allocate his content to these Plugins with requirements for extensibility, modularity, reuse, and maintainability in mind.&#xD;&#xA;Special extensibility mechanisms defined for the meta-classes Variability Element and Process Contribution allow Plugin content to directly contribute new content, replace existing content, or to cross-reference to any Content Element or Process within another Plugin that it extends.  Similar to UML 2.0's 'package merge' mechanism transformation interpretations, interpreting these Method Plugin mechanisms results into new extended Method Content and Processes."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="userChangeable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="methodPackages" ordered="false"
+        upperBound="-1" eType="#//MethodPackage" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bases" ordered="false"
+        upperBound="-1" eType="#//MethodPlugin"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VariabilityElement" abstract="true"
+      eSuperTypes="#//MethodElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Variability Element is an abstract class derived from Method Element that provides new capabilities for content variation and extension to Content Elements or any other Method Element that derives from it.  It has been placed in-between the classes Method Element and Content Element in the overall UMA taxonomy of classes using the UML 2.0 package merge mechanism.  The association Variability Specialization shall only be instantiated between two subclasses of Variability Element of the same type.  The element on varaibilitySpecialElement side of the relationship defines a value for the attribute variabilityType defining the nature of the relationship using a literal from the enumeration Variability Type.&#xD;&#xA;Variability Element of the meta-model package Method Plugins adds the capabilities of variation and extension to Method Elements that derive from it.  By default all Content Elements such as Role, Task, Guidance Types, or Activities are defined to be Variability Elements.&#xD;&#xA;Variability and extension provides unique mechanisms for customizing method content without actually directly modifying the original content, but by just be able to describe with separate objects the differences (additions, changes, omissions) relative to the original.  This plug-in concept allows users to factor their method content and processes in interrelated units and even to architect method content and processes in layers that extend each other with new capabilities.  The resulting method and process design can be dynamically combined and applied on demand using the interpretation rules defined for Variability Element Specializations assembling to process practitioners the most accurate method and process descriptions possible.  It also allows process practitioners to extends and tailor method content and processes they do not own and to easily upgrade to newer versions by simply reapply their personal changes to these upgrades.&#xD;&#xA;Variability Element defines two types of variability and one type of extension which are formally defined for the enumeration Variability Type."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="variabilityType" unique="false"
+        eType="#//VariabilityType" defaultValueLiteral="na">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="If in instance of the variabilitySpecialization association between two Variability Elements of the same type exists, then the variabilityType attribute specifies how the element at the variabilitySpecialElement end of the association changes the Content Element at the variabilityBasedOnElement end. See the Variability Type enumeration class for definitions for the different types of variability."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variabilityBasedOnElement"
+        unique="false" eType="#//VariabilityElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="VariabilityType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Variability Type is an Enumeration used for values for instances of Variability Element's attribute variabilityType.  It defines the nature of how a Variability Element extends another Variability Element. See enumeration literals for definitions for each type."/>
+    </eAnnotations>
+    <eLiterals name="na"/>
+    <eLiterals name="contributes" value="1"/>
+    <eLiterals name="extends" value="2"/>
+    <eLiterals name="replaces" value="3"/>
+    <eLiterals name="localContribution" value="4"/>
+    <eLiterals name="localReplacement" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodUnit" abstract="true" eSuperTypes="#//MethodElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Method Unit is a special Method Element that shall be maintained in a Method Library as a separate unit of control."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="authors" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Every Method Unit is being created and owned by an author or authoring team."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeDate" unique="false"
+        eType="#//Date">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The date the last change that resulted into this version has been made."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeDescription" unique="false"
+        eType="#//String" defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The description of the last change that resulted into this version."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="#//String"
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Every Package has a version number used to track changes."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="copyrightStatement" eType="#//SupportingMaterial"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodConfiguration" eSuperTypes="#//MethodUnit">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Method Configuration is a collection of selected Method Models and MethodPackages. A configuration can be exported into its own standalone library when it includes the full transitive closure of all elements all other elements depend on."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="methodPluginSelection"
+        ordered="false" upperBound="-1" eType="#//MethodPlugin"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="methodPackageSelection"
+        ordered="false" upperBound="-1" eType="#//MethodPackage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="processViews" ordered="false"
+        upperBound="-1" eType="#//ContentCategory"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defaultView" eType="#//ContentCategory"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="baseConfigurations" ordered="false"
+        upperBound="-1" eType="#//MethodConfiguration"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcessFamily" eSuperTypes="#//MethodConfiguration">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Delivery Model Family is a convenient grouping of Delivery Processes and Capability Patterns of interest to some specific user community."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="deliveryProcesses" ordered="false"
+        upperBound="-1" eType="#//DeliveryProcess"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodLibrary" eSuperTypes="#//MethodUnit #//Package">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Method Library is a physical container for Method Plugins and Method Configuration definitions.  All Method Elements are stored in a Method Library."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="methodPlugins" ordered="false"
+        upperBound="-1" eType="#//MethodPlugin" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="predefinedConfigurations"
+        ordered="false" upperBound="-1" eType="#//MethodConfiguration" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

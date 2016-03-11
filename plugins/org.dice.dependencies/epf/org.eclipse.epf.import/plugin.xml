@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension-point id="importPluginWizard" name="Import Plugin Wizard Extension" schema="schema/importPluginWizard.exsd"/>
+   <extension-point id="importConfigurationWizard" name="Import Configuration Wizard Extension" schema="schema/importConfigurationWizard.exsd"/>
+
+   <extension
+         point="org.eclipse.ui.importWizards">
+      <wizard
+            category="org.eclipse.epf.ui.importWizards.category"
+            class="org.eclipse.epf.importing.wizards.ImportConfigurationWizard"
+            icon="/icons/etool16/imp_lib_conf.gif"
+            id="org.eclipse.epf.importing.wizards.ImportConfigurationWizard"
+            name="%importLibraryConfigurationWizardName">
+         <description> 
+               %importLibraryConfigurationWizardText
+         </description>
+      </wizard>
+      <wizard
+            category="org.eclipse.epf.ui.importWizards.category"
+            class="org.eclipse.epf.importing.wizards.ImportPluginWizard"
+            icon="/icons/etool16/imp_meth_plugin.gif"
+            id="org.eclipse.epf.importing.wizards.ImportPluginWizard"
+            name="%importMethodPluginsWizardName">
+         <description>
+               %importMethodPluginsWizardText
+         </description>
+      </wizard>
+   </extension>
+
+   <extension
+         point="org.eclipse.epf.ui.importWizards">
+      <wizard id="org.eclipse.epf.importing.wizards.ImportPluginWizard"/>
+   </extension>
+
+   <extension
+         point="org.eclipse.epf.ui.importWizards">
+      <wizard id="org.eclipse.epf.importing.wizards.ImportConfigurationWizard"/>
+   </extension>
+   <extension
+         point="org.eclipse.epf.common.service.commandLineRunners">
+      <commandLineRunner
+            class="org.eclipse.epf.importing.services.CommandLinePluginImporter"
+            runnerId="commandLinePluginImporter"/>
+   </extension>
+
+</plugin>

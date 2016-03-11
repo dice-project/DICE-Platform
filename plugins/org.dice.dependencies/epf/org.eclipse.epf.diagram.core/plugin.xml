@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension-point id="diagramIconProviders" name="Diagram Icon Providers" schema="schema/diagramIconProviders.exsd"/>
+
+   <extension
+         point="org.eclipse.epf.library.edit.nestedCommandProviders">
+      <nestedCommandProvider class="org.eclipse.epf.diagram.core.commands.NestedCommandProvider"/>
+  </extension>
+
+	<extension point="org.eclipse.ui.popupMenus">
+	 <objectContribution
+            adaptable="true"
+            id="org.eclipse.epf.diagram.core.DeleteDiagram"
+            objectClass="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+         <action
+               class="org.eclipse.epf.diagram.core.actions.DeleteDiagramAction"
+               enablesFor="1"
+               icon="icons/elcl16/delete_diagram.gif"
+               id="org.eclipse.epf.diagram.core.actions.DeleteDiagramAction"
+               label="%DeleteDiagram_text"
+               menubarPath="additions"
+               style="push"
+               tooltip="%DeleteDiagram_text"/>
+      </objectContribution> 
+      <objectContribution
+            adaptable="true"
+            id="org.eclipse.epf.diagram.core.RefreshFromBaseAction"
+            objectClass="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+         <action
+               class="org.eclipse.epf.diagram.core.actions.RefreshFromBaseAction"
+               enablesFor="1"
+               icon="icons/elcl16/refresh_base.gif"
+               id="org.eclipse.epf.diagram.core.actions.RefreshFromBaseAction"
+               label="%refreshFromBaseActivity_text"
+               menubarPath="additions"
+               style="push"
+               tooltip="%refreshFromBaseActivity_text"/>
+      </objectContribution>
+      <objectContribution
+            adaptable="true"
+            id="org.eclipse.epf.diagram.core.RefreshAction"
+            objectClass="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+         <action
+               class="org.eclipse.epf.diagram.core.actions.RefreshAction"
+               enablesFor="1"
+               icon="icons/elcl16/refresh.gif"
+               id="org.eclipse.epf.diagram.core.actions.RefreshAction"
+               label="%refresh_text"
+               menubarPath="additions"
+               style="push"
+               tooltip="%refresh_text"/>
+      </objectContribution>
+      <objectContribution
+            adaptable="true"
+            id="org.eclipse.epf.diagram.core.DeleteDiagramElementAction"
+            objectClass="org.eclipse.gmf.runtime.diagram.ui.editparts.IPrimaryEditPart">
+         <action
+               class="org.eclipse.epf.diagram.core.actions.DeleteElementActionDelegate"
+               enablesFor="*"
+               icon="icons/elcl16/delete.gif"
+               id="org.eclipse.epf.diagram.core.actions.DeleteDiagramElementAction"
+               label="%delete_text"
+               menubarPath="additions"
+               overrideActionId="deleteFromDiagramAction"
+               style="push"
+               tooltip="%delete_text"/>
+      </objectContribution>
+  </extension>
+</plugin>

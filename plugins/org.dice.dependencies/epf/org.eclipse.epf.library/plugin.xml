@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.core.resources.natures"
+         id="project.MethodLibraryProjectNature"
+         name="Method Library Project Nature">
+      <runtime>
+         <run class="org.eclipse.epf.library.project.MethodLibraryProjectNature">
+         </run>
+      </runtime>
+   </extension>
+   
+   <extension-point
+         id="libraryManagers"
+         name="Method Library Managers"
+         schema="schema/LibraryManagers.exsd"/>
+   <extension-point id="elementLayoutExtensions" name="Element layout Extensions" schema="schema/elementLayoutExtensions.exsd"/>
+   <extension-point id="elementRealizerFactory" name="ElementRealizer Factory" schema="schema/elementRealizerFactory.exsd"/>
+   <extension-point id="configHelperDelegateExt" name="ConfigHelperDelegateExt" schema="schema/configHelperDelegateExt.exsd"/>
+   <extension
+         point="org.eclipse.epf.library.edit.textReferenceReplacer">
+      <textReferenceReplacer class="org.eclipse.epf.library.util.TextReferenceReplacerImpl"/>
+   </extension>
+   <extension id="unresolvedBasePlugins" point="org.eclipse.core.resources.markers" name="%UnresolvedBasePluginsTypeName"> 
+      <persistent value="false"/> 
+      <super type="org.eclipse.core.resources.problemmarker"/> 
+      <attribute name="name"/>
+      <attribute name="guid"/>
+      <attribute name="unresolvedBaseGuids"/>
+   </extension>  
+      <extension id="multipleReplacers" point="org.eclipse.core.resources.markers" name="%MultipleReplacersTypeName"> 
+      <persistent value="false"/> 
+      <super type="org.eclipse.core.resources.problemmarker"/> 
+      <attribute name="guid"/>
+      <attribute name="replacerGuids"/>
+   </extension>
+   
+   <extension id="validation" point="org.eclipse.core.resources.markers" name="%ValidationMarkerTypeName"> 
+      <persistent value="false"/> 
+      <attribute name="validationType"/>
+      <super type="org.eclipse.core.resources.problemmarker"/>
+   </extension>
+   
+      <extension
+            point="org.eclipse.epf.library.edit.libraryEditUtilProvider">
+         <libraryEditUtilProvider
+               class="org.eclipse.epf.library.util.LibraryEditUtilProvider">
+         </libraryEditUtilProvider>
+      </extension>  
+   
+</plugin>

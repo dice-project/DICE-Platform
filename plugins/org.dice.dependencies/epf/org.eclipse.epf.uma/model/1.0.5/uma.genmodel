@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.epf.uma/src"
+    modelPluginID="org.eclipse.uma" templateDirectory="/org.eclipse.epf.uma.ecore/templates"
+    runtimeJar="true" dynamicTemplates="true" modelName="Uma" modelPluginClass=""
+    nonNLSMarkers="true" rootExtendsInterface="org.eclipse.epf.uma.ecore.IModelObject"
+    rootExtendsClass="org.eclipse.epf.uma.ecore.impl.MultiResourceEObject" rootImplementsInterface=""
+    suppressEMFTypes="true" featureMapWrapperInterface="" featureMapWrapperInternalInterface=""
+    featureMapWrapperClass="" codeFormatting="true" importerID="com.ibm.xtools.modeler.ui.wizards.internal.ecore.importer.EmxImporterWizard"
+    containmentProxies="true" complianceLevel="5.0">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/com.ibm.xtools.modeler.ui.wizards.internal.ecore.importer.EmxImporterWizard">
+    <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
+    <details key="OPERATION_BODIES" value="IGNORE"/>
+    <details key="DERIVED_FEATURES" value="PROCESS"/>
+    <details key="DUPLICATE_OPERATION_INHERITANCE" value="DISCARD"/>
+    <details key="REDEFINING_OPERATIONS" value="REPORT"/>
+    <details key="ANNOTATION_DETAILS" value="PROCESS"/>
+    <details key="REDEFINING_PROPERTIES" value="REPORT"/>
+    <details key="INVARIANT_CONSTRAINTS" value="PROCESS"/>
+    <details key="DUPLICATE_FEATURE_INHERITANCE" value="DISCARD"/>
+    <details key="DUPLICATE_OPERATIONS" value="DISCARD"/>
+    <details key="COMMENTS" value="PROCESS"/>
+    <details key="DUPLICATE_FEATURES" value="DISCARD"/>
+    <details key="SUBSETTING_PROPERTIES" value="REPORT"/>
+    <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
+    <details key="UNION_PROPERTIES" value="REPORT"/>
+  </genAnnotations>
+  <foreignModel>../../UMA%201.0.5%20(RSM)/uma.emx</foreignModel>
+  <genPackages prefix="Uma" basePackage="org.eclipse.epf" disposableProviderFactory="true"
+      ecorePackage="uma.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="uma.ecore#//VariabilityType">
+      <genEnumLiterals ecoreEnumLiteral="uma.ecore#//VariabilityType/na"/>
+      <genEnumLiterals ecoreEnumLiteral="uma.ecore#//VariabilityType/contributes"/>
+      <genEnumLiterals ecoreEnumLiteral="uma.ecore#//VariabilityType/extends"/>
+      <genEnumLiterals ecoreEnumLiteral="uma.ecore#//VariabilityType/replaces"/>
+      <genEnumLiterals ecoreEnumLiteral="uma.ecore#//VariabilityType/localContribution"/>
+      <genEnumLiterals ecoreEnumLiteral="uma.ecore#//VariabilityType/localReplacement"/>
+      <genEnumLiterals ecoreEnumLiteral="uma.ecore#//VariabilityType/extendsReplaces"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="uma.ecore#//WorkOrderType">
+      <genEnumLiterals ecoreEnumLiteral="uma.ecore#//WorkOrderType/finishToStart"/>
+      <genEnumLiterals ecoreEnumLiteral="uma.ecore#//WorkOrderType/finishToFinish"/>
+      <genEnumLiterals ecoreEnumLiteral="uma.ecore#//WorkOrderType/startToStart"/>
+      <genEnumLiterals ecoreEnumLiteral="uma.ecore#//WorkOrderType/startToFinish"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="uma.ecore#//String"/>
+    <genDataTypes ecoreDataType="uma.ecore#//Boolean"/>
+    <genDataTypes ecoreDataType="uma.ecore#//Date"/>
+    <genDataTypes ecoreDataType="uma.ecore#//Uri"/>
+    <genDataTypes ecoreDataType="uma.ecore#//Set"/>
+    <genDataTypes ecoreDataType="uma.ecore#//Sequence"/>
+    <genDataTypes ecoreDataType="uma.ecore#//Integer"/>
+    <genDataTypes ecoreDataType="uma.ecore#//Double"/>
+    <genClasses image="false" ecoreClass="uma.ecore#//Classifier">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//Classifier/isAbstract"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="uma.ecore#//Type"/>
+    <genClasses image="false" ecoreClass="uma.ecore#//PackageableElement"/>
+    <genClasses image="false" ecoreClass="uma.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="uma.ecore#//Element"/>
+    <genClasses ecoreClass="uma.ecore#//Package"/>
+    <genClasses image="false" ecoreClass="uma.ecore#//Namespace"/>
+    <genClasses ecoreClass="uma.ecore#//Constraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//Constraint/body"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="uma.ecore#//MethodElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//MethodElement/guid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//MethodElement/presentationName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//MethodElement/briefDescription"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//MethodElement/ownedRules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//MethodElement/methodElementProperty"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//MethodElement/kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//MethodElement/suppressed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//MethodElement/orderingGuide"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//MethodElementProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//MethodElementProperty/value"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//Kind">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//Kind/applicableMetaClassInfo"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="uma.ecore#//ContentElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//ContentElement/supportingMaterials"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//ContentElement/conceptsAndPapers"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//ContentElement/checklists"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//ContentElement/guidelines"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//ContentElement/examples"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//ContentElement/assets"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//ContentElement/termdefinition"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="uma.ecore#//DescribableElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//DescribableElement/presentation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//DescribableElement/shapeicon"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//DescribableElement/nodeicon"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//ContentDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//ContentDescription/mainDescription"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//ContentDescription/sections"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//ContentDescription/externalId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//ContentDescription/keyConsiderations"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//ContentDescription/longPresentationName"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="uma.ecore#//MethodUnit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//MethodUnit/authors"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//MethodUnit/changeDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//MethodUnit/changeDescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//MethodUnit/version"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//MethodUnit/copyrightStatement"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//SupportingMaterial"/>
+    <genClasses image="false" ecoreClass="uma.ecore#//Guidance"/>
+    <genClasses ecoreClass="uma.ecore#//Section">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//Section/sectionName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//Section/sectionDescription"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//Section/subSections"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Section/predecessor"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="uma.ecore#//VariabilityElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//VariabilityElement/variabilityType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//VariabilityElement/variabilityBasedOnElement"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//Concept"/>
+    <genClasses ecoreClass="uma.ecore#//Checklist"/>
+    <genClasses ecoreClass="uma.ecore#//Guideline"/>
+    <genClasses ecoreClass="uma.ecore#//Example"/>
+    <genClasses ecoreClass="uma.ecore#//ReusableAsset"/>
+    <genClasses ecoreClass="uma.ecore#//TermDefinition"/>
+    <genClasses ecoreClass="uma.ecore#//ApplicableMetaClassInfo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//ApplicableMetaClassInfo/isPrimaryExtension"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//Artifact">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference uma.ecore#//Artifact/containerArtifact"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//Artifact/containedArtifacts"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//WorkProduct">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//WorkProduct/reports"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//WorkProduct/templates"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//WorkProduct/toolMentors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//WorkProduct/estimationConsiderations"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//FulfillableElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//FulfillableElement/fulfills"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//Report"/>
+    <genClasses ecoreClass="uma.ecore#//Template"/>
+    <genClasses ecoreClass="uma.ecore#//ToolMentor"/>
+    <genClasses ecoreClass="uma.ecore#//EstimationConsiderations"/>
+    <genClasses ecoreClass="uma.ecore#//Deliverable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Deliverable/deliveredWorkProducts"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//Outcome"/>
+    <genClasses ecoreClass="uma.ecore#//Step"/>
+    <genClasses image="false" ecoreClass="uma.ecore#//WorkDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//WorkDefinition/precondition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//WorkDefinition/postcondition"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//Whitepaper"/>
+    <genClasses ecoreClass="uma.ecore#//Task">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Task/performedBy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Task/mandatoryInput"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Task/output"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Task/additionallyPerformedBy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Task/optionalInput"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Task/steps"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Task/toolMentors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Task/estimationConsiderations"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//Role">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Role/modifies"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Role/responsibleFor"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//ArtifactDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//ArtifactDescription/briefOutline"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//ArtifactDescription/representationOptions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//ArtifactDescription/representation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//ArtifactDescription/notation"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//WorkProductDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//WorkProductDescription/purpose"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//WorkProductDescription/impactOfNotHaving"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//WorkProductDescription/reasonsForNotNeeding"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//DeliverableDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//DeliverableDescription/externalDescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//DeliverableDescription/packagingGuidance"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//RoleDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//RoleDescription/skills"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//RoleDescription/assignmentApproaches"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//RoleDescription/synonyms"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//TaskDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//TaskDescription/purpose"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//TaskDescription/alternatives"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//GuidanceDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//GuidanceDescription/attachments"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//PracticeDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//PracticeDescription/additionalInfo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//PracticeDescription/problem"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//PracticeDescription/background"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//PracticeDescription/goals"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//PracticeDescription/application"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//PracticeDescription/levelsOfAdoption"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//RoleSet">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//RoleSet/roles"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="uma.ecore#//ContentCategory"/>
+    <genClasses ecoreClass="uma.ecore#//Domain">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Domain/workProducts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//Domain/subdomains"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//WorkProductType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//WorkProductType/workProducts"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//DisciplineGrouping">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//DisciplineGrouping/disciplines"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//Discipline">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Discipline/tasks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//Discipline/subdiscipline"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Discipline/referenceWorkflows"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//Activity">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Activity/breakdownElements"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Activity/roadmaps"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="uma.ecore#//WorkBreakdownElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//WorkBreakdownElement/isRepeatable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//WorkBreakdownElement/isOngoing"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//WorkBreakdownElement/isEventDriven"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//WorkBreakdownElement/linkToPredecessor"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="uma.ecore#//BreakdownElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//BreakdownElement/prefix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//BreakdownElement/isPlanned"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//BreakdownElement/hasMultipleOccurrences"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//BreakdownElement/isOptional"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//BreakdownElement/presentedAfter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//BreakdownElement/presentedBefore"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//BreakdownElement/planningData"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//BreakdownElement/superActivities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//BreakdownElement/checklists"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//BreakdownElement/concepts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//BreakdownElement/examples"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//BreakdownElement/guidelines"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//BreakdownElement/reusableAssets"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//BreakdownElement/supportingMaterials"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//BreakdownElement/templates"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//BreakdownElement/reports"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//BreakdownElement/estimationconsiderations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//BreakdownElement/toolmentor"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="uma.ecore#//ProcessElement"/>
+    <genClasses ecoreClass="uma.ecore#//PlanningData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//PlanningData/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//PlanningData/finishDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//PlanningData/rank"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//WorkOrder">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//WorkOrder/linkType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//WorkOrder/pred"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//Roadmap"/>
+    <genClasses ecoreClass="uma.ecore#//Tool">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Tool/toolMentors"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//RoleSetGrouping">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//RoleSetGrouping/roleSets"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//CustomCategory">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//CustomCategory/categorizedElements"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//CustomCategory/subCategories"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="uma.ecore#//MethodPackage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//MethodPackage/global"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//MethodPackage/reusedPackages"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//MethodPackage/childPackages"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//ContentPackage">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//ContentPackage/contentElements"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//Milestone">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Milestone/requiredResults"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//WorkProductDescriptor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//WorkProductDescriptor/activityEntryState"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//WorkProductDescriptor/activityExitState"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//WorkProductDescriptor/WorkProduct"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//WorkProductDescriptor/impactedBy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//WorkProductDescriptor/impacts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//WorkProductDescriptor/deliverableParts"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="uma.ecore#//Descriptor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//Descriptor/isSynchronizedWithSource"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//Iteration"/>
+    <genClasses ecoreClass="uma.ecore#//Phase"/>
+    <genClasses ecoreClass="uma.ecore#//TeamProfile">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//TeamProfile/teamRoles"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//TeamProfile/superTeam"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//TeamProfile/subTeam"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//RoleDescriptor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//RoleDescriptor/Role"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//RoleDescriptor/modifies"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//RoleDescriptor/responsibleFor"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//TaskDescriptor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//TaskDescriptor/Task"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//TaskDescriptor/additionallyPerformedBy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//TaskDescriptor/assistedBy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//TaskDescriptor/externalInput"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//TaskDescriptor/mandatoryInput"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//TaskDescriptor/optionalInput"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//TaskDescriptor/output"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//TaskDescriptor/performedPrimarilyBy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//TaskDescriptor/selectedSteps"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//CompositeRole">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//CompositeRole/aggregatedRoles"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//DeliveryProcess">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//DeliveryProcess/educationMaterials"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//DeliveryProcess/communicationsMaterials"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="uma.ecore#//Process">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Process/includesPatterns"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Process/defaultContext"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Process/validContext"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//CapabilityPattern"/>
+    <genClasses ecoreClass="uma.ecore#//MethodConfiguration">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//MethodConfiguration/methodPluginSelection"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//MethodConfiguration/methodPackageSelection"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//MethodConfiguration/processViews"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//MethodConfiguration/defaultView"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//MethodConfiguration/baseConfigurations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//MethodConfiguration/subtractedCategory"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//MethodConfiguration/addedCategory"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//MethodPlugin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//MethodPlugin/userChangeable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//MethodPlugin/methodPackages"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//MethodPlugin/bases"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//MethodPlugin/supporting"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//ProcessPlanningTemplate">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//ProcessPlanningTemplate/basedOnProcesses"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//Practice">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//Practice/subPractices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Practice/contentReferences"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Practice/activityReferences"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//BreakdownElementDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//BreakdownElementDescription/usageGuidance"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//ActivityDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//ActivityDescription/purpose"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//ActivityDescription/alternatives"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//ActivityDescription/howtoStaff"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//DeliveryProcessDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//DeliveryProcessDescription/scale"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//DeliveryProcessDescription/projectCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//DeliveryProcessDescription/riskLevel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//DeliveryProcessDescription/estimatingTechnique"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//DeliveryProcessDescription/projectMemberExpertise"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//DeliveryProcessDescription/typeOfContract"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//ProcessDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//ProcessDescription/scope"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//ProcessDescription/usageNotes"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//DescriptorDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//DescriptorDescription/refinedDescription"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//ProcessComponentDescriptor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//ProcessComponentDescriptor/_processComponent"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//ProcessComponent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//ProcessComponent/interfaces"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//ProcessComponent/process"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//ProcessPackage">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//ProcessPackage/processElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//ProcessPackage/diagrams"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//Diagram">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Diagram/diagramLink"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//Diagram/namespace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//Diagram/zoom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Diagram/viewpoint"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//GraphNode">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//GraphNode/size"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="uma.ecore#//GraphElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//GraphElement/contained"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//GraphElement/position"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//GraphElement/link"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//GraphElement/anchorage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//GraphElement/semanticModel"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="uma.ecore#//DiagramElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//DiagramElement/isVisible"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference uma.ecore#//DiagramElement/container"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//DiagramElement/reference"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//DiagramElement/property"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//Reference">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//Reference/isIndividualRepresentation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Reference/referenced"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//Property/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//Property/value"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//Point">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//Point/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//Point/y"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//DiagramLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//DiagramLink/zoom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//DiagramLink/viewport"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//DiagramLink/diagram"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference uma.ecore#//DiagramLink/graphElement"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//GraphConnector">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//GraphConnector/graphEdge"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference uma.ecore#//GraphConnector/graphElement"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//GraphEdge">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//GraphEdge/waypoints"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//GraphEdge/anchor"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="uma.ecore#//SemanticModelBridge">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//SemanticModelBridge/presentation"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference uma.ecore#//SemanticModelBridge/diagram"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference uma.ecore#//SemanticModelBridge/graphElement"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//Dimension">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//Dimension/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//Dimension/height"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//ProcessComponentInterface">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//ProcessComponentInterface/interfaceSpecifications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//ProcessComponentInterface/interfaceIO"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//SimpleSemanticModelElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//SimpleSemanticModelElement/typeInfo"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//UMASemanticModelBridge">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//UMASemanticModelBridge/element"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//CoreSemanticModelBridge">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//CoreSemanticModelBridge/element"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="uma.ecore#//LeafElement"/>
+    <genClasses ecoreClass="uma.ecore#//TextElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//TextElement/text"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//Image">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//Image/uri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//Image/mimeType"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="uma.ecore#//GraphicPrimitive"/>
+    <genClasses ecoreClass="uma.ecore#//Polyline">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//Polyline/closed"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//Polyline/waypoints"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//Ellipse">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//Ellipse/center"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//Ellipse/radiusX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//Ellipse/radiusY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//Ellipse/rotation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//Ellipse/startAngle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uma.ecore#//Ellipse/endAngle"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//ProcessFamily">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uma.ecore#//ProcessFamily/deliveryProcesses"/>
+    </genClasses>
+    <genClasses ecoreClass="uma.ecore#//MethodLibrary">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//MethodLibrary/methodPlugins"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uma.ecore#//MethodLibrary/predefinedConfigurations"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

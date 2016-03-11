@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.exportWizards">
+      <wizard
+            category="org.eclipse.epf.ui.exportWizards.category"
+            class="org.eclipse.epf.export.wizards.ExportConfigurationWizard"
+            icon="/icons/etool16/exp_lib_conf.gif"
+            id="org.eclipse.epf.export.wizards.ExportConfigurationWizard"
+            name="%exportLibraryConfigurationWizardName">
+         <description>
+               %exportLibraryConfiguration
+         </description>
+      </wizard>
+      <wizard
+            category="org.eclipse.epf.ui.exportWizards.category"
+            class="org.eclipse.epf.export.wizards.ExportPluginWizard"
+            icon="/icons/etool16/exp_meth_plugin.gif"
+            id="org.eclipse.epf.export.wizards.ExportPluginWizard"
+            name="%exportMethodPluginsWizardName">
+         <description> 
+               %exportMethodPlugins
+         </description>
+      </wizard> 
+   </extension>
+
+   <extension
+         point="org.eclipse.epf.ui.exportWizards">
+      <wizard id="org.eclipse.epf.export.wizards.ExportConfigurationWizard"/>
+      <wizard id="org.eclipse.epf.export.wizards.ExportPluginWizard"/>
+   </extension>
+
+</plugin>

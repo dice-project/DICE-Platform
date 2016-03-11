@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension-point id="importXMLWizard" name="Import XML Wizard Extension" schema="schema/importXMLWizard.exsd"/>
+
+   <extension
+         point="org.eclipse.ui.importWizards">
+      <wizard
+            category="org.eclipse.epf.ui.importWizards.category"
+            class="org.eclipse.epf.importing.xml.wizards.ImportXMLWizard"
+            icon="icons/etool16/imp_xml.gif"
+            id="org.eclipse.epf.importing.xml.wizards.ImportXMLWizard"
+            name="%importXMLWizardName">
+         <description>
+               %importXMLWizardDescription
+         </description>
+      </wizard>
+   </extension>
+
+   <extension
+         point="org.eclipse.epf.ui.importWizards">
+      <wizard id="org.eclipse.epf.importing.xml.wizards.ImportXMLWizard"/>
+   </extension>
+
+</plugin>

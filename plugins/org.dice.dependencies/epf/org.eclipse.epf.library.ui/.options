@@ -1,0 +1,2 @@
+# Turn on debug trace for the Library plug-in
+org.eclipse.epf.library.ui/debug=true

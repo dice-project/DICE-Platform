@@ -1,0 +1,8 @@
+Non-NLS Markers:	true
+Containment Proxies:	true
+Suppress EMF Metadata:	false
+Root Extends Class:	org.eclipse.epf.uma.ecore.impl.MultiResourceEObject
+Root Extends Interface:	org.eclipse.epf.uma.ecore.IModelObject
+Code Formatting:	true
+Dynamic Templates:	true
+Template Directory:	/org.eclipse.epf.uma.ecore/templates

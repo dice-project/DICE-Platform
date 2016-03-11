@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!-- 
+    Copyright (c) 2005, 2006 IBM Corporation and others.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+    Contributors:
+    IBM Corporation - initial implementation
+-->
+
+<cheatsheet title="Apply a Capability Pattern">
+
+	<intro 
+		href="/org.eclipse.epf.help.doc/topics/c_capability_pattern.html">
+		<description>When developing a process you do not need to work from scratch by creating activities and descriptors one by one.  This cheat sheet walks you through applying pre-defined capability patterns or even capability pattern or delivery process parts as building blocks to your process.<br/><br/>A capability pattern is a special process that describes a reusable cluster of activities in common process areas.  Capabilities patterns express and communicate process knowledge for a key area of interest such as a discipline and can be directly used by a process practitioner to guide his work.  They are also used as building blocks to assemble delivery processes or larger capability patterns ensuring optimal reuse and application of the key practices they express. You can apply the same pattern several times to the same process and define local modifications to each individual pattern application. This allows you to express specific changes each time the pattern is being performed throughout a lifecycle a process represents.</description>
+	</intro>
+
+	<item
+		title="Find an Activity to which a Pattern will be Applied"
+		skip="false">
+		<description>Given that you have already opened your process in the process editor, switch to the work breakdown structure tab and review your process. Find the location where you want to apply a capability pattern. A capability pattern has to be applied to one specific activity (including iteration or phase which are special activities) in a process. Such an activity can either be defined locally in the process (presented as a name in a standard black font) or an activity which had been added to the process by applying another capability pattern (presented as a name in a green-italic font).<br/><br/>If you want to apply a pattern to a local activity (black font), go to step "Select a Capability Pattern in the Configuration View". If you want to apply a pattern to an activity from another pattern (green italic font), please go to step "Contribute to an Activity from Another Pattern".</description>
+	</item>
+
+	<item
+		title="Contribute to an Activity from Another Pattern"
+		skip="true">
+		<description>Only if you want to apply a pattern to an activity from another pattern (recognizable by the green italic font) then you need to create an activity contribution, which allows you to make local changes to the activity.<br/><br/>Find the activity's parent element. If this element is a not a local element (green italic font) then you first need create a contribution to this parent and so on (if the parent's parent is not local then create a contribution to the parent's parent first, etc.) <br/><br/>To create a contribution to a non-local activity, right-click the non-local activity and then click "Contribute". Do this with all parents top-down until you reach the activity to which you want to apply the pattern. Once you clicked "Contribute", the activity become local and is presented with a standard black font.</description>
+	</item>
+
+	<item
+		href="/org.eclipse.epf.help.doc/topics/c_configuration_view.html" 
+		title="Select a Capability Pattern in the Configuration View"
+		skip="false">
+		<description>Find a capability pattern in the configuration view. Expand the package "Processes -&gt; Capability Patterns" as well as its sub-packages. Select the pattern you want to apply to your process.</description>
+	</item>
+
+	<item
+		title="Apply the Capability Pattern or Capability Patterns Activity"
+		skip="false">
+		<description>You can apply either the whole capability pattern to your process or just one or more activities from it. To apply the whole capability pattern drag the pattern over the activity selected earlier in your process. To apply one or more activities of the capability pattern select them in the configuration view. You can multi select by pressing ctrl + select, or shift + select to capture an all-inclusive section.<br/><br/>Drag them to the activity selected earlier in your process. After dragging the pattern or activities you will be prompted you to apply the pattern/activities via Extends (dynamic binding) or Copy (See the online help section "Process Authoring Overview" for more details on these two choices). Make your choice by clicking.<br/><br/>As an alternative to dragging the capability pattern you can also right-click the activity to which you want to apply the pattern and select the menu option "Apply Pattern -&gt; Copy..." or "Apply Pattern -&gt; Extend..."</description>
+	</item>
+	
+	<item
+		title="Make Local Changes to a Pattern Application"
+		skip="true">
+		<description>If you applied the pattern via copy, you can freely make modifications to the copied elements. If you applied the pattern via extends (dynamic binding) you can still provide local additions to the pattern by defining a contribution to the pattern's activities. Follow the instructions of the step "Contribute to an Activity from Another Pattern" above to define such a contribution. After you create the local activity contribution, you can add additional descriptors or patterns to this activity.</description>
+	</item>
+	
+	<item
+		title="Suppress Pattern Elements"
+		skip="true">
+		<description>You can suppress elements such as descriptors or activities of a dynamically bounds pattern (via extends) by right clicking and selecting "Suppress" from the context menu.</description>
+	</item>
+	<item title="Done"><description></description></item>
+</cheatsheet>

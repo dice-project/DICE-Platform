@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!-- 
+    Copyright (c) 2005, 2006 IBM Corporation and others.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+    Contributors:
+    IBM Corporation - initial implementation
+-->
+
+<cheatsheet title="Add new Method Content such as Roles, Tasks, Work Products or Guidance">
+
+	<intro 
+		href="/org.eclipse.epf.help.doc/topics/t_create_method_content.html">
+		<description>This cheat sheet guides you though the steps of creating your own method content. You should always create method content in a method plug-in that you produce. This separates your content from content that you reused from third parties and allows you to update your own library with new releases of such third party plug-ins without affecting the content that you have created in your own plug-ins.<br/><br/>All plug-ins shipped with your method library are protected from direct modification. Creating new elements in your own plug-in and then relating those elements to the elements in the locked plug-in allows you to tailor the contents of the locked plug-in for your own use. If you have not created your own method plug-in, perform the "Create your own Method Plug-in" cheat sheet first.</description>
+	</intro>
+
+	<item
+		href="/org.eclipse.epf.help.doc/topics/c_method_content_package.html"
+		title="Select or Create a Content Package"
+		skip="false">
+		<description>Content packages are used to group related method content together. Since content packages are selectable at publication time, it is recommended practice to group content that needs to be published together into the same content package.<br/><br/>Find your method plug-in in the Library view. Drill into the plug-in's packages to locate the package called "Content Packages". This package contains all packages that are allowed to contain method elements. Select and expand a package in the "Content Packages" hierarchy in which you want to create your element, or to create a new content package. Right click a package and select New -&gt; Content Package.<br/><br/>An editor opens that allows you to provide a unique name for the package as well as to briefly describe its purpose.</description>
+	</item>
+
+	<item
+		href="/org.eclipse.epf.help.doc/topics/c_method_content.html"
+		title="Create Method Content Element"
+		skip="false">
+		<description>In your expanded content package within the library view, right click any one of roles, tasks, work products, or guidance to create any of these content elements. Highlight "New" and then select the concrete type of the element you want to create (for example, for work products choose between artifact, outcome, or deliverable). The new element is created and its respective editor is opened.</description>
+	</item>
+
+	<item
+		title="Detail the Newly Created Method Content Element"
+		skip="false">
+		<description>Use the fields in the content element editor to specify the content element details. Start by assigning a unique "Name" to the element as well as giving it a "Presentation Name" that will be used as the external visible name when other elements refer to this element or when the element is published.<br/><br/>Every element owns several specific content fields distributed on several stacked editor tabs and sections within these tabs that you can use for your descriptions. For more information on these description fields as well as how to use the rich text editor see, the online help.</description>
+	</item>
+	<item title="Done"><description></description></item>
+</cheatsheet>
+

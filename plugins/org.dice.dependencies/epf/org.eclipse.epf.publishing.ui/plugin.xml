@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension-point
+         id="publishConfigWizard"
+         name="Publish Method Configuraiton Wizard Extension"
+         schema="schema/PublishConfigWizard.exsd" />
+
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="org.eclipse.epf.library.ConfigActionSet"
+            label="%configActionSet"
+            visible="false">
+         <menu
+               id="org.eclipse.epf.publishing.ui.menu.configuration"
+               label="%configMenu"
+               path="additions"/>  
+         <action
+               class="org.eclipse.epf.publishing.ui.actions.PublishConfigAction"
+               helpContextId="org.eclipse.epf.authoring.ui.configuration_publish_context"
+               icon="icons/WebPublish.gif"
+               id="org.eclipse.epf.library.actions.Publish"
+               label="%publishConfigAction"
+               menubarPath="org.eclipse.epf.publishing.ui.menu.configuration/additions"
+               style="push"/>
+      </actionSet>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.epf.authoring.ui.AuthoringPerspective">
+         <actionSet
+               id="org.eclipse.epf.library.ConfigActionSet">
+         </actionSet>
+      </perspectiveExtension>
+      <perspectiveExtension
+            targetID="org.eclipse.epf.authoring.ui.BrowsingPerspective">
+         <actionSet
+               id="org.eclipse.epf.library.ConfigActionSet">
+         </actionSet>
+      </perspectiveExtension>      
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.actionSetPartAssociations">
+      <actionSetPartAssociation
+            targetID="org.eclipse.epf.library.ConfigActionSet">
+         <part
+               id="org.eclipse.epf.authoring.ui.editors.ConfigurationEditor">
+         </part>
+      </actionSetPartAssociation>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages">
+      <page
+            id="org.eclipse.epf.publishing.ui.preferences.PublishingPreferencePage"
+            class="org.eclipse.epf.publishing.ui.preferences.PublishingPreferencePage"
+            category="org.eclipse.epf.ui.preferences.RootPreferencePage"
+            name="%rootPageName"/>
+      <page
+            id="org.eclipse.epf.publishing.ui.preferences.RoleDiagramPreferencePage"
+            class="org.eclipse.epf.publishing.ui.preferences.RoleDiagramPreferencePage"
+            category="org.eclipse.epf.publishing.ui.preferences.PublishingPreferencePage"
+            name="%roleDiagramPageName"/>
+      <page
+            id="org.eclipse.epf.publishing.ui.preferences.ActivityDiagramPreferencePage"
+	        class="org.eclipse.epf.publishing.ui.preferences.ActivityDiagramPreferencePage"
+		    category="org.eclipse.epf.publishing.ui.preferences.PublishingPreferencePage"
+		    name="%activityDiagramPageName"/>
+	  <page
+            id="org.eclipse.epf.publishing.ui.preferences.SupportingPluginsPreferencePage"
+	        class="org.eclipse.epf.publishing.ui.preferences.SupportingPluginPreferencePage"
+		    category="org.eclipse.epf.publishing.ui.preferences.PublishingPreferencePage"
+            name="%supportingPluginPageName"/>    
+   </extension>
+
+   <extension
+         point="org.eclipse.epf.library.edit.commandListeners">
+      <commandListener class="org.eclipse.epf.publishing.ui.preferences.DeleteConfigCommandListener"/>
+   </extension>
+
+</plugin>

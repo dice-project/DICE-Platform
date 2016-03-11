@@ -1,0 +1,207 @@
+//------------------------------------------------------------------------------
+// Copyright (c) 2005, 2007 IBM Corporation and others.
+// All rights reserved. This program and the accompanying materials
+// are made available under the terms of the Eclipse Public License v1.0
+// which accompanies this distribution, and is available at
+// http://www.eclipse.org/legal/epl-v10.html
+//
+// Contributors:
+// IBM Corporation - initial implementation
+//------------------------------------------------------------------------------
+package org.eclipse.epf.library.services;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+import org.eclipse.epf.common.utils.StrUtil;
+import org.eclipse.epf.library.layout.Bookmark;
+import org.eclipse.epf.library.layout.LinkInfo;
+import org.eclipse.epf.persistence.MultiFileResourceSetImpl;
+import org.eclipse.epf.uma.MethodElement;
+
+/**
+ * 
+ * This class is depricated. use FileNameGenerator instead
+ *
+ */
+public class NameCache {
+	
+	private static NameCache instance = new NameCache();
+	private Map<String, String> aMap = new HashMap<String, String>();
+	private Set<ElementFile> aSet = new HashSet<ElementFile>();
+	private Map<String, String> gMap = new HashMap<String, String>();
+
+	/**
+	 * Returns the shared instance.
+	 * @deplicated
+	 */
+	private static NameCache getInstance() {
+		return instance;
+	}
+
+	/**
+	 * Private constructor to prevent this class from being instantiated.
+	 */
+	private NameCache() {
+	}
+	
+	public void clear() {
+		aMap.clear();
+		aSet.clear();
+		gMap.clear();
+	}
+	
+	/**
+	 * get the file name with the given prefix and extension
+	 * @param element MethodElement
+	 * @param namePrefix String prefix for the name
+	 * @param nameSuffix String suffix for the name
+	 * @param ext String file extension, for example, ".html"
+	 * @return String
+	 * @deplicated
+	 */	 
+	private String getFileName(MethodElement element, String namePrefix,
+			String nameSuffix, String ext) {
+		
+		String existingElementName = null;
+		StringBuffer buffer = new StringBuffer();
+		if (namePrefix != null) {
+			buffer.append(namePrefix);
+		}
+		
+		if (element.getName() == "")
+			return "0" + ext; //$NON-NLS-1$
+			
+		if (!gMap.isEmpty()) {
+			existingElementName =  (String) gMap.get(element.getGuid());
+		}
+		// Browsing: Browsing CP with special chars failed with
+		// blank pages and Script Error need to make a valid file name
+		buffer.append((existingElementName != null) ? existingElementName : StrUtil.removeSpecialCharacters(element.getName()));
+		if (nameSuffix != null) {
+			buffer.append(nameSuffix);
+		}
+
+		if (ext != null) {
+			if (ext.indexOf(".") < 0) //$NON-NLS-1$
+			{
+				ext = "." + ext; //$NON-NLS-1$
+			}
+			buffer.append(ext);
+		}
+		
+		if (existingElementName == null) {
+			
+			ElementFile a = new ElementFile(element.getGuid(), buffer.toString());
+			
+			if (a != null && aSet.add(a)) {
+				int extDot = a.getFileName().lastIndexOf(".");
+				aMap.put((extDot < 0) ? a.getFileName() : a.getFileName().substring(0, extDot), element.getGuid());			 
+				gMap.put(element.getGuid(), (extDot < 0) ? a.getFileName() : a.getFileName().substring(0, extDot));
+			}
+		
+			return a.getFileName();
+		}
+		return buffer.toString();
+	}
+	
+	
+	private String getFileName(String guid) {
+	
+		if (guid != null && !gMap.isEmpty()) {
+			return (String) gMap.get(guid);
+		}
+		return null; 
+	}
+
+	/**
+	 * get the guid from the file name, assuming the file name is generated from an element, 
+	 * return null if not found.
+	 * @param fileName String
+	 * @return String
+	 */
+	public String getGuidFromFileName(String fileName) {
+		if (fileName == null || (fileName.indexOf("resources/") > -1 && fileName.indexOf(".htm") < 0)) {
+			return null;
+		}			
+		
+		String guid = null;
+		
+		int idx = fileName.lastIndexOf("/");
+		int lastIdx = fileName.lastIndexOf(".");
+
+		if (idx > -1) {
+			guid = (String) aMap.get((lastIdx > -1 && idx < lastIdx) ? 
+					fileName.substring(idx+1, lastIdx) : (idx < fileName.length()) ? 
+							fileName.substring(idx+1) : null);
+		} else {
+			guid = (String) aMap.get((lastIdx > -1) ? fileName.substring(0, lastIdx) : fileName);
+		}
+		if (guid == null)	return null;		
+	
+		// turn off error reporting and see if guid exists in library
+		boolean oldReport_Error = MultiFileResourceSetImpl.REPORT_ERROR;
+		MultiFileResourceSetImpl.REPORT_ERROR = false;
+/*		MethodElement e = LibraryService.getInstance().getCurrentLibraryManager()
+				.getMethodElement(guid);*/
+		//part of temp solution due to not having lib mgr during migration
+		MethodElement e = LinkInfo.getMethodElement(guid);
+		MultiFileResourceSetImpl.REPORT_ERROR = oldReport_Error;
+		if (e == null)
+			return null;
+
+		return guid;
+	}
+	
+	/**
+	 * get the file name with the given prefix and extension
+	 * @param view Bookmark
+	 * @param namePrefix String prefix for the name
+	 * @param nameSuffix String suffix for the name
+	 * @param ext String file extension, for example, ".html"
+	 * @return String
+	 * @deplicated this method is not needed 
+	 */	 
+	private String getFileName(Bookmark view, String namePrefix,
+			String nameSuffix, String ext) {
+		
+		String existingElementName = null;
+		StringBuffer buffer = new StringBuffer();
+		if (namePrefix != null) {
+			buffer.append(namePrefix);
+		}
+		
+		if (view.getPresentationName() == "")
+			return "0" + ext; //$NON-NLS-1$
+		
+		if (!gMap.isEmpty()) {
+			existingElementName =  (String) gMap.get(view.getUniqueId());
+		}
+		// Browsing: Browsing CP with special chars failed with
+		// blank pages and Script Error need to make a valid file name
+		buffer.append((existingElementName != null) ? existingElementName : StrUtil.removeSpecialCharacters(view.getPresentationName()));
+		if (nameSuffix != null) {
+			buffer.append(nameSuffix);
+		}
+
+		if (ext != null) {
+			if (ext.indexOf(".") < 0) //$NON-NLS-1$
+			{
+				ext = "." + ext; //$NON-NLS-1$
+			}
+			buffer.append(ext);
+		}
+
+		ElementFile a = new ElementFile(view.getUniqueId(), buffer.toString());
+		
+		if (a != null && aSet.add(a)) {
+			int extDot = a.getFileName().lastIndexOf(".");
+			aMap.put((extDot < 0) ? a.getFileName() : a.getFileName().substring(0, extDot), view.getUniqueId());			 
+			gMap.put(view.getUniqueId(), (extDot < 0) ? a.getFileName() : a.getFileName().substring(0, extDot));
+		}
+
+		return a.getFileName(); 
+	}
+}

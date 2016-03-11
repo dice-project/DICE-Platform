@@ -1,0 +1,66 @@
+//------------------------------------------------------------------------------
+// Copyright (c) 2005, 2006 IBM Corporation and others.
+// All rights reserved. This program and the accompanying materials
+// are made available under the terms of the Eclipse Public License v1.0
+// which accompanies this distribution, and is available at
+// http://www.eclipse.org/legal/epl-v10.html
+//
+// Contributors:
+// IBM Corporation - initial implementation
+//------------------------------------------------------------------------------
+package org.eclipse.epf.library.edit.command;
+
+import java.util.List;
+
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+
+/**
+ * @author Phong Nguyen Le
+ * @since 1.0
+ */
+public class Reference {
+	
+	EObject owner;
+
+	EStructuralFeature feature;
+
+	Object value;
+
+	int index = -1;
+
+	public Reference(EObject owner, EStructuralFeature feature, Object value) {
+		this.owner = owner;
+		this.feature = feature;
+		this.value = value;
+		if (feature.isMany()) {
+			List list = (List) owner.eGet(feature);
+			index = list.indexOf(value);
+		}
+	}
+
+	Reference(EObject owner, EStructuralFeature feature, Object value, int index) {
+		this.owner = owner;
+		this.feature = feature;
+		this.value = value;
+		this.index = index;
+	}
+
+	public EStructuralFeature getFeature() {
+		return feature;
+	}
+
+	public int getIndex() {
+		return index;
+	}
+
+	public EObject getOwner() {
+		return owner;
+	}
+
+	public Object getValue() {
+		return value;
+	}
+	
+	
+}

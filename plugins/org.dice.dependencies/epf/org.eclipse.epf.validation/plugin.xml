@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.emf.validation.constraintProviders">
+      <category
+            id="org.eclipse.epf.validation.library.category"
+            name="Method Library Constraints"/>
+      <constraintProvider
+            cache="true"
+            >
+         <package namespaceUri="http://www.eclipse.org/epf/uma/1.0.6/uma.ecore"/>
+         <constraints categories="org.eclipse.epf.validation.library.category">
+            <constraint
+                  class="org.eclipse.epf.validation.constraints.NameConstraint"
+                  id="org.eclipse.epf.validation.constraints.NameConstraint"
+                  lang="Java"
+                  mode="Batch"
+                  name="Name Constraint"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  A {0} has been found to have children with invalid name or presentation name
+               </message>
+            </constraint>
+            <constraint
+                  class="org.eclipse.epf.validation.constraints.RelationshipConstraint"
+                  id="org.eclipse.epf.validation.constraints.RelationshipConstraint"
+                  lang="Java"
+                  mode="Batch"
+                  name="Relationship Constraint"
+                  severity="ERROR"
+                  statusCode="2">
+               <message>
+                  A {0} has been found to have invalid relationship
+               </message>
+            </constraint>
+         </constraints>
+      </constraintProvider>
+   </extension>
+
+   <extension
+         point="org.eclipse.emf.validation.constraintBindings">
+      <clientContext
+            default="true"
+            id="org.eclipse.epf.validation.library.defaultClientContext">
+         <enablement>
+            <instanceof value="org.eclipse.epf.uma.MethodElement"/>
+         </enablement>
+      </clientContext>
+   </extension>
+
+   <extension
+         point="org.eclipse.emf.validation.traversal">
+      <traversalStrategy
+            class="org.eclipse.epf.validation.constraints.LibraryTraversalStrategy"
+            namespaceUri="http://www.eclipse.org/epf/uma/1.0.6/uma.ecore"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup class="org.eclipse.epf.validation.util.Startup"/>
+   </extension>
+
+</plugin>

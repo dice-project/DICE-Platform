@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.ibm.uma.edit.tng/src"
+    editDirectory="/com.ibm.uma.resourcemanager.edit/src" editorDirectory="/com.ibm.uma.resourcemanager.editor/src"
+    modelPluginID="com.ibm.uma.edit.tng" runtimeJar="true" modelName="editutil" editPluginClass="com.ibm.uma.resourcemanager.provider.editutilEditPlugin"
+    editorPluginClass="com.ibm.uma.resourcemanager.presentation.editutilEditorPlugin"
+    runtimeCompatibility="false">
+  <foreignModel>@model</foreignModel>
+  <genPackages prefix="Model" basePackage="com.ibm.uma.edit.tng.util" ecorePackage="editutil.ecore#/">
+    <genClasses ecoreClass="editutil.ecore#//OrderInfo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute editutil.ecore#//OrderInfo/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute editutil.ecore#//OrderInfo/gUIDs"/>
+    </genClasses>
+    <genClasses ecoreClass="editutil.ecore#//OrderInfoCollection">
+      <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EReference editutil.ecore#//OrderInfoCollection/orderInfos"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

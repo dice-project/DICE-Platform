@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id: plugin.xml,v 1.1 2008/01/15 08:52:57 jtham Exp $
+-->
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http://epf.eclipse.org/msproject" 
+       class = "org.eclipse.epf.msproject.MsprojectPackage"
+       genModel = "model/MS_Project_2003.genmodel" /> 
+  </extension>
+
+  <extension point="org.eclipse.emf.ecore.extension_parser">
+    <parser 
+       type="msproject" 
+       class="org.eclipse.epf.msproject.util.MsprojectResourceFactoryImpl" />
+  </extension>
+
+</plugin>
+

@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="org.eclipse.epf.export.msp.ui">
+<annotation>
+      <appInfo>
+         <meta.schema plugin="org.eclipse.epf.export.msp.ui" id="exportMSPWizard" name="Export Microsoft Project Wizard Extension"/>
+      </appInfo>
+      <documentation>
+         Enables a plug-in to extend the Open Method Library wizard by replacing existing wizard pages or adding new ones.
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <complexType>
+         <sequence>
+            <element ref="wizardExtender" minOccurs="0" maxOccurs="1"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  A fully qualified identifier of the target extension point.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  An optional identifier of the extension instance.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  An optional name of the extension instance.
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="wizardExtender">
+      <complexType>
+         <sequence>
+            <element ref="wizardPage" minOccurs="0" maxOccurs="unbounded"/>
+         </sequence>
+         <attribute name="class" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The Java class that implements the wizard extender. This class must implements &lt;code&gt;org.eclipse.epf.publishing.ui.wizards.IPublishConfigWizardExtender&lt;/code&gt;.
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="wizardPage">
+      <complexType>
+         <attribute name="class" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The Java class that implements the wizard page. This class must implements &lt;code&gt;org.eclipse.jface.wizard.IWizardPage&lt;/code&gt;.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="type" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The type of extension - &quot;replace&quot; or &quot;new&quot;.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="target" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The name of the base wizard page to be replaced or used as a reference for inserting a new wizard page.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="insert" type="string">
+            <annotation>
+               <documentation>
+                  The insertion type for a new wizard page - &quot;before&quot; or &quot;after&quot;.
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="since"/>
+      </appInfo>
+      <documentation>
+         1.2
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="examples"/>
+      </appInfo>
+      <documentation>
+         The following is an example of how the extension point can be used: 
+&lt;p&gt;
+&lt;pre&gt;
+   &lt;extension point=&quot;org.eclipse.epf.library.ui.openLibraryWizard&quot;&gt;
+      &lt;wizard
+            class=&quot;org.eclipse.epf.library.ui.wizards.MyOpenLibraryWizard&quot;&gt;
+         &lt;wizardPage
+               class=&quot;org.eclipse.epf.library.ui.wizards.MyOpenLibraryMainPage&quot;
+               type=&quot;replace&quot;
+               target=&quot;org.eclipse.epf.library.ui.wizards.OpenLibraryMainPage&quot;/&gt;
+         &lt;wizardPage
+               class=&quot;org.eclipse.epf.library.ui.wizards.MyOpenLibraryOptionPage&quot;
+               type=&quot;new&quot;
+               target=&quot;org.eclipse.epf.library.ui.wizards.OpenLibraryMainPage&quot;
+               insert=&quot;after&quot;/&gt;                     
+      &lt;/wizard&gt;
+   &lt;/extension&gt;
+&lt;/pre&gt;
+&lt;/p&gt;
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="apiInfo"/>
+      </appInfo>
+      <documentation>
+         
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="implementation"/>
+      </appInfo>
+      <documentation>
+         
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="copyright"/>
+      </appInfo>
+      <documentation>
+         Copyright (c) 2005, 2007 IBM Corporation and others.&lt;br&gt;
+All rights reserved. This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at &lt;a 
+href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
+      </documentation>
+   </annotation>
+
+</schema>

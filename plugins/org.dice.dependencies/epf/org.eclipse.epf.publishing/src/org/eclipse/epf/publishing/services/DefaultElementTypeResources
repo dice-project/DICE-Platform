@@ -1,0 +1,10 @@
+#------------------------------------------------------------------------------
+# Copyright (c) 2004, 2005 IBM Corporation.  All Rights Reserved.
+#------------------------------------------------------------------------------
+#
+# defines which elements will use the default icon
+#
+discipline=true
+capabilityPattern=true
+role=true
+task=true

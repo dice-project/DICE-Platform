@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.epf.msproject/src"
+    modelPluginID="org.eclipse.epf.msproject" modelName="MS_Project_2003" importerID="org.eclipse.xsd.ecore.importer">
+  <foreignModel>file:/C:/Eclipse311/MS_Project_2003.xsd</foreignModel>
+  <genPackages prefix="Msproject" basePackage="org.eclipse.epf" resource="XML" disposableProviderFactory="true"
+      loadInitialization="true" ecorePackage="msproject.ecore#/">
+    <genDataTypes ecoreDataType="msproject.ecore#//AccrueAt"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//ActiveDirectoryGUIDType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//AliasType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//AuthorType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//BaselineForEarnedValueType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//BookingTypeType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//BookingTypeType1"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//CalculationTypeType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//CategoryType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//CodeType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//CompanyType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//ConstraintTypeType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//ContactType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//CostRateTableType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//CurrencySymbolPositionType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//CurrencySymbolType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//DayTypeType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//DefaultFixedCostAccrualType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//DefaultTaskEVMethodType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//DefaultTaskTypeType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//DurationFormatType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//DurationFormatType1"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//DurationFormatType2"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//DurationFormatType3"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//DurationFormatType4"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//DurationFormatType5"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//EarnedValueMethodType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//EarnedValueMethodType1"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//EmailAddressType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//ExternalTaskProjectType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//FixedCostAccrualType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//FYStartDateType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//GroupType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//HyperlinkAddressType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//HyperlinkAddressType1"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//HyperlinkAddressType2"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//HyperlinkSubAddressType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//HyperlinkSubAddressType1"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//HyperlinkSubAddressType2"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//HyperlinkType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//HyperlinkType1"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//HyperlinkType2"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//InitialsType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//LagFormatType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//LevelingDelayFormatType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//LevelingDelayFormatType1"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//ManagerType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//MaterialLabelType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//NameType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//NameType1"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//NameType2"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//NameType3"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//NewTaskStartDateType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//NTAccountType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//OutlineNumberType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//OvertimeRateFormatType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//OvertimeRateFormatType1"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//PhoneticAliasType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//PhoneticsType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//PrefixType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//RateTableType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//RollupTypeType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//StandardRateFormatType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//StandardRateFormatType1"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//SubjectType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//SubprojectNameType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//TitleType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//TypeType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//TypeType1"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//TypeType2"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//TypeType3"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//TypeType4"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//TypeType5"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//UIDType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//UnitType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//ValuelistSortOrderType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//WeekStartDayType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//WorkContourType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//WorkFormatType"/>
+    <genDataTypes ecoreDataType="msproject.ecore#//WorkGroupType"/>
+    <genClasses ecoreClass="msproject.ecore#//Assignment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/uID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/taskUID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/resourceUID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/percentWorkComplete"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/actualCost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/actualFinish"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/actualOvertimeCost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/actualOvertimeWork"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/actualStart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/actualWork"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/aCWP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/confirmed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/cost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/costRateTable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/costVariance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/cV"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/delay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/finish"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/finishVariance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/hyperlink"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/hyperlinkAddress"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/hyperlinkSubAddress"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/workVariance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/hasFixedRateUnits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/fixedMaterial"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/levelingDelay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/levelingDelayFormat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/linkedFields"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/milestone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/notes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/overallocated"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/overtimeCost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/overtimeWork"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/regularWork"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/remainingCost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/remainingOvertimeCost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/remainingOvertimeWork"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/remainingWork"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/responsePending"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/start"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/stop"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/resume"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/startVariance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/units"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/updateNeeded"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/vAC"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/work"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/workContour"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/bCWS"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/bCWP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/bookingType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/actualWorkProtected"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/actualOvertimeWorkProtected"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Assignment/creationDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Assignment/extendedAttribute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Assignment/baseline"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Assignment/timephasedData"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//Assignments">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Assignments/assignment"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//AvailabilityPeriod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//AvailabilityPeriod/availableFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//AvailabilityPeriod/availableTo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//AvailabilityPeriod/availableUnits"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//AvailabilityPeriods">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//AvailabilityPeriods/availabilityPeriod"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//Baseline">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Baseline/timephasedData"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Baseline/number"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Baseline/interim"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Baseline/start"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Baseline/finish"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Baseline/duration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Baseline/durationFormat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Baseline/estimatedDuration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Baseline/work"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Baseline/cost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Baseline/bCWS"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Baseline/bCWP"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//Baseline2">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Baseline2/number"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Baseline2/work"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Baseline2/cost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Baseline2/bCWS"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Baseline2/bCWP"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//Baseline3">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Baseline3/timephasedData"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Baseline3/number"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Baseline3/start"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Baseline3/finish"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Baseline3/work"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Baseline3/cost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Baseline3/bCWS"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Baseline3/bCWP"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//Calendar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Calendar/uID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Calendar/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Calendar/isBaseCalendar"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Calendar/baseCalendarUID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Calendar/weekDays"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//Calendars">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Calendars/calendar"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//DocumentRoot">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute msproject.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference msproject.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference msproject.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference msproject.ecore#//DocumentRoot/project"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//ExtendedAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute/fieldID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute/fieldName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute/alias"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute/phoneticAlias"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute/rollupType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute/calculationType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute/formula"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute/restrictValues"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute/valuelistSortOrder"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute/appendNewValues"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute/default"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//ExtendedAttribute/valueList"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//ExtendedAttribute2">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute2/uID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute2/fieldID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute2/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute2/valueID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute2/durationFormat"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//ExtendedAttribute3">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute3/uID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute3/fieldID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute3/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute3/valueID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute3/durationFormat"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//ExtendedAttribute4">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute4/uID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute4/fieldID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute4/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute4/valueID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//ExtendedAttribute4/durationFormat"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//ExtendedAttributes">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//ExtendedAttributes/extendedAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//Mask">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Mask/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Mask/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Mask/length"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Mask/separator"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//Masks">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Masks/mask"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//OutlineCode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//OutlineCode/fieldID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//OutlineCode/fieldName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//OutlineCode/alias"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//OutlineCode/phoneticAlias"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//OutlineCode/values"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//OutlineCode/enterprise"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//OutlineCode/enterpriseOutlineCodeAlias"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//OutlineCode/resourceSubstitutionEnabled"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//OutlineCode/leafOnly"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//OutlineCode/allLevelsRequired"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//OutlineCode/onlyTableValuesAllowed"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//OutlineCode/masks"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//OutlineCode2">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//OutlineCode2/uID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//OutlineCode2/fieldID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//OutlineCode2/valueID"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//OutlineCode3">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//OutlineCode3/uID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//OutlineCode3/fieldID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//OutlineCode3/valueID"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//OutlineCodes">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//OutlineCodes/outlineCode"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//PredecessorLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//PredecessorLink/predecessorUID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//PredecessorLink/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//PredecessorLink/crossProject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//PredecessorLink/crossProjectName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//PredecessorLink/linkLag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//PredecessorLink/lagFormat"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//Project">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/uID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/subject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/category"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/company"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/manager"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/author"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/creationDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/revision"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/lastSaved"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/scheduleFromStart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/finishDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/fYStartDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/criticalSlackLimit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/currencyDigits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/currencySymbol"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/currencySymbolPosition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/calendarUID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/defaultStartTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/defaultFinishTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/minutesPerDay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/minutesPerWeek"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/daysPerMonth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/defaultTaskType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/defaultFixedCostAccrual"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/defaultStandardRate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/defaultOvertimeRate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/durationFormat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/workFormat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/editableActualCosts"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/honorConstraints"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/earnedValueMethod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/insertedProjectsLikeSummary"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/multipleCriticalPaths"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/newTasksEffortDriven"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/newTasksEstimated"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/splitsInProgressTasks"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/spreadActualCost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/spreadPercentComplete"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/taskUpdatesResource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/fiscalYearStart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/weekStartDay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/moveCompletedEndsBack"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/moveRemainingStartsBack"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/moveRemainingStartsForward"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/moveCompletedEndsForward"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/baselineForEarnedValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/autoAddNewResourcesAndTasks"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/statusDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/currentDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/microsoftProjectServerURL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/autolink"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/newTaskStartDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/defaultTaskEVMethod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/projectExternallyEdited"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/extendedCreationDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/actualsInSync"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/removeFileProperties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Project/adminProject"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Project/outlineCodes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Project/wBSMasks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Project/extendedAttributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Project/calendars"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Project/tasks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Project/resources"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Project/assignments"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//Rate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Rate/ratesFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Rate/ratesTo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Rate/rateTable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Rate/standardRate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Rate/standardRateFormat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Rate/overtimeRate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Rate/overtimeRateFormat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Rate/costPerUse"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//Rates">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Rates/rate"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//Resource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/uID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/isNull"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/initials"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/phonetics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/nTAccount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/materialLabel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/group"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/workGroup"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/emailAddress"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/hyperlink"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/hyperlinkAddress"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/hyperlinkSubAddress"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/maxUnits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/peakUnits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/overAllocated"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/availableFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/availableTo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/start"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/finish"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/canLevel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/accrueAt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/work"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/regularWork"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/overtimeWork"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/actualWork"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/remainingWork"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/actualOvertimeWork"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/remainingOvertimeWork"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/percentWorkComplete"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/standardRate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/standardRateFormat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/cost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/overtimeRate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/overtimeRateFormat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/overtimeCost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/costPerUse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/actualCost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/actualOvertimeCost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/remainingCost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/remainingOvertimeCost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/workVariance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/costVariance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/sV"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/cV"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/aCWP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/calendarUID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/notes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/bCWS"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/bCWP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/isGeneric"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/isInactive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/isEnterprise"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/bookingType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/actualWorkProtected"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/actualOvertimeWorkProtected"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/activeDirectoryGUID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Resource/creationDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Resource/extendedAttribute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Resource/baseline"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Resource/outlineCode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Resource/availabilityPeriods"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Resource/rates"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Resource/timephasedData"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//Resources">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Resources/resource"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//Task">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/uID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/isNull"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/createDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/contact"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/wBS"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/wBSLevel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/outlineNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/outlineLevel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/priority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/start"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/finish"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/duration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/durationFormat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/work"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/stop"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/resume"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/resumeValid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/effortDriven"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/recurring"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/overAllocated"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/estimated"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/milestone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/summary"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/critical"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/isSubproject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/isSubprojectReadOnly"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/subprojectName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/externalTask"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/externalTaskProject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/earlyStart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/earlyFinish"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/lateStart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/lateFinish"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/startVariance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/finishVariance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/workVariance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/freeSlack"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/totalSlack"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/fixedCost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/fixedCostAccrual"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/percentComplete"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/percentWorkComplete"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/cost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/overtimeCost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/overtimeWork"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/actualStart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/actualFinish"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/actualDuration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/actualCost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/actualOvertimeCost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/actualWork"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/actualOvertimeWork"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/regularWork"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/remainingDuration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/remainingCost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/remainingWork"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/remainingOvertimeCost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/remainingOvertimeWork"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/aCWP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/cV"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/constraintType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/calendarUID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/constraintDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/deadline"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/levelAssignments"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/levelingCanSplit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/levelingDelay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/levelingDelayFormat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/preLeveledStart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/preLeveledFinish"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/hyperlink"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/hyperlinkAddress"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/hyperlinkSubAddress"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/ignoreResourceCalendar"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/notes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/hideBar"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/rollup"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/bCWS"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/bCWP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/physicalPercentComplete"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/earnedValueMethod"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Task/predecessorLink"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/actualWorkProtected"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Task/actualOvertimeWorkProtected"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Task/extendedAttribute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Task/baseline"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Task/outlineCode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Task/timephasedData"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//Tasks">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//Tasks/task"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//TimePeriod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//TimePeriod/fromDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//TimePeriod/toDate"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//TimephasedDataType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//TimephasedDataType/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//TimephasedDataType/uID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//TimephasedDataType/start"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//TimephasedDataType/finish"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//TimephasedDataType/unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//TimephasedDataType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//Value">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Value/valueID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Value/parentValueID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Value/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Value/description"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//Value2">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Value2/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Value2/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//Value2/description"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//ValueList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//ValueList/value"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//Values">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute msproject.ecore#//Values/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference msproject.ecore#//Values/value"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//WBSMask">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//WBSMask/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//WBSMask/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//WBSMask/length"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//WBSMask/separator"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//WBSMasks">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//WBSMasks/verifyUniqueCodes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//WBSMasks/generateCodes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//WBSMasks/prefix"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//WBSMasks/wBSMask"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//WeekDay">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//WeekDay/dayType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//WeekDay/dayWorking"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//WeekDay/timePeriod"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//WeekDay/workingTimes"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//WeekDays">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//WeekDays/weekDay"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//WorkingTime">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//WorkingTime/fromTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msproject.ecore#//WorkingTime/toTime"/>
+    </genClasses>
+    <genClasses ecoreClass="msproject.ecore#//WorkingTimes">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msproject.ecore#//WorkingTimes/workingTime"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

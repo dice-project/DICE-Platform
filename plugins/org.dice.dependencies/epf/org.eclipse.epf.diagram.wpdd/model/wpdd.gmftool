@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmftool:ToolRegistry xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
+  <allMenus
+      xsi:type="gmftool:ContextMenu"
+      default="//@allMenus.0/@items.0">
+    <items
+        xsi:type="gmftool:MenuAction"
+        title="WorkProduct Node"
+        kind="CUSTOM"
+        hotKey="ALT+W"/>
+  </allMenus>
+  <palette>
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="model">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Control Flow"
+          description="Create new Control Flow">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/link_pal16.gif"
+            bundle="org.eclipse.epf.diagram.wpdd"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Work Product Descriptor"
+          description="Create new work product descriptor">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/WorkProductDescriptor.gif"
+            bundle="org.eclipse.epf.diagram.wpdd"/>
+      </tools>
+    </tools>
+  </palette>
+</gmftool:ToolRegistry>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+<!--
+   <extension
+         point="org.eclipse.ui.exportWizards">
+      <wizard
+     	    category="org.eclipse.epf.ui.exportWizards.category"
+            class="org.eclipse.epf.migration.diagram.ad.wizards.MigrationExportWizard"
+            icon="icons/full/obj16/XMLFile.gif"
+            id="org.eclipse.epf.migration.diagram.ad.wizards.MigrationExportWizard"
+            name="%exportWorkflowTemplateWizardName">
+         <description>
+	         %exportWorkflowTemplateWizardDescription
+         </description>
+      </wizard>
+   </extension>
+   
+   <extension
+         point="org.eclipse.epf.ui.exportWizards">
+      <wizard id="org.eclipse.epf.migration.diagram.ad.wizards.MigrationExportWizard"/>
+   </extension>
+   -->
+   <extension
+         point="org.eclipse.epf.library.xmi.diagramMigration">
+      <diagramMigration class="org.eclipse.epf.migration.diagram.DiagramMigration"/>
+   </extension>
+</plugin>

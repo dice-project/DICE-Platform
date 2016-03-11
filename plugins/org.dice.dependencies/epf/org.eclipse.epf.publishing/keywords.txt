@@ -1,0 +1,5 @@
+XE_KeyWordIndex__Copyright	XE_Copyright
+XE_SiteMap__Copyright	XE_Copyright
+XE_SearchEngine__Copyright	XE_Copyright
+XE_TreeBrowser__Copyright	XE_Copyright
+XE_TreeBrowser__Example	XE_System_requirements

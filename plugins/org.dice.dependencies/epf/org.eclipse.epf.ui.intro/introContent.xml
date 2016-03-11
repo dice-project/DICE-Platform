@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+    Copyright (c) 2005, 2006 IBM Corporation and others.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+    Contributors:
+    IBM Corporation - initial implementation
+-->
+<introContent>
+
+    <page alt-style="css/root_swt.properties" style="css/root.css" id="root" style-id="page">
+        <title style-id="intro-header">Eclipse Process Framework Composer</title>
+        <group id="links-background">
+            <group id="page-links">
+                <link label="Overview" url="http://org.eclipse.ui.intro/showPage?id=overview" id="overview" style-id="left">
+                    <text>Find out what Eclipse Process Framework Composer is all about</text>
+                </link>
+                <link label="Tutorials" url="http://org.eclipse.ui.intro/showPage?id=tutorials" id="tutorials" style-id="left">
+                    <text>Let us guide you through Eclipse Process Framework Composer tutorials</text>
+                </link>
+                <!-- First Steps -->
+				<link label="First Steps" url="http://org.eclipse.ui.intro/showPage?id=steps" id="steps" style-id="left">
+					<text>Start working on your own method plug-in.</text>
+				</link>
+                <!-- Web Resources -->
+				<link label="Web Resources" url="http://org.eclipse.ui.intro/showPage?id=web" id="web" style-id="right">
+					<text>Find information on the web</text>
+				</link>              
+            </group>
+        </group>
+        <group id="action-links">
+            <link url="http://org.eclipse.ui.intro/switchToLaunchBar" label="Workbench" id="workbench">
+                <text>Go to the workbench</text>
+            </link>
+        </group>
+    </page>
+
+    <page alt-style="css/standby_swt.properties" style="css/standby_root.css" id="standby" style-id="page">
+        <title style-id="intro-header">Eclipse Process Framework Composer</title>
+        <group id="links-background">
+            <group id="page-links">
+                <link label="Overview" url="http://org.eclipse.ui.intro/showPage?id=overview&amp;standby=false" id="overview" style-id="left">
+                    <text>Find out what Eclipse Process Framework Composer is all about</text>
+                </link>
+                <link label="Tutorials" url="http://org.eclipse.ui.intro/showPage?id=tutorials&amp;standby=false" id="tutorials" style-id="left">
+                    <text>Let us guide you through Eclipse Process Framework Composer tutorials</text>
+                </link>
+				<link label="First Steps" url="http://org.eclipse.ui.intro/showPage?id=steps&amp;standby=false" id="steps" style-id="left">
+					<text>Start working on your own method plug-in</text>
+				</link>
+				<link label="Web Resources" url="http://org.eclipse.ui.intro/showPage?id=web&amp;standby=false" id="web" style-id="right">
+					<text>Find information on the web</text>
+				</link>
+            </group>
+        </group>
+    </page>
+
+    <page style="css/overview/overview.css" alt-style="css/overview/swt.properties" id="overview" style-id="page">
+        <title style-id="intro-header">Eclipse Process Framework Composer</title>
+        <group id="background-image" filteredFrom="swt"/>
+        <group id="curve-image" filteredFrom="swt"/>
+        <group id="navigation-links" filteredFrom="swt">
+            <group id="page-links">
+                <link label="Overview" url="http://org.eclipse.ui.intro/showPage?id=overview" id="overview" style-id="left">
+                    <text>Find out what Eclipse Process Framework Composer is all about</text>
+                </link>
+                <link label="Tutorials" url="http://org.eclipse.ui.intro/showPage?id=tutorials" id="tutorials" style-id="left">
+                    <text>Let us guide you through Eclipse Process Framework Composer end-to-end tutorials</text>
+                </link>
+                <link label="First Steps" url="http://org.eclipse.ui.intro/showPage?id=steps" id="steps" style-id="left">
+                    <text>Start working on your own method plug-in</text>
+                </link>
+                <link label="Web Resources" url="http://org.eclipse.ui.intro/showPage?id=web" id="web" style-id="left">
+                    <text>Find out more information on the web</text>
+                </link>
+            </group>
+            <group id="action-links">
+                <link url="http://org.eclipse.ui.intro/switchToLaunchBar" label="Workbench" id="workbench">
+                    <text>Go to the workbench</text>
+                </link>
+            </group>
+        </group>
+        
+        <group id="page-content">
+            <text style-id="page-title" id="page-title" filteredFrom="swt">OVERVIEW</text>
+            <text style-id="page-title" id="page-title" filteredFrom="html">OVERVIEW</text>
+            <text style-id="page-description" id="page-description">Welcome! Take a few minutes to become familiar with EPF Composer.</text>
+            <group id="overview-links">
+                <anchor id="beginAnchor"/>       
+				<link 
+					label="Eclipse Process Framework Composer Overview" 
+					url="http://org.eclipse.ui.intro/showHelpTopic?id=/org.eclipse.epf.help.doc/topics/a_product_overview.html&amp;embedTarget=page-content"   
+					id="epf-ov-rupov">
+                    <text>Read about Eclipse Process Framework Composer's purpose and its key concepts.</text>
+                </link>
+                <link 
+                	label="Methods: The reusable building blocks" 
+                	url="http://org.eclipse.ui.intro/showHelpTopic?id=/org.eclipse.epf.help.doc/topics/a_method_content_authoring_overview.html&amp;embedTarget=page-content"   
+                	id="epf-ov-method">
+                    <text>Read about the role and representation of method content elements in EPF Composer.</text>
+                </link>            
+                <link 
+                	label="Authoring Processes"
+                	url="http://org.eclipse.ui.intro/showHelpTopic?id=/org.eclipse.epf.help.doc/topics/a_process_authoring_overview.html&amp;embedTarget=page-content" 
+                	id="epf-ov-process">
+                    <text>Read about the role and representation of processes in EPF Composer.</text>
+                </link>
+                <link 
+                	label="Configuration and Publishing" 
+              		url="http://org.eclipse.ui.intro/showHelpTopic?id=/org.eclipse.epf.help.doc/topics/a_method_configurations_overview.html&amp;embedTarget=page-content"  
+                	id="epf-ov-configpublish">
+                    <text>Read about configuring and publishing method content and processes in EPF Composer.</text>
+                </link>
+                <group id="step-links">
+            		<anchor id="beginAnchor"/>
+            		<anchor id="endAnchor"/>
+            	</group>
+            </group>
+        </group>
+    </page>
+    
+    <page style="css/tour.css" alt-style="css/tour-swt.properties" id="epf-tour" style-id="page">
+		<title style-id="intro-header">Eclipse Process Framework Composer</title>
+		<group id="background-image" filteredFrom="swt"/>
+		<include path="overview/navigation-links"/>
+		<group id="page-content">
+			<text style-id="page-title" id="page-title">Eclipse Process Framework Composer TOUR</text>
+			<html id="epf-tour" src="css/tour-placeholder.html" type="inline">
+			</html>	
+		</group>
+	</page>
+	
+	<page style="css/tour.css" alt-style="css/tour-swt.properties" id="epf-overview" style-id="page">
+		<title style-id="intro-header">Eclipse Process Framework Composer</title>
+		<group id="background-image" filteredFrom="swt"/>
+		<include path="overview/navigation-links"/>
+		<group id="page-content">
+			<text style-id="page-title" id="page-title">Eclipse Process Framework Composer Overview</text>
+			<html id="epf-overview" src="css/product_overview.html" type="inline">
+			</html>	
+		</group>
+	</page>
+	
+	<page style="css/tour.css" alt-style="css/tour-swt.properties" id="epf-methods" style-id="page">
+		<title style-id="intro-header">Eclipse Process Framework Composer</title>
+		<group id="background-image" filteredFrom="swt"/>
+		<include path="overview/navigation-links"/>
+		<group id="page-content">
+			<text style-id="page-title" id="page-title">Methods: The reusable building blocks</text>
+			<html id="epf-methods" src="css/method_authoring_overview.html" type="inline">
+			</html>	
+		</group>
+	</page>
+	
+	<page style="css/tour.css" alt-style="css/tour-swt.properties" id="epf-processes" style-id="page">
+		<title style-id="intro-header">Eclipse Process Framework Composer</title>
+		<group id="background-image" filteredFrom="swt"/>
+		<include path="overview/navigation-links"/>
+		<group id="page-content">
+			<text style-id="page-title" id="page-title">Authoring Processes</text>
+			<html id="epf-processes" src="css/process_authoring_overivew.html" type="inline">
+			</html>	
+		</group>
+	</page>
+	
+	<page style="css/tour.css" alt-style="css/tour-swt.properties" id="epf-configpublish" style-id="page">
+		<title style-id="intro-header">Eclipse Process Framework Composer</title>
+		<group id="background-image" filteredFrom="swt"/>
+		<include path="overview/navigation-links"/>
+		<group id="page-content">
+			<text style-id="page-title" id="page-title">Configuration and Publishing</text>
+			<html id="epf-processes" src="css/publishing.html" type="inline">
+			</html>	
+		</group>
+	</page>
+	
+	<!-- FIRST STEPS SCAFFOLDING -->
+	<page 
+		style="css/firststeps/firststeps.css" 
+		alt-style="css/firststeps/firststeps.properties" 
+		id="steps" 
+		style-id="page">
+		<title style-id="intro-header">Eclipse Process Framework Composer</title>
+		<group id="background-image" filteredFrom="swt"/>
+		<group id="curve-image" filteredFrom="swt"/>
+		<include path="overview/navigation-links"/>
+		<group id="page-content">
+			<text style-id="page-title" id="page-title">FIRST STEPS</text>
+			<text style-id="page-description" id="page-description">Start working on your own method plug-in.</text>
+			<group id="steps-links">               
+			    <anchor id="beginAnchor"/>
+			    <link label="Create your own Method Plug-in" url="http://org.eclipse.ui.intro/openCheatsheetView?input=org.eclipse.epf.help.doc.cheatsheets.createmethodplugin&amp;toggle=true" id="epf-steps-two">
+                    <text>Start building a method plug-in using a wizard.</text>
+                </link>
+                <link label="Create your own Method Configuration" url="http://org.eclipse.ui.intro/openCheatsheetView?input=org.eclipse.epf.help.doc.cheatsheets.createmethodconfiguration&amp;toggle=true" id="epf-steps-four">
+                    <text>This cheatsheet guides you though the steps of creating your own method configuration.</text>
+                </link>
+                <link label="Add new Method Content such as Roles, Task" url="http://org.eclipse.ui.intro/openCheatsheetView?input=org.eclipse.epf.help.doc.cheatsheets.addnewmethodcontent&amp;toggle=true" id="epf-steps-one">
+                    <text>This cheatsheet guides you though the steps of creating your own method content.</text>
+                </link>
+                <link label="Create a Process" url="http://org.eclipse.ui.intro/openCheatsheetView?input=org.eclipse.epf.help.doc.cheatsheets.createaprocess&amp;toggle=true" id="epf-steps-three">
+                    <text>This cheatsheet takes you through the steps necessary to create a process.</text>
+                </link>  
+				<group id="step-links">
+					<anchor id="beginAnchor"/>
+            		<anchor id="endAnchor"/>
+				</group>
+		   	</group>
+		</group>
+	</page>
+	
+    <page style="css/tutorials/tutorials.css" alt-style="css/tutorials/swt.properties" id="tutorials" style-id="page">
+        <title style-id="intro-header">Eclipse Process Framework Composer</title>
+        <group id="background-image" filteredFrom="swt"/>
+        <group id="curve-image" filteredFrom="swt"/>
+        <include path="overview/navigation-links"/>
+        <group id="page-content">
+            <text style-id="page-title" id="page-title">TUTORIALS</text>
+            <text style-id="page-description" id="page-description">Learn how you can use Eclipse Process Framework Composer to deliver practical, customized, and consistent process guidance to your project team.</text>
+			<group id="tutorials-links">               
+			    <anchor id="beginAnchor"/>
+				<link 
+					label="Explore the user interface" 
+					url="http://org.eclipse.ui.intro/showHelpTopic?id=/org.eclipse.epf.help.doc/tutorials/tut1_intro.html&amp;" 
+					id="epf-tut-navigate"
+					class-id="left">
+                    <text>Learn to navigate through the user interface: perspectives, views, and search.</text>
+                </link>
+                <link 
+                	label="Working with processes" 
+                	url="http://org.eclipse.ui.intro/showHelpTopic?id=/org.eclipse.epf.help.doc/tutorials/tut4_intro.html&amp;" 
+                	id="epf-tut-process">
+                    <text>Learn how to create and reuse capability patterns and delivery processes.</text>
+                </link>
+                <link 
+                	label="Create method content " 
+                	url="http://org.eclipse.ui.intro/showHelpTopic?id=/org.eclipse.epf.help.doc/tutorials/tut2_intro.html&amp;" 
+                	id="epf-tut-element"
+                	class-id="left">
+                    <text>Learn how to use the editors to create roles, tasks, work products and guidance.</text>
+                </link>
+                <link 
+                	label="Publishing and Exporting" 
+                	url="http://org.eclipse.ui.intro/showHelpTopic?id=/org.eclipse.epf.help.doc/tutorials/tut5_intro.html&amp;" 
+                	id="epf-tut-pubexp">
+                    <text>Learn how to publish configurations to a web site and how to export processes to a planning tool.</text>
+                </link>
+                
+                <link 
+                	label="Reuse method content" 
+                	url="http://org.eclipse.ui.intro/showHelpTopic?id=/org.eclipse.epf.help.doc/tutorials/tut3_intro.html&amp;" 
+                	id="epf-tut-content"
+                	class-id="left">
+                    <text>Learn how to extend, replace, and contribute to base content elements.</text>
+                </link>
+				<group id="step-links">
+					<anchor id="beginAnchor"/>
+            		<anchor id="endAnchor"/>
+				</group>
+		   	</group>   	
+        </group>
+        
+    </page>
+
+    <!-- WEB RESOURCES SCAFFOLDING -->
+	<page 
+		style="css/webresources/webresources.css" alt-style="css/webresources/webresources.properties" id="web" style-id="page">
+		<title style-id="intro-header">Eclipse Process Framework Composer</title>
+		<group id="background-image" filteredFrom="swt"/>
+		<group id="curve-image" filteredFrom="swt"/>
+		<include path="overview/navigation-links"/>
+		<group id="page-content">
+			<text style-id="page-title" id="page-title">WEB RESOURCES</text>
+			<text style-id="page-description" id="page-description">In addition to information in the Welcome and the Help, the Web provides you with tips, articles, updates, and references to industry standards. </text>
+			<group id="web-links">
+				   <link
+	                     label="Eclipse Process Framework"
+	                     url="http://org.eclipse.ui.intro/openBrowser?url=http://www.eclipse.org/epf"
+	                     id="epf_resource">
+	                  <text>Central location for information related to the Eclipse Process Framework</text>
+	               </link>
+			</group>
+		</group>
+	</page>
+	
+    <page style="css/samples/samples.css" alt-style="css/samples/swt.properties" id="samples" style-id="page">
+        <title style-id="intro-header">Eclipse Process Framework Composer</title>
+        <group id="background-image" filteredFrom="swt"/>
+        <group id="curve-image" filteredFrom="swt"/>
+        <include path="overview/navigation-links"/>
+        <group id="page-content">
+            <group id="content-header" label="SAMPLES" filteredFrom="swt">
+            </group>
+            <text style-id="page-title" id="page-title" filteredFrom="html">SAMPLES</text>
+            <text style-id="page-description" id="page-description">Explore Eclipse by installing prefabricated samples (may require Internet connection).</text>
+            <anchor id="beginAnchor"/>
+            <group label="SWT" id="swt" style-id="samples-group">
+                <text style-id="group-description">Run SWT samples using either the standalone SWT launcher or as an integrated workbench view.</text>
+                <link label="Workbench views and standalone applications" url="http://org.eclipse.ui.intro/runAction?pluginId=org.eclipse.pde.ui&amp;class=org.eclipse.pde.ui.internal.samples.ShowSampleAction&amp;id=org.eclipse.sdk.samples.swt.examples" id="swt-examples" style-id="sample-link">
+                    <text>The SWT Example launcher will allow you to launch a collection of SWT examples.  Some of the examples can be run independent of the eclipse platform and others will be available as views inside the workbench.</text>
+                </link>
+                <anchor id="swtGroupAnchor"/>
+            </group>
+            <group label="Workbench" id="workbench" style-id="samples-group">
+                <text style-id="group-description">The following samples demonstrate how to tightly integrate into the Eclipse workbench.</text>
+                <link label="Multi-page editor" url="http://org.eclipse.ui.intro/runAction?pluginId=org.eclipse.pde.ui&amp;class=org.eclipse.pde.ui.internal.samples.ShowSampleAction&amp;id=org.eclipse.sdk.samples.multipageeditor" id="multi-page-editor" style-id="sample-link">
+                    <text>Shows how to create an editor with multiple pages</text>
+                </link>
+                <link label="Property sheet and outline" url="http://org.eclipse.ui.intro/runAction?pluginId=org.eclipse.pde.ui&amp;class=org.eclipse.pde.ui.internal.samples.ShowSampleAction&amp;id=org.eclipse.sdk.samples.propertysheet" id="property-sheet" style-id="sample-link">
+                    <text>Demonstrates how to use property sheet and outline views</text>
+                </link>
+                <link label="Readme tool" url="http://org.eclipse.ui.intro/runAction?pluginId=org.eclipse.pde.ui&amp;class=org.eclipse.pde.ui.internal.samples.ShowSampleAction&amp;id=org.eclipse.sdk.samples.readmetool" id="readmetool" style-id="sample-link">
+                    <text>Shows how to create your own extension points</text>
+                </link>
+                <anchor id="jdtAnchor"/>
+                <anchor id="workbenchGroupAnchor"/>
+            </group>
+            <anchor id="endAnchor"/>
+        </group>
+    </page>
+
+    <page style="css/whatsnew/whatsnew.css" alt-style="css/whatsnew/swt.properties" id="news" style-id="page">
+        <title style-id="intro-header">Eclipse Process Framework Composer</title>
+        <group id="background-image" filteredFrom="swt"/>
+        <group id="curve-image" filteredFrom="swt"/>
+        <include path="overview/navigation-links"/>
+        <group id="page-content">
+            <group id="content-header" label="WHAT'S NEW" filteredFrom="swt">
+            </group>
+            <text style-id="page-title" id="page-title" filteredFrom="html">WHAT'S NEW</text>
+            <anchor id="beginAnchor"/>
+            <group id="noteworthy-links" label="New and Noteworthy">
+                <link label="Eclipse Platform" url="http://org.eclipse.ui.intro/showHelpTopic?id=/org.eclipse.platform.doc.user/whatsNew/platform_whatsnew.html" id="platform-noteworthy" style-id="noteworthy-link">
+                    <text>Find out about the major new features in this release</text>
+                </link>
+                <anchor id="jdtAnchor"/>
+                <anchor id="pdeAnchor"/>
+                <anchor id="generalAnchor"/>
+            </group>
+            <group id="news-links" label="General">
+                <link label="Migration from the previous release" url="http://org.eclipse.ui.intro/showHelpTopic?id=/org.eclipse.platform.doc.isv/porting/eclipse_3_0_porting_guide.html" id="migration">
+                    <text>Learn what you need to do to make your old code work in Eclipse 3.1</text>
+                </link>
+                <link label="New Updates" url="http://org.eclipse.ui.intro/runAction?pluginId=org.eclipse.ui.ide&amp;class=org.eclipse.ui.internal.ide.update.InstallWizardAction" id="updates">
+                    <text>Get the latest updates from Eclipse.org</text>
+                </link>
+                <link label="Eclipse community" url="http://www.eclipse.org" id="eclipse">
+                    <text>Join the community, read articles and news on Eclipse.org</text>
+                </link>
+                <anchor id="linksAnchor"/>
+            </group>
+            <anchor id="endAnchor"/>
+        </group>
+    </page>
+    
+</introContent>

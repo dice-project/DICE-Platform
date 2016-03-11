@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore2ecore:Ecore2EcoreMappingRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore2ecore="http://www.eclipse.org/emf/2004/Ecore2Ecore" topToBottom="true">
+  <inputs href="../../org.eclipse.epf.uma/model/1.0.2/uma.ecore#/"/>
+  <outputs href="../../org.eclipse.epf.uma/model/1.0.3/uma.ecore#/"/>
+</ecore2ecore:Ecore2EcoreMappingRoot>

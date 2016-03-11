@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!-- 
+    Copyright (c) 2005, 2006 IBM Corporation and others.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+    Contributors:
+    IBM Corporation - initial implementation
+-->
+
+<cheatsheet title="Create a Process (Capability Pattern or Delivery Process)">
+
+	<intro 
+		href="/org.eclipse.epf.help.doc/topics/a_process_authoring_overview.html">
+		<description>This cheat sheet guides you through the steps of creating a Process. There are two main types of processes: Capability Patterns and Delivery Processes. A Capability Pattern is a special Process that describes a reusable cluster of Activities in common process areas, while a Delivery Process describes a complete and integrated approach for performing a specific type of development project. See the online help section "Process Authoring Overview" for more details.</description>
+	</intro>
+
+	<item
+		href="/org.eclipse.epf.help.doc/topics/c_method_configurations.html"
+		title="Select or Create a Default Method Configuration for your Process"
+		skip="true">
+		<description>Your process can contain content from many different method plug-ins. The content elements from these plug-ins, such as tasks or work products, applied to your process via drag and drop, can have many contributions or replacements. Such contributions or replacements may provide additional relationships that need to be considered for creating the process elements with their mirrored set of relationships.<br/><br/>For that reason you need to define a configuration that defines the visible set of elements and relationships when the process is authored. This process authoring configuration is referred to as the "Default Configuration" for the process and should define the largest reasonable set of method plug-ins, content packages, and other processes from the method library that will be referred to by the process at some point.<br/><br/>In addition to the default configuration, a process can be linked to many additional method configurations that have been verified to also produce valid results. However, all other valid configurations need to define sub-sets of the default configuration.  In other words, it is not possible to link a method configuration to a process that refers to elements that are not part of the default configuration, because such elements were not considered when the process was created.<br/><br/>Process elements that refer to content packages that are defined outside the scope of such a configuration will not be shown in the process when published or used under such a configuration. This allows you to easily hide content from a process by moving content packages in or out of the related configuration.<br/><br/>Therefore, before you start creating a process, review your list of configurations in the library view and decide which configuration you are going to use.  If necessary, open configurations and examine their specification. If you do not find a fitting configuration that defines the right set of elements, create a new method configuration.  For more information on process and method configuration see the section "Process Authoring Overview" in the online help.</description>
+	</item>
+
+	<item
+		href="/org.eclipse.epf.help.doc/topics/t_create_method_plugin.html"
+		title="Choose a Method Plug-in to Hold your Process"
+		skip="false">
+		<description>Since you cannot add processes to write-locked third-party method plug-ins your process needs to be created in one of your own method plug-ins. Therefore, it is best to create your process within the plug-in in which it is going to be used. For instance, if you want to develop a set of capability patterns to use to assemble a delivery process, try to maintain all of the capability patterns in the same method plug-in.<br/><br/>If you have not created a method plug-in, go to the "Create your own Method Plug-in" cheat sheet.<br/><br/>In the library view, select a plug-in from the list of available method plug-ins. Icons that appear to be grayed-out have been locked for modification and cannot be used.</description>
+	</item>
+
+	<item
+		href="/org.eclipse.epf.help.doc/topics/c_process.html" 
+		title="Find or Create a Process Package"
+		skip="false">
+		<description>Processes can be organized with process packages to increase maintainability and to make it easier for the process user to browse and find them. Please be aware that you can create capability patterns only in a capability patterns package or sub-package and delivery processes only in a delivery process package or sub-package.<br/><br/>Using the library view, review the structure of process packages available in the method plug-in that you selected or created in the last step and then select one of the packages present as a container for your process. Alternatively, you can create a new Process Package by right-clicking a capability pattern or delivery process package or sub-package and then clicking New -&gt; Process Package. In the dialog box that appears, specify the name of the package and then click OK.</description>
+	</item>
+
+	<item
+		href="/org.eclipse.epf.help.doc/topics/c_capability_pattern.html" 
+		title="Create the Capability Pattern or Delivery Process"
+		skip="false">	
+		<description>To create a new capability pattern or delivery process: Right click the selected or newly created process package and then click New -&gt; Capability Pattern or New -&gt; Delivery Process.  In the dialog box that appears, specify the process name and default configuration and then click OK. The process is created and the editor is opened.</description>
+	</item>
+	
+	<item
+		title="Document your Process"
+		skip="false">
+		<description>With the process editor opened in the Description tab, document your process using the available text fields.  At a minimum provide a presentation name and a brief description for your process.  See the online help for definitions of each available documentation field.</description>
+	</item>
+	
+<item
+		title="Decide on your Primary Process Authoring View"
+		skip="false">
+		<description>You can develop a process from three different views:<br/><br/>Breakdown Structure:  Create your process by defining a work breakdown structure.  Create iterations and activities first and then populate your activities by either applying tasks from your method content or applying capability patterns. Go to step "Develop the Work Breakdown Structure" to work with this view.<br/><br/>Team Allocation: Create your process by defining which teams and roles shall participate in activities and finding responsible work products and tasks from there.  Go to step "Develop the Team Allocation Structure" to work with this view.<br/><br/>Work Product Usage: Create your process by defining which work products should be created in activities and finding tasks and roles from there. Go to step "Develop Work Product Usage Structure" to work with this view.</description>
+	</item>
+
+	<item
+		href="/org.eclipse.epf.help.doc/topics/t_develop_wbs.html" 
+		title="Develop the Work Breakdown Structure"
+		skip="true">
+		<description>Before you start, ensure the method configuration selected in the tool bar is the same as the configuration you selected as the default configuration for your process.<br/><br/>To access the work breakdown structure editor, select the "Work Breakdown Structure" tab in the process editor.<br/><br/>Right-click the element in the first row of the breakdown structure and then click New Child -&gt; Activity to create a new activity. Alternatively, you can create a phase or iteration, depending on the scope of your process. If needed, create more activities to set-up your breakdown structure. Activities can be nested inside each other.<br/><br/>Review the list of tasks in the configuration view. In this view tasks are sorted by discipline. Drill into the disciplines hierarchy to see which tasks are available in this configuration. Select a task that you want to add to your breakdown structure and drag it on top of one of the activities you just created. The task is added as a so-called task descriptor (an occurrence of a task in one specific activity).<br/><br/>Review the task descriptor's details in its properties view. If the properties view is not displayed then select the task in the work breakdown structure editor, right-click, and select "Properties". Use the tabs on the side of the properties view to review different aspects of the task descriptor.<br/><br/>Perform individual modifications of the task descriptor in the properties view.  For example, you can change the presentation name, add textual descriptions, change performing roles, change the inputs and outputs, etc. When changing the task descriptor's relationships in the property window tabs roles or work products, you can either add new elements from your method content by using the 'Add..' button or connect your task descriptor with tasks already present in this activity.<br/><br/>Instead of dragging task one by one you can also apply whole capability patterns or activities from other processes available in your current method configuration.  Select a capability pattern or any activity of such a pattern or delivery process available in the configuration view and drag it on top of an activity within your process breakdown in the process editor. (Find a detailed walkthrough to applying capability pattern in the cheat sheet "Apply a Capability Pattern".)<br/><br/>Continue adding more tasks, activities or patterns to your activities or switch to the team allocation tab to add roles or to the work product usage tab to add work products.</description>
+	</item>
+
+<item
+		href="/org.eclipse.epf.help.doc/topics/t_develop_team_structure.html" 
+		title="Develop the Team Allocation Structure"
+		skip="true">
+		<description>Before you start, ensure the configuration selected in the tool bar is the same as the configuration you selected as the default configuration for your process.<br/><br/>In the process editor, click the "Team Allocation" tab to open the team allocation editor.<br/><br/>Right-click the element in the first row of the breakdown structure and then click New Child -&gt; Activity to create a new activity. Alternatively, you can create a phase or iteration, depending on the scope of your process. If needed, create more activities to set-up your breakdown structure. Activities can be nested inside each other.<br/><br/>You can add roles directly to your activities now. In the configuration view, review the list of roles. In this view roles are organized into role sets. Drill into the role sets hierarchy to see which roles are available in this configuration. Select a Role that you want to add to your activity and drag it on top of the activity you created earlier. The role is added as a role descriptor (an occurrence of a role in one specific activity).<br/><br/>If the role that you just dragged has responsibility relationships to work products defined, a wizard appears prompting you to add any of the work products to the process. Select zero to many work products and then click OK.<br/><br/>For each selected work product the next wizard window prompts you to select tasks that produce these work products. Again, select zero to many tasks and then click OK to add these elements to your process.<br/><br/>Review the role descriptor's details in its properties view. If the properties view is not displayed then select the role in the breakdown structure editor, right-click, and select "Properties". Use the tabs on the side of the properties view to review different aspects of the role descriptor. You can also perform individual modifications of the role descriptor, such as change the presentation name, add textual descriptions, change work products the role is responsible for, etc.<br/><br/>When changing the role descriptor’s relationships in the property window tab’s roles or work products, you can add new elements from your method content by using the "Add…" button, or connect your role descriptor with work products already present in this activity.<br/><br/>Continue adding more roles to your activities, or switch to the work breakdown structure tab to add tasks or to the work product usage tab to add work products.</description>
+	</item>
+
+<item
+		href="/org.eclipse.epf.help.doc/topics/t_develop_workproduct_structure.html" 
+		title="Develop the Work Product Usage Structure"
+		skip="true">
+		<description>Before you start, ensure the configuration selected in the tool bar is the same as the configuration you selected as the default configuration for your process.<br/><br/>In the process editor, click the "Work Product Usage" tab to open the work product usage editor.<br/><br/>Right-click the element in the first row of the breakdown structure and then click New Child -&gt; Activity to create a new activity. Alternatively, you can create a phase or iteration, depending on the scope of your process. If needed, create more activities to set-up your breakdown structure. Activities can be nested inside each other.<br/><br/>Review the list of work products in the configuration view. In this view work products are sorted by domain as well as work product types.  Drill into either of these hierarchies to see which work products are available in this configuration. Select a work product you want to add to an activity and then drag it on top of an Activity that you created earlier. The work product is added as a work product descriptor (an occurrence of a work product in one specific activity).<br/><br/>After you have added the work product to the activity, a wizard prompts you to add tasks that produce this work product to this activity. Select zero to many tasks and then click OK. The wizard adds task descriptors for each selected task to the work breakdown structure.<br/><br/>Review the new work product descriptor’s details in its properties view. If the properties view is not displayed then select the work product descriptor in the process editor, right-click, and select "Properties". Use the tabs on the side of the properties view to review different aspects of the work product descriptor. You can also perform individual modifications of the role descriptor, such as change the presentation name add textual descriptions, add entry and exit states, etc.<br/><br/>When changing the role descriptor’s relationships in the property window tab’s roles or work products, you can add new elements from your method content by using the "Add…" button, or connect your role descriptor with work products already present in this Activity.<br/><br/>Continue by adding more work products to your activities, or switch to the work breakdown structure tab to add tasks or the team allocation tab to add roles.</description>
+	</item>
+
+<item
+		href="/org.eclipse.epf.help.doc/topics/c_capability_pattern.html" 
+		title="Apply a Capability Patter or Capability Pattern's Activity"
+		skip="true">
+		<description>You do not need to develop your process from scratch by adding descriptors one by one as described in the last steps.  You can also reuse existing capability patterns or even capability pattern parts. Go to the cheat sheet "Apply a Capability Pattern" to see how.</description>
+	</item>
+	<item title="Done"><description></description></item>
+</cheatsheet>
+

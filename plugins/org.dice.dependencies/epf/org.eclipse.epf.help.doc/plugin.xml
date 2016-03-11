@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!-- 
+    Copyright (c) 2005, 2006 IBM Corporation and others.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+    Contributors:
+    IBM Corporation - initial implementation
+-->
+<plugin>
+
+   <extension point="org.eclipse.help.toc">
+      	<toc
+            file="main.xml"
+            primary="true">
+      	</toc>
+
+   </extension>
+
+<!-- ============================================================================= -->
+<!-- F1 context files                                                              -->
+<!-- ============================================================================= -->
+
+	<extension point="org.eclipse.help.contexts"> 
+		<contexts file="$nl$/contexts_authoring_ui.xml" plugin="org.eclipse.epf.authoring.ui"/> 
+	</extension>
+
+ 	<extension point="org.eclipse.help.contexts"> 
+      <contexts file="$nl$/contexts_Search.xml" plugin="org.eclipse.search"/> 
+   	</extension>
+	
+	<extension 
+         point="org.eclipse.ui.cheatsheets.cheatSheetContent"
+         id="org.eclipse.epf.help.doc.cheatsheets"
+         name="%methodAuthoringCheatSheetsName">
+      <category
+            id="org.eclipse.epf.help.doc.cheatsheets.getstarted" 
+            name="%CheatsheetGetstartedCategoryText"/>
+      <cheatsheet
+            id="org.eclipse.epf.help.doc.cheatsheets.navigatemethodcontent"
+            category="org.eclipse.epf.help.doc.cheatsheets.getstarted"
+            contentFile="$nl$/cheatsheets/navigatemethodcontent.xml"
+            name="%CheatsheetNavigateMethodContent"/>
+      <cheatsheet
+            id="org.eclipse.epf.help.doc.cheatsheets.createmethodconfiguration"
+            category="org.eclipse.epf.help.doc.cheatsheets.getstarted"
+            contentFile="$nl$/cheatsheets/createmethodconfiguration.xml"
+            name="%CheatsheetCreateMethodConfiguration"/>
+      <cheatsheet
+            id="org.eclipse.epf.help.doc.cheatsheets.createmethodplugin"
+            category="org.eclipse.epf.help.doc.cheatsheets.getstarted"
+            contentFile="$nl$/cheatsheets/createmethodplugin.xml"
+            name="%CheatsheetCreateMethodPlugin"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.cheatsheets.cheatSheetContent" 
+         id="org.eclipse.epf.help.doc.cheatsheets" 
+         name="%methodAuthoringCheatSheetsName">
+      <category
+            id="org.eclipse.epf.help.doc.cheatsheets.resuable.content"
+            name="%CheatsheetReusableContentCategoryText"/>
+      <cheatsheet
+            id="org.eclipse.epf.help.doc.cheatsheets.addnewmethodcontent"
+            category="org.eclipse.epf.help.doc.cheatsheets.resuable.content"
+            contentFile="$nl$/cheatsheets/addnewmethodcontent.xml"
+            name="%CheatsheetAddMethodContent"/>
+      <cheatsheet
+            id="org.eclipse.epf.help.doc.cheatsheets.tailorexistingmethodelements"
+            category="org.eclipse.epf.help.doc.cheatsheets.resuable.content"
+            contentFile="$nl$/cheatsheets/tailorexistingmethodelements.xml"
+            name="%CheatsheetTailorMethodElements"/>
+      <cheatsheet
+            id="org.eclipse.epf.help.doc.cheatsheets.replaceexistingmethodelements"
+            category="org.eclipse.epf.help.doc.cheatsheets.resuable.content"
+            contentFile="$nl$/cheatsheets/replaceexistingmethodelements.xml"
+            name="%CheatsheetReplaceMehtodElements"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.cheatsheets.cheatSheetContent"
+         id="org.eclipse.epf.help.doc.cheatsheets"
+         name="%methodAuthoringCheatSheetsName">
+      <category
+            id="org.eclipse.epf.help.doc.cheatsheets.write.content"
+            name="%CheatsheetWriteContentCategoryText"/>
+      <cheatsheet
+            id="org.eclipse.epf.help.doc.cheatsheets.addmethodref_or_hyperlink"
+            category="org.eclipse.epf.help.doc.cheatsheets.write.content"
+            contentFile="$nl$/cheatsheets/addmethodref_or_hyperlink.xml"
+            name="%CheatsheetAddMethodRefOrHyperlink"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.cheatsheets.cheatSheetContent"
+         id="org.eclipse.epf.help.doc.cheatsheets"
+         name="%methodAuthoringCheatSheetsName">
+      <category
+            id="org.eclipse.epf.help.doc.cheatsheets.processes"
+            name="%CheatsheetProcessesCategoryText"/>
+      <cheatsheet
+            id="org.eclipse.epf.help.doc.cheatsheets.applycapabilitypattern"
+            category="org.eclipse.epf.help.doc.cheatsheets.processes"
+            contentFile="$nl$/cheatsheets/applycapabilitypattern.xml"
+            name="%CheatsheetApplyCapabilityPattern"/>
+      <cheatsheet
+            id="org.eclipse.epf.help.doc.cheatsheets.createaprocess"
+            category="org.eclipse.epf.help.doc.cheatsheets.processes"
+            contentFile="$nl$/cheatsheets/createaprocess.xml"
+            name="%CheatsheetCreateProcess"/>
+   </extension>
+	
+</plugin>

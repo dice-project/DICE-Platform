@@ -1,0 +1,550 @@
+/*
+ * Copyright (c) 2005, 2006 IBM Corporation and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ *
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ * IBM Corporation - initial implementation
+ */
+
+/* 
+ * Set up general fonts, sizes and colors 
+ */
+body { font-family : Arial, sans-serif; }
+
+H1, H2, H3, H4, p, a { color : #4D4D4D; }
+
+.intro-header H1 {
+	font-size : 16pt;
+	font-weight : normal;
+	color : #E5E5E5;
+}
+
+h2 {
+	font-size : 13pt;
+	font-weight : normal;
+	color : #7B8694;
+}
+
+.page-title {
+	font-size : 14pt;
+	font-weight : normal;
+	color : #8C96A2;
+	float : none;
+	clear : both;
+}
+
+.page-description { 
+	font-size : 10pt;
+	float : none;
+	clear : both;
+}
+
+H4 .div-label {
+	font-size : 10pt;
+	font-weight : bold;
+}
+
+a {
+	font-weight : bold;
+	text-decoration : none;
+	color : #4D4D4D;
+}
+
+a .link-label {
+	font-size : 10pt;
+	font-weight : normal;
+}
+
+#navigation-links a .link-label {
+	font-size : 9pt;
+	font-weight : normal;
+	color : #E5E5E5;
+}
+
+a .text {
+	font-size : 8pt;
+	font-weight : normal;
+}
+
+p .group-description {
+	font-size : 10pt;
+	font-weight : normal;
+}
+
+
+/* 
+ * Set up other general properties like padding/margins
+ */
+html, body { width : 100%; height : 100%; }
+
+html, body, div, h1, h4, p, a { margin : 0px; padding : 0px; }
+
+.intro-header H1 { padding-top : 10px; margin-left : 10px; }
+
+/* For regular div labels */
+#page-content div H4 {
+	padding : 10px;
+	margin-bottom : 5px;
+}
+
+/* For the main page content's div label */
+#page-content #content-header H4 {
+	padding-bottom : 10px;
+	padding-top : 0px;
+}
+
+/* special case for Mozilla's main content-header label.
+   Mozilla 1.4 needs more room at the top */
+#page-content > #content-header H4 { padding-top : 10px; }
+
+/* Needed in IE to get shift+tab to show the active image properly */
+a:active {
+	border : solid 0px;
+}
+
+a img {
+	border-width : 0;
+	background-repeat : no-repeat;
+}
+
+/*
+ * to get scrollbars working in both IE and Mozilla
+ */
+html,body { overflow: auto; }
+html>body { overflow: visible; }
+
+/*
+ * Set up the body, decorative background, and navigation for the content 
+ * pages. 
+ * Note: the root page handles its own background and navigation; these
+ * settings primarily apply to the content pages
+ */
+body {
+	background-color : #FFFFFF;
+	background-repeat : no-repeat;
+	background-position : bottom right;
+	background-attachment : fixed;
+}
+
+#background-image {
+	width : 100%;
+	height : 164px;
+	background-image : url(graphics/contentpage/background.jpg);
+	background-repeat : no-repeat;
+	background-position : top left;	
+	position : absolute;
+	top : 0px;
+	z-index : -100;
+}
+
+#curve-image { 
+	width : 100%;
+	height : 164px;
+	position : absolute;
+	top : 0px;
+	background-image : url(graphics/contentpage/background.gif);
+	background-repeat : no-repeat;
+	background-position : top center;
+	margin : 0;
+	padding : 0;
+}
+
+.intro-header {	background-color : transparent; z-index : 100;}
+
+body, .page{
+	min-width : 770px;
+	/* since IE doesn't support min-width, try expression */
+	width:expression(document.body.clientWidth < 770? "770px": "auto" );
+	min-height : 425px;
+	height : 100%;
+	height : expression(document.body.clientHeight < 425? "425px": "100%" );
+}
+
+.page { 
+	min-height : 475px;
+	background-image : url(graphics/contentpage/background.jpg);
+	background-repeat : repeat-x;
+	background-position : top left;
+}
+
+#page-content {
+	background-repeat : no-repeat;
+	background-position : bottom right;
+	height : 70%;
+}
+
+/* 
+ * Lay out the navigation links 
+ * (Root page does something similar for its navigation)
+ */
+#navigation-links {
+	position : relative;
+	left : 10px;
+	top : 5px;
+	height : 60;
+	width : 98%;
+}
+
+
+#navigation-links a {
+	padding-left : 5px;
+	padding-right : 5px;
+	float : left;
+	text-align : center;
+}
+
+#navigation-links a img {
+	height : 52px;
+	width : 52px;
+	vertical-align : middle;
+}
+
+#navigation-links a .link-label { display : block; margin-top : 5px;}
+
+#navigation-links a .text { display : none; }
+
+#navigation-links a:hover, 
+#navigation-links a:focus 
+#navigation-links a:active { border-right : 0px;}
+
+/* properties for each of the navigation-links  */
+#navigation-links a#overview img { background-image : url(graphics/icons/etool/overview48.gif); }
+#navigation-links a#overview:hover img,
+#navigation-links a#overview:focus img,
+#navigation-links a#overview:active img { background-image : url(graphics/icons/ctool/overview48.gif); }
+/*#navigation-links a#overview:active img { background-image : url(graphics/icons/ctool/overview48sel.gif); }*/
+
+#navigation-links a#tutorials img { background-image : url(graphics/icons/etool/tutorials48.gif); }
+#navigation-links a#tutorials:hover img,
+#navigation-links a#tutorials:active img,
+#navigation-links a#tutorials:focus img { background-image : url(graphics/icons/ctool/tutorials48.gif); }
+/*#navigation-links a#tutorials:active img { background-image : url(graphics/icons/ctool/tutorials48sel.gif); }*/
+
+#navigation-links a#samples img { background-image : url(graphics/icons/etool/samples48.gif); }
+#navigation-links a#samples:hover img,
+#navigation-links a#samples:active img,
+#navigation-links a#samples:focus img { background-image : url(graphics/icons/ctool/samples48.gif); }
+/*#navigation-links a#samples:active img { background-image : url(graphics/icons/ctool/samples48sel.gif); }*/
+
+#navigation-links a#news img { background-image : url(graphics/icons/etool/retuser48.gif); }
+#navigation-links a#news:hover img { background-image : url(graphics/icons/ctool/retuser48.gif); }
+#navigation-links a#news:active img { background-image : url(graphics/icons/ctool/retuser48sel.gif); }
+
+#navigation-links a#web img { background-image : url(graphics/icons/etool/webrsrc48.gif); }
+#navigation-links a#web:hover img { background-image : url(graphics/icons/ctool/webrsrc48.gif); }
+#navigation-links a#web:active img { background-image : url(graphics/icons/ctool/webrsrc48sel.gif); }
+
+#navigation-links a#steps img { background-image : url(graphics/icons/etool/firsteps48.gif); }
+#navigation-links a#steps:hover img { background-image : url(graphics/icons/ctool/firsteps48.gif); }
+#navigation-links a#steps:active img { background-image : url(graphics/icons/ctool/firsteps48sel.gif); }
+
+#navigation-links a#workbench { position : absolute;  right : 0px; top : -35px; text-align : right;}
+#navigation-links a#workbench .link-label { visibility : hidden; }
+#navigation-links a#workbench:hover .link-label { visibility : visible; }
+#navigation-links a#workbench .text { display : none; }
+#navigation-links a#workbench img { background-image : url(graphics/icons/etool/wb48.gif); width : 53px; height : 53px;}
+#navigation-links a#workbench:hover img,
+#navigation-links a#workbench:focus img,
+#navigation-links a#workbench:active img { background-image : url(graphics/icons/ctool/wb48.gif); }
+
+/* 
+ * Lay out the page title and description 
+ */
+h1, p { margin-left : 10px; } /* required in mozilla so the page description is properly indented */
+
+/* position the page content so that the page title overlays the bottom
+ * of the background image, but make sure the content is always on top 
+ * (using z-index) */
+#page-content {
+	float : none;
+	clear : both;
+	text-align : center;
+	margin-top : 35px;
+}
+
+.page > #page-content { margin-top : 50px; }
+
+#page-content p { 
+	padding-bottom : 15px; 
+	text-align : left; 
+	float : none;
+	clear : both;
+}
+
+#page-content #content-header H4, .page-description {
+	text-align : left;
+	margin-right : 10px;
+	float : none;
+	clear : both;
+}
+
+.page-description {
+	text-align : left;
+	margin-right : 10px;
+	float : none;
+	clear : both;
+}
+
+/*
+ * Navigation Links (back, forward and home)
+ */
+
+#nav-links {
+	width : 98%;
+	position : absolute;
+	left : 0px;
+	top : 65px;
+}
+
+a#back { 
+	position : absolute; 
+	top : 65px;
+	right : 20px;
+	text-align : right;  
+}
+
+a#back img {
+	background-image : url(graphics/icons/etool/back.gif); 
+	height : 56px;
+	width : 56px;
+	text-align : center;
+}
+
+a#back:hover img,
+a#back:focus img,
+a#back:active img {
+	background-image : url(graphics/icons/ctool/back.gif); 
+	height : 56px;
+	width : 56px;
+}
+
+a#forward { 
+	position : absolute; 
+	top : 65px;
+	right : -8px;
+	text-align : right;  
+}
+
+a#forward img {
+	background-image : url(graphics/icons/etool/forward.gif); 
+	height : 56px;
+	width : 56px;
+	text-align : center;
+}
+
+a#forward:hover img,
+a#forward:focus img,
+a#forward:active img {
+	background-image : url(graphics/icons/ctool/forward.gif); 
+	height : 56px;
+	width : 56px;
+}
+
+a#home { 
+	position : absolute; 
+	top : 65px;
+	right : 60px;
+	text-align : right;  
+}
+
+a#home img {
+	background-image : url(graphics/icons/etool/home.gif); 
+	height : 56px;
+	width : 56px;
+	text-align : center;
+}
+
+a#home:hover img,
+a#home:focus img,
+a#home:active img {
+	background-image : url(graphics/icons/ctool/home.gif); 
+	height : 56px;
+	width : 56px;
+}
+
+
+/* hide the link and description until users hover over the link */
+#nav-links a p .text, #nav-links a .link-label { display : none; }
+
+#nav-links a:hover .link-label,
+#nav-links a:focus .link-label,
+#nav-links a:active .link-label { display : block; width : 16em; }
+
+#nav-links a:hover p .text,
+#nav-links a:focus p .text,
+#nav-links a:active p .text {	display : block; width : 16em; }
+
+#nav-links a:hover,
+#nav-links a:focus,
+#nav-links a:active { border-right : 0px; }
+
+/*
+ * Transition page css settings
+ */
+
+#t-links {
+	text-align : left;
+	width : 760px;
+	/* To center in Moz (have to use text-align for IE) */	
+	margin: 0px auto;
+}
+
+#t-links a { 
+	width : 370px;
+	text-align : left; 
+	margin-left : 5px;
+	margin-right : 5px;
+	margin-top : 5px;
+	margin-bottom : -20px;
+	vertical-align : top;
+}
+
+#t-links > a { vertical-align : middle; }
+
+#t-links a img {
+	height : 57px;
+	width : 57px;
+	vertical-align : middle;
+}
+
+#t-links a .link-label {
+	display : block;
+	width : 300px;
+	position : relative;
+	top : -50px;
+	left : 60px;
+}
+
+#t-links a p .text {
+	display : block;
+	width : 300px;
+	position : relative;
+	top : -45px;
+	left : 53px;
+}
+
+/* 
+ * Special case for Mozilla, because the links are displayed
+ * in 1 vertical column instead of 2 centered columns 
+ */
+
+#t-links > a { 	width : 700px; }
+#t-links a > .link-label { width : 700px; }
+#t-links a p > .text { width : 700px; }
+
+#t-links a:hover { border-right : 5px; }
+
+
+/*** Backup Link Image ***/
+
+a#t-links img { background-image : url(graphics/icons/obj48/new_obj.gif); }
+a#t-links:hover img { background-image : url(graphics/icons/obj48/newhov_obj.gif); }
+
+a#folder_steps img { background-image : url(graphics/icons/obj48/folder_firststeps.gif); }
+a#folder_steps:hover img { background-image : url(graphics/icons/obj48/folder_firststepshov.gif); }
+
+a#folder_newweb img { background-image : url(graphics/icons/obj48/folder_newweb.gif); }
+a#folder_newweb:hover img { background-image : url(graphics/icons/obj48/folder_newwebhov.gif); }
+
+a#folder_importweb img { background-image : url(graphics/icons/obj48/folder_importweb.gif); }
+a#folder_importweb:hover img { background-image : url(graphics/icons/obj48/folder_importwebhov.gif); }
+
+a#folder_help img { background-image : url(graphics/icons/obj48/folder_help.gif); }
+a#folder_help:hover img { background-image : url(graphics/icons/obj48/folder_helphov.gif); }
+
+a#folder_overview img { background-image : url(graphics/icons/obj48/folder_overview.gif); }
+a#folder_overview:hover img { background-image : url(graphics/icons/obj48/folder_overviewhov.gif); }
+
+a#folder_advapps img { background-image : url(graphics/icons/obj48/folder_advapps.gif); }
+a#folder_advapps:hover img { background-image : url(graphics/icons/obj48/folder_advappshov.gif); }
+
+a#folder_devweb img { background-image : url(graphics/icons/obj48/folder_devweb.gif); }
+a#folder_devweb:hover img { background-image : url(graphics/icons/obj48/folder_devwebhov.gif); }
+
+a#folder_samples img { background-image : url(graphics/icons/obj48/folder_samples.gif); }
+a#folder_samples:hover img { background-image : url(graphics/icons/obj48/folder_sampleshov.gif); }
+
+a#folder_tutorials img { background-image : url(graphics/icons/obj48/folder_tutorials.gif); }
+a#folder_tutorials:hover img { background-image : url(graphics/icons/obj48/folder_tutorialshov.gif); }
+
+a#folder_web img { background-image : url(graphics/icons/obj48/folder_web.gif); }
+a#folder_web:hover img { background-image : url(graphics/icons/obj48/folder_webhov.gif); }
+
+a#folder_richreports img { background-image : url(graphics/icons/obj48/folder_richreports.gif); }
+a#folder_richreports:hover img { background-image : url(graphics/icons/obj48/folder_richreportshov.gif); }
+
+a#folder_whatsnew img { background-image : url(graphics/icons/obj48/folder_whatsnew.gif); }
+a#folder_whatsnew:hover img { background-image : url(graphics/icons/obj48/folder_whatsnewhov.gif); }
+
+a#gallery_samples img { background-image : url(graphics/icons/obj48/gallery_samples.gif); }
+a#gallery_samples:hover img { background-image : url(graphics/icons/obj48/gallery_sampleshov.gif); }
+
+a#gallery_tutorials img { background-image : url(graphics/icons/obj48/gallery_tutorials.gif); }
+a#gallery_tutorials:hover img { background-image : url(graphics/icons/obj48/gallery_tutorialshov.gif); }
+
+a#page_steps img { background-image : url(graphics/icons/obj48/page_firststeps.gif); }
+a#page_steps:hover img { background-image : url(graphics/icons/obj48/page_firststepshov.gif); }
+
+a#page_help img { background-image : url(graphics/icons/obj48/page_help.gif); }
+a#page_help:hover img { background-image : url(graphics/icons/obj48/page_helphov.gif); }
+
+a#page_overview img { background-image : url(graphics/icons/obj48/page_overview.gif); }
+a#page_overview:hover img { background-image : url(graphics/icons/obj48/page_overviewhov.gif); }
+
+a#page_web img { background-image : url(graphics/icons/obj48/page_web.gif); }
+a#page_web:hover img { background-image : url(graphics/icons/obj48/page_webhov.gif); }
+
+a#page_whatsnew img { background-image : url(graphics/icons/obj48/page_whatsnew.gif); }
+a#page_whatsnew:hover img { background-image : url(graphics/icons/obj48/page_whatsnewhov.gif); }
+
+a#epf_resource img { background-image : url(graphics/icons/obj48/epf_resource.gif); }
+a#epf_resource:hover img { background-image : url(graphics/icons/obj48/epf_resourcehov.gif); }
+
+a#epf-ov-tour img { background-image : url(graphics/icons/obj48/epf-ov-tour.gif); }
+a#epf-ov-tour:hover img { background-image : url(graphics/icons/obj48/epf-ov-tourhov.gif); }
+
+a#epf-ov-rupov img { background-image : url(graphics/icons/obj48/epf-ov-rupov.gif); }
+a#epf-ov-rupov:hover img { background-image : url(graphics/icons/obj48/epf-ov-rupovhov.gif); }
+
+a#epf-ov-method img { background-image : url(graphics/icons/obj48/epf-ov-method.gif); }
+a#epf-ov-method:hover img { background-image : url(graphics/icons/obj48/epf-ov-methodhov.gif); }
+
+a#epf-ov-process img { background-image : url(graphics/icons/obj48/epf-ov-process.gif); }
+a#epf-ov-process:hover img { background-image : url(graphics/icons/obj48/epf-ov-processhov.gif); }
+
+a#epf-ov-configpublish img { background-image : url(graphics/icons/obj48/epf-ov-configpublish.gif); }
+a#epf-ov-configpublish:hover img { background-image : url(graphics/icons/obj48/epf-ov-configpublishhov.gif); }
+
+a#epf-steps-one img { background-image : url(graphics/icons/obj48/page_firststeps.gif); }
+a#epf-steps-one:hover img { background-image : url(graphics/icons/obj48/page_firststepshov.gif); }
+
+a#epf-steps-two img { background-image : url(graphics/icons/obj48/page_firststeps.gif); }
+a#epf-steps-two:hover img { background-image : url(graphics/icons/obj48/page_firststepshov.gif); }
+
+a#epf-steps-three img { background-image : url(graphics/icons/obj48/page_firststeps.gif); }
+a#epf-steps-three:hover img { background-image : url(graphics/icons/obj48/page_firststepshov.gif); }
+
+a#epf-steps-four img { background-image : url(graphics/icons/obj48/page_firststeps.gif); }
+a#epf-steps-four:hover img { background-image : url(graphics/icons/obj48/page_firststepshov.gif); }
+
+a#epf-tut-gallery img { background-image : url(graphics/icons/obj48/gallery_tutorials.gif); }
+a#epf-tut-gallery:hover img { background-image : url(graphics/icons/obj48/gallery_tutorialshov.gif); }
+
+a#epf-tut-element img { background-image : url(graphics/icons/obj48/t_methcont_obj.gif); }
+a#epf-tut-element:hover img { background-image : url(graphics/icons/obj48/t_methconthov_obj.gif); }
+
+a#epf-tut-navigate img { background-image : url(graphics/icons/obj48/t_navui_obj.gif); }
+a#epf-tut-navigate:hover img { background-image : url(graphics/icons/obj48/t_navuihov_obj.gif); }
+
+a#epf-tut-content img { background-image : url(graphics/icons/obj48/t_remethcont_obj.gif); }
+a#epf-tut-content:hover img { background-image : url(graphics/icons/obj48/t_remethconthov_obj.gif); }
+
+a#epf-tut-process img { background-image : url(graphics/icons/obj48/t_workproc_obj.gif); }
+a#epf-tut-process:hover img { background-image : url(graphics/icons/obj48/t_workprochov_obj.gif); }
+
+a#epf-tut-pubexp img { background-image : url(graphics/icons/obj48/t_pubexp_obj.gif); }
+a#epf-tut-pubexp:hover img { background-image : url(graphics/icons/obj48/t_pubexphov_obj.gif); }

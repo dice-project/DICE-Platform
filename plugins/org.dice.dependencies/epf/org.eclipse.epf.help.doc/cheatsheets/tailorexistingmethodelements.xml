@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!-- 
+    Copyright (c) 2005, 2006 IBM Corporation and others.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+    Contributors:
+    IBM Corporation - initial implementation
+-->
+
+<cheatsheet title="Tailor Existing Method Elements (Roles, Tasks, Work Products, or Guidance) Using Contribution">
+
+	<intro 
+		href="/org.eclipse.epf.help.doc/topics/c_variability.html">
+		<description>You can tailor existing method elements, such as an element that is defined in a locked method plug-in, without directly modifying it, but by contributing new content or relationships to it from an element defined in one of your own method plug-ins. This cheat sheet walks you through the steps of creating such a contribution.  See the online help section "Variability Overview" for an introduction on variability and contributions.<br/><br/>Contributions can also be applied within the same method plug-in between elements from different content packages. This is useful in the event you want to build up your content elements in layers of complexity by gradually adding more and more content via contribution.  The respective levels of contribution can then be selected within method configurations that allow you to include or exclude the content packages with the contributing elements.</description>
+	</intro>
+
+	<item
+		title="Plan your Contribution"
+		skip="false">
+		<description>Before you can create a contribution to an existing method content element you need to know where this element is located within its method plug-in. You also need to decide where to create and place the contributing element. Typically, you create this element in your own method plug-in, in a specific content package. Finally, you need to know what it is you actually want to contribute. This could be additional text for the form fields, new relationships to other elements, or new categorizations. (See the online help for more details on these fields and relationships.)</description>
+	</item>
+
+	<item
+		href="/org.eclipse.epf.help.doc/topics/t_create_method_content.html"
+		title="Create a Contributing Content Element"
+		skip="false">
+		<description>Create a content element in your method plug-in that provides contributions to the content element that you wish to tailor.  Go to the cheat sheet "Add a new Method Content such as Roles, Tasks, Work Products, or Guidance" to be guided through these steps.<br/><br/>Add your contributions such as revised text for form fields or additional relationships to your method content element.</description>
+	</item>
+
+	<item
+		href="/org.eclipse.epf.help.doc/topics/c_variability_contributes.html" 
+		title="Specify the Contribution Relationship"
+		skip="false">
+		<description>Go to the "Content Variability" section of the elements description tab. Select "Contributes" from the combo box. Click the "Select..." button of the base role field and then select the element that you want your new element to contribute to.</description>
+	</item>
+
+	<item
+		href="/org.eclipse.epf.help.doc/topics/c_browsing_perspective.html" 
+		title="Review your Contributions"
+		skip="false">
+		<description>To review your contributions select (or create first and then select) a method configuration in the current configuration combo box in the tool bar that contains the plug-ins and packages of both of the elements participating in your contribution.  In other words the configuration has to contain the contributing element as well as the base element.<br/><br/>Switch to the "Browsing Perspective". Find and select the base element (i.e. the element you contributed to) in the configuration view. The content window displays the results of the contribution.</description>
+	</item>	
+	<item title="Done"><description></description></item>
+</cheatsheet>
+

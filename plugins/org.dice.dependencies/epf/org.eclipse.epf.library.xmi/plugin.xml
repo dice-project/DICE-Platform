@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension-point id="diagramMigration" name="Diagram Migration" schema="schema/IDiagramMigration.exsd"/>
+
+   <extension
+         point="org.eclipse.epf.library.libraryManagers">
+      <libraryManager
+            class="org.eclipse.epf.library.xmi.XMILibraryManager"       		
+            type="xmi"
+            typeName="XMI">
+      </libraryManager>     
+   </extension>
+   <extension
+         point="org.eclipse.epf.library.edit.oppositeFeatureLoaders">
+      <oppositeFeatureLoader class="org.eclipse.epf.library.xmi.internal.XMIOppositeFeatureLoader"/>
+   </extension>
+
+</plugin>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.intro">
+      <intro
+            class="org.eclipse.ui.intro.config.CustomizableIntroPart"
+            icon="icons/full/obj16/product.gif"
+            id="org.eclipse.epf.ui.intro"/>
+         <introProductBinding
+               introId="org.eclipse.epf.ui.intro"
+               productId="org.eclipse.epf.rcp.ui.composer"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.intro.config">
+      <config
+            content="$nl$/introContent.xml"
+            id="org.eclipse.ui.intro.config"
+            introId="org.eclipse.epf.ui.intro">
+         <presentation home-page-id="root" standby-page-id="standby">
+           	<implementation
+           	  	   ws="win32,gtk"
+           	  	   style="css/shared.css"
+           	  	   kind="html"
+           	  	   os="win32,linux">
+           	</implementation>
+            <implementation kind="swt"/>
+               <launchBar
+                     location="right"
+                     bg="#dedcf5">
+               <handle
+                     close="true"
+                     image="css/graphics/contentpage/handle.gif"/>
+               <shortcut
+                     icon="css/graphics/icons/etool/overview.gif"
+                     tooltip="%shortcut.overview.tooltip"
+                     url="http://org.eclipse.ui.intro/showPage?id=overview"/>
+               <shortcut
+                     tooltip="%shortcut.tutorials.tooltip"
+                     icon="css/graphics/icons/etool/tutorials.gif"
+                     url="http://org.eclipse.ui.intro/showPage?id=tutorials"/>
+               <shortcut
+                     tooltip="%shortcut.firststeps.tooltip"
+                     icon="css/graphics/icons/etool/firsteps48.gif"
+                     url="http://org.eclipse.ui.intro/showPage?id=steps"/>
+               <shortcut
+                     tooltip="%shortcut.webresources.tooltip"
+                     icon="css/graphics/icons/etool/webrsrc16.gif"
+                     url="http://org.eclipse.ui.intro/showPage?id=web"/>
+            </launchBar>
+         </presentation>
+      </config>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.intro.configExtension">
+      <action
+            name="openCheatsheetView"
+            replaces="runAction?class=org.eclipse.epf.authoring.ui.actions.OpenCheatsheetView&amp;pluginId=org.eclipse.epf.authoring.ui">
+      </action>
+   </extension>
+
+</plugin>

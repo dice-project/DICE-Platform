@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfgraph:Canvas xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmfgraph="http://www.eclipse.org/gmf/2005/GraphicalDefinition" name="model">
+  <figures
+      name="Default">
+    <figures
+        xsi:type="gmfgraph:PolylineConnection"
+        referencingElements="Link"
+        name="LinkFigure"
+        targetDecoration="OpenArrow">
+      <children
+          xsi:type="gmfgraph:PolylineDecoration"
+          name="OpenArrow">
+        <template
+            x="-1"
+            y="1"/>
+        <template/>
+        <template
+            x="-1"
+            y="-1"/>
+      </children>
+      <children
+          xsi:type="gmfgraph:Label"
+          referencingElements="LinkName"
+          name="LinkNameFigure"
+          text=""/>
+    </figures>
+    <figures
+        xsi:type="gmfgraph:Rectangle"
+        referencingElements="WorkProductNode"
+        name="WorkProductNodeFigure"
+        outline="false">
+      <children
+          xsi:type="gmfgraph:Label"
+          referencingElements="NamedNodeName"
+          name="NamedNodeNameFigure"
+          text="New Work Product Descriptor"/>
+    </figures>
+  </figures>
+  <nodes
+      name="WorkProductNode"
+      figure="WorkProductNodeFigure"/>
+  <connections
+      name="Link"
+      figure="LinkFigure"/>
+  <labels
+      name="LinkName"
+      figure="LinkNameFigure"/>
+  <labels
+      name="NamedNodeName"
+      figure="NamedNodeNameFigure"/>
+</gmfgraph:Canvas>
