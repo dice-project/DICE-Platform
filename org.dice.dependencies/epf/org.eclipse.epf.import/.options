@@ -1,2 +1,0 @@
-# Turn on debug trace for the Import plug-in
-org.eclipse.epf.import/debug=true

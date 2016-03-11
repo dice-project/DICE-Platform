@@ -1,2 +1,0 @@
-# Turn on debug trace for the Authoring UI plug-in
-org.eclipse.epf.authoring.ui/debug=true

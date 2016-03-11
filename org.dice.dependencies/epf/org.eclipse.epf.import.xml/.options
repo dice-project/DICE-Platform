@@ -1,2 +1,0 @@
-# Turn on debug trace for the xml import plug-in
-org.eclipse.epf.import.xml/debug=true

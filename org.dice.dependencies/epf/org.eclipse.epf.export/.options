@@ -1,2 +1,0 @@
-# Turn on debug trace for the export plug-in
-org.eclipse.epf.export/debug=true
