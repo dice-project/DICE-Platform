@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="194">
+<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="199">
 <locations>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.tigris.subversion.clientadapter.svnkit.feature.feature.group" version="1.8.9"/>
-<unit id="org.tigris.subversion.subclipse.feature.group" version="1.10.11"/>
-<unit id="com.collabnet.subversion.merge.feature.feature.group" version="4.1.0"/>
-<unit id="org.tigris.subversion.clientadapter.feature.feature.group" version="1.10.3"/>
-<unit id="org.tigris.subversion.subclipse.graph.feature.feature.group" version="1.1.1"/>
-<unit id="net.java.dev.jna.feature.group" version="4.1.0.v06022015_1911"/>
-<unit id="org.tigris.subversion.subclipse.mylyn.feature.group" version="3.0.0"/>
-<unit id="org.tmatesoft.svnkit.feature.group" version="1.8.12.r10533_v20160129_0158"/>
-<unit id="org.tigris.subversion.clientadapter.javahl.feature.feature.group" version="1.9.3"/>
-<repository location="http://subclipse.tigris.org/update_1.12.x"/>
-</location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.platform.ide" version="4.5.2.M20160212-1500"/>
 <unit id="org.eclipse.pde.source.feature.group" version="3.11.2.v20160212-1500"/>
@@ -149,6 +137,17 @@
 <unit id="org.eclipse.jgit.feature.group" version="4.2.0.201601211800-r"/>
 <unit id="org.eclipse.egit.feature.group" version="4.2.0.201601211800-r"/>
 <repository location="http://download.eclipse.org/egit/updates"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.tigris.subversion.clientadapter.svnkit.feature.feature.group" version="1.8.9"/>
+<unit id="org.tigris.subversion.subclipse.feature.group" version="1.10.12"/>
+<unit id="com.collabnet.subversion.merge.feature.feature.group" version="4.1.0"/>
+<unit id="org.tigris.subversion.clientadapter.feature.feature.group" version="1.10.3"/>
+<unit id="org.tigris.subversion.subclipse.graph.feature.feature.group" version="1.1.1"/>
+<unit id="net.java.dev.jna.feature.group" version="4.1.0.v06022015_1911"/>
+<unit id="org.tmatesoft.svnkit.feature.group" version="1.8.12.r10533_v20160129_0158"/>
+<unit id="org.tigris.subversion.clientadapter.javahl.feature.feature.group" version="1.9.3"/>
+<repository location="http://subclipse.tigris.org/update_1.12.x"/>
 </location>
 </locations>
 <environment>
