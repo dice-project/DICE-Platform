@@ -230,11 +230,11 @@ litigation
          version="0.0.0"/>
 
    <includes
-         id="org.dice.features.m2t"
+         id="org.dice.features.qvto"
          version="0.0.0"/>
 
    <includes
-         id="org.dice.features.qvto"
+         id="org.dice.features.xtext"
          version="0.0.0"/>
 
    <plugin
