@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="209">
+<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="210">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.platform.ide" version="4.5.2.M20160212-1500"/>
@@ -75,18 +75,6 @@
 <repository location="http://download.eclipse.org/egit/updates"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="fr.lip6.pnml.framework.symmetricnet.feature.feature.group" version="2.2.10"/>
-<unit id="fr.lip6.pnml.framework.pthlpng.feature.feature.group" version="2.2.10"/>
-<unit id="fr.lip6.pnml.framework.sdk.feature.group" version="2.2.10"/>
-<unit id="fr.lip6.pnml.nupn.toolinfo.feature.feature.group" version="2.2.10"/>
-<unit id="fr.lip6.pnml.framework.coremodel.feature.feature.group" version="2.2.10"/>
-<unit id="fr.lip6.pnml.framework.ptnet.feature.feature.group" version="2.2.10"/>
-<unit id="fr.lip6.pnml.framework.utils.feature.feature.group" version="2.2.10"/>
-<unit id="fr.lip6.pnml.framework.3rdPart.feature.feature.group" version="2.2.10"/>
-<unit id="fr.lip6.pnml.framework.hlpn.feature.feature.group" version="2.2.10"/>
-<repository location="http://pnml.lip6.fr/pnmlframework/updatesite/2.2.10/"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.tigris.subversion.clientadapter.svnkit.feature.feature.group" version="1.8.9"/>
 <unit id="org.tigris.subversion.subclipse.feature.group" version="1.10.13"/>
 <unit id="org.tigris.subversion.clientadapter.feature.feature.group" version="1.10.3"/>
@@ -149,6 +137,18 @@
 <unit id="org.eclipse.graphiti.feature.tools.feature.group" version="0.12.2.v20160120-1255"/>
 <unit id="org.eclipse.gmf.tooling.feature.group" version="3.3.1.201509020853"/>
 <repository location="http://download.eclipse.org/releases/mars"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="fr.lip6.pnml.framework.symmetricnet.feature.feature.group" version="2.2.11"/>
+<unit id="fr.lip6.pnml.framework.pthlpng.feature.feature.group" version="2.2.11"/>
+<unit id="fr.lip6.pnml.framework.sdk.feature.group" version="2.2.11"/>
+<unit id="fr.lip6.pnml.nupn.toolinfo.feature.feature.group" version="2.2.11"/>
+<unit id="fr.lip6.pnml.framework.coremodel.feature.feature.group" version="2.2.11"/>
+<unit id="fr.lip6.pnml.framework.ptnet.feature.feature.group" version="2.2.11"/>
+<unit id="fr.lip6.pnml.framework.utils.feature.feature.group" version="2.2.11"/>
+<unit id="fr.lip6.pnml.framework.3rdPart.feature.feature.group" version="2.2.11"/>
+<unit id="fr.lip6.pnml.framework.hlpn.feature.feature.group" version="2.2.11"/>
+<repository location="http://pnml.lip6.fr/pnmlframework/updatesite/2.2.11/"/>
 </location>
 </locations>
 <environment>
