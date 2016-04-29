@@ -217,6 +217,10 @@ Each party waives its rights to a jury trial in any resulting
 litigation
    </license>
 
+   <includes
+         id="org.dice.features.base"
+         version="0.0.0"/>
+
    <plugin
          id="com.collabnet.subversion.merge"
          download-size="0"
@@ -288,6 +292,13 @@ litigation
 
    <plugin
          id="org.tigris.subversion.subclipse.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.draw2d"
          download-size="0"
          install-size="0"
          version="0.0.0"

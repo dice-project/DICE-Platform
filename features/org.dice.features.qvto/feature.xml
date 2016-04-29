@@ -218,7 +218,7 @@ litigation
    </license>
 
    <includes
-         id="org.dice.features.ocl"
+         id="org.dice.features.emf"
          version="0.0.0"/>
 
    <plugin
