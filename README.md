@@ -38,7 +38,8 @@ If you want to build your own DICE IDE, you need to follow these steps:
 		* Root directory: dice
 		* Check synchronize before exporting
 		* Destination directory: $HOME\dice (this folder will include a folder for every platform. Also, you can choose Archive file if you want to export it into a ZIP file)
-		* Uncheck "Export source" and "Generate p2 repository"
+		* Uncheck "Export source"
+		* Check "Generate p2 repository"
 		* Check "Export for multiple platforms" and "Allow for binary cycles in target platform"
 		* If you choose "Export for multiple platform", you will choose which platforms you want to export to in the next step
 		* By default, your platform will be chosen, but you can choose others. Recommended are these ones:
@@ -47,7 +48,7 @@ If you want to build your own DICE IDE, you need to follow these steps:
 			* Macosx (cocoa/x86_64)
 			* Win32 (win32/x86)
 			* Win32 (win32/x86_64)
-		* The build process will take 2 or 3 minutes approximately per platform
+		* The build process will take 7 or 8 minutes approximately
 
 # Exporting for Mac platform
 
@@ -61,17 +62,14 @@ The generated folder structure looks as follows:
 - macosx.cocoa.x86_64
 	- dice
 		- configuration
-		- DICE.app
-			- Contents
-				- MacOS
-					- DICE.ini
 		- features
-		- MacOS
-			- DICE
+		- p2
 		- plugins
-		- Resources
-		- .eclipseproduct
-		- Info.plist
+		- artifacts.xml
+		- DICE.ini
+	- MacOS
+	- Resources
+	- Info.plist
 
 You need to modify it as follows:
 - macosx.cocoa.x86_64
@@ -85,5 +83,6 @@ You need to modify it as follows:
 				- Resources
 				- Info.plist
 		- features
+		- p2
 		- plugins
-		- .eclipseproduct
+		- .artifacts.xml
