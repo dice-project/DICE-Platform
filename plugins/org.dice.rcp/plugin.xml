@@ -7,38 +7,19 @@
          point="org.eclipse.core.runtime.products">
       <product
             application="org.eclipse.ui.ide.workbench"
-            name="DICE">
+            description="%productBlurb"
+            name="%productName">
          <property
                name="windowImages"
                value="icons/16.gif,icons/32.gif,icons/48.gif,icons/64.gif,icons/128.gif,icons/256.gif">
          </property>
          <property
-               name="aboutImage"
-               value="icons/120.gif">
-         </property>
-         <property
-               name="aboutText"
-               value="DICE Platform&#x0A;&#x0A;Version: 1.0.0&#x0A;&#x0A;All rights reserved.&#x0A;New code and modifications are made available under the terms of the Eclipse Public License v1.0.">
-         </property>
-         <property
                name="appName"
-               value="DICE">
-         </property>
-         <property
-               name="startupProgressRect"
-               value="5,145,570,15">
-         </property>
-         <property
-               name="startupMessageRect"
-               value="5,125,570,20">
-         </property>
-         <property
-               name="startupForegroundColor"
-               value="FFFF80">
+               value="%productName">
          </property>
          <property
                name="introTitle"
-               value="Welcome to DICE">
+               value="%productIntroTitle">
          </property>
          <property
                name="introBrandingImage"
@@ -46,23 +27,23 @@
          </property>
          <property
                name="introBrandingImageText"
-               value="DICE Project">
+               value="%productIntroBrandingText">
          </property>
          <property
                name="introDescription-overview"
-               value="The DICE Platform is a kind of universal tool platform - an open extensible IDE for anything and nothing in particular">
+               value="%introDescription-overview">
          </property>
          <property
                name="introDescription-tutorials"
-               value="Learn how to be productive using DICE and Eclipse by completing end-to-end tutorials that will guide you along the way.">
+               value="%introDescription-tutorials">
          </property>
          <property
                name="introDescription-samples"
-               value="Explore DICE and Eclipse by installing prefabricated samples (may require Internet connection).">
+               value="%introDescription-samples">
          </property>
          <property
                name="applicationXMI"
-               value="org.dice.rcp/dice.e4xmi">
+               value="org.dice.rcp/LegacyIDE.e4xmi">
          </property>
          <property
                name="cssTheme"
@@ -70,7 +51,35 @@
          </property>
          <property
                name="applicationCSSResources"
-               value="platform:/plugin/org.dice.rcp/images/">
+               value="platform:/plugin/org.eclipse.ui.themes/images/">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="FFFF80">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="5,125,570,20">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="5,145,570,15">
+         </property>
+         <property
+               name="buildIdShow"
+               value="true">
+         </property>
+         <property
+               name="buildIdRectangle"
+               value="300,105,220,40">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/120.gif">
+         </property>
+         <property
+               name="aboutText"
+               value="%productBlurb">
          </property>
          <property
                name="preferenceCustomization"
@@ -84,5 +93,16 @@
             introId="org.eclipse.ui.intro.universal"
             productId="org.dice.rcp.dice">
       </introProductBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.splashHandlers">
+      <splashHandler
+            class="org.dice.rcp.DiceSplashHandler"
+            id="org.dice.rcp.splashHandler">
+      </splashHandler>
+      <splashHandlerProductBinding
+            productId="org.dice.rcp.dice"
+            splashId="org.dice.rcp.splashHandler">
+      </splashHandlerProductBinding>
    </extension>
 </plugin>

@@ -8,8 +8,8 @@
             locationURI="menu:org.dice.menu.tools">
          <command
                commandId="org.dice.ui.monitoringCommand"
-               icon="icons/16.gif"
-               label="Open DICE Monitoring Service"
+               icon="icons/monitoring.png"
+               label="DICE Monitoring Service"
                style="push">
          </command>
       </menuContribution>
@@ -17,16 +17,16 @@
    <extension
          point="org.eclipse.ui.commands">
       <command
-            defaultHandler="org.dice.ui.handlers.MonitoringHandler"
+            defaultHandler="org.dice.monitoring.handlers.MonitoringHandler"
             id="org.dice.ui.monitoringCommand"
-            name="Open DICE Monitoring Service">
+            name="DICE Monitoring Service">
       </command>
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
             category="org.dice.ui.preferences"
-            class="org.dice.ui.preferences.pages.MonitoringPreferencesPage"
+            class="org.dice.monitoring.preferences.pages.MonitoringPreferencesPage"
             id="org.dice.ui.preferences.monitoring"
             name="Monitoring Tools">
       </page>
@@ -34,7 +34,7 @@
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="org.dice.ui.preferences.MonitoringPreferenceInitializer">
+            class="org.dice.monitoring.preferences.MonitoringPreferenceInitializer">
       </initializer>
    </extension>
 

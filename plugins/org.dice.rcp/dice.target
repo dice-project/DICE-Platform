@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="211">
+<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="214">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.platform.ide" version="4.5.2.M20160212-1500"/>
@@ -17,16 +17,6 @@
 <unit id="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature.feature.group" version="1.1.0.v20151130-0157"/>
 <unit id="org.eclipse.ecf.filetransfer.httpclient4.feature.feature.group" version="3.12.0.v20151130-0157"/>
 <repository location="http://download.eclipse.org/eclipse/updates/4.5"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="com.hierynomus.sshj.feature.feature.group" version="0.15.0.201602121824"/>
-<unit id="es.unizar.disco.simulation.ui.feature.feature.group" version="0.1.3.201602161651"/>
-<unit id="es.unizar.disco.ssh.feature.feature.group" version="0.1.3.201602161651"/>
-<unit id="es.unizar.disco.simulation.quickstart.feature.feature.group" version="0.1.3.201602161651"/>
-<unit id="es.unizar.dsico.ssh.ui.feature.feature.group" version="0.1.3.201602161651"/>
-<unit id="es.unizar.disco.simulation.feature.feature.group" version="0.1.3.201602161651"/>
-<unit id="es.unizar.disco.simulation.greatspn.feature.feature.group" version="0.1.3.201602161651"/>
-<repository location="http://dice-project.github.io/DICE-Simulation/updates"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.papyrus.extra.marte.properties.feature.feature.group" version="1.1.4.201602101324"/>
@@ -65,11 +55,6 @@
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.ocl.master.feature.group" version="6.0.2.v20160118-1848"/>
 <repository location="http://download.eclipse.org/modeling/mdt/ocl/updates/releases"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="com.masdes.dam.profile.feature.group" version="0.3.0.201602121816"/>
-<unit id="com.masdes.dam.profile.ui.feature.feature.group" version="0.3.0.201602121816"/>
-<repository location="http://dice-project.github.io/DICE-Profiles/updates"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="es.cv.gvcase.features.moskitt4me.processeditor.feature.group" version="1.0.0.201509111147"/>
@@ -155,6 +140,22 @@
 <unit id="fr.lip6.pnml.framework.3rdPart.feature.feature.group" version="2.2.11"/>
 <unit id="fr.lip6.pnml.framework.hlpn.feature.feature.group" version="2.2.11"/>
 <repository location="http://pnml.lip6.fr/pnmlframework/updatesite/2.2.11/"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="es.unizar.disco.dice.profile.feature.feature.group" version="0.4.0.201603111941"/>
+<unit id="com.masdes.dam.profile.feature.group" version="0.4.0.201603111941"/>
+<unit id="com.masdes.dam.profile.ui.feature.feature.group" version="0.4.0.201603111941"/>
+<repository location="http://dice-project.github.io/DICE-Profiles/updates"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="es.unizar.disco.simulation.greatspn.feature.feature.group" version="0.1.6.201604081552"/>
+<unit id="com.hierynomus.sshj.feature.feature.group" version="0.15.0.201602121824"/>
+<unit id="es.unizar.disco.simulation.quickstart.feature.feature.group" version="0.1.6.201604081552"/>
+<unit id="es.unizar.dsico.ssh.ui.feature.feature.group" version="0.1.6.201604081552"/>
+<unit id="es.unizar.disco.simulation.feature.feature.group" version="0.1.6.201604081552"/>
+<unit id="es.unizar.disco.simulation.ui.feature.feature.group" version="0.1.6.201604081552"/>
+<unit id="es.unizar.disco.ssh.feature.feature.group" version="0.1.6.201604081552"/>
+<repository location="http://dice-project.github.io/DICE-Simulation/updates"/>
 </location>
 </locations>
 <environment>

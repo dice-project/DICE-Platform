@@ -1,4 +1,4 @@
-package org.dice.ui;
+package org.dice.monitoring;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;

@@ -1,6 +1,6 @@
-package org.dice.ui.preferences.pages;
+package org.dice.monitoring.preferences.pages;
 
-import org.dice.ui.MonitoringActivator;
+import org.dice.monitoring.MonitoringActivator;
 import org.eclipse.jface.preference.ComboFieldEditor;
 import org.eclipse.jface.preference.FieldEditorPreferencePage;
 import org.eclipse.jface.preference.IPreferenceStore;
@@ -12,8 +12,8 @@ import org.eclipse.ui.IWorkbenchPreferencePage;
 
 public class MonitoringPreferencesPage extends FieldEditorPreferencePage implements IWorkbenchPreferencePage {
 
-	private static final String TITLE = "Monitoring Tools";
-	private static final String DESCRIPTION = "Preferences for Monitoring Tools";
+	private static final String TITLE = "Monitoring Tool";
+	private static final String DESCRIPTION = "Preferences for Monitoring Tool";
 
 	public static final String MONITORING_PROTOCOL = "monitoring_protocol";
 	public static final String MONITORING_SERVER = "monitoring_server";

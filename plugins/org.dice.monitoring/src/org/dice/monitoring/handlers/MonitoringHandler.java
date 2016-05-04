@@ -1,12 +1,12 @@
-package org.dice.ui.handlers;
+package org.dice.monitoring.handlers;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import org.dice.monitoring.MonitoringActivator;
+import org.dice.monitoring.preferences.pages.MonitoringPreferencesPage;
 import org.dice.ui.DiceUIActivator;
-import org.dice.ui.MonitoringActivator;
 import org.dice.ui.preferences.pages.DicePreferencesPage;
-import org.dice.ui.preferences.pages.MonitoringPreferencesPage;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;

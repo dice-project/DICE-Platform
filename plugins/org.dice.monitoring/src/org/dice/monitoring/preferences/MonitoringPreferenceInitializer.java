@@ -1,7 +1,7 @@
-package org.dice.ui.preferences;
+package org.dice.monitoring.preferences;
 
-import org.dice.ui.MonitoringActivator;
-import org.dice.ui.preferences.pages.MonitoringPreferencesPage;
+import org.dice.monitoring.MonitoringActivator;
+import org.dice.monitoring.preferences.pages.MonitoringPreferencesPage;
 import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
 import org.eclipse.jface.preference.IPreferenceStore;
 
