@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.dice.menu.tools">
+         <command
+               commandId="org.dice.ui.optimizationCommand"
+               icon="icons/optimization.png"
+               label="DICE Optimization Service"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.dice.optimization.handlers.OptimizationHandler"
+            id="org.dice.ui.optimizationCommand"
+            name="DICE Optimization Service">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="org.dice.ui.preferences"
+            class="org.dice.optimization.preferences.pages.OptimizationPreferencesPage"
+            id="org.dice.ui.preferences.optimization"
+            name="Optimization Tools">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.dice.optimization.preferences.OptimizationPreferenceInitializer">
+      </initializer>
+   </extension>
+
+</plugin>
