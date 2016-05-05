@@ -250,12 +250,6 @@ litigation
          unpack="false"/>
 
    <plugin
-         id="org.apache.ant"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"/>
-
-   <plugin
          id="org.apache.commons.cli"
          download-size="0"
          install-size="0"
@@ -277,13 +271,6 @@ litigation
          unpack="false"/>
 
    <plugin
-         id="org.objectweb.asm"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.apache.commons.logging"
          download-size="0"
          install-size="0"
@@ -298,31 +285,10 @@ litigation
          unpack="false"/>
 
    <plugin
-         id="com.ibm.icu"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.antlr.runtime"
          download-size="0"
          install-size="0"
          version="3.2.0.v201101311130"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.ltk.core.refactoring"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.ltk.ui.refactoring"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
          unpack="false"/>
 
    <plugin

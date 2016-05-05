@@ -237,20 +237,6 @@ litigation
          unpack="false"/>
 
    <plugin
-         id="org.apache.lucene.analysis"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.lucene.core"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.apache.lucene.misc"
          download-size="0"
          install-size="0"
@@ -583,7 +569,14 @@ litigation
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.team.cvs.ui"
+         id="com.jcraft.jsch"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jsch.core"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -597,14 +590,7 @@ litigation
          unpack="false"/>
 
    <plugin
-         id="com.jcraft.jsch"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.jsch.core"
+         id="org.eclipse.team.cvs.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
