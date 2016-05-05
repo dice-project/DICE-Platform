@@ -218,19 +218,7 @@ litigation
    </license>
 
    <includes
-         id="org.dice.features.emf"
-         version="0.0.0"/>
-
-   <includes
-         id="org.dice.features.activiti"
-         version="0.0.0"/>
-
-   <includes
          id="org.dice.features.epf"
-         version="0.0.0"/>
-
-   <includes
-         id="org.dice.features.graphiti"
          version="0.0.0"/>
 
    <plugin
