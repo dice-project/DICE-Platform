@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.dice.features.profile"
-      label="DICE RCP Profile Feature"
+      id="org.dice.features.profiles"
+      label="DICE RCP Profiles Feature"
       version="1.0.0.qualifier"
       provider-name="DICE Project">
 
