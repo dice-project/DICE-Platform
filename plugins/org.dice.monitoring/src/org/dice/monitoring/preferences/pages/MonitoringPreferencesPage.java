@@ -1,58 +1,58 @@
 package org.dice.monitoring.preferences.pages;
 
 import org.dice.monitoring.MonitoringActivator;
-import org.eclipse.jface.preference.ComboFieldEditor;
-import org.eclipse.jface.preference.FieldEditorPreferencePage;
+import org.dice.ui.preferences.pages.AbstractOpenBrowserPreferencesPage;
 import org.eclipse.jface.preference.IPreferenceStore;
-import org.eclipse.jface.preference.IntegerFieldEditor;
-import org.eclipse.jface.preference.StringFieldEditor;
-import org.eclipse.jface.resource.ImageDescriptor;
-import org.eclipse.ui.IWorkbench;
-import org.eclipse.ui.IWorkbenchPreferencePage;
 
-public class MonitoringPreferencesPage extends FieldEditorPreferencePage implements IWorkbenchPreferencePage {
+public class MonitoringPreferencesPage extends AbstractOpenBrowserPreferencesPage {
 
-	private static final String TITLE = "Monitoring Tool";
-	private static final String DESCRIPTION = "Preferences for Monitoring Tool";
+	private static MonitoringPreferencesPage singleton;
 
-	public static final String MONITORING_PROTOCOL = "monitoring_protocol";
-	public static final String MONITORING_SERVER = "monitoring_server";
-	public static final String MONITORING_PORT = "monitoring_port";
-
-	public MonitoringPreferencesPage() {
-		this(GRID);
-	}
-
-	public MonitoringPreferencesPage(int style) {
-		this(TITLE, style);
-	}
-
-	public MonitoringPreferencesPage(String title, int style) {
-		this(title, null, style);
-	}
-
-	public MonitoringPreferencesPage(String title, ImageDescriptor image, int style) {
-		super(title, image, style);
+	public static MonitoringPreferencesPage getSingleton() {
+		if (singleton == null) {
+			singleton = new MonitoringPreferencesPage();
+		}
+		return singleton;
 	}
 
 	@Override
-	public void init(IWorkbench workbench) {
-		setPreferenceStore(MonitoringActivator.getDefault().getPreferenceStore());
-		setDescription(DESCRIPTION);
+	public IPreferenceStore getPluginPreferenceStore() {
+		return MonitoringActivator.getDefault().getPreferenceStore();
 	}
 
 	@Override
-	protected void createFieldEditors() {
-		addField(new ComboFieldEditor(MONITORING_PROTOCOL, "Protocol",
-				new String[][] { { "http", "http" }, { "https", "https" } }, getFieldEditorParent()));
-		addField(new StringFieldEditor(MONITORING_SERVER, "Server", getFieldEditorParent()));
-		addField(new IntegerFieldEditor(MONITORING_PORT, "Port", getFieldEditorParent(), 5));
+	protected String getPageDescription() {
+		return "Preferences for Monitoring Tool";
 	}
 
-	public static void initDefaults(IPreferenceStore store) {
-		store.setDefault(MONITORING_PROTOCOL, "http");
-		store.setDefault(MONITORING_SERVER, "85.120.206.43");
-		store.setDefault(MONITORING_PORT, 5001);
+	@Override
+	public String getProtocolIdProperty() {
+		return "monitoring_protocol";
+	}
+
+	@Override
+	public String getServerIdProperty() {
+		return "monitoring_server";
+	}
+
+	@Override
+	public String getPortIdProperty() {
+		return "monitoring_port";
+	}
+
+	@Override
+	protected String getDefaultProtocol() {
+		return PROTOCOL.HTTP.name();
+	}
+
+	@Override
+	protected String getDefaultServer() {
+		return "85.120.206.43";
+	}
+
+	@Override
+	protected int getDefaultPort() {
+		return 5001;
 	}
 
 }

@@ -10,4 +10,5 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: DICE Project
 Export-Package: org.dice.ui,
+ org.dice.ui.handlers,
  org.dice.ui.preferences.pages
