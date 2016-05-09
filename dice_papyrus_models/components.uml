@@ -45,7 +45,9 @@
     <packagedElement xmi:type="uml:Component" xmi:id="_06-EYOBXEeWNL_YKB8_3iw" name="UML2 5.1.2">
       <packagedElement xmi:type="uml:Dependency" xmi:id="_4DqToOBXEeWNL_YKB8_3iw" client="_06-EYOBXEeWNL_YKB8_3iw" supplier="_js0y0OBWEeWNL_YKB8_3iw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Component" xmi:id="_J5SRYOBYEeWNL_YKB8_3iw" name="Xtext 2.9.1"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_J5SRYOBYEeWNL_YKB8_3iw" name="Xtext 2.9.1">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_orwIkBXYEea6Lq6Z3vyxgQ" client="_J5SRYOBYEeWNL_YKB8_3iw" supplier="_js0y0OBWEeWNL_YKB8_3iw"/>
+    </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_mK5F0OBYEeWNL_YKB8_3iw" name="PNML 2.2.10">
       <packagedElement xmi:type="uml:Dependency" xmi:id="_YDPNsA4CEeaaU9FekHx-8w" client="_mK5F0OBYEeWNL_YKB8_3iw" supplier="_js0y0OBWEeWNL_YKB8_3iw"/>
     </packagedElement>
@@ -68,6 +70,9 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_9T_l8BIJEeau57QEN6nt9g" name="Optimization 1.0.0">
       <packagedElement xmi:type="uml:Dependency" xmi:id="_BR5l8BIKEeau57QEN6nt9g" client="_9T_l8BIJEeau57QEN6nt9g" supplier="_eBirAOBWEeWNL_YKB8_3iw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_FkkjcBXYEea6Lq6Z3vyxgQ" name="Delivery 1.0.0">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_LBopEBXYEea6Lq6Z3vyxgQ" client="_FkkjcBXYEea6Lq6Z3vyxgQ" supplier="_eBirAOBWEeWNL_YKB8_3iw"/>
     </packagedElement>
   </packagedElement>
 </uml:Model>
