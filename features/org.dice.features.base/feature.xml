@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.dice.features.base"
-      label="DICE RCP Base Feature"
+      label="DICE Base Feature"
       version="1.0.0.qualifier"
       provider-name="DICE Project">
 
@@ -9,8 +9,7 @@
       DICE Platform
 Version: 1.0.0
 All rights reserved.
-New code and modifications are made available under the terms
-of the Eclipse Public License v1.0.
+New code and modifications are made available under the terms of the Eclipse Public License v1.0.
 
 This component was developed by Prodevelop (PRO)
    </description>
@@ -266,21 +265,21 @@ litigation
          id="org.apache.batik.css"
          download-size="0"
          install-size="0"
-         version="1.7.0.v201011041433"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.batik.util"
          download-size="0"
          install-size="0"
-         version="1.7.0.v201011041433"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.batik.util.gui"
          download-size="0"
          install-size="0"
-         version="1.7.0.v200903091627"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -1887,6 +1886,13 @@ litigation
          install-size="0"
          version="0.0.0"
          fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jdt.annotation"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>

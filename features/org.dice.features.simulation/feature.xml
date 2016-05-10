@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.dice.features.simulation"
-      label="DICE RCP Simulation Feature"
+      label="DICE Simulation Feature"
       version="1.0.0.qualifier"
       provider-name="DICE Project">
 
@@ -9,8 +9,7 @@
       DICE Platform
 Version: 1.0.0
 All rights reserved.
-New code and modifications are made available under the terms
-of the Eclipse Public License v1.0.
+New code and modifications are made available under the terms of the Eclipse Public License v1.0.
 
 This component was developed by University of Zaragoza (ZAR)
    </description>
@@ -220,21 +219,12 @@ Each party waives its rights to a jury trial in any resulting
 litigation
    </license>
 
-   <includes
-         id="org.dice.features.pnml"
-         version="0.0.0"/>
-
-   <includes
-         id="org.dice.features.acceleo"
-         version="0.0.0"/>
-
-   <includes
-         id="org.dice.features.papyrus"
-         version="0.0.0"/>
-
-   <includes
-         id="org.dice.features.profiles"
-         version="0.0.0"/>
+   <requires>
+      <import feature="org.dice.features.acceleo" version="1.0.0.qualifier"/>
+      <import feature="org.dice.features.papyrus" version="1.0.0.qualifier"/>
+      <import feature="org.dice.features.pnml" version="1.0.0.qualifier"/>
+      <import feature="org.dice.features.profiles" version="1.0.0.qualifier"/>
+   </requires>
 
    <plugin
          id="es.unizar.disco.simulation"

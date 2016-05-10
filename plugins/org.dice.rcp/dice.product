@@ -54,14 +54,28 @@ org.eclipse.papyrus.infra.core.perspective
    </plugins>
 
    <features>
+      <feature id="org.dice.features.base" version="1.0.0.qualifier"/>
+      <feature id="org.dice.features.epf" version="1.0.0.qualifier"/>
+      <feature id="org.dice.features.activiti" version="1.0.0.qualifier"/>
+      <feature id="org.dice.features.graphiti" version="1.0.0.qualifier"/>
+      <feature id="org.dice.features.emf" version="1.0.0.qualifier"/>
+      <feature id="org.dice.features.gmf" version="1.0.0.qualifier"/>
+      <feature id="org.dice.features.uml2" version="1.0.0.qualifier"/>
+      <feature id="org.dice.features.wst" version="1.0.0.qualifier"/>
+      <feature id="org.dice.features.jdt" version="1.0.0.qualifier"/>
       <feature id="org.dice.features.simulation" version="1.0.0.qualifier"/>
-      <feature id="org.dice.features.monitoring" version="1.0.0.qualifier"/>
-      <feature id="org.dice.features.optimization" version="1.0.0.qualifier"/>
+      <feature id="org.dice.features.acceleo" version="1.0.0.qualifier"/>
+      <feature id="org.dice.features.papyrus" version="1.0.0.qualifier"/>
+      <feature id="org.dice.features.xtext" version="1.0.0.qualifier"/>
+      <feature id="org.dice.features.qvto" version="1.0.0.qualifier"/>
+      <feature id="org.dice.features.profiles" version="1.0.0.qualifier"/>
+      <feature id="org.dice.features.pnml" version="1.0.0.qualifier"/>
+      <feature id="org.dice.features.atl" version="1.0.0.qualifier"/>
       <feature id="org.dice.features.svn" version="1.0.0.qualifier"/>
       <feature id="org.dice.features.git" version="1.0.0.qualifier"/>
-      <feature id="org.dice.features.atl" version="1.0.0.qualifier"/>
-      <feature id="org.dice.features.epf" version="1.0.0.qualifier"/>
-      <feature id="org.dice.features.deployments" version="0.1.0.qualifier"/>
+      <feature id="org.dice.features.deployments" version="1.0.0.qualifier"/>
+      <feature id="org.dice.features.optimization" version="1.0.0.qualifier"/>
+      <feature id="org.dice.features.monitoring" version="1.0.0.qualifier"/>
    </features>
 
    <configurations>

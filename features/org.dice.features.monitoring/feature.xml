@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.dice.features.monitoring"
-      label="DICE RCP Monitoring Feature"
+      label="DICE Monitoring Feature"
       version="1.0.0.qualifier"
       provider-name="DICE Project">
 
@@ -9,8 +9,7 @@
       DICE Platform
 Version: 1.0.0
 All rights reserved.
-New code and modifications are made available under the terms
-of the Eclipse Public License v1.0.
+New code and modifications are made available under the terms of the Eclipse Public License v1.0.
 
 This component was developed by Institute e-Austria Timisoara (IeAT)
    </description>
@@ -220,9 +219,9 @@ Each party waives its rights to a jury trial in any resulting
 litigation
    </license>
 
-   <includes
-         id="org.dice.features.base"
-         version="0.0.0"/>
+   <requires>
+      <import feature="org.dice.features.base" version="1.0.0.qualifier"/>
+   </requires>
 
    <plugin
          id="org.dice.monitoring"

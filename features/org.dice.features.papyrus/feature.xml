@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.dice.features.papyrus"
-      label="DICE RCP Papyrus Feature"
+      label="DICE Papyrus Feature"
       version="1.0.0.qualifier"
       provider-name="DICE Project">
 
@@ -217,25 +217,13 @@ Each party waives its rights to a jury trial in any resulting
 litigation
    </license>
 
-   <includes
-         id="org.dice.features.gmf"
-         version="0.0.0"/>
-
-   <includes
-         id="org.dice.features.uml2"
-         version="0.0.0"/>
-
-   <includes
-         id="org.dice.features.wst"
-         version="0.0.0"/>
-
-   <includes
-         id="org.dice.features.qvto"
-         version="0.0.0"/>
-
-   <includes
-         id="org.dice.features.xtext"
-         version="0.0.0"/>
+   <requires>
+      <import feature="org.dice.features.gmf" version="1.0.0.qualifier"/>
+      <import feature="org.dice.features.qvto" version="1.0.0.qualifier"/>
+      <import feature="org.dice.features.uml2" version="1.0.0.qualifier"/>
+      <import feature="org.dice.features.wst" version="1.0.0.qualifier"/>
+      <import feature="org.dice.features.xtext" version="1.0.0.qualifier"/>
+   </requires>
 
    <plugin
          id="org.eclipse.papyrus.cdo.ui.doc"
