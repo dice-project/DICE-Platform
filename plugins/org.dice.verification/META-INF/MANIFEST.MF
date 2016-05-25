@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DICE Verification
+Bundle-SymbolicName: org.dice.verification;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.dice.verification.VerificationActivator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.debug.ui;bundle-version="3.11.101",
+ org.eclipse.papyrus.uml.tools;bundle-version="1.1.4",
+ it.polimi.dice.verification;bundle-version="1.0.0",
+ it.polimi.dice.verification.ui;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: DICE Project
