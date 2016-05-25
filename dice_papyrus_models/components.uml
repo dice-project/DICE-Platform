@@ -74,5 +74,8 @@
     <packagedElement xmi:type="uml:Component" xmi:id="_FkkjcBXYEea6Lq6Z3vyxgQ" name="Delivery 1.0.0">
       <packagedElement xmi:type="uml:Dependency" xmi:id="_LBopEBXYEea6Lq6Z3vyxgQ" client="_FkkjcBXYEea6Lq6Z3vyxgQ" supplier="_eBirAOBWEeWNL_YKB8_3iw"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_NpjeACJDEeaIF4cCpWN5hQ" name="Verification 1.0.0">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_1DWH0CJDEeaIF4cCpWN5hQ" client="_NpjeACJDEeaIF4cCpWN5hQ" supplier="_JO6UIOBXEeWNL_YKB8_3iw"/>
+    </packagedElement>
   </packagedElement>
 </uml:Model>
