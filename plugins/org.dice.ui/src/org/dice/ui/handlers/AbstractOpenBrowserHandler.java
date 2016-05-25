@@ -2,6 +2,10 @@ package org.dice.ui.handlers;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import org.dice.ui.DiceUIActivator;
 import org.dice.ui.preferences.pages.AbstractOpenBrowserPreferencesPage;
@@ -40,8 +44,11 @@ public abstract class AbstractOpenBrowserHandler extends AbstractHandler {
 			String server = store.getString(getOpenBrowserPreferencesPage().getServerIdProperty());
 			Integer port = store.getInt(getOpenBrowserPreferencesPage().getPortIdProperty());
 			port = port != null ? port : 80;
+			Map<String, String> parameters = new HashMap<String, String>();
+			fillRequestParameters(parameters);
+			String parametersString = parseMapParameters(parameters);
 
-			URL url = new URL(protocol, server, port, "");
+			URL url = new URL(protocol, server, port, parametersString);
 
 			browser.openURL(url);
 		} catch (PartInitException e) {
@@ -56,6 +63,34 @@ public abstract class AbstractOpenBrowserHandler extends AbstractHandler {
 		}
 
 		return null;
+	}
+
+	private String parseMapParameters(Map<String, String> parameters) {
+		if (parameters == null || parameters.isEmpty()) {
+			return "";
+		}
+
+		StringBuilder builder = new StringBuilder();
+		builder.append("?");
+		for (Iterator<Entry<String, String>> it = parameters.entrySet().iterator(); it.hasNext();) {
+			Entry<String, String> next = it.next();
+			builder.append(next.getKey());
+			builder.append("=");
+			builder.append(next.getValue());
+
+			if (it.hasNext()) {
+				builder.append("&");
+			}
+		}
+
+		return builder.toString();
+	}
+
+	/**
+	 * Fill the parameters of the request. As parameter of this function, you'll
+	 * receive the map you need to fulfill
+	 */
+	protected void fillRequestParameters(Map<String, String> parameters) {
 	}
 
 	/**

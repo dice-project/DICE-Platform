@@ -11,6 +11,7 @@ public class OptimizationHandler extends AbstractOpenBrowserHandler {
 		return "OPTIMIZATION_BROWSER_ID";
 	}
 
+	@Override
 	protected AbstractOpenBrowserPreferencesPage getOpenBrowserPreferencesPage() {
 		return OptimizationPreferencesPage.getSingleton();
 	}

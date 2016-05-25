@@ -11,6 +11,7 @@ public class MonitoringHandler extends AbstractOpenBrowserHandler {
 		return "MONITORING_BROWSER_ID";
 	}
 
+	@Override
 	protected AbstractOpenBrowserPreferencesPage getOpenBrowserPreferencesPage() {
 		return MonitoringPreferencesPage.getSingleton();
 	}

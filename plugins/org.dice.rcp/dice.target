@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="218">
+<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="220">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="es.cv.gvcase.features.moskitt4me.processeditor.feature.group" version="1.0.0.201509111147"/>
@@ -155,7 +155,14 @@
 <repository location="http://download.eclipse.org/releases/mars"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.dice.features.deployments.feature.group" version="0.1.0"/>
+<unit id="it.polimi.dice.profiles.feature.feature.group" version="1.0.0.201605130950"/>
+<unit id="it.polimi.dice.verification.uml2json.feature.feature.group" version="1.0.0.201605130950"/>
+<unit id="it.polimi.dice.verification.ui.feature.feature.group" version="1.0.0.201605130950"/>
+<unit id="it.polimi.dice.verification.feature.feature.group" version="1.0.0.201605130950"/>
+<repository location="http://dice-project.github.io/DICE-Verification/updates"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.dice.features.deployments.feature.group" version="0.1.2"/>
 <repository location="http://dice-project.github.io/DICE-Deployment-IDE-Plugin/site.xml"/>
 </location>
 </locations>
