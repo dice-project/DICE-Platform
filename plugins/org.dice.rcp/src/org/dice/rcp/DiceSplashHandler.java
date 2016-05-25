@@ -69,15 +69,19 @@ public class DiceSplashHandler extends BasicSplashHandler {
 		String[] mappings = loadMappings(product.getDefiningBundle());
 
 		if (buildIdShow) {
-			String text = "";
+			StringBuilder sb = new StringBuilder();
 			if (mappings.length >= 3) {
-				text += mappings[0];
-				text += " (";
-				text += mappings[1];
-				text += ") :: ";
-				text += mappings[2];
+				sb.append(mappings[0]);
+				if (mappings[1] != null && !mappings[1].isEmpty()) {
+					sb.append(" (");
+					sb.append(mappings[1]);
+					sb.append(") :: ");
+				} else {
+					sb.append(" :: ");
+				}
+				sb.append(mappings[2]);
 			} else {
-				text = "Unknown Build";
+				sb.append("Unknown Build");
 			}
 
 			// find the specified location. Not currently API
@@ -90,7 +94,7 @@ public class DiceSplashHandler extends BasicSplashHandler {
 			Label idLabel = new Label(getContent(), SWT.RIGHT);
 			idLabel.setForeground(getForeground());
 			idLabel.setBounds(buildIdRectangle);
-			idLabel.setText(text);
+			idLabel.setText(sb.toString());
 			idLabel.setData(CSSSWTConstants.CSS_ID_KEY, CSS_ID_SPLASH_BUILD_ID);
 		} else {
 			getContent(); // ensure creation of the progress
