@@ -2,7 +2,7 @@
 <feature
       id="org.dice.features.optimization"
       label="DICE Optimization Feature"
-      version="1.0.0.qualifier"
+      version="0.1.0.qualifier"
       provider-name="DICE Project">
 
    <description url="https://vm-project-dice.doc.ic.ac.uk/redmine/projects/dice">
@@ -220,7 +220,7 @@ litigation
    </license>
 
    <requires>
-      <import feature="org.dice.features.base" version="1.0.0.qualifier"/>
+      <import feature="org.dice.features.base" version="4.6.0.qualifier"/>
    </requires>
 
    <plugin

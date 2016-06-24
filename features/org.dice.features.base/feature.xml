@@ -2,7 +2,7 @@
 <feature
       id="org.dice.features.base"
       label="DICE Base Feature"
-      version="1.0.0.qualifier"
+      version="4.6.0.qualifier"
       provider-name="DICE Project">
 
    <description url="https://vm-project-dice.doc.ic.ac.uk/redmine/projects/dice">
@@ -367,14 +367,6 @@ litigation
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.core.filesystem.java7"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
          id="org.eclipse.core.filesystem.win32.x86_64"
          os="win32"
          ws="win32"
@@ -434,13 +426,6 @@ litigation
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-
-   <plugin
-         id="org.eclipse.core.runtime.compatibility.registry"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"/>
 
    <plugin
          id="org.eclipse.core.variables"
@@ -1845,21 +1830,21 @@ litigation
          unpack="false"/>
 
    <plugin
+         id="org.eclipse.jdt.annotation"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ui.intro.quicklinks"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
          id="org.eclipse.ecf"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.ecf.filetransfer"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.ecf.provider.filetransfer"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -1873,11 +1858,24 @@ litigation
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.ecf.provider.filetransfer.ssl"
+         id="org.eclipse.ecf.console"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ecf.provider.filetransfer"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ecf.filetransfer"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -1889,10 +1887,11 @@ litigation
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.jdt.annotation"
+         id="org.eclipse.ecf.provider.filetransfer.ssl"
          download-size="0"
          install-size="0"
          version="0.0.0"
+         fragment="true"
          unpack="false"/>
 
 </feature>

@@ -2,7 +2,7 @@
 <feature
       id="org.dice.features.simulation"
       label="DICE Simulation Feature"
-      version="1.0.0.qualifier"
+      version="0.1.6.qualifier"
       provider-name="DICE Project">
 
    <description url="https://vm-project-dice.doc.ic.ac.uk/redmine/projects/dice">
@@ -220,10 +220,9 @@ litigation
    </license>
 
    <requires>
-      <import feature="org.dice.features.acceleo" version="1.0.0.qualifier"/>
-      <import feature="org.dice.features.papyrus" version="1.0.0.qualifier"/>
-      <import feature="org.dice.features.pnml" version="1.0.0.qualifier"/>
-      <import feature="org.dice.features.profiles" version="1.0.0.qualifier"/>
+      <import feature="org.dice.features.acceleo" version="3.6.4.qualifier"/>
+      <import feature="org.dice.features.pnml" version="2.2.12.qualifier"/>
+      <import feature="org.dice.features.profiles" version="0.5.0.qualifier"/>
    </requires>
 
    <plugin

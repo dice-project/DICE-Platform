@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.dice.features.svn"
-      label="DICE SVN Feature"
-      version="1.0.0.qualifier"
+      label="DICE Subclipse SVN Feature"
+      version="1.12.10.qualifier"
       provider-name="DICE Project">
 
    <description url="https://vm-project-dice.doc.ic.ac.uk/redmine/projects/dice">

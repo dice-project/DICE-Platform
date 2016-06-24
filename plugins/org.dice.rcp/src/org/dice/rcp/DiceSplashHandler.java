@@ -24,6 +24,7 @@ import org.eclipse.ui.branding.IProductConstants;
 import org.eclipse.ui.splash.BasicSplashHandler;
 import org.osgi.framework.Bundle;
 
+@SuppressWarnings("restriction")
 public class DiceSplashHandler extends BasicSplashHandler {
 
 	// CSS id can be used to style the label for the build ID

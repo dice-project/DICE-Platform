@@ -6,7 +6,7 @@ Bundle-Activator: org.eclipse.graphiti.ui.internal.GraphitiUIPlugin
 Require-Bundle: org.eclipse.emf.edit.ui;bundle-version="[2.5.0,3.0.0)",
  org.eclipse.emf.workspace;bundle-version="[1.3.0,2.0.0)",
  org.eclipse.gef_old;bundle-version="[3.5.0,3.7.0)",
- org.eclipse.graphiti;bundle-version="0.7.1",
+ org.eclipse.graphiti;bundle-version="[0.7.1,0.7.2)",
  org.eclipse.ui.ide;bundle-version="[3.5.0,4.0.0)",
  org.eclipse.ui.navigator;bundle-version="[3.4.0,4.0.0)",
  org.eclipse.ui.views.properties.tabbed;bundle-version="[3.5.0,4.0.0)",

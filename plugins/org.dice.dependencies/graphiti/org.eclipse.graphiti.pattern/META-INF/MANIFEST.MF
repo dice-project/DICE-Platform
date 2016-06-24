@@ -2,7 +2,8 @@ Manifest-Version: 1.0
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-SymbolicName: org.eclipse.graphiti.pattern;singleton:=true
-Require-Bundle: org.eclipse.graphiti;bundle-version="0.7.1"
+Require-Bundle: org.eclipse.graphiti;bundle-version="[0.7.1,0.7.2)",
+ org.eclipse.graphiti.ui;bundle-version="[0.7.1,0.7.2)"
 Export-Package: org.eclipse.graphiti.pattern;version="0.7.1",org.eclip
  se.graphiti.pattern.config;version="0.7.1",org.eclipse.graphiti.patte
  rn.mapping;version="0.7.1",org.eclipse.graphiti.pattern.mapping.data;
@@ -14,7 +15,6 @@ Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName
 Bundle-Name: %pluginName
 Created-By: 16.3-b01 (Sun Microsystems Inc.)
-Import-Package: org.eclipse.graphiti.ui.features;version="0.7.1"
 Bundle-ManifestVersion: 2
 
 Name: org/eclipse/graphiti/pattern/CreateFeatureForPattern.class

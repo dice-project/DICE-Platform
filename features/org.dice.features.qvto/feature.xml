@@ -2,7 +2,7 @@
 <feature
       id="org.dice.features.qvto"
       label="DICE QVTO Feature"
-      version="1.0.0.qualifier"
+      version="3.6.0.qualifier"
       provider-name="DICE Project">
 
    <description url="https://vm-project-dice.doc.ic.ac.uk/redmine/projects/dice">
@@ -218,7 +218,7 @@ litigation
    </license>
 
    <requires>
-      <import feature="org.dice.features.emf" version="1.0.0.qualifier"/>
+      <import feature="org.dice.features.emf" version="2.12.0.qualifier"/>
    </requires>
 
    <plugin

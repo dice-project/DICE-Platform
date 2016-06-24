@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.dice.features.git"
-      label="DICE GIT Feature"
-      version="1.0.0.qualifier"
+      label="DICE EGIT Feature"
+      version="4.4.0.qualifier"
       provider-name="DICE Project">
 
    <description url="https://vm-project-dice.doc.ic.ac.uk/redmine/projects/dice">
@@ -243,13 +243,6 @@ litigation
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.jgit"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.slf4j.api"
          download-size="0"
          install-size="0"
@@ -272,6 +265,13 @@ litigation
 
    <plugin
          id="com.jcraft.jsch"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jgit"
          download-size="0"
          install-size="0"
          version="0.0.0"

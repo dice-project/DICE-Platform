@@ -2,11 +2,11 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: DICE Optimization
 Bundle-SymbolicName: org.dice.optimization;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 0.1.0.qualifier
 Bundle-Activator: org.dice.optimization.OptimizationActivator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- org.dice.ui;bundle-version="1.0.0"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+ org.dice.ui;bundle-version="0.1.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: DICE Project
