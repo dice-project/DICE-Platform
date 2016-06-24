@@ -18,7 +18,7 @@
       <packagedElement xmi:type="uml:Dependency" xmi:id="_Hx8KYOBYEeWNL_YKB8_3iw" client="_JO6UIOBXEeWNL_YKB8_3iw" supplier="_2_SiAOBWEeWNL_YKB8_3iw"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_Om_WoOBYEeWNL_YKB8_3iw" client="_JO6UIOBXEeWNL_YKB8_3iw" supplier="_J5SRYOBYEeWNL_YKB8_3iw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Component" xmi:id="_KW4o0OBXEeWNL_YKB8_3iw" name="DICE 0.4.0 &amp; DAM 0.4.0 Profiles">
+    <packagedElement xmi:type="uml:Component" xmi:id="_KW4o0OBXEeWNL_YKB8_3iw" name="DICE 0.5.0 &amp; DAM 0.5.0 Profiles">
       <packagedElement xmi:type="uml:Dependency" xmi:id="_LKP_cOBXEeWNL_YKB8_3iw" client="_KW4o0OBXEeWNL_YKB8_3iw" supplier="_JO6UIOBXEeWNL_YKB8_3iw"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_OCjCQOBXEeWNL_YKB8_3iw" name="JDT 3.12.0">
