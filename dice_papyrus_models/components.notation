@@ -286,7 +286,7 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QDifEuBWEeWNL_YKB8_3iw"/>
     </children>
     <element xmi:type="uml:Component" href="components.uml#_QCVlMOBWEeWNL_YKB8_3iw"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QDOWAeBWEeWNL_YKB8_3iw" x="5" y="60" width="2202" height="889"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QDOWAeBWEeWNL_YKB8_3iw" x="5" y="60" width="2202" height="772"/>
   </children>
   <styles xmi:type="notation:StringValueStyle" xmi:id="__KdpIeBVEeW-1LDt9RpxOw" name="diagram_compatibility_version" stringValue="1.2.0"/>
   <styles xmi:type="notation:DiagramStyle" xmi:id="__KdpIuBVEeW-1LDt9RpxOw"/>
