@@ -1,1 +1,0 @@
-Icons in this folder were copied from org.eclipse.epf.library.edit/icons/full/obj16
