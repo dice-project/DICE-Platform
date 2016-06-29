@@ -2,87 +2,75 @@
 
 This is the DICE Platform repository. It includes all the necessary plugins and features to build the DICE IDE.
 
-DICE IDE is based on Eclipse Mars 4.5.2.
+DICE IDE is based on Eclipse Neon 4.6.0 version. So if you want to build your own DICE IDE, you need Java 1.8 version at least.
+
+The DICE IDE is built using Tycho building technology, that uses maven to perform it (https://eclipse.org/tycho/).
 
 If you want to build your own DICE IDE, you need to follow these steps:
 
-* Download the Eclipse 4.5.2 base, concretely the RCP distribution: http://download.eclipse.org/eclipse/downloads/drops4/R-4.5.2-201602121500/
-* Checkout this repository to your computer
+* Download Eclipse 4.6.0, concretely the SDK distribution for your OS: http://download.eclipse.org/eclipse/downloads/drops4/R-4.6-201606061100/
 * Start Eclipse, create a new workspace and import all the plugins:
-	* Right click to the Resource Explorer
-	* Import
-	* General/Existing Projects into Workspace
-	* Select your GIT folder (where you checked out this project)
-	* Check "Search for nested projects"
-	* Uncheck "Copy projects into workspace"
-	* Select all the projects
-	* Click on "Finish"
-* Now you need to select the DICE Target Platform. It is placed on the 'org.dice.rcp' plugin (dice.target file):
-	* Open this file "org.dice.rcp/dice.target"
-	* Click "Set as Target Platform" button at the Top Right corner
+* You need to install GIT and MAVEN plugins
+	* GIT
+		* Click on Help -> Install new software, and include this repository: http://download.eclipse.org/egit/updates
+		* Select only the "Eclipse Git Team Provider" feature. The other features are not necessary.
+		* Click on next button, accept the licence, and finish the installation.
+	* MAVEN
+		* Click on Help -> Install new software, and include this repository: http://download.eclipse.org/technology/m2e/releases/
+		* Select only the "m2e - Maven Integration for Eclipse (includes Incubating components)" feature. The other features are not necessary.
+		* Click on next button, accept the licence, and finish the installation.
+	* Restart Eclipse when both installations finish.
+* Once Eclipse is restarted, you need to modify some preferences for GIT. Go to Window -> Preferences, and browse to Team -> Git.
+	* Check the repository folder to point to the correct folder
+	* Modify the .gitconfig file from the Configuration tab as follows:
+```
+[user]
+	email = your email
+	name = Your name
+[branch]
+	autosetuprebase = always
+[color]
+	ui = auto
+[push]
+	default = simple
+[core]
+	excludesfile = .gitignore
+```
+* Now you need to import the projects to the Workspace
+	* Open the "Git Repositories" view via Window -> Show View -> Others -> Git -> Git Repositories
+	* Copy the URL of this GitHub project, and paste it to this Eclipse view. Automatically a wizard is opened and ask you about some needed information:
+		* The URL, host and repository path (automatically set)
+		* User and password
+		* The branches you want to import
+		* The destination folder (automatically set to your home GIT folder)
+	* Once done, right click to this repository and click on "Import Projects" action. Another wizard is opened. Just follow the steps and import all the projects.
+		* Verifh that option "Search for nested projects" is checked in the projects list page.
+* Now you need to select the DICE Target Platform. It is placed on the 'org.dice.target' project (org.dice.target.target file):
+	* Open this file "org.dice.target/org.dice.target.target"
+	* Click "Set as Target Platform" button at the top right corner
 	* Wait until all the dependencies are downloaded. This step could take a lot of minutes, so be patience
 * Next step is to check if all the plugin dependencies are correctly loaded:
-	* Go to 'org.dice.rcp' plugin
+	* Go to 'org.dice.product' plugin
 	* Open 'dice.product' file
 	* Click on Overview Tab
-	* Click on 'Launch an Eclipse application'
-		* If all worked fine, you'll se the DICE RCP launched
-		* If any error occurred, it appears on the Console view (Window --> Show View --> Console). Open it before launching the application
-* Final step is to build your RCP. You can build DICE IDE for multiple platforms:
-	* Go to 'org.dice.rcp' plugin
-	* Open 'dice.product' file
-	* Click on Overview Tab
-	* Click on "Eclipse Product export wizard"
-	* Fill the wizard as following:
-		* Configuration: /org.dice.rcp/dice.product
-		* Root directory: dice
-		* Check synchronize before exporting
-		* Destination directory: $HOME\dice (this folder will include a folder for every platform. Also, you can choose Archive file if you want to export it into a ZIP file)
-		* Uncheck "Export source"
-		* Check "Generate p2 repository"
-		* Check "Export for multiple platforms" and "Allow for binary cycles in target platform"
-		* If you choose "Export for multiple platform", you will choose which platforms you want to export to in the next step
-		* By default, your platform will be chosen, but you can choose others. Recommended are these ones:
-			* Linux (gtk/x86)
-			* Linux (gtk/x86_64)
-			* Macosx (cocoa/x86_64)
-			* Win32 (win32/x86)
-			* Win32 (win32/x86_64)
-		* The build process will take 7 or 8 minutes approximately
+	* Click the button "Validate" at the top right corner and check that there are no dependency problems
+* Now you can launch the DICE IDE in order to check that all works fine
+	* Click the button "Launch an Eclipse application" and wait until it is loaded
+	* If any error occurred, it appears on the Console view (Window --> Show View --> Console). Open it before launching the application
+* Final step is to build your RCP. It is really easy to do with Tycho and maven. In the "org.dice.root" project there are two launchers that allows to perform a build and a clean (clean is only necessary if you want to delete previous build files).
+	* Click on the menu Run -> Run configurations -> Maven Build -> DICE Builder. Then click on run button and wait.
+	* If no problems were found on the building process, you will have your files in "org.dice.product" plugin, at "org.dice.product/target/products" folder.
 
-# Exporting for Mac platform
+# How Tycho works
 
-There is a bug in Eclipse 4.5.x when exporting to MacOSX. Eclipse commiters move this bug to Eclipse 4.5.2 and 4.6 tags, but it's not still solved (https://bugs.eclipse.org/bugs/show_bug.cgi?id=468131)
+You can check how Tycho works by having a look at the pom.xml files. The main thing to have in consideration is the folder structure. All the projects and plugins are placed into a recommended folder structure at "org.dice.root" project. You can find this folders inside:
+* bundles: contains all the plugins of the IDE
+* features: contains all the features of the IDE
+* releng: contains some necessary projects for the building process
+	* org.dice.configuration: contains the root pom.xml
+	* org.dice.product: contains the product files of the IDE
+	* org.dice.target: contains the target platform file (not necessary the project, but we need the target file)
+	* org.dice.update: contains the update site of the IDE (not necessary)
 
-If you want to build your own product, and your target platform is MacOSX, there is a bug on the build process, at least doing it from a Windows platform (not tested on Mac platform, maybe it works fine).
-
-After the build process is completed, you need to go to the generated folder and check the folder structure, because there are some file and folder not placed in the correct location.
-
-The generated folder structure looks as follows:
-- macosx.cocoa.x86_64
-	- dice
-		- configuration
-		- features
-		- p2
-		- plugins
-		- artifacts.xml
-		- DICE.ini
-	- MacOS
-	- Resources
-	- Info.plist
-
-You need to modify it as follows:
-- macosx.cocoa.x86_64
-	- dice
-		- configuration
-		- DICE.app
-			- Contents
-				- MacOS
-					- DICE
-					- DICE.ini
-				- Resources
-				- Info.plist
-		- features
-		- p2
-		- plugins
-		- .artifacts.xml
+If you want to know more about Tycho, just visit its main website on Eclipse, or I recommend you to have a look at Vogella howto to know how to use Tycho to build your products :)
+* http://www.vogella.com/tutorials/EclipseTycho/article.html

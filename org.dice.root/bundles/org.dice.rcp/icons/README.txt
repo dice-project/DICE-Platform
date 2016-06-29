@@ -1,0 +1,1 @@
+This folder is a replica of "org.dice.root/releng/org.dice.product/icons" folder, so maintain it synchronized

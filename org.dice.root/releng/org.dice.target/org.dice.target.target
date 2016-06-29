@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="245">
+<locations>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="fr.lip6.pnml.framework.symmetricnet.feature.feature.group" version="2.2.12"/>
+<unit id="fr.lip6.pnml.framework.pthlpng.feature.feature.group" version="2.2.12"/>
+<unit id="fr.lip6.pnml.framework.sdk.feature.group" version="2.2.12"/>
+<unit id="fr.lip6.pnml.nupn.toolinfo.feature.feature.group" version="2.2.12"/>
+<unit id="fr.lip6.pnml.framework.coremodel.feature.feature.group" version="2.2.12"/>
+<unit id="fr.lip6.pnml.framework.ptnet.feature.feature.group" version="2.2.12"/>
+<unit id="fr.lip6.pnml.framework.utils.feature.feature.group" version="2.2.12"/>
+<unit id="fr.lip6.pnml.framework.3rdPart.feature.feature.group" version="2.2.12"/>
+<unit id="fr.lip6.pnml.framework.hlpn.feature.feature.group" version="2.2.12"/>
+<repository location="http://pnml.lip6.fr/pnmlframework/updatesite/2.2.12/"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="it.polimi.dice.profiles.feature.feature.group" version="1.0.0.201605130950"/>
+<unit id="it.polimi.dice.verification.uml2json.feature.feature.group" version="1.0.0.201605130950"/>
+<unit id="it.polimi.dice.verification.ui.feature.feature.group" version="1.0.0.201605130950"/>
+<unit id="it.polimi.dice.verification.feature.feature.group" version="1.0.0.201605130950"/>
+<repository location="http://dice-project.github.io/DICE-Verification/updates"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.papyrus.extra.marte.feature.feature.group" version="1.2.0.201606080903"/>
+<unit id="org.eclipse.papyrus.extra.marte.textedit.feature.feature.group" version="1.2.0.201606080903"/>
+<unit id="org.eclipse.papyrus.extra.marte.properties.feature.feature.group" version="1.2.0.201606080903"/>
+<repository location="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/neon/"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.ocl.master.feature.group" version="6.1.0.v20160526-1513"/>
+<repository location="http://download.eclipse.org/modeling/mdt/ocl/updates/releases/6.1.0"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="es.unizar.disco.dice.profile.feature.feature.group" version="0.5.0.201606231611"/>
+<unit id="com.masdes.dam.profile.ui.feature.feature.group" version="0.5.0.201606231611"/>
+<unit id="com.masdes.dam.profile.feature.group" version="0.5.0.201606231611"/>
+<repository location="http://dice-project.github.io/DICE-Profiles/updates"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.platform.ide" version="4.6.0.I20160606-1100"/>
+<unit id="org.eclipse.equinox.sdk.feature.group" version="3.12.0.v20160606-1311"/>
+<unit id="org.eclipse.pde.source.feature.group" version="3.12.0.v20160606-1100"/>
+<unit id="org.eclipse.pde.feature.group" version="3.12.0.v20160606-1100"/>
+<unit id="org.eclipse.rcp.source.feature.group" version="4.6.0.v20160606-1342"/>
+<unit id="org.eclipse.platform.sdk" version="4.6.0.I20160606-1100"/>
+<unit id="org.eclipse.rcp.feature.group" version="4.6.0.v20160606-1342"/>
+<unit id="org.eclipse.sdk.ide" version="4.6.0.I20160606-1100"/>
+<repository location="http://download.eclipse.org/eclipse/updates/4.6"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.tigris.subversion.subclipse.feature.group" version="1.10.13"/>
+<unit id="com.collabnet.subversion.merge.feature.feature.group" version="4.1.0"/>
+<unit id="org.tigris.subversion.clientadapter.feature.feature.group" version="1.10.3"/>
+<unit id="org.tigris.subversion.subclipse.graph.feature.feature.group" version="1.1.1"/>
+<unit id="net.java.dev.jna.feature.group" version="4.1.0.v06022015_1911"/>
+<unit id="org.tmatesoft.svnkit.feature.group" version="1.8.12.r10533_v20160129_0158"/>
+<unit id="org.tigris.subversion.clientadapter.javahl.feature.feature.group" version="1.9.3"/>
+<repository location="http://subclipse.tigris.org/update_1.12.x"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.apache.lucene.queries" version="3.5.0.v20120725-1805"/>
+<unit id="org.apache.ant" version="1.9.6.v201510161327"/>
+<unit id="com.google.inject" version="3.0.0.v201605172100"/>
+<unit id="org.apache.batik.parser" version="1.7.0.v201011041433"/>
+<unit id="org.apache.lucene.analysis" version="3.5.0.v20120725-1805"/>
+<unit id="org.apache.batik.ext.awt" version="1.7.0.v201011041433"/>
+<unit id="org.apache.batik.xml" version="1.7.0.v201011041433"/>
+<unit id="org.apache.batik.swing" version="1.7.0.v201302011158"/>
+<unit id="org.apache.batik.bridge" version="1.7.0.v201011041433"/>
+<unit id="org.apache.lucene.misc" version="3.5.0.v20120725-1805"/>
+<unit id="org.apache.batik.svggen" version="1.7.0.v201011041433"/>
+<unit id="org.apache.batik.pdf" version="1.6.0.v201105071520"/>
+<unit id="com.google.inject.assistedinject" version="3.0.0.v201402270930"/>
+<unit id="com.google.gson" version="2.2.4.v201311231704"/>
+<unit id="org.apache.batik.transcoder" version="1.7.0.v201011041433"/>
+<unit id="org.apache.batik.dom.svg" version="1.7.0.v201011041433"/>
+<unit id="org.apache.batik.css" version="1.7.0.v201011041433"/>
+<unit id="org.apache.batik.util.gui" version="1.7.0.v200903091627"/>
+<unit id="org.apache.batik.util" version="1.7.0.v201011041433"/>
+<unit id="org.apache.lucene" version="3.5.0.v20120725-1805"/>
+<unit id="org.apache.batik.extension" version="1.7.0.v201011041433"/>
+<unit id="org.apache.batik.dom" version="1.7.1.v201505191845"/>
+<unit id="org.apache.commons.codec" version="1.6.0.v201305230611"/>
+<unit id="org.apache.lucene.core" version="3.5.0.v20120725-1805"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20160520211859/repository"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="es.unizar.dsico.ssh.ui.feature.feature.group" version="0.1.6.201604081552"/>
+<unit id="es.unizar.disco.ssh.feature.feature.group" version="0.1.6.201604081552"/>
+<unit id="com.hierynomus.sshj.feature.feature.group" version="0.15.0.201602161613"/>
+<unit id="es.unizar.disco.simulation.greatspn.feature.feature.group" version="0.1.6.201604081552"/>
+<unit id="es.unizar.disco.simulation.quickstart.feature.feature.group" version="0.1.6.201604081552"/>
+<unit id="es.unizar.disco.simulation.feature.feature.group" version="0.1.6.201604081552"/>
+<unit id="es.unizar.disco.simulation.ui.feature.feature.group" version="0.1.6.201604081552"/>
+<repository location="http://dice-project.github.io/DICE-Simulation/updates"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.graphiti.feature.tools.feature.group" version="0.13.0.v20160608-1043"/>
+<unit id="org.eclipse.jst.webpageeditor.feature.feature.group" version="2.8.0.v201605262035"/>
+<unit id="org.eclipse.m2e.wtp.jsf.feature.feature.group" version="1.3.0.20160530-2310"/>
+<unit id="org.eclipse.emf.transaction.sdk.feature.group" version="1.10.0.201606071900"/>
+<unit id="org.eclipse.xpand.sdk.feature.group" version="2.2.0.v201605260315"/>
+<unit id="org.eclipse.ocl.examples.feature.group" version="6.1.0.v20160526-1513"/>
+<unit id="org.eclipse.acceleo.feature.group" version="3.6.4.201605040614"/>
+<unit id="org.eclipse.emf.sdk.feature.group" version="2.12.0.v20160526-0356"/>
+<unit id="org.eclipse.jsf.feature.feature.group" version="3.9.0.v201605262035"/>
+<unit id="org.eclipse.emf.validation.sdk.feature.group" version="1.10.0.201606071713"/>
+<unit id="org.eclipse.datatools.enablement.sdk.feature.feature.group" version="1.13.0.201603142002"/>
+<unit id="org.eclipse.gef.sdk.feature.group" version="3.11.0.201606061308"/>
+<unit id="org.eclipse.xtend.sdk.feature.group" version="2.10.0.v201605250459"/>
+<unit id="org.eclipse.gmf.feature.group" version="1.10.0.201606071959"/>
+<unit id="org.eclipse.jpt.jaxb.feature.feature.group" version="1.5.100.v201603180253"/>
+<unit id="org.eclipse.papyrus.sdk.feature.feature.group" version="2.0.0.201606080854"/>
+<unit id="org.eclipse.jpt.jaxb.eclipselink.feature.feature.group" version="1.4.200.v201603180253"/>
+<unit id="org.eclipse.jst.server_adapters.ext.feature.feature.group" version="3.3.500.v201603031514"/>
+<unit id="org.eclipse.ecf.core.feature.group" version="3.13.1.v20160405-1820"/>
+<unit id="org.eclipse.emf.mwe.sdk.feature.group" version="1.3.20.v201605261103"/>
+<unit id="org.eclipse.jst.server_adapters.feature.feature.group" version="3.2.400.v201606081655"/>
+<unit id="org.eclipse.jst.ws.cxf.feature.feature.group" version="1.1.203.v201503151903"/>
+<unit id="org.sonatype.m2e.mavenarchiver.feature.feature.group" version="0.17.1.201605251832-signed-20160525150658"/>
+<unit id="org.eclipse.m2e.wtp.jaxrs.feature.feature.group" version="1.3.0.20160530-2310"/>
+<unit id="org.eclipse.gmf.tooling.runtime.feature.group" version="3.3.1.201509291144"/>
+<unit id="org.eclipse.jpt.dbws.eclipselink.feature.feature.group" version="1.2.200.v201603180253"/>
+<unit id="org.eclipse.jst.ws.axis2tools.feature.feature.group" version="1.1.301.v201410160332"/>
+<unit id="org.eclipse.m2e.wtp.feature.feature.group" version="1.3.0.20160530-2310"/>
+<unit id="org.eclipse.emf.mwe2.runtime.sdk.feature.group" version="2.9.0.v201605261103"/>
+<unit id="org.eclipse.graphiti.export.feature.feature.group" version="0.13.0.v20160608-1043"/>
+<unit id="org.eclipse.wst.server_adapters.feature.feature.group" version="3.2.500.v201606081655"/>
+<unit id="org.eclipse.xwt.feature.feature.group" version="1.2.0.v20160502-1019"/>
+<unit id="org.eclipse.jst.ws.jaxws.feature.feature.group" version="1.2.203.v201602092125"/>
+<unit id="org.eclipse.m2e.wtp.jpa.feature.feature.group" version="1.3.0.20160530-2310"/>
+<unit id="org.eclipse.jst.jsf.apache.trinidad.tagsupport.feature.feature.group" version="2.6.0.v201410101748"/>
+<unit id="org.eclipse.xtext.sdk.feature.group" version="2.10.0.v201605250459"/>
+<unit id="org.eclipse.egit.feature.group" version="4.4.0.201606070830-r"/>
+<unit id="org.eclipse.m2m.qvt.oml.sdk.feature.group" version="3.6.0.v20160606-1156"/>
+<unit id="org.eclipse.wst.web_ui.feature.feature.group" version="3.8.0.v201606030549"/>
+<unit id="org.eclipse.jpt.jpa.eclipselink.feature.feature.group" version="3.4.100.v201603180253"/>
+<unit id="org.eclipse.emf.mwe2.language.sdk.feature.group" version="2.9.0.v201605261103"/>
+<unit id="org.eclipse.ocl.all.sdk.feature.group" version="5.2.0.v20160523-1914"/>
+<unit id="org.eclipse.datatools.sdk.feature.feature.group" version="1.13.0.201603142002"/>
+<unit id="org.eclipse.jst.common.fproj.enablement.jdt.feature.group" version="3.8.0.v201603091933"/>
+<unit id="org.eclipse.gmf.tooling.feature.group" version="3.3.1.201509291144"/>
+<unit id="org.eclipse.m2m.atl.sdk.feature.group" version="3.6.0.v201505180909"/>
+<unit id="org.eclipse.wst.common.fproj.feature.group" version="3.7.0.v201505072140"/>
+<unit id="org.eclipse.gmf.runtime.notation.sdk.feature.group" version="1.10.0.201606071631"/>
+<unit id="org.eclipse.graphiti.feature.feature.group" version="0.13.0.v20160608-1043"/>
+<unit id="org.eclipse.uml2.sdk.feature.group" version="5.2.0.v20160516-0939"/>
+<repository location="http://download.eclipse.org/releases/neon"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.jgit.feature.group" version="4.4.0.201606070830-r"/>
+<repository location="http://download.eclipse.org/egit/updates"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.ecf.core.feature.feature.group" version="1.3.0.v20160405-1820"/>
+<unit id="org.eclipse.ecf.core.ssl.feature.feature.group" version="1.1.0.v20160405-1820"/>
+<unit id="org.eclipse.ecf.filetransfer.ssl.feature.feature.group" version="1.1.0.v20160405-1820"/>
+<unit id="org.eclipse.ecf.filetransfer.httpclient4.feature.feature.group" version="3.13.1.v20160405-1820"/>
+<unit id="org.eclipse.ecf.remoteservice.sdk.feature.feature.group" version="3.13.1.v20160405-1820"/>
+<unit id="org.eclipse.ecf.core.feature.group" version="3.13.1.v20160405-1820"/>
+<unit id="org.eclipse.ecf.filetransfer.feature.feature.group" version="3.13.1.v20160405-1820"/>
+<unit id="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature.feature.group" version="1.1.0.v20160405-1820"/>
+<repository location="http://download.eclipse.org/rt/ecf/3.13.1/site.p2/"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.dice.features.deployments.feature.group" version="0.1.2"/>
+<repository location="http://dice-project.github.io/DICE-Deployment-IDE-Plugin"/>
+</location>
+</locations>
+<launcherArgs>
+<vmArgs>-Dosgi.requiredJavaVersion=1.7 -Xms256m -Xmx1024m</vmArgs>
+</launcherArgs>
+</target>
