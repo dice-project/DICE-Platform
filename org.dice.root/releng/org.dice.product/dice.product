@@ -37,14 +37,6 @@ org.eclipse.papyrus.infra.core.perspective
       <solaris/>
       <win useIco="true">
          <ico path="icons/icon.ico"/>
-         <bmp
-            winSmallHigh="icons/16-32b.bmp"
-            winSmallLow="icons/16-8b.bmp"
-            winMediumHigh="icons/32-32b.bmp"
-            winMediumLow="icons/32-8b.bmp"
-            winLargeHigh="icons/48-32b.bmp"
-            winLargeLow="icons/48-8b.bmp"
-            winExtraLargeHigh="icons/256-32b.bmp"/>
       </win>
    </launcher>
 
