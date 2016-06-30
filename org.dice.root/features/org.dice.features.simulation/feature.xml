@@ -2,7 +2,7 @@
 <feature
       id="org.dice.features.simulation"
       label="DICE Simulation Feature"
-      version="0.1.6.qualifier"
+      version="0.1.0.qualifier"
       provider-name="DICE Project">
 
    <description url="https://vm-project-dice.doc.ic.ac.uk/redmine/projects/dice">
@@ -223,110 +223,21 @@ litigation
       <import feature="org.dice.features.acceleo" version="3.6.4.qualifier"/>
       <import feature="org.dice.features.pnml" version="2.2.12.qualifier"/>
       <import feature="org.dice.features.profiles" version="0.5.0.qualifier"/>
+      <import feature="es.unizar.disco.simulation.feature"/>
+      <import feature="es.unizar.disco.simulation.greatspn.feature"/>
+      <import feature="es.unizar.disco.simulation.quickstart.feature"/>
+      <import feature="es.unizar.disco.simulation.ui.feature"/>
+      <import feature="es.unizar.disco.ssh.feature"/>
+      <import feature="es.unizar.dsico.ssh.ui.feature"/>
+      <import feature="com.hierynomus.sshj.feature"/>
+      <import feature="org.dice.features.papyrus" version="2.0.0.qualifier"/>
    </requires>
-
-   <plugin
-         id="es.unizar.disco.simulation"
-         download-size="0"
-         install-size="0"
-         version="0.1.6.201604081552"
-         unpack="false"/>
-
-   <plugin
-         id="es.unizar.disco.simulation.greatspn.ssh"
-         download-size="0"
-         install-size="0"
-         version="0.1.6.201604081552"
-         unpack="false"/>
-
-   <plugin
-         id="es.unizar.disco.simulation.quickstart"
-         download-size="0"
-         install-size="0"
-         version="0.1.6.201604081552"
-         unpack="false"/>
-
-   <plugin
-         id="es.unizar.disco.simulation.ui"
-         download-size="0"
-         install-size="0"
-         version="0.1.6.201604081552"
-         unpack="false"/>
-
-   <plugin
-         id="es.unizar.disco.core"
-         download-size="0"
-         install-size="0"
-         version="0.1.6.201604081552"
-         unpack="false"/>
-
-   <plugin
-         id="es.unizar.disco.core.ui"
-         download-size="0"
-         install-size="0"
-         version="0.1.6.201604081552"
-         unpack="false"/>
-
-   <plugin
-         id="es.unizar.disco.pnconfig"
-         download-size="0"
-         install-size="0"
-         version="0.1.6.201604081552"
-         unpack="false"/>
-
-   <plugin
-         id="es.unizar.disco.pnextensions"
-         download-size="0"
-         install-size="0"
-         version="0.1.6.201604081552"
-         unpack="false"/>
-
-   <plugin
-         id="es.unizar.disco.pnml.m2m"
-         download-size="0"
-         install-size="0"
-         version="0.1.6.201604081552"
-         unpack="false"/>
-
-   <plugin
-         id="es.unizar.disco.pnml.m2t"
-         download-size="0"
-         install-size="0"
-         version="0.1.6.201604081552"
-         unpack="false"/>
-
-   <plugin
-         id="es.unizar.disco.ssh"
-         download-size="0"
-         install-size="0"
-         version="0.1.6.201604081552"
-         unpack="false"/>
-
-   <plugin
-         id="es.unizar.disco.ssh.ui"
-         download-size="0"
-         install-size="0"
-         version="0.1.6.201604081552"
-         unpack="false"/>
-
-   <plugin
-         id="com.hierynomus.sshj"
-         download-size="0"
-         install-size="0"
-         version="0.15.0.201602161613"/>
-
-   <plugin
-         id="org.eclipse.ui.intro.universal"
-         download-size="0"
-         install-size="0"
-         version="3.3.0.v20160519-1604"
-         unpack="false"/>
 
    <plugin
          id="org.dice.simulation"
          download-size="0"
          install-size="0"
-         version="0.1.0.qualifier"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>
