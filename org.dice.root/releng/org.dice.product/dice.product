@@ -80,6 +80,11 @@ org.eclipse.papyrus.infra.core.perspective
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
    </configurations>
 
+   <repositories>
+      <repository location="http://dice-project.github.io/DICE-Profiles/updates" enabled="true" />
+      <repository location="http://dice-project.github.io/DICE-Simulation/updates" enabled="true" />
+   </repositories>
+
    <preferencesInfo>
       <targetfile overwrite="false"/>
    </preferencesInfo>
