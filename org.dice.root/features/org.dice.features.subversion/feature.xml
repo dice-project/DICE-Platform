@@ -7,7 +7,6 @@
 
    <description url="https://vm-project-dice.doc.ic.ac.uk/redmine/projects/dice">
       DICE Platform
-Version: 1.0.0
 All rights reserved.
 New code and modifications are made available under the terms of the Eclipse Public License v1.0.
    </description>
@@ -218,7 +217,7 @@ litigation
    </license>
 
    <requires>
-      <import feature="org.dice.features.base" version="1.0.0.qualifier"/>
+      <import feature="org.dice.features.base" version="4.6.0.qualifier"/>
    </requires>
 
    <plugin

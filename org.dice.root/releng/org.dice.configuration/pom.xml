@@ -27,7 +27,7 @@
 		<subclipse.url>http://subclipse.tigris.org/update_1.12.x</subclipse.url>
 		<egit.url>http://download.eclipse.org/egit/updates</egit.url>
 		<ecf.url>http://download.eclipse.org/rt/ecf/3.13.1/site.p2/</ecf.url>
-		<pnml.url>http://pnml.lip6.fr/pnmlframework/updatesite/2.2.12/</pnml.url>
+		<pnml.url>http://pnml.lip6.fr/pnmlframework/updatesite/</pnml.url>
 		<dice-deployment.url>http://dice-project.github.io/DICE-Deployment-IDE-Plugin</dice-deployment.url>
 		<dice-verification.url>http://dice-project.github.io/DICE-Verification/updates</dice-verification.url>
 		<dice-profiles.url>http://dice-project.github.io/DICE-Profiles/updates</dice-profiles.url>

@@ -7,7 +7,6 @@
 
    <description url="https://vm-project-dice.doc.ic.ac.uk/redmine/projects/dice">
       DICE Platform
-Version: 1.0.0
 All rights reserved.
 New code and modifications are made available under the terms of the Eclipse Public License v1.0.
 
@@ -221,6 +220,13 @@ litigation
 
    <requires>
       <import feature="org.dice.features.base" version="4.6.0.qualifier"/>
+      <import plugin="it.polimi.dice.core"/>
+      <import plugin="it.polimi.dice.core.ui"/>
+      <import plugin="it.polimi.dice.profiles"/>
+      <import plugin="it.polimi.dice.verification"/>
+      <import plugin="it.polimi.dice.verification.ui"/>
+      <import plugin="it.polimi.dice.verification.uml2json"/>
+      <import plugin="it.polimi.dice.vtconfig"/>
    </requires>
 
    <plugin
@@ -228,55 +234,6 @@ litigation
          download-size="0"
          install-size="0"
          version="0.1.0.qualifier"
-         unpack="false"/>
-
-   <plugin
-         id="it.polimi.dice.core"
-         download-size="0"
-         install-size="0"
-         version="1.0.0.201605130950"
-         unpack="false"/>
-
-   <plugin
-         id="it.polimi.dice.core.ui"
-         download-size="0"
-         install-size="0"
-         version="1.0.0.201605130950"
-         unpack="false"/>
-
-   <plugin
-         id="it.polimi.dice.profiles"
-         download-size="0"
-         install-size="0"
-         version="1.0.0.201605130950"
-         unpack="false"/>
-
-   <plugin
-         id="it.polimi.dice.verification"
-         download-size="0"
-         install-size="0"
-         version="1.0.0.201605130950"
-         unpack="false"/>
-
-   <plugin
-         id="it.polimi.dice.verification.ui"
-         download-size="0"
-         install-size="0"
-         version="1.0.0.201605130950"
-         unpack="false"/>
-
-   <plugin
-         id="it.polimi.dice.verification.uml2json"
-         download-size="0"
-         install-size="0"
-         version="1.0.0.201605130950"
-         unpack="false"/>
-
-   <plugin
-         id="it.polimi.dice.vtconfig"
-         download-size="0"
-         install-size="0"
-         version="1.0.0.201605130950"
          unpack="false"/>
 
 </feature>
