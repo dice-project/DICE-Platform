@@ -221,79 +221,38 @@ litigation
    </requires>
 
    <plugin
-         id="com.collabnet.subversion.merge"
+         id="org.eclipse.team.svn"
          download-size="0"
          install-size="0"
-         version="4.1.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.tigris.subversion.clientadapter"
+         id="org.eclipse.team.svn.core"
          download-size="0"
          install-size="0"
-         version="1.10.3"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.tigris.subversion.clientadapter.javahl"
+         id="org.eclipse.team.svn.help"
          download-size="0"
          install-size="0"
-         version="1.9.3"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.tigris.subversion.clientadapter.javahl.win32"
-         os="win32"
-         ws="win32"
-         arch="x86"
+         id="org.eclipse.team.svn.ui"
          download-size="0"
          install-size="0"
-         version="1.9.3"
-         fragment="true"/>
-
-   <plugin
-         id="org.tigris.subversion.clientadapter.javahl.win64"
-         os="win32"
-         ws="win32"
-         arch="x86_64"
-         download-size="0"
-         install-size="0"
-         version="1.9.3"
-         fragment="true"/>
-
-   <plugin
-         id="org.tigris.subversion.subclipse.core"
-         download-size="0"
-         install-size="0"
-         version="1.10.12"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.tigris.subversion.subclipse.doc"
+         id="org.eclipse.team.svn.ui.startup"
          download-size="0"
          install-size="0"
-         version="1.3.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.tigris.subversion.subclipse.graph"
-         download-size="0"
-         install-size="0"
-         version="1.1.1"
-         unpack="false"/>
-
-   <plugin
-         id="org.tigris.subversion.subclipse.tools.usage"
-         download-size="0"
-         install-size="0"
-         version="1.1.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.tigris.subversion.subclipse.ui"
-         download-size="0"
-         install-size="0"
-         version="1.10.13"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>

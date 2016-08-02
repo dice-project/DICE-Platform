@@ -6,10 +6,10 @@ Bundle-Version: 0.1.0.qualifier
 Bundle-Activator: org.dice.simulation.SimulationActivator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- org.eclipse.debug.ui;bundle-version="3.11.101",
- es.unizar.disco.simulation.ui;bundle-version="0.1.6",
- org.eclipse.papyrus.uml.tools;bundle-version="1.1.4",
- es.unizar.disco.simulation;bundle-version="0.1.6"
+ org.eclipse.debug.ui,
+ es.unizar.disco.simulation.ui,
+ org.eclipse.papyrus.uml.tools,
+ es.unizar.disco.simulation
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: DICE Project
