@@ -222,7 +222,7 @@ litigation
          id="org.dice.rcp"
          download-size="0"
          install-size="0"
-         version="0.1.0.qualifier"
+         version="0.1.1.qualifier"
          unpack="false"/>
 
    <plugin
@@ -1678,7 +1678,7 @@ litigation
          id="org.dice.ui"
          download-size="0"
          install-size="0"
-         version="0.1.0.qualifier"
+         version="0.1.1.qualifier"
          unpack="false"/>
 
    <plugin
