@@ -12,7 +12,7 @@
 		<maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-		<dice.version>0.1.0</dice.version>
+		<dice.version>0.1.1</dice.version>
 		<dice.timestamp>${maven.build.timestamp}</dice.timestamp>
 
 		<tycho.version>0.25.0</tycho.version>
