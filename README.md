@@ -61,6 +61,11 @@ If you want to build your own DICE IDE, you need to follow these steps:
 	* Click on the menu Run -> Run configurations -> Maven Build -> DICE Builder. Then click on run button and wait.
 	* If no problems were found on the building process, you will have your files in "org.dice.product" plugin, at "org.dice.product/target/products" folder.
 
+# New version of the DICE IDE
+
+* Before building a new version of the RCP, you need to set up the new version number. You can do it modifying the pom.xml file from the "org.dice.configuration" project. Replace the <dice.version> property with the new version.
+* Also you need to change the features and plugins version number from the plugin.xml file, and the dependencies of the features too. You will know that all is well configured because when a feature points to a plugin with a failing version number, the feature is marked with a Warning. Also, the build of the product will fail too.
+
 # How Tycho works
 
 You can check how Tycho works by having a look at the pom.xml files. The main thing to have in consideration is the folder structure. All the projects and plugins are placed into a recommended folder structure at "org.dice.root" project. You can find this folders inside:
