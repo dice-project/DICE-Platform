@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="268">
+<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="269">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.dice.features.deployments.feature.group" version="0.1.2"/>
@@ -33,16 +33,6 @@
 <unit id="it.polimi.dice.verification.ui.feature.feature.group" version="1.0.0.201605130950"/>
 <unit id="it.polimi.dice.verification.feature.feature.group" version="1.0.0.201605130950"/>
 <repository location="http://dice-project.github.io/DICE-Verification/updates"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="es.unizar.disco.simulation.greatspn.feature.feature.group" version="0.3.2.201607281250"/>
-<unit id="com.hierynomus.sshj.feature.feature.group" version="0.16.0"/>
-<unit id="es.unizar.disco.ssh.feature.feature.group" version="0.3.2.201607281250"/>
-<unit id="es.unizar.disco.simulation.quickstart.feature.feature.group" version="0.3.2.201607281250"/>
-<unit id="es.unizar.dsico.ssh.ui.feature.feature.group" version="0.3.2.201607281250"/>
-<unit id="es.unizar.disco.simulation.feature.feature.group" version="0.3.2.201607281250"/>
-<unit id="es.unizar.disco.simulation.ui.feature.feature.group" version="0.3.2.201607281250"/>
-<repository location="http://dice-project.github.io/DICE-Simulation/updates"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.papyrus.extra.marte.feature.feature.group" version="1.2.0.201606080903"/>
@@ -184,6 +174,16 @@
 <unit id="com.masdes.dam.profile.feature.feature.group" version="0.6.0.201607111746"/>
 <unit id="es.unizar.disco.dice.profile.feature.feature.group" version="0.6.0.201607111746"/>
 <repository location="http://dice-project.github.io/DICE-Profiles/updates"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="es.unizar.disco.simulation.feature.feature.group" version="0.3.3.201609011724"/>
+<unit id="es.unizar.disco.ssh.feature.feature.group" version="0.3.3.201609011724"/>
+<unit id="es.unizar.disco.simulation.ui.feature.feature.group" version="0.3.3.201609011724"/>
+<unit id="com.hierynomus.sshj.feature.feature.group" version="0.16.0"/>
+<unit id="es.unizar.disco.simulation.greatspn.feature.feature.group" version="0.3.3.201609011724"/>
+<unit id="es.unizar.dsico.ssh.ui.feature.feature.group" version="0.3.3.201609011724"/>
+<unit id="es.unizar.disco.simulation.quickstart.feature.feature.group" version="0.3.3.201609011724"/>
+<repository location="http://dice-project.github.io/DICE-Simulation/updates"/>
 </location>
 </locations>
 <launcherArgs>
