@@ -47,7 +47,7 @@
     <packagedElement xmi:type="uml:Component" xmi:id="_q1Kj4OEZEeWI17F7oX02dQ" name="ATL 3.6.0">
       <packagedElement xmi:type="uml:Dependency" xmi:id="_tPp6IOUbEeWW3eVRuNk5hw" client="_q1Kj4OEZEeWI17F7oX02dQ" supplier="_js0y0OBWEeWNL_YKB8_3iw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Component" xmi:id="_B-yREOUbEeWW3eVRuNk5hw" name="Subclipse SVN 1.12.10">
+    <packagedElement xmi:type="uml:Component" xmi:id="_B-yREOUbEeWW3eVRuNk5hw" name="Subversive SVN 4.0.0">
       <packagedElement xmi:type="uml:Dependency" xmi:id="_sTlJoBaCEea6b5ddKgFqJw" client="_B-yREOUbEeWW3eVRuNk5hw" supplier="_eBirAOBWEeWNL_YKB8_3iw"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_CLM8cOUbEeWW3eVRuNk5hw" name="EGIT 4.4.0">
