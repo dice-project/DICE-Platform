@@ -12,7 +12,7 @@
 		<maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-		<dice.version>0.1.1</dice.version>
+		<dice.version>0.1.2</dice.version>
 		<dice.timestamp>${maven.build.timestamp}</dice.timestamp>
 
 		<tycho.version>0.25.0</tycho.version>
@@ -24,7 +24,6 @@
 		<orbit.url>http://download.eclipse.org/tools/orbit/downloads/drops/R20160520211859/repository</orbit.url>
 		<papyrus.url>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/neon/</papyrus.url>
 		<ocl.url>http://download.eclipse.org/modeling/mdt/ocl/updates/releases/6.1.0</ocl.url>
-		<subclipse.url>http://subclipse.tigris.org/update_1.12.x</subclipse.url>
 		<egit.url>http://download.eclipse.org/egit/updates</egit.url>
 		<ecf.url>http://download.eclipse.org/rt/ecf/3.13.1/site.p2/</ecf.url>
 		<pnml.url>http://pnml.lip6.fr/pnmlframework/updatesite/</pnml.url>
@@ -60,11 +59,6 @@
 			<id>ocl</id>
 			<layout>p2</layout>
 			<url>${ocl.url}</url>
-		</repository>
-		<repository>
-			<id>subclipse</id>
-			<layout>p2</layout>
-			<url>${subclipse.url}</url>
 		</repository>
 		<repository>
 			<id>egit</id>

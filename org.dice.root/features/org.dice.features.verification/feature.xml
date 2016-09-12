@@ -222,7 +222,6 @@ litigation
       <import feature="org.dice.features.base" version="4.6.0.qualifier"/>
       <import plugin="it.polimi.dice.core"/>
       <import plugin="it.polimi.dice.core.ui"/>
-      <import plugin="it.polimi.dice.profiles"/>
       <import plugin="it.polimi.dice.verification"/>
       <import plugin="it.polimi.dice.verification.ui"/>
       <import plugin="it.polimi.dice.verification.uml2json"/>

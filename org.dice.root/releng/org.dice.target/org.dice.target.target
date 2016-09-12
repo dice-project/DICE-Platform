@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="269">
+<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="270">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.dice.features.deployments.feature.group" version="0.1.2"/>
@@ -26,13 +26,6 @@
 <unit id="org.eclipse.ecf.filetransfer.feature.feature.group" version="3.13.1.v20160405-1820"/>
 <unit id="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature.feature.group" version="1.1.0.v20160405-1820"/>
 <repository location="http://download.eclipse.org/rt/ecf/3.13.1/site.p2/"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="it.polimi.dice.profiles.feature.feature.group" version="1.0.0.201605130950"/>
-<unit id="it.polimi.dice.verification.uml2json.feature.feature.group" version="1.0.0.201605130950"/>
-<unit id="it.polimi.dice.verification.ui.feature.feature.group" version="1.0.0.201605130950"/>
-<unit id="it.polimi.dice.verification.feature.feature.group" version="1.0.0.201605130950"/>
-<repository location="http://dice-project.github.io/DICE-Verification/updates"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.papyrus.extra.marte.feature.feature.group" version="1.2.0.201606080903"/>
@@ -184,6 +177,12 @@
 <unit id="es.unizar.dsico.ssh.ui.feature.feature.group" version="0.3.3.201609011724"/>
 <unit id="es.unizar.disco.simulation.quickstart.feature.feature.group" version="0.3.3.201609011724"/>
 <repository location="http://dice-project.github.io/DICE-Simulation/updates"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="it.polimi.dice.verification.uml2json.feature.feature.group" version="0.1.0.201609091443"/>
+<unit id="it.polimi.dice.verification.feature.feature.group" version="0.1.0.201609091443"/>
+<unit id="it.polimi.dice.verification.ui.feature.feature.group" version="0.1.0.201609091443"/>
+<repository location="http://dice-project.github.io/DICE-Verification/updates"/>
 </location>
 </locations>
 <launcherArgs>

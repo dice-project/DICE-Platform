@@ -64,7 +64,13 @@ If you want to build your own DICE IDE, you need to follow these steps:
 # New version of the DICE IDE
 
 * Before building a new version of the RCP, you need to set up the new version number. You can do it modifying the pom.xml file from the "org.dice.configuration" project. Replace the <dice.version> property with the new version.
-* Also you need to change the features and plugins version number from the plugin.xml file, and the dependencies of the features too. You will know that all is well configured because when a feature points to a plugin with a failing version number, the feature is marked with a Warning. Also, the build of the product will fail too.
+* Also you need to change the features and plugins version number from the plugin.xml file, and the dependencies of the features too. You will know that all is well configured because when a feature points to a plugin with a failing version number, the feature is marked with a Warning. Also, the build of the product will fail too. At least the following changes should be done:
+	* Change the version in the "org.dice.product/dice.product" file
+	* Change the version in the "org.dice.rcp/plugin.xml" file
+	* Change the version of the dependency in the "org.dice.features.base" feature to the "org.dice.rcp" plugin
+	* Change the property "dice.version" in the "org.dice.configuration/pom.xml" file
+
+* MAC Users: you need to change the permision of the DICE file: chmod 0744 DICE
 
 # How Tycho works
 
