@@ -216,12 +216,91 @@ Each party waives its rights to a jury trial in any resulting
 litigation
    </license>
 
-   <includes
-         id="org.eclipse.team.svn"
-         version="0.0.0"/>
-
    <requires>
       <import feature="org.dice.features.base" version="4.6.0.qualifier"/>
    </requires>
+
+   <plugin
+         id="org.tigris.subversion.clientadapter.svnkit"
+         download-size="0"
+         install-size="0"
+         version="1.8.12.1"
+         unpack="false"/>
+
+   <plugin
+         id="org.tmatesoft.svnkit"
+         download-size="0"
+         install-size="0"
+         version="1.8.12.r10533_v20160129_0158"
+         unpack="false"/>
+
+   <plugin
+         id="org.tigris.subversion.clientadapter"
+         download-size="0"
+         install-size="0"
+         version="1.9.4.1"
+         unpack="false"/>
+
+   <plugin
+         id="org.tigris.subversion.clientadapter.javahl"
+         download-size="0"
+         install-size="0"
+         version="1.9.4.1"
+         unpack="false"/>
+
+   <plugin
+         id="org.tigris.subversion.clientadapter.javahl.win32"
+         os="win32"
+         arch="x86"
+         download-size="0"
+         install-size="0"
+         version="1.9.4.201609101344"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.tigris.subversion.clientadapter.javahl.win64"
+         os="win32"
+         arch="x86_64"
+         download-size="0"
+         install-size="0"
+         version="1.9.4.201609101344"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.tigris.subversion.subclipse.core"
+         download-size="0"
+         install-size="0"
+         version="4.2.0.201609101435"
+         unpack="false"/>
+
+   <plugin
+         id="org.tigris.subversion.subclipse.graph"
+         download-size="0"
+         install-size="0"
+         version="4.2.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="org.tigris.subversion.subclipse.ui"
+         download-size="0"
+         install-size="0"
+         version="4.2.0.201609101435"
+         unpack="false"/>
+
+   <plugin
+         id="com.trilead.ssh2"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.tmatesoft.sqljet"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>

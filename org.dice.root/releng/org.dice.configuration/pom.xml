@@ -14,19 +14,23 @@
 
 		<dice.version>0.1.2</dice.version>
 		<dice.timestamp>${maven.build.timestamp}</dice.timestamp>
+		<dice.eclipse_base_version>Based on Eclipse Neon 4.6.1</dice.eclipse_base_version>
 
-		<tycho.version>0.25.0</tycho.version>
+		<tycho.version>0.26.0</tycho.version>
 
 		<!-- The repositories tend to be removed some day when the target platform 
 			works with Tycho. Nowadays there are some troubles with Neon -->
 		<eclipse-base.url>http://download.eclipse.org/releases/neon</eclipse-base.url>
 		<eclipse-updates.url>http://download.eclipse.org/eclipse/updates/4.6</eclipse-updates.url>
-		<orbit.url>http://download.eclipse.org/tools/orbit/downloads/drops/R20160520211859/repository</orbit.url>
+		<orbit.url>http://download.eclipse.org/tools/orbit/downloads/drops/S20160916162009/repository</orbit.url>
 		<papyrus.url>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/neon/</papyrus.url>
-		<ocl.url>http://download.eclipse.org/modeling/mdt/ocl/updates/releases/6.1.0</ocl.url>
+		<ocl.url>http://download.eclipse.org/modeling/mdt/ocl/updates/releases/6.2.1</ocl.url>
 		<egit.url>http://download.eclipse.org/egit/updates</egit.url>
-		<ecf.url>http://download.eclipse.org/rt/ecf/3.13.1/site.p2/</ecf.url>
-		<pnml.url>http://pnml.lip6.fr/pnmlframework/updatesite/</pnml.url>
+		<svn.url>https://dl.bintray.com/subclipse/releases/subclipse/latest/</svn.url>
+		<ecf.url>http://download.eclipse.org/rt/ecf/latest/site.p2</ecf.url>
+		<pnml.url>http://pnml.lip6.fr/pnmlframework/updatesite/2.2.12/</pnml.url>
+		<!-- <emfatic.url>http://download.eclipse.org/emfatic/update/</emfatic.url> -->
+		<!-- <epsilon.url>http://download.eclipse.org/epsilon/updates/</epsilon.url> -->
 		<dice-deployment.url>http://dice-project.github.io/DICE-Deployment-IDE-Plugin</dice-deployment.url>
 		<dice-verification.url>http://dice-project.github.io/DICE-Verification/updates</dice-verification.url>
 		<dice-profiles.url>http://dice-project.github.io/DICE-Profiles/updates</dice-profiles.url>
@@ -64,6 +68,11 @@
 			<id>egit</id>
 			<layout>p2</layout>
 			<url>${egit.url}</url>
+		</repository>
+		<repository>
+			<id>svn</id>
+			<layout>p2</layout>
+			<url>${svn.url}</url>
 		</repository>
 		<repository>
 			<id>ecf</id>

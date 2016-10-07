@@ -224,21 +224,21 @@ litigation
          id="org.eclipse.egit"
          download-size="0"
          install-size="0"
-         version="4.4.0.201606070830-r"
+         version="4.5.0.201609210915-r"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.egit.core"
          download-size="0"
          install-size="0"
-         version="4.4.0.201606070830-r"
+         version="4.5.0.201609210915-r"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.egit.ui"
          download-size="0"
          install-size="0"
-         version="4.4.0.201606070830-r"
+         version="4.5.0.201609210915-r"
          unpack="false"/>
 
    <plugin
@@ -270,17 +270,17 @@ litigation
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.jgit"
-         download-size="0"
-         install-size="0"
-         version="4.4.1.201607150455-r"
-         unpack="false"/>
-
-   <plugin
          id="javaewah"
          download-size="0"
          install-size="0"
          version="0.7.9.v201605172130"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jgit"
+         download-size="0"
+         install-size="0"
+         version="4.5.0.201609210915-r"
          unpack="false"/>
 
 </feature>

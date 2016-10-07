@@ -1,2 +1,3 @@
 0=${dice.version}
 1=${dice.timestamp}
+2=${dice.eclipse_base_version}

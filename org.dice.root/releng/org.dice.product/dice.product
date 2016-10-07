@@ -68,6 +68,7 @@ org.eclipse.papyrus.infra.core.perspective
       <feature id="org.dice.features.optimization" version="0.1.1.qualifier"/>
       <feature id="org.dice.features.monitoring" version="0.1.1.qualifier"/>
       <feature id="org.dice.features.verification" version="0.1.1.qualifier"/>
+      <feature id="org.dice.features.methodology" version="0.1.1.qualifier"/>
    </features>
 
    <configurations>

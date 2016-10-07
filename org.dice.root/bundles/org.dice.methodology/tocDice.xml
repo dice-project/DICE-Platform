@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="DICE Methodology">
+   <topic href="html/introduction/diceProject.html" label="The DICE Project">
+   </topic>
+   <topic href="html/introduction/diceIde.html" label="DICE IDE">
+   </topic>
+   <anchor id="ide"/>
+   <topic href="html/tools/index.html" label="DICE Tools">
+      <anchor id="diceTools"/>
+   </topic>
+</toc>

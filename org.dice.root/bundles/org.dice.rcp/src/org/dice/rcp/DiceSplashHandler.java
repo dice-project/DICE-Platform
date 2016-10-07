@@ -78,19 +78,24 @@ public class DiceSplashHandler extends BasicSplashHandler {
 			sbId.append("Unknown Build");
 		}
 
+		String eclipseBaseVersion = "";
+		if (mappings.length >= 3) {
+			eclipseBaseVersion = mappings[2];
+			if (eclipseBaseVersion.startsWith("$")) {
+				eclipseBaseVersion = "Unknown Eclipse Base Version";
+			}
+		}
+
 		Label idLabel = new Label(getContent(), SWT.LEFT);
 		idLabel.setForeground(getForeground());
 		idLabel.setBounds(new Rectangle(390, 105, 220, 40));
 		idLabel.setText(sbId.toString());
 		idLabel.setData(CSSSWTConstants.CSS_ID_KEY, CSS_ID_SPLASH_BUILD_ID);
 
-		StringBuilder sbBasedOn = new StringBuilder();
-		sbBasedOn.append("Based on Eclipse Neon 4.6.0");
-
 		Label basedOnLabel = new Label(getContent(), SWT.LEFT);
 		basedOnLabel.setForeground(getForeground());
 		basedOnLabel.setBounds(new Rectangle(190, 105, 220, 40));
-		basedOnLabel.setText(sbBasedOn.toString());
+		basedOnLabel.setText(eclipseBaseVersion);
 		basedOnLabel.setData(CSSSWTConstants.CSS_ID_KEY, CSS_ID_SPLASH_BUILD_ID);
 
 		toString();
