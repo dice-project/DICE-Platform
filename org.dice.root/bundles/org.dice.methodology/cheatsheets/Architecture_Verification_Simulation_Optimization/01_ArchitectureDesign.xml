@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet
+      title="Architecture Design">
+   <intro>
+      <description>
+         Find a service-oriented architecture that meets the requirements.
+      </description>
+   </intro>
+   <item
+         title="Step 1">
+      <description>
+         The DICE Methodology promotes the service-oriented architectural style. In service orientation, an application is designed as an aggregate of software components using and/or delivering services to other software components, typically over a network, via carefully-defined application programming interfaces (API), implemented on top of some communication protocols (e.g, HTTP). These APIs enable a client component to remotely activate a precise service’s behavior.
+      </description>
+   </item>
+   <item
+         title="Step 2">
+      <description>
+         Following service-orientation principles, the first step of The DICE Methodology for the architecture verification Once an architecture is envisioned, it is indispensable to classify the services thereof as internal or external. An external service must be provisioned in the production environment by Operators, while an internal service must be programmed by Developers, and deployed into it afterwards. An external service can be, for example, a software open-sourced on the Internet, or subcontracted to a company. This partitioning of services takes place during exhaustive deliberations between Developers and Operators. In other words, the DICE methodology innovates by integrating Operators into the development lifecycle from the beginning to the end of the project.ion scenario—the service-oriented architecture design (Figure 4)—consists in modeling a solution in terms of software components (or software nodes) serving and/or being ²served by other software components. For this activity, the modeling language endorsed by DICE is the UML Object diagram. The design can be accomplished both in a platform-independent and technology-specific manner by using respectively the DPIM and DTSM profiles. At the DPIM level, components are stereotyped as source nodes, storage nodes, computation nodes, or channel nodes; underlying technologies and communication protocols are not yet determined. It is only at the DTSM level that Developers can state, for instance, that a given storage node is actually a Cassandra cluster.
+      </description>
+   </item>
+   <item
+         title="Step 3">
+      <description>
+         Once an architecture is envisioned, it is indispensable to classify the services thereof as internal or external. An external service must be provisioned in the production environment by Operators, while an internal service must be programmed by Developers, and deployed into it afterwards. An external service can be, for example, a software open-sourced on the Internet, or subcontracted to a company. This partitioning of services takes place during exhaustive deliberations between Developers and Operators. In other words, the DICE methodology innovates by integrating Operators into the development lifecycle from the beginning to the end of the project.
+      </description>
+   </item>
+   
+</cheatsheet>

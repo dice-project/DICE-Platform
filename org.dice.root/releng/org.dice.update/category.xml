@@ -1,51 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.dice.features.acceleo_3.6.4.qualifier.jar" id="org.dice.features.acceleo" version="3.6.4.qualifier">
+   <feature url="features/org.dice.features.acceleo_3.6.5.qualifier.jar" id="org.dice.features.acceleo" version="3.6.5.qualifier">
       <category name="diceupdate"/>
    </feature>
    <feature url="features/org.dice.features.atl_3.6.0.qualifier.jar" id="org.dice.features.atl" version="3.6.0.qualifier">
       <category name="diceupdate"/>
    </feature>
-   <feature url="features/org.dice.features.base_4.6.0.qualifier.jar" id="org.dice.features.base" version="4.6.0.qualifier">
+   <feature url="features/org.dice.features.base_4.6.1.qualifier.jar" id="org.dice.features.base" version="4.6.1.qualifier">
       <category name="diceupdate"/>
    </feature>
    <feature url="features/org.dice.features.deployments_0.1.2.jar" id="org.dice.features.deployments" version="0.1.2">
       <category name="diceupdate"/>
    </feature>
+   <feature url="features/org.dice.features.dicer_1.0.0.qualifier.jar" id="org.dice.features.dicer" version="1.0.0.qualifier">
+      <category name="diceupdate"/>
+   </feature>
    <feature url="features/org.dice.features.emf_2.12.0.qualifier.jar" id="org.dice.features.emf" version="2.12.0.qualifier">
       <category name="diceupdate"/>
    </feature>
-   <feature url="features/org.dice.features.git_4.4.0.qualifier.jar" id="org.dice.features.git" version="4.4.0.qualifier">
+   <feature url="features/org.dice.features.git_4.5.0.qualifier.jar" id="org.dice.features.git" version="4.5.0.qualifier">
       <category name="diceupdate"/>
    </feature>
    <feature url="features/org.dice.features.gmf_1.10.0.qualifier.jar" id="org.dice.features.gmf" version="1.10.0.qualifier">
       <category name="diceupdate"/>
    </feature>
-   <feature url="features/org.dice.features.monitoring_0.1.0.qualifier.jar" id="org.dice.features.monitoring" version="0.1.0.qualifier">
+   <feature url="features/org.dice.features.jdt_3.12.1.qualifier.jar" id="org.dice.features.jdt" version="3.12.1.qualifier">
       <category name="diceupdate"/>
    </feature>
-   <feature url="features/org.dice.features.optimization_0.1.0.qualifier.jar" id="org.dice.features.optimization" version="0.1.0.qualifier">
+   <feature url="features/org.dice.features.methodology_0.1.3.qualifier.jar" id="org.dice.features.methodology" version="0.1.3.qualifier">
       <category name="diceupdate"/>
    </feature>
-   <feature url="features/org.dice.features.papyrus_2.0.0.qualifier.jar" id="org.dice.features.papyrus" version="2.0.0.qualifier">
+   <feature url="features/org.dice.features.monitoring_0.1.1.qualifier.jar" id="org.dice.features.monitoring" version="0.1.1.qualifier">
+      <category name="diceupdate"/>
+   </feature>
+   <feature url="features/org.dice.features.optimization_0.1.1.qualifier.jar" id="org.dice.features.optimization" version="0.1.1.qualifier">
+      <category name="diceupdate"/>
+   </feature>
+   <feature url="features/org.dice.features.papyrus_2.0.1.qualifier.jar" id="org.dice.features.papyrus" version="2.0.1.qualifier">
       <category name="diceupdate"/>
    </feature>
    <feature url="features/org.dice.features.pnml_2.2.12.qualifier.jar" id="org.dice.features.pnml" version="2.2.12.qualifier">
       <category name="diceupdate"/>
    </feature>
-   <feature url="features/org.dice.features.profiles_0.5.0.qualifier.jar" id="org.dice.features.profiles" version="0.5.0.qualifier">
+   <feature url="features/org.dice.features.profiles_0.9.0.qualifier.jar" id="org.dice.features.profiles" version="0.9.0.qualifier">
       <category name="diceupdate"/>
    </feature>
    <feature url="features/org.dice.features.qvto_3.6.0.qualifier.jar" id="org.dice.features.qvto" version="3.6.0.qualifier">
       <category name="diceupdate"/>
    </feature>
-   <feature url="features/org.dice.features.simulation_0.1.6.qualifier.jar" id="org.dice.features.simulation" version="0.1.6.qualifier">
+   <feature url="features/org.dice.features.simulation_0.3.4.qualifier.jar" id="org.dice.features.simulation" version="0.3.4.qualifier">
       <category name="diceupdate"/>
    </feature>
-   <feature url="features/org.dice.features.svn_1.12.10.qualifier.jar" id="org.dice.features.svn" version="1.12.10.qualifier">
+   <feature url="features/org.dice.features.svn_4.2.1.qualifier.jar" id="org.dice.features.svn" version="4.2.1.qualifier">
       <category name="diceupdate"/>
    </feature>
-   <feature url="features/org.dice.features.uml2_5.2.0.qualifier.jar" id="org.dice.features.uml2" version="5.2.0.qualifier">
+   <feature url="features/org.dice.features.uml2_5.2.1.qualifier.jar" id="org.dice.features.uml2" version="5.2.1.qualifier">
       <category name="diceupdate"/>
    </feature>
    <feature url="features/org.dice.features.verification_0.1.0.qualifier.jar" id="org.dice.features.verification" version="0.1.0.qualifier">
@@ -55,9 +64,6 @@
       <category name="diceupdate"/>
    </feature>
    <feature url="features/org.dice.features.xtext_2.10.0.qualifier.jar" id="org.dice.features.xtext" version="2.10.0.qualifier">
-      <category name="diceupdate"/>
-   </feature>
-   <feature url="features/org.dice.features.jdt_3.12.0.qualifier.jar" id="org.dice.features.jdt" version="3.12.0.qualifier">
       <category name="diceupdate"/>
    </feature>
    <category-def name="diceupdate" label="DICE IDE Update"/>

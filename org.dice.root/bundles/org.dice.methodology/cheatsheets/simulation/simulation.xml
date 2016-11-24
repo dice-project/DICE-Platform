@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet
+      title="Simulation Tool">
+   <intro>
+      <description>
+         This Cheat Sheet allows you to get started with Simulation Tool. It brings an step-by-step howto in order to start using this tool correctly.
+      </description>
+   </intro>
+   <item
+         title="Create or Select a DPIM/DTSM model">
+      <description>
+         Create a new DPIM/DTSM model or select an existing one from the Project Explorer view. A DPIM/DTSM model is an UML Class model annotated with the DICE DPIM profile.
+      </description>
+      <subitem
+            label="Create a new UML Class Model"
+            skip="true">
+         <command
+               required="false"
+               serialization="org.eclipse.papyrus.uml.diagram.clazz.CreateClassDiagramCommand"/>
+      </subitem>
+      <subitem
+            label="Open an existing UML Class Model. Browse the Project Explorer view, and open it."
+            skip="true">
+         <command
+               required="false"
+               serialization="org.eclipse.ui.views.showView(org.eclipse.ui.views.showView.viewId=org.eclipse.ui.navigator.ProjectExplorer)"/>
+      </subitem>
+   </item>
+   <item
+         title="Complete the model">
+      <description>
+          Complete the model creating the necessary elements
+      </description>
+      <subitem
+            label="Apply the DICE Profile to your class model in the Properties Views, by selecting it in Profile section"
+            skip="true">
+         <command
+               required="false"
+               serialization="org.eclipse.ui.views.showView(org.eclipse.ui.views.showView.viewId=org.eclipse.ui.views.PropertySheet)"/>
+      </subitem>
+   </item>
+   <item
+         title="Execute the Simulation tool">
+      <description>
+         When the model is done, use the Simulation tool button to configure and execute the Simulation Tool
+      </description>
+          <command
+               required="false"
+               serialization="org.dice.ui.simulationCommand"/>
+   </item>
+   <item
+         title="Set variables">
+      <description>
+         If the model has variables, then set them
+      </description>
+   </item>
+   <item
+         title="Run the configuration">
+      <description>
+         Finally, click the run button in order to execute the configuration for Simulation Tool
+      </description>
+   </item>
+</cheatsheet>

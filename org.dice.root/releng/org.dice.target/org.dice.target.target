@@ -1,27 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="284">
+<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="289">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.papyrus.extra.marte.feature.feature.group" version="1.2.0.201609141604"/>
 <unit id="org.eclipse.papyrus.extra.marte.properties.feature.feature.group" version="1.2.0.201609141604"/>
 <unit id="org.eclipse.papyrus.extra.marte.textedit.feature.feature.group" version="1.2.0.201609141604"/>
 <repository location="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/neon/"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.dice.features.deployments.feature.group" version="0.1.2"/>
-<repository location="http://dice-project.github.io/DICE-Deployment-IDE-Plugin"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="com.masdes.dam.profile.ui.feature.feature.group" version="0.6.0.201607111746"/>
-<unit id="com.masdes.dam.profile.feature.feature.group" version="0.6.0.201607111746"/>
-<unit id="es.unizar.disco.dice.profile.feature.feature.group" version="0.6.0.201607111746"/>
-<repository location="http://dice-project.github.io/DICE-Profiles/updates"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="it.polimi.dice.verification.ui.feature.feature.group" version="0.1.0.201609120835"/>
-<unit id="it.polimi.dice.verification.feature.feature.group" version="0.1.0.201609120835"/>
-<unit id="it.polimi.dice.verification.uml2json.feature.feature.group" version="0.1.0.201609120835"/>
-<repository location="http://dice-project.github.io/DICE-Verification/updates"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="com.google.inject.assistedinject" version="3.0.0.v201402270930"/>
@@ -52,88 +36,21 @@
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20160916162009/repository"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.epsilon.eunit.dt.emf.feature.feature.group" version="1.3.0.201602270002"/>
-<unit id="org.eclipse.epsilon.concordance.feature.feature.group" version="1.3.0.201602270002"/>
-<unit id="org.eclipse.epsilon.core.feature.feature.group" version="1.3.0.201602270002"/>
-<unit id="org.eclipse.epsilon.ewl.gmf.feature.feature.group" version="1.3.0.201602270002"/>
-<unit id="org.eclipse.epsilon.emc.spreadsheets.google.feature.feature.group" version="1.3.0.201602270002"/>
-<unit id="org.eclipse.epsilon.uml.feature.feature.group" version="1.3.0.201602270002"/>
-<unit id="org.eclipse.epsilon.emf.feature.feature.group" version="1.3.0.201602270002"/>
-<unit id="org.eclipse.epsilon.hutn.feature.feature.group" version="1.3.0.201602270002"/>
-<unit id="org.eclipse.epsilon.core.dt.feature.feature.group" version="1.3.0.201602270002"/>
-<unit id="org.eclipse.epsilon.emf.dt.feature.feature.group" version="1.3.0.201602270002"/>
-<unit id="org.eclipse.epsilon.uml.dt.feature.feature.group" version="1.3.0.201602270002"/>
-<unit id="org.eclipse.epsilon.emc.spreadsheets.excel.dt.feature.feature.group" version="1.3.0.201602270002"/>
-<unit id="org.eclipse.epsilon.hutn.dt.feature.feature.group" version="1.3.0.201602270002"/>
-<unit id="org.eclipse.epsilon.emc.spreadsheets.google.dt.feature.feature.group" version="1.3.0.201602270002"/>
-<unit id="org.eclipse.epsilon.evl.emf.validation.feature.feature.group" version="1.3.0.201602270002"/>
-<unit id="org.eclipse.epsilon.ewl.emf.feature.feature.group" version="1.3.0.201602270002"/>
-<unit id="org.eclipse.epsilon.eugenia.feature.feature.group" version="1.3.0.201602270002"/>
-<unit id="org.eclipse.epsilon.emc.graphml.feature.feature.group" version="1.3.0.201602270002"/>
-<unit id="org.eclipse.epsilon.emc.spreadsheets.feature.feature.group" version="1.3.0.201602270002"/>
-<unit id="org.eclipse.epsilon.emc.spreadsheets.excel.feature.feature.group" version="1.3.0.201602270002"/>
-<repository location="http://download.eclipse.org/epsilon/updates/"/>
+<unit id="org.dice.features.deployments.feature.group" version="0.1.2"/>
+<repository location="http://dice-project.github.io/DICE-Deployment-IDE-Plugin"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.emf.emfatic.feature.group" version="0.8.0.201507261242"/>
-<repository location="http://download.eclipse.org/emfatic/update/"/>
+<unit id="es.unizar.disco.dice.profile.feature.feature.group" version="0.9.0.201611110956"/>
+<unit id="ro.ieat.secureuml.profile.feature.feature.group" version="0.9.0.201611110956"/>
+<unit id="com.masdes.dam.profile.feature.feature.group" version="0.9.0.201611110956"/>
+<unit id="com.masdes.dam.profile.ui.feature.feature.group" version="0.9.0.201611110956"/>
+<repository location="http://dice-project.github.io/DICE-Profiles/updates"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="fr.lip6.pnml.framework.symmetricnet.feature.feature.group" version="2.2.12"/>
-<unit id="fr.lip6.pnml.framework.pthlpng.feature.feature.group" version="2.2.12"/>
-<unit id="fr.lip6.pnml.framework.sdk.feature.group" version="2.2.12"/>
-<unit id="fr.lip6.pnml.nupn.toolinfo.feature.feature.group" version="2.2.12"/>
-<unit id="fr.lip6.pnml.framework.coremodel.feature.feature.group" version="2.2.12"/>
-<unit id="fr.lip6.pnml.framework.ptnet.feature.feature.group" version="2.2.12"/>
-<unit id="fr.lip6.pnml.framework.utils.feature.feature.group" version="2.2.12"/>
-<unit id="fr.lip6.pnml.framework.3rdPart.feature.feature.group" version="2.2.12"/>
-<unit id="fr.lip6.pnml.framework.hlpn.feature.feature.group" version="2.2.12"/>
-<repository location="http://pnml.lip6.fr/pnmlframework/updatesite/2.2.12/"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.pde.feature.group" version="3.12.1.v20160907-1200"/>
-<unit id="org.eclipse.platform.sdk" version="4.6.1.M20160907-1200"/>
-<unit id="org.eclipse.rcp.source.feature.group" version="4.6.1.v20160907-1200"/>
-<unit id="org.eclipse.sdk.ide" version="4.6.1.M20160907-1200"/>
-<unit id="org.eclipse.pde.source.feature.group" version="3.12.1.v20160907-1200"/>
-<unit id="org.eclipse.platform.ide" version="4.6.1.M20160907-1200"/>
-<unit id="org.eclipse.rcp.feature.group" version="4.6.1.v20160907-1200"/>
-<unit id="org.eclipse.equinox.sdk.feature.group" version="3.12.0.v20160829-1338"/>
-<repository location="http://download.eclipse.org/eclipse/updates/4.6"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.ocl.master.feature.group" version="6.2.1.v20160808-1652"/>
-<repository location="http://download.eclipse.org/modeling/mdt/ocl/updates/releases/6.2.1"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="es.unizar.disco.simulation.feature.feature.group" version="0.3.3.201609011724"/>
-<unit id="es.unizar.disco.ssh.feature.feature.group" version="0.3.3.201609011724"/>
-<unit id="es.unizar.disco.simulation.ui.feature.feature.group" version="0.3.3.201609011724"/>
-<unit id="com.hierynomus.sshj.feature.feature.group" version="0.16.0"/>
-<unit id="es.unizar.disco.simulation.greatspn.feature.feature.group" version="0.3.3.201609011724"/>
-<unit id="es.unizar.dsico.ssh.ui.feature.feature.group" version="0.3.3.201609011724"/>
-<unit id="es.unizar.disco.simulation.quickstart.feature.feature.group" version="0.3.3.201609011724"/>
-<repository location="http://dice-project.github.io/DICE-Simulation/updates"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.tigris.subversion.clientadapter.javahl.feature.feature.group" version="1.9.4.201609101344"/>
-<unit id="org.tigris.subversion.subclipse.graph.feature.feature.group" version="4.2.0.1"/>
-<unit id="org.tmatesoft.svnkit.feature.group" version="1.8.12.r10533_v20160129_0158"/>
-<unit id="org.tigris.subversion.subclipse.feature.group" version="4.2.0.201609101435"/>
-<unit id="net.java.dev.jna.feature.group" version="4.1.0.v06022015_1911"/>
-<unit id="org.tigris.subversion.clientadapter.svnkit.feature.feature.group" version="1.8.12.1"/>
-<repository location="https://dl.bintray.com/subclipse/releases/subclipse/latest/"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.ecf.core.ssl.feature.feature.group" version="1.1.0.v20160823-2221"/>
-<unit id="org.eclipse.ecf.filetransfer.feature.feature.group" version="3.13.2.v20160823-2221"/>
-<unit id="org.eclipse.ecf.core.feature.group" version="3.13.2.v20160823-2221"/>
-<unit id="org.eclipse.ecf.remoteservice.sdk.feature.feature.group" version="3.13.2.v20160823-2221"/>
-<unit id="org.eclipse.ecf.filetransfer.ssl.feature.feature.group" version="1.1.0.v20160823-2221"/>
-<unit id="org.eclipse.ecf.core.feature.feature.group" version="1.3.0.v20160823-2221"/>
-<unit id="org.eclipse.ecf.filetransfer.httpclient4.feature.feature.group" version="3.13.2.v20160823-2221"/>
-<unit id="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature.feature.group" version="1.1.0.v20160823-2221"/>
-<repository location="http://download.eclipse.org/rt/ecf/latest/site.p2"/>
+<unit id="it.polimi.dice.verification.ui.feature.feature.group" version="0.1.0.201609120835"/>
+<unit id="it.polimi.dice.verification.feature.feature.group" version="0.1.0.201609120835"/>
+<unit id="it.polimi.dice.verification.uml2json.feature.feature.group" version="0.1.0.201609120835"/>
+<repository location="http://dice-project.github.io/DICE-Verification/updates"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.jst.webpageeditor.feature.feature.group" version="2.8.0.v201605262035"/>
@@ -188,9 +105,71 @@
 <repository location="http://download.eclipse.org/releases/neon"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.tigris.subversion.clientadapter.javahl.feature.feature.group" version="1.9.4.201609101344"/>
+<unit id="org.tigris.subversion.subclipse.feature.group" version="4.2.1.201611061650"/>
+<unit id="net.java.dev.jna.feature.group" version="4.1.0.v06022015_1911"/>
+<unit id="org.tigris.subversion.subclipse.graph.feature.feature.group" version="4.2.0.1"/>
+<unit id="org.tmatesoft.svnkit.feature.group" version="1.8.12.r10533_v20160129_0158"/>
+<unit id="org.tigris.subversion.clientadapter.svnkit.feature.feature.group" version="1.8.12.1"/>
+<repository location="https://dl.bintray.com/subclipse/releases/subclipse/latest/"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="es.unizar.disco.ssh.feature.feature.group" version="0.3.4.201611141035"/>
+<unit id="es.unizar.disco.simulation.ui.feature.feature.group" version="0.3.4.201611141035"/>
+<unit id="com.hierynomus.sshj.feature.feature.group" version="0.16.0"/>
+<unit id="es.unizar.disco.simulation.quickstart.feature.feature.group" version="0.3.4.201611141035"/>
+<unit id="es.unizar.disco.simulation.greatspn.feature.feature.group" version="0.3.4.201611141035"/>
+<unit id="es.unizar.disco.simulation.feature.feature.group" version="0.3.4.201611141035"/>
+<unit id="es.unizar.disco.ssh.ui.feature.feature.group" version="0.3.4.201611141035"/>
+<repository location="http://dice-project.github.io/DICE-Simulation/updates"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="fr.lip6.pnml.framework.symmetricnet.feature.feature.group" version="2.2.12"/>
+<unit id="fr.lip6.pnml.framework.pthlpng.feature.feature.group" version="2.2.12"/>
+<unit id="fr.lip6.pnml.framework.sdk.feature.group" version="2.2.12"/>
+<unit id="fr.lip6.pnml.nupn.toolinfo.feature.feature.group" version="2.2.12"/>
+<unit id="fr.lip6.pnml.framework.coremodel.feature.feature.group" version="2.2.12"/>
+<unit id="fr.lip6.pnml.framework.ptnet.feature.feature.group" version="2.2.12"/>
+<unit id="fr.lip6.pnml.framework.utils.feature.feature.group" version="2.2.12"/>
+<unit id="fr.lip6.pnml.framework.3rdPart.feature.feature.group" version="2.2.12"/>
+<unit id="fr.lip6.pnml.framework.hlpn.feature.feature.group" version="2.2.12"/>
+<repository location="http://pnml.lip6.fr/pnmlframework/updatesite/2.2.12/"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.pde.feature.group" version="3.12.1.v20160907-1200"/>
+<unit id="org.eclipse.platform.sdk" version="4.6.1.M20160907-1200"/>
+<unit id="org.eclipse.rcp.source.feature.group" version="4.6.1.v20160907-1200"/>
+<unit id="org.eclipse.sdk.ide" version="4.6.1.M20160907-1200"/>
+<unit id="org.eclipse.pde.source.feature.group" version="3.12.1.v20160907-1200"/>
+<unit id="org.eclipse.platform.ide" version="4.6.1.M20160907-1200"/>
+<unit id="org.eclipse.rcp.feature.group" version="4.6.1.v20160907-1200"/>
+<unit id="org.eclipse.equinox.sdk.feature.group" version="3.12.0.v20160829-1338"/>
+<repository location="http://download.eclipse.org/eclipse/updates/4.6"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.ocl.master.feature.group" version="6.2.1.v20160808-1652"/>
+<repository location="http://download.eclipse.org/modeling/mdt/ocl/updates/releases/6.2.1"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.egit.feature.group" version="4.5.0.201609210915-r"/>
 <unit id="org.eclipse.jgit.feature.group" version="4.5.0.201609210915-r"/>
 <repository location="http://download.eclipse.org/egit/updates"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.ecf.core.ssl.feature.feature.group" version="1.1.0.v20160823-2221"/>
+<unit id="org.eclipse.ecf.filetransfer.feature.feature.group" version="3.13.2.v20160823-2221"/>
+<unit id="org.eclipse.ecf.core.feature.group" version="3.13.2.v20160823-2221"/>
+<unit id="org.eclipse.ecf.remoteservice.sdk.feature.feature.group" version="3.13.2.v20160823-2221"/>
+<unit id="org.eclipse.ecf.filetransfer.ssl.feature.feature.group" version="1.1.0.v20160823-2221"/>
+<unit id="org.eclipse.ecf.core.feature.feature.group" version="1.3.0.v20160823-2221"/>
+<unit id="org.eclipse.ecf.filetransfer.httpclient4.feature.feature.group" version="3.13.2.v20160823-2221"/>
+<unit id="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature.feature.group" version="1.1.0.v20160823-2221"/>
+<repository location="http://download.eclipse.org/rt/ecf/latest/site.p2"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="it.polimi.dice.dicer.d4d.dependencies.feature.feature.group" version="1.0.0.201611220954"/>
+<unit id="it.polimi.dice.dicer.d4d.launcher.feature.feature.group" version="1.0.0.201611220954"/>
+<repository location="https://giorgiobart.github.io/updatesite/"/>
 </location>
 </locations>
 <launcherArgs>

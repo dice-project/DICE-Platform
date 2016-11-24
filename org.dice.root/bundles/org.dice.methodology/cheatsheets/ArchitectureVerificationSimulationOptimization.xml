@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compositeCheatsheet name="Architecture Verification, Simulation and Optimization">
+   <taskGroup kind="sequence" name="Architecture Verification, Simulation and Optimization" skip="false">
+      <intro>
+         In the architecture simulation and verification scenario, Developers get from System Orchestrators a list of requirements about the system to construct, and want to study models of possible production environments in order to predict behaviors and performances for different implementation strategies. This work is similar to the one done by engineering or consultancy offices for civil or aeronautical projects, such as the construction of a building, or the manufacturing of an aircraft. However, in these disciplines, the characteristics of the environment are imposed by natural physical conditions; whereas in software development, the characteristics of the production environment are negotiated with Operators. This use case is enabled thanks to the DICE/UML profile, the simulation tool, and the verification tool. Here are the stages to follow.
+      </intro>
+      <onCompletion>
+         Congratulations, you finished the Cheat Sheet for Architecture Verification, Simulation and Optimization!
+      </onCompletion>
+      <task kind="cheatsheet" name="Architecture Verification, Simulation and Optimization" skip="false">
+         <intro>
+            Start the Cheat Sheet for Architecture Verification, Simulation and Optimization
+         </intro>
+         <onCompletion>
+            Congratulations, you finished the Architecture Verification, Simulation and Optimization Task!
+         </onCompletion>
+         <param name="path" value="1_ArchitectureVerificationSimulationOptimization.xml">
+         </param>
+      </task>
+   </taskGroup>
+</compositeCheatsheet>

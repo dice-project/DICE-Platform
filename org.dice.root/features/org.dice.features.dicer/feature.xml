@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.dice.features.verification"
-      label="DICE Verification Feature"
-      version="0.1.0.qualifier"
+      id="org.dice.features.dicer"
+      label="DICE DICER Feature"
+      version="1.0.0.qualifier"
       provider-name="DICE Project">
 
    <description url="https://vm-project-dice.doc.ic.ac.uk/redmine/projects/dice">
@@ -220,19 +220,8 @@ litigation
 
    <requires>
       <import feature="org.dice.features.base" version="4.6.0.qualifier"/>
-      <import plugin="it.polimi.dice.core"/>
-      <import plugin="it.polimi.dice.core.ui"/>
-      <import plugin="it.polimi.dice.verification"/>
-      <import plugin="it.polimi.dice.verification.ui"/>
-      <import plugin="it.polimi.dice.verification.uml2json"/>
-      <import plugin="it.polimi.dice.vtconfig"/>
+      <import feature="it.polimi.dice.dicer.d4d.dependencies.feature" version="1.0.0.201611220954"/>
+      <import feature="it.polimi.dice.dicer.d4d.launcher.feature" version="1.0.0.201611220954"/>
    </requires>
-
-   <plugin
-         id="org.dice.verification"
-         download-size="0"
-         install-size="0"
-         version="0.1.1.qualifier"
-         unpack="false"/>
 
 </feature>

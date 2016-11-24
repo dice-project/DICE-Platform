@@ -2,7 +2,7 @@
 <feature
       id="org.dice.features.methodology"
       label="DICE Methodology Feature"
-      version="0.1.1.qualifier"
+      version="0.1.3.qualifier"
       provider-name="DICE Project">
 
    <description url="https://vm-project-dice.doc.ic.ac.uk/redmine/projects/dice">
@@ -228,14 +228,13 @@ litigation
          id="org.dice.methodology"
          download-size="0"
          install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.1.3.qualifier"/>
 
    <plugin
          id="org.eclipse.ui.forms"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="3.7.0.v20160518-1929"
          unpack="false"/>
 
 </feature>
