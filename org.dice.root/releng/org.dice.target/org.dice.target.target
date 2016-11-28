@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="289">
+<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="291">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.papyrus.extra.marte.feature.feature.group" version="1.2.0.201609141604"/>
@@ -34,10 +34,6 @@
 <unit id="org.apache.commons.codec" version="1.6.0.v201305230611"/>
 <unit id="org.apache.lucene.core" version="5.2.1.v20160301-1110"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20160916162009/repository"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.dice.features.deployments.feature.group" version="0.1.2"/>
-<repository location="http://dice-project.github.io/DICE-Deployment-IDE-Plugin"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="es.unizar.disco.dice.profile.feature.feature.group" version="0.9.0.201611110956"/>
@@ -167,8 +163,13 @@
 <repository location="http://download.eclipse.org/rt/ecf/latest/site.p2"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="it.polimi.dice.dicer.d4d.dependencies.feature.feature.group" version="1.0.0.201611220954"/>
-<unit id="it.polimi.dice.dicer.d4d.launcher.feature.feature.group" version="1.0.0.201611220954"/>
+<unit id="org.dice.features.deployments.feature.group" version="0.1.2"/>
+<repository location="http://dice-project.github.io/DICE-Deployment-IDE-Plugin/updates"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="it.polimi.dice.lwdg.dependencies.feature.feature.group" version="1.0.0.201611251843"/>
+<unit id="it.polimi.dice.lwdg.launcher.feature.feature.group" version="1.0.0.201611251843"/>
+<unit id="it.polimi.dice.lwdg.loadDemo.feature.feature.group" version="1.0.0.201611251843"/>
 <repository location="https://giorgiobart.github.io/updatesite/"/>
 </location>
 </locations>

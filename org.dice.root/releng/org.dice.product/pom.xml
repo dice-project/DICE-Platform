@@ -40,6 +40,14 @@
 						</goals>
 					</execution>
 				</executions>
+				<configuration>
+					<products>
+						<product>
+							<id>org.dice.rcp.dice</id>
+							<archiveFileName>dice-${dice.version}</archiveFileName>
+						</product>
+					</products>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
