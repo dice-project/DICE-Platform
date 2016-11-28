@@ -2,13 +2,13 @@
 
 This is the DICE Platform repository. It includes all the necessary plugins and features to build the DICE IDE.
 
-DICE IDE is based on Eclipse Neon 4.6.0 version. So if you want to build your own DICE IDE, you need Java 1.8 version at least.
+DICE IDE is based on Eclipse Neon 4.6.1 version. So if you want to build your own DICE IDE, you need Java 1.8 version at least.
 
 The DICE IDE is built using Tycho building technology, that uses maven to perform it (https://eclipse.org/tycho/).
 
 If you want to build your own DICE IDE, you need to follow these steps:
 
-* Download Eclipse 4.6.0, concretely the SDK distribution for your OS: http://download.eclipse.org/eclipse/downloads/drops4/R-4.6-201606061100/
+* Download Eclipse 4.6.1, concretely the SDK distribution for your OS: http://download.eclipse.org/eclipse/downloads/drops4/R-4.6.1-201609071200/
 * Start Eclipse, create a new workspace and import all the plugins:
 * You need to install GIT and MAVEN plugins
 	* GIT
