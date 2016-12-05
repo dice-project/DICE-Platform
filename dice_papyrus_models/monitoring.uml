@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_nbVGYLrHEeaEY8PkEXRd3w" name="RootElement">
+  <packagedElement xmi:type="uml:Component" xmi:id="_oN39oLrHEeaEY8PkEXRd3w" name="org.dice.features.monitoring">
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_oN39obrHEeaEY8PkEXRd3w" client="_oN39oLrHEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="simulation.uml#_T2c44LrEEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_oN39orrHEeaEY8PkEXRd3w" client="_oN39oLrHEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="simulation.uml#_T-nWYLrEEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_oN39o7rHEeaEY8PkEXRd3w" client="_oN39oLrHEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="simulation.uml#_UFBgYLrEEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_oN39pLrHEeaEY8PkEXRd3w" client="_oN39oLrHEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="simulation.uml#_ULf70LrEEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_oN39pbrHEeaEY8PkEXRd3w" client="_oN39oLrHEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="simulation.uml#_UWC-8LrEEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_oN39prrHEeaEY8PkEXRd3w" client="_oN39oLrHEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="simulation.uml#_QTprELrFEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_oN39p7rHEeaEY8PkEXRd3w" client="_oN39oLrHEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="simulation.uml#_O6_PALrFEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_oN39qLrHEeaEY8PkEXRd3w" client="_oN39oLrHEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="simulation.uml#_PB_18LrFEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_oN39qbrHEeaEY8PkEXRd3w" client="_oN39oLrHEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="simulation.uml#_Psp8gLrFEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_oN39qrrHEeaEY8PkEXRd3w" client="_oN39oLrHEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="verification.uml#_NtGqILrGEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_oN39q7rHEeaEY8PkEXRd3w" client="_oN39oLrHEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="verification.uml#_P9n7QLrGEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_oN39rLrHEeaEY8PkEXRd3w" client="_oN39oLrHEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="verification.uml#_QExsILrGEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_oN39rbrHEeaEY8PkEXRd3w" client="_oN39oLrHEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="verification.uml#_QMsSALrGEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_oN39rrrHEeaEY8PkEXRd3w" client="_oN39oLrHEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="verification.uml#_QT6UULrGEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_oN39r7rHEeaEY8PkEXRd3w" client="_oN39oLrHEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="verification.uml#_QaTQMLrGEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_oN39sLrHEeaEY8PkEXRd3w" client="_oN39oLrHEeaEY8PkEXRd3w" supplier="_oN39sbrHEeaEY8PkEXRd3w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_oN39sbrHEeaEY8PkEXRd3w" name="org.dice.features.base"/>
+</uml:Model>

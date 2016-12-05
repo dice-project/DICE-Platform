@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_3nL3sLrMEeaEY8PkEXRd3w" name="RootElement">
+  <packagedElement xmi:type="uml:Component" xmi:id="_6SuQ4LrMEeaEY8PkEXRd3w" name="it.polimi.dice.lwdg.loadDemo.feature"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_6SvfAbrMEeaEY8PkEXRd3w" name="org.dice.features.dicer">
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_6SvfArrMEeaEY8PkEXRd3w" client="_6SvfAbrMEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="simulation.uml#_T2c44LrEEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_6SvfA7rMEeaEY8PkEXRd3w" client="_6SvfAbrMEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="simulation.uml#_T-nWYLrEEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_6SvfBLrMEeaEY8PkEXRd3w" client="_6SvfAbrMEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="simulation.uml#_UFBgYLrEEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_6SvfBbrMEeaEY8PkEXRd3w" client="_6SvfAbrMEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="simulation.uml#_ULf70LrEEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_6SvfBrrMEeaEY8PkEXRd3w" client="_6SvfAbrMEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="simulation.uml#_UWC-8LrEEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_6SvfB7rMEeaEY8PkEXRd3w" client="_6SvfAbrMEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="simulation.uml#_QTprELrFEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_6SvfCLrMEeaEY8PkEXRd3w" client="_6SvfAbrMEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="simulation.uml#_O6_PALrFEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_6SvfCbrMEeaEY8PkEXRd3w" client="_6SvfAbrMEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="simulation.uml#_PB_18LrFEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_6SvfCrrMEeaEY8PkEXRd3w" client="_6SvfAbrMEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="simulation.uml#_Psp8gLrFEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_6SvfC7rMEeaEY8PkEXRd3w" client="_6SvfAbrMEeaEY8PkEXRd3w" supplier="_6SuQ4LrMEeaEY8PkEXRd3w"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_6SvfDLrMEeaEY8PkEXRd3w" client="_6SvfAbrMEeaEY8PkEXRd3w" supplier="_6SvfE7rMEeaEY8PkEXRd3w"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_6SvfDbrMEeaEY8PkEXRd3w" client="_6SvfAbrMEeaEY8PkEXRd3w" supplier="_6SvfFbrMEeaEY8PkEXRd3w"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_6SvfEbrMEeaEY8PkEXRd3w" client="_6SvfAbrMEeaEY8PkEXRd3w" supplier="_6SvfErrMEeaEY8PkEXRd3w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_6SvfErrMEeaEY8PkEXRd3w" name="org.dice.features.base"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_6SvfE7rMEeaEY8PkEXRd3w" name="it.polimi.dice.lwdg.dependencies.feature"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_6SvfFbrMEeaEY8PkEXRd3w" name="it.polimi.dice.lwdg.launcher.feature"/>
+</uml:Model>

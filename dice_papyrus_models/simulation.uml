@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_JiIwcLrEEeaEY8PkEXRd3w" name="RootElement">
+  <packagedElement xmi:type="uml:Component" xmi:id="_K-idALrEEeaEY8PkEXRd3w" name="org.dice.features.simulation">
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_b7ZmwLrEEeaEY8PkEXRd3w" client="_K-idALrEEeaEY8PkEXRd3w" supplier="_T2c44LrEEeaEY8PkEXRd3w"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_cLl-4LrEEeaEY8PkEXRd3w" client="_K-idALrEEeaEY8PkEXRd3w" supplier="_T-nWYLrEEeaEY8PkEXRd3w"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_ca_s0LrEEeaEY8PkEXRd3w" client="_K-idALrEEeaEY8PkEXRd3w" supplier="_UFBgYLrEEeaEY8PkEXRd3w"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_cs8YcLrEEeaEY8PkEXRd3w" client="_K-idALrEEeaEY8PkEXRd3w" supplier="_ULf70LrEEeaEY8PkEXRd3w"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_dKOxYLrEEeaEY8PkEXRd3w" client="_K-idALrEEeaEY8PkEXRd3w" supplier="_UWC-8LrEEeaEY8PkEXRd3w"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_Ww2_ELrFEeaEY8PkEXRd3w" client="_K-idALrEEeaEY8PkEXRd3w" supplier="_QTprELrFEeaEY8PkEXRd3w"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_gMSXsLrFEeaEY8PkEXRd3w" client="_K-idALrEEeaEY8PkEXRd3w" supplier="_O6_PALrFEeaEY8PkEXRd3w"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_kstO4LrFEeaEY8PkEXRd3w" client="_K-idALrEEeaEY8PkEXRd3w" supplier="_PB_18LrFEeaEY8PkEXRd3w"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_k66C8LrFEeaEY8PkEXRd3w" client="_K-idALrEEeaEY8PkEXRd3w" supplier="_Psp8gLrFEeaEY8PkEXRd3w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_T2c44LrEEeaEY8PkEXRd3w" name="es.unizar.disco.simulation.feature"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_T-nWYLrEEeaEY8PkEXRd3w" name="es.unizar.disco.simulation.greatspn.feature"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_UFBgYLrEEeaEY8PkEXRd3w" name="es.unizar.disco.simulation.quickstart.feature"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_ULf70LrEEeaEY8PkEXRd3w" name="es.unizar.simulation.ui.feature"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_UWC-8LrEEeaEY8PkEXRd3w" name="es.unizar.disco.ssh.feature"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_O6_PALrFEeaEY8PkEXRd3w" name="org.dice.features.acceleo"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_PB_18LrFEeaEY8PkEXRd3w" name="org.dice.features.pnml"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_Psp8gLrFEeaEY8PkEXRd3w" name="org.dice.features.profiles"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_QTprELrFEeaEY8PkEXRd3w" name="com.hierynomus.sshj.feature"/>
+</uml:Model>
