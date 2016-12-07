@@ -62,6 +62,7 @@ org.eclipse.papyrus.infra.core.perspective
       <feature id="org.dice.features.atl" version="3.6.0.qualifier"/>
       <feature id="org.dice.features.svn" version="4.2.1.qualifier"/>
       <feature id="org.dice.features.git" version="4.5.0.qualifier"/>
+      <feature id="org.dice.features.birt" version="4.6.0.qualifier"/>
       <feature id="org.dice.features.profiles" version="0.9.0.qualifier"/>
       <feature id="org.dice.features.simulation" version="0.3.4.qualifier"/>
       <feature id="org.dice.features.deployments" version="0.1.2"/>

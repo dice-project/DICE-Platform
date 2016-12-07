@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>org.dice.features</artifactId>
 	<name>DICE IDE - Features</name>
-    <packaging>pom</packaging>
+	<packaging>pom</packaging>
 
 	<parent>
 		<groupId>org.dice</groupId>
@@ -17,6 +17,7 @@
 		<module>org.dice.features.jdt</module>
 		<module>org.dice.features.subversion</module>
 		<module>org.dice.features.git</module>
+		<module>org.dice.features.birt</module>
 		<module>org.dice.features.emf</module>
 		<module>org.dice.features.pnml</module>
 		<module>org.dice.features.acceleo</module>
