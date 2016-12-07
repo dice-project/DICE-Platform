@@ -10,6 +10,7 @@
     <packagedElement xmi:type="uml:Dependency" xmi:id="_gMSXsLrFEeaEY8PkEXRd3w" client="_K-idALrEEeaEY8PkEXRd3w" supplier="_O6_PALrFEeaEY8PkEXRd3w"/>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_kstO4LrFEeaEY8PkEXRd3w" client="_K-idALrEEeaEY8PkEXRd3w" supplier="_PB_18LrFEeaEY8PkEXRd3w"/>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_k66C8LrFEeaEY8PkEXRd3w" client="_K-idALrEEeaEY8PkEXRd3w" supplier="_Psp8gLrFEeaEY8PkEXRd3w"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_bFKhMLxXEeaXAoPfUQl9pQ" client="_K-idALrEEeaEY8PkEXRd3w" supplier="_Y2itgLxXEeaXAoPfUQl9pQ"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Component" xmi:id="_T2c44LrEEeaEY8PkEXRd3w" name="es.unizar.disco.simulation.feature"/>
   <packagedElement xmi:type="uml:Component" xmi:id="_T-nWYLrEEeaEY8PkEXRd3w" name="es.unizar.disco.simulation.greatspn.feature"/>
@@ -20,4 +21,5 @@
   <packagedElement xmi:type="uml:Component" xmi:id="_PB_18LrFEeaEY8PkEXRd3w" name="org.dice.features.pnml"/>
   <packagedElement xmi:type="uml:Component" xmi:id="_Psp8gLrFEeaEY8PkEXRd3w" name="org.dice.features.profiles"/>
   <packagedElement xmi:type="uml:Component" xmi:id="_QTprELrFEeaEY8PkEXRd3w" name="com.hierynomus.sshj.feature"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_Y2itgLxXEeaXAoPfUQl9pQ" name="org.dice.features.birt"/>
 </uml:Model>

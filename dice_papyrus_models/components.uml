@@ -43,6 +43,7 @@
       <packagedElement xmi:type="uml:Dependency" xmi:id="_z_s5gOBYEeWNL_YKB8_3iw" client="_y7KTUOBYEeWNL_YKB8_3iw" supplier="_vIrLEOBWEeWNL_YKB8_3iw"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_0iFN0OBYEeWNL_YKB8_3iw" client="_y7KTUOBYEeWNL_YKB8_3iw" supplier="_mK5F0OBYEeWNL_YKB8_3iw"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_kWqGEBFCEeac_4PS_4DJkw" client="_y7KTUOBYEeWNL_YKB8_3iw" supplier="_KW4o0OBXEeWNL_YKB8_3iw"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_3aGoYLxVEeaXAoPfUQl9pQ" client="_y7KTUOBYEeWNL_YKB8_3iw" supplier="_pzRmULxVEeaXAoPfUQl9pQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_q1Kj4OEZEeWI17F7oX02dQ" name="ATL 3.6.0">
       <packagedElement xmi:type="uml:Dependency" xmi:id="_tPp6IOUbEeWW3eVRuNk5hw" client="_q1Kj4OEZEeWI17F7oX02dQ" supplier="_js0y0OBWEeWNL_YKB8_3iw"/>
@@ -76,6 +77,9 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_oCLDcLJBEeauNfMY7ucCOQ" name="Methodology 0.1.0">
       <packagedElement xmi:type="uml:Dependency" xmi:id="_oCLDcbJBEeauNfMY7ucCOQ" client="_oCLDcLJBEeauNfMY7ucCOQ" supplier="_eBirAOBWEeWNL_YKB8_3iw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_pzRmULxVEeaXAoPfUQl9pQ" name="Birt 4.6.0">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_2op9ULxVEeaXAoPfUQl9pQ" client="_pzRmULxVEeaXAoPfUQl9pQ" supplier="_eBirAOBWEeWNL_YKB8_3iw"/>
     </packagedElement>
   </packagedElement>
 </uml:Model>
