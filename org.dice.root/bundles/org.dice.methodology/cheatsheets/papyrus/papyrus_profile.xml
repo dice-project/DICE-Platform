@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet title="Apply a Profile to a UML Papyrus model">
+   <intro>
+      <description>If you have an UML Papyrus model created, and you want to apply some UML Profiles and Stereotype the elements, this cheat sheet will help you to do that</description>
+   </intro>
+   <item title="Apply profiles to the model">
+		<description>First of all, the profiles should be applied to the model</description>
+			<subitem>
+		  	<description>Open the model you want to apply the profiles to from the Project Explorer.</description>
+		</subitem>
+		<subitem>
+			<description>Open the Properties View through the menu "Window->Show view->Other" and select "General->Properties"</description>
+			<command required="false" serialization="org.eclipse.ui.views.showView(org.eclipse.ui.views.showView.viewId=org.eclipse.ui.views.PropertySheet)"></command>
+		</subitem>
+		<subitem>
+			<description>Select the Root Element of the model. If you are using the Papyrus Perspective, in the Model Explorer View just select the top root element. This element is the root of all the model and contains all the needed information applied to all the contents (like the profiles)</description>
+		</subitem>
+		<subitem>
+			<description>Select the Profile section in the Properties. Having the root element selected, you can select in the Properties view opened previously the Profile tab. Here you can add existing profiles to your model</description>
+		</subitem>
+		<subitem>
+			<description>Apply an existing registered Profile. In this tab, click the button "Apply registered profile" and a dialog will be opened listing all the registered profiles. Here you can select one or more profiles to be applied to the model. All the listed profiles are available from the Plug-ins. Click OK and the selected profiles will be applied</description>
+		</subitem>
+	</item>
+   <item title="Apply stereotypes to the model elements">
+   	<description>Once loaded the profiles in the model, you're ready for applying its Stereotypes to the model elements. This example will be applied to a Class Diagram</description>
+   	<subitem>
+   		<description>Select an existing element in the diagram (or create a new one). Having always the Profile tab opened in the Properties view, select an element in the diagram. If no one exists, create a new Class</description>
+   	</subitem>
+   	<subitem>
+   		<description>In the Profiles tab, click the "Apply stereotype" button. A new dialog appears and you can select those Stereotypes that are valid to be applied to the selected element, according the loaded Profiles</description></subitem>
+   	<subitem>
+   		<description>See how the element in the diagram has changed and shows now the applied Stereotypes</description></subitem>
+   	<subitem>
+   		<description>Each Stereotype may have properties. You can set all of them by expanding the Stereotype the list in the Profiles tab. The available values depends on the type of the Stereotype</description></subitem></item>
+</cheatsheet>

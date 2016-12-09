@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?NLS TYPE="org.eclipse.help.toc"?>
-
-<toc label="DICE IDE" link_to="tocDice.xml#ide"> 
-	<topic label="Introduction"  href="html/introduction/index.html"> 
-	</topic>
-</toc>
