@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet title="Create a new UML Papyrus Project">
+   <intro>
+      <description>In this cheat sheet you will learn how to create a new UML Papyrus Project</description>
+   </intro>
+   <item title="Open Papyrus Perspective" dialog="true">
+      <description>First step is to enable the Papyrus Perspective. Click on the menu "Window->Perspective->Open Perspective->Other" and select Papyrus from the list</description>
+      <command required="false" serialization="org.eclipse.ui.perspectives.showPerspective(org.eclipse.ui.perspectives.showPerspective.perspectiveId=org.eclipse.papyrus.infra.core.perspective,org.eclipse.ui.perspectives.showPerspective.newWindow=false)"></command></item>
+   <item title="Create a new project" dialog="true">
+   	<description>To create a new Project, simply click on the menu "File->New->Papyrus Project". The wizard to create the new project will be opened</description>
+   	<command required="false" serialization="org.eclipse.ui.newWizard(newWizardId=org.eclipse.papyrus.uml.diagram.wizards.createproject)"></command></item>
+   <item title="Configure the project properties" dialog="true">
+   	<description>In the first step, you need to specify the Language of the contained diagrams. Select UML as value and click on Next</description>
+   </item>
+   <item title="Set the project and default model name" dialog="true">
+   	<description>Set the project name in the field. Also you can set the name of the default model. Click on Next</description></item>
+   <item title="Select the kind of diagrams by default" dialog="true">
+   	<description>The default created model, can contain one or more diagrams by default. You can select them in this window. Also you can specify if you want to include the default basic primitives or not. The name of the root element of the model can be specified here too. And finally, you can choose a profile and apply it to the whole model (this step can be performed after creating the model). Click on Finish to complete the process</description></item>
+   <item title="Start modeling" dialog="true">
+   	<description>The default model is opened and now you can start modeling!</description>
+   	<subitem label="Add new diagrams if no one exists by clicking &quot;Create View&quot; button in the opened model"></subitem></item>
+</cheatsheet>
