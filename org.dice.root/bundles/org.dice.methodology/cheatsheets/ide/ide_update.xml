@@ -20,5 +20,7 @@
       </subitem>
    </item>
    <item title="Update the IDE manually">
-   	<description>You can always check if there are any update using the "Help->Check for updates" menu entry</description><command required="false" serialization="org.eclipse.equinox.p2.ui.sdk.update"></command></item>
+   	<description>You can always check if there are any update using the "Help->Check for updates" menu entry</description>
+   		<command required="false" serialization="org.eclipse.equinox.p2.ui.sdk.update"></command>
+   	</item>
 </cheatsheet>
