@@ -12,6 +12,12 @@
                label="DICE Monitoring Service"
                style="push">
          </command>
+         <command
+               commandId="org.dice.ui.monitoringVisualizationCommand"
+               icon="icons/monitoring.png"
+               label="DICE Monitoring Service Visualization UI"
+               style="push">
+         </command>
       </menuContribution>
    </extension>
    <extension
@@ -20,6 +26,11 @@
             defaultHandler="org.dice.monitoring.handlers.MonitoringHandler"
             id="org.dice.ui.monitoringCommand"
             name="DICE Monitoring Service">
+      </command>
+      <command
+            defaultHandler="org.dice.monitoring.handlers.MonitoringVisualizationHandler"
+            id="org.dice.ui.monitoringVisualizationCommand"
+            name="DICE Monitoring Service Visualization UI">
       </command>
    </extension>
    <extension

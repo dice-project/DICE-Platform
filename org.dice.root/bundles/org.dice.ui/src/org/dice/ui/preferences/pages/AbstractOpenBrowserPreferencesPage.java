@@ -24,11 +24,10 @@ public abstract class AbstractOpenBrowserPreferencesPage extends FieldEditorPref
 
 	@Override
 	protected void createFieldEditors() {
-		addField(new ComboFieldEditor(getProtocolIdProperty(), "Protocol", new String[][] {
-				{ PROTOCOL.HTTP.name(), PROTOCOL.HTTP.name() }, { PROTOCOL.HTTPS.name(), PROTOCOL.HTTPS.name() } },
-				getFieldEditorParent()));
-		addField(new StringFieldEditor(getServerIdProperty(), "Server", getFieldEditorParent()));
-		addField(new IntegerFieldEditor(getPortIdProperty(), "Port", getFieldEditorParent(), 5));
+		addProtocolField();
+		addServerField();
+		addPortField();
+		addPathField();
 	}
 
 	/**
@@ -38,6 +37,37 @@ public abstract class AbstractOpenBrowserPreferencesPage extends FieldEditorPref
 		getPluginPreferenceStore().setDefault(getProtocolIdProperty(), getDefaultProtocol());
 		getPluginPreferenceStore().setDefault(getServerIdProperty(), getDefaultServer());
 		getPluginPreferenceStore().setDefault(getPortIdProperty(), getDefaultPort());
+		getPluginPreferenceStore().setDefault(getPathIdProperty(), getDefaultPath());
+	}
+
+	/**
+	 * Adds the Protocol Field to the preferences page
+	 */
+	protected void addProtocolField() {
+		addField(new ComboFieldEditor(getProtocolIdProperty(), getProtocolLabel(), new String[][] {
+				{ PROTOCOL.HTTP.name(), PROTOCOL.HTTP.name() }, { PROTOCOL.HTTPS.name(), PROTOCOL.HTTPS.name() } },
+				getFieldEditorParent()));
+	}
+
+	/**
+	 * Adds the Server Field to the preferences page
+	 */
+	protected void addServerField() {
+		addField(new StringFieldEditor(getServerIdProperty(), getServerLabel(), getFieldEditorParent()));
+	}
+
+	/**
+	 * Adds the Port Field to the preferences page
+	 */
+	protected void addPortField() {
+		addField(new IntegerFieldEditor(getPortIdProperty(), getPortLabel(), getFieldEditorParent(), 5));
+	}
+
+	/**
+	 * Adds the Path Field to the preferences page
+	 */
+	protected void addPathField() {
+		addField(new StringFieldEditor(getPathIdProperty(), getPathLabel(), getFieldEditorParent()));
 	}
 
 	/**
@@ -51,6 +81,34 @@ public abstract class AbstractOpenBrowserPreferencesPage extends FieldEditorPref
 	 * The description for this Preferences Page
 	 */
 	protected abstract String getPageDescription();
+
+	/**
+	 * The label for the protocol attribute
+	 */
+	protected String getProtocolLabel() {
+		return "Protocol";
+	}
+
+	/**
+	 * The label for the server attribute
+	 */
+	protected String getServerLabel() {
+		return "Server";
+	}
+
+	/**
+	 * The label for the port attribute
+	 */
+	protected String getPortLabel() {
+		return "Port";
+	}
+
+	/**
+	 * The label for the path attribute
+	 */
+	protected String getPathLabel() {
+		return "Path";
+	}
 
 	/**
 	 * The ID of the Protocol property
@@ -68,6 +126,11 @@ public abstract class AbstractOpenBrowserPreferencesPage extends FieldEditorPref
 	public abstract String getPortIdProperty();
 
 	/**
+	 * The ID of the Path property
+	 */
+	public abstract String getPathIdProperty();
+
+	/**
 	 * The default value for Protocol property
 	 */
 	protected abstract String getDefaultProtocol();
@@ -78,22 +141,17 @@ public abstract class AbstractOpenBrowserPreferencesPage extends FieldEditorPref
 	protected abstract String getDefaultServer();
 
 	/**
-	 * The default valur for Port property
+	 * The default value for Port property
 	 */
 	protected abstract int getDefaultPort();
 
+	/**
+	 * The default value for Path property
+	 */
+	protected abstract String getDefaultPath();
+
 	protected enum PROTOCOL {
 		HTTP, HTTPS;
-	}
-
-	protected enum PORT {
-		P_80(80), P_8080(8080);
-
-		public int port;
-
-		private PORT(int port) {
-			this.port = port;
-		}
 	}
 
 }

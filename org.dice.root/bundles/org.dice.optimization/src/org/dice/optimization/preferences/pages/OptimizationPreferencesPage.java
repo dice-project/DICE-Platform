@@ -41,6 +41,11 @@ public class OptimizationPreferencesPage extends AbstractOpenBrowserPreferencesP
 	}
 
 	@Override
+	public String getPathIdProperty() {
+		return "optimization_path";
+	}
+
+	@Override
 	protected String getDefaultProtocol() {
 		return PROTOCOL.HTTP.name();
 	}
@@ -53,6 +58,11 @@ public class OptimizationPreferencesPage extends AbstractOpenBrowserPreferencesP
 	@Override
 	protected int getDefaultPort() {
 		return 8017;
+	}
+
+	@Override
+	protected String getDefaultPath() {
+		return "";
 	}
 
 }

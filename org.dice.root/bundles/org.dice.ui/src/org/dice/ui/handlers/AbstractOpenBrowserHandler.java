@@ -15,6 +15,7 @@ import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.browser.IWebBrowser;
@@ -39,30 +40,71 @@ public abstract class AbstractOpenBrowserHandler extends AbstractHandler {
 				browser = PlatformUI.getWorkbench().getBrowserSupport().getExternalBrowser();
 			}
 
-			IPreferenceStore store = getOpenBrowserPreferencesPage().getPluginPreferenceStore();
-			String protocol = store.getString(getOpenBrowserPreferencesPage().getProtocolIdProperty());
-			String server = store.getString(getOpenBrowserPreferencesPage().getServerIdProperty());
-			Integer port = store.getInt(getOpenBrowserPreferencesPage().getPortIdProperty());
-			port = port != null ? port : 80;
-			Map<String, String> parameters = new HashMap<String, String>();
-			fillRequestParameters(parameters);
-			String parametersString = parseMapParameters(parameters);
+			String protocol = getProtocol();
+			String server = getServer();
+			Integer port = getPort();
+			String path = getPath();
+			String parameters = getParameters();
 
-			URL url = new URL(protocol, server, port, parametersString);
+			URL url = new URL(protocol, server, port, path + parameters);
 
 			browser.openURL(url);
 		} catch (PartInitException e) {
-			MessageDialog.openError(PlatformUI.getWorkbench().getModalDialogShellProvider().getShell(),
-					"Error while opening the Web Browser",
+			MessageDialog.openError(getShell(), "Error while opening the Web Browser",
 					"An error occurred while opening the Web Browser. Try restarting the IDE. More details:\n"
 							+ e.getMessage());
 		} catch (MalformedURLException e) {
-			MessageDialog.openError(PlatformUI.getWorkbench().getModalDialogShellProvider().getShell(),
-					"Error while opening the Web Browser",
+			MessageDialog.openError(getShell(), "Error while opening the Web Browser",
 					"An error occurred while opening the URL. More details:\n" + e.getMessage());
 		}
 
 		return null;
+	}
+
+	protected Shell getShell() {
+		return PlatformUI.getWorkbench().getModalDialogShellProvider().getShell();
+	}
+
+	/**
+	 * Get the preferences store
+	 */
+	protected IPreferenceStore getStore() {
+		return getOpenBrowserPreferencesPage().getPluginPreferenceStore();
+	}
+
+	/**
+	 * Get the protocol from the preferences page
+	 */
+	protected String getProtocol() {
+		return getStore().getString(getOpenBrowserPreferencesPage().getProtocolIdProperty());
+	}
+
+	/**
+	 * Get the server from the preferences page
+	 */
+	protected String getServer() {
+		return getStore().getString(getOpenBrowserPreferencesPage().getServerIdProperty());
+	}
+
+	/**
+	 * Get the port from the preferences page
+	 */
+	protected Integer getPort() {
+		Integer port = getStore().getInt(getOpenBrowserPreferencesPage().getPortIdProperty());
+		return port != null ? port : 80;
+	}
+
+	/**
+	 * Get the path from the preferences page
+	 */
+	protected String getPath() {
+		return getStore().getString(getOpenBrowserPreferencesPage().getPathIdProperty());
+	}
+
+	protected String getParameters() {
+		Map<String, String> parameters = new HashMap<String, String>();
+		fillRequestParameters(parameters);
+		return parseMapParameters(parameters);
 	}
 
 	private String parseMapParameters(Map<String, String> parameters) {
