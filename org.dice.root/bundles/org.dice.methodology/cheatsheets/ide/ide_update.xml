@@ -2,12 +2,12 @@
 <cheatsheet title="Update the IDE">
    <intro>
       <description>
-      Here your will learn how you can update your IDE and keep all the components updated
+      Here you will learn how you can update your IDE and keep all the components updated
       </description>
    </intro>
    <item title="Configure the Preferences" dialog="true">
       <description>
-      First action is to configure property the Preferences of the IDE in order to set the used Update Sites and the IDE to indicate the updating period
+      FFirst action is to configure properly the Preferences of the IDE in order to set the used Update Sites and the IDE to indicate the updating period
       </description>
       <subitem label="Select &quot;Window-&gt;Preferences&quot; from the main menu and select the &quot;Install/Update&quot; entry. Here you can decide to see only the latest versions of all of them.">
          <command required="false" serialization="org.eclipse.ui.window.preferences(preferencePageId=org.eclipse.equinox.internal.p2.ui.sdk.ProvisioningPreferencePage)"></command>
