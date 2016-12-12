@@ -2652,4 +2652,25 @@ litigation
          version="1.2.0.201609141604"
          unpack="false"/>
 
+   <plugin
+         id="org.eclipse.papyrus.infra.nattable.gmfdiag"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.papyrus.sdk"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.papyrus.uml.textedit.valuespecification.xtext.source"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
 </feature>
