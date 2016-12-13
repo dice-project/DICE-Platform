@@ -163,6 +163,16 @@
             Learn how to deal with the DICE Delivery Tool with this simple Cheat Sheet
          </description>
       </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.tools.category"
+            composite="false"
+            contentFile="cheatsheets/tools/optimization.xml"
+            id="org.dice.methodology.cheatsheet.tools.optimization"
+            name="Optimization Tool">
+         <description>
+            Learn how to deal with the DICE Optimization Tool with this simple Cheat Sheet
+         </description>
+      </cheatsheet>
    </extension>
    
    
