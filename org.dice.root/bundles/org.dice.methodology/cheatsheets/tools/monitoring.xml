@@ -2,7 +2,7 @@
 <cheatsheet
       title="Monitoring Tool">
    <intro>
-      <description>This Cheat Sheet brings an example of use of the DICE Monitoring Tool. This tool is currently externally integrated, so the main functionality is in an external website or server</description>
+      <description>This Cheat Sheet brings an example of use of the DICE Monitoring Tool. This tool is currently externally integrated, so the main functionality remains in an external website or server</description>
       </intro>
    <item title="Configure the tool" dialog="true">
    	<description>Before launching the tool, you need to check the connection properties to the external website</description>

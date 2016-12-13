@@ -153,6 +153,16 @@
             Learn how to deal with the DICE Monitoring Tool with this simple Cheat Sheet
          </description>
       </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.tools.category"
+            composite="false"
+            contentFile="cheatsheets/tools/delivery.xml"
+            id="org.dice.methodology.cheatsheet.tools.delivery"
+            name="Delivery Tool">
+         <description>
+            Learn how to deal with the DICE Delivery Tool with this simple Cheat Sheet
+         </description>
+      </cheatsheet>
    </extension>
    
    
