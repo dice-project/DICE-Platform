@@ -97,4 +97,40 @@
             splashId="org.dice.rcp.splashHandler">
       </splashHandlerProductBinding>
    </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="org.dice.rcp.prespective.DicePerspective"
+            icon="icons/16.gif"
+            id="org.dice.rcp.perspective"
+            name="DICE">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.navigator.navigatorContent">
+      <commonWizard
+            type="new"
+            wizardId="org.eclipse.papyrus.uml.diagram.wizards.createproject">
+         <enablement>
+            <with
+                  variable="activeWorkbenchWindow.activePerspective">
+               <equals
+                     value="org.dice.rcp.perspective">
+               </equals>
+            </with>
+         </enablement>
+      </commonWizard>
+      <commonWizard
+            type="new"
+            wizardId="org.eclipse.papyrus.uml.diagram.wizards.createmodel">
+         <enablement>
+            <with
+                  variable="activeWorkbenchWindow.activePerspective">
+               <equals
+                     value="org.dice.rcp.perspective">
+               </equals>
+            </with>
+         </enablement>
+      </commonWizard>
+   </extension>
 </plugin>

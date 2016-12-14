@@ -15,7 +15,7 @@
 
    <launcherArgs>
       <programArgs>-perspective
-org.eclipse.papyrus.infra.core.perspective
+org.dice.rcp.perspective
       </programArgs>
       <vmArgs>-Xms256m
 -Xmx1024m
