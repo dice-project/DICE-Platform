@@ -10,7 +10,7 @@
       <command required="false" serialization="org.eclipse.ui.cheatsheets.openCheatSheet(cheatSheetId=org.dice.methodology.cheatsheet.papyrus.create)"></command>
    </item>
    <item title="Apply MARTE and DICE profiles to the model">
-   	<description>The model should be profiled using the MARTE and DICE profiles. For DICE, only DPIM profile, and for MARTE, MARTE_AnalysisModel profiles. There exists a Cheat Sheet for this purpose too "DICE Framework -> DICE Papyrus -> Profile and Stereotype Papyrus models". Execute it and apply these profiles to the model. Then come back to this Cheat Sheet</description>
+   	<description>The model should be profiled using the MARTE and DICE profiles. For DICE, only DPIM profile, and for MARTE, MARTE_AnalysisModel profile. There exists a Cheat Sheet for this purpose too "DICE Framework -> DICE Papyrus -> Profile and Stereotype Papyrus models". Execute it and apply these profiles to the model. Then come back to this Cheat Sheet</description>
    	<command required="false" serialization="org.eclipse.ui.cheatsheets.openCheatSheet(cheatSheetId=org.dice.methodology.cheatsheet.papyrus.profile)"></command></item>
    <item
          title="Create 2 diagrams to the model">
@@ -26,7 +26,7 @@
    <item title="Complete the Activity diagram">
    	<description>The Activity diagram should be completed adding some elements</description>
    	<subitem label='Add an "Initial Node" element inside the Activity'></subitem>
-   	<subitem label='Add an "Activity Partition" element inside the Activity. Open the Properties view, select the UML tab and set the property "Represents" to the Artifact created in the previous step. Use the "3 points" button and browse the tree model until you found the desired element'></subitem>
+   	<subitem label='Add an "Activity Partition" element inside the Activity. Open the Properties view, and select the UML tab and set the property "Represents" to the Artifact created in the previous step. Use the "3 points" button and browse the tree model until you found the desired element'></subitem>
    	<subitem label='Add an "Opaque Action" element inside the Activity Partition'></subitem>
    	<subitem label='Add an "Activity Final Node" element inside the Activity. This element is placed in the same entry of the Initial Node in the Palette'></subitem>
    	<subitem label='Add a "Control flow" link between the "Initial Node" and the "Opaque Action"'></subitem>
@@ -43,7 +43,7 @@
    	<subitem label='In the &lt;&lt;GaWorkloadEvent&gt;&gt; stereotype, browse its properties and set the value of the "pattern" property to "open=(arrivalRate=(expr=$rate, unit=Hz, statQ=mean, source=est))". This is a MARTE known value format for the work load'></subitem>
    	<subitem label='Select the "Activity", and go to the Properties view and select the Profile tab. Add a &lt;&lt;GaAnalysisContext&gt;&gt; and a &lt;&lt;DPIMscenario&gt;&gt; stereotypes'></subitem>
    	<subitem label='In the &lt;&lt;GaAnalysisContext&gt;&gt; stereotype, browse its properties and set the value of the "context" property to "out$responseTime" and "in$rate".'></subitem>
-   	<subitem label='In the &lt;&lt;DPIMscenatio&gt;&gt; stereotype, browse its properties and set the value of the "respT" property to "(expr=$responseTime, statQ=mean, source=calc)".'></subitem></item>
+   	<subitem label='In the &lt;&lt;DPIMscenario&gt;&gt; stereotype, browse its properties and set the value of the "respT" property to "(expr=$responseTime, statQ=mean, source=calc)".'></subitem></item>
    <item title="Configure the launching">
    	<description>In this step, the launching should be configured in order to obtain valid results.</description>
    	<subitem label='The configuration can be launched from the menu "DICE Tools -&gt; DICE Simulation Tool", or right click over the model in the Project Explorer, click on Run As... and DICE Simulation entry'></subitem>
@@ -54,7 +54,7 @@
    	<description>If the configuration gone ok, the final step is to see the results.</description>
    	<subitem label='Open the view to see the results. In the menu "Window -&gt; Show View -&gt; Other -&gt; DICE Simulation -&gt; Invocations Registry"'></subitem>
    	<subitem label="Double click over the identifier of the simulation"></subitem>
-   	<subitem label="A tree editor will be opened showing the results of the execution. It can be found the calculed response time in the simulation"></subitem>
+   	<subitem label="A tree editor will be opened showing the results of the execution. It can be found the calculated response time in the simulation"></subitem>
    </item>
 
 </cheatsheet>

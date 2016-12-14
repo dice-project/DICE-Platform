@@ -12,7 +12,7 @@
    <item title="Connect to the Monitoring Service Admin UI"><description>The Admin interface of Monitoring Service gives access to operations that manage the monitoring platform and the monitored nodes. Simply click on the menu "DICE Tools -> DICE Monitoring Service", and the website will be opened</description><command required="false" serialization="org.dice.ui.monitoringCommand"></command>
    	</item>
    <item title="Launch the Monitoring Service Visualization UI">
-   	<description>The Visualization interface of Monitoring Service enables end-users to create graphs out of collected monitored data. This interface is available on the menu "DICE Tools -> DICE Monitoring Service Visualization UI</description>
+   	<description>The Visualization interface of Monitoring Service enables end-users to create graphs out of collected monitored data. This interface is available on the menu "DICE Tools -> DICE Monitoring Service Visualization UI"</description>
    	<command required="false" serialization="org.dice.ui.monitoringVisualizationCommand"></command>
    </item>
 
