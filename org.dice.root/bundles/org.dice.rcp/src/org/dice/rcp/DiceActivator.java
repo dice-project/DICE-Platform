@@ -5,6 +5,9 @@ import org.osgi.framework.BundleContext;
 
 public class DiceActivator implements BundleActivator {
 
+	// The plug-in ID
+	public static final String PLUGIN_ID = "org.dice.rcp"; //$NON-NLS-1$
+
 	private static BundleContext context;
 
 	static BundleContext getContext() {

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/viewpoints/policy/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <notation:Diagram xmi:id="_LjlAQMN2EealSsGBCBb5Aw" type="PapyrusUMLActivityDiagram" name="DPIMactivity" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_LjlAQcN2EealSsGBCBb5Aw" type="Activity_Shape">
+      <children xmi:type="notation:DecorationNode" xmi:id="_LjlAQsN2EealSsGBCBb5Aw" type="Activity_NameLabel"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_LjlAQ8N2EealSsGBCBb5Aw" type="Activity_KeywordLabel"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_LjlARMN2EealSsGBCBb5Aw" type="Activity_ParameterCompartment">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_LjlARcN2EealSsGBCBb5Aw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_LjlARsN2EealSsGBCBb5Aw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LjlAR8N2EealSsGBCBb5Aw"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_LjlASMN2EealSsGBCBb5Aw" type="Activity_PreconditionCompartment">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_LjlAScN2EealSsGBCBb5Aw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_LjlASsN2EealSsGBCBb5Aw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LjlAS8N2EealSsGBCBb5Aw"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_LjlATMN2EealSsGBCBb5Aw" type="Activity_PostconditionCompartment">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_LjlATcN2EealSsGBCBb5Aw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_LjlATsN2EealSsGBCBb5Aw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LjlAT8N2EealSsGBCBb5Aw"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_LjlAUMN2EealSsGBCBb5Aw" type="Activity_ActivityNodeCompartment">
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LjlAUcN2EealSsGBCBb5Aw"/>
+      </children>
+      <element xmi:type="uml:Activity" href="DICEmodel.uml#_LiFLcMN2EealSsGBCBb5Aw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LjlAUsN2EealSsGBCBb5Aw"/>
+    </children>
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_LjlAU8N2EealSsGBCBb5Aw" name="diagram_compatibility_version" stringValue="1.2.0"/>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_LjlAVMN2EealSsGBCBb5Aw"/>
+    <styles xmi:type="style:PapyrusViewStyle" xmi:id="_LjlAVcN2EealSsGBCBb5Aw">
+      <owner xmi:type="uml:Model" href="DICEmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
+    </styles>
+    <element xmi:type="uml:Activity" href="DICEmodel.uml#_LiFLcMN2EealSsGBCBb5Aw"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_Lj_P8MN2EealSsGBCBb5Aw" type="PapyrusUMLClassDiagram" name="DTSMclass" measurementUnit="Pixel">
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_Lj_P8cN2EealSsGBCBb5Aw" name="diagram_compatibility_version" stringValue="1.2.0"/>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_Lj_P8sN2EealSsGBCBb5Aw"/>
+    <styles xmi:type="style:PapyrusViewStyle" xmi:id="_Lj_P88N2EealSsGBCBb5Aw">
+      <owner xmi:type="uml:Model" href="DICEmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
+    </styles>
+    <element xmi:type="uml:Model" href="DICEmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_LkJoAMN2EealSsGBCBb5Aw" type="PapyrusUMLDeploymentDiagram" name="DDSMdeployment" measurementUnit="Pixel">
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_LkJoAcN2EealSsGBCBb5Aw" name="diagram_compatibility_version" stringValue="1.2.0"/>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_LkJoAsN2EealSsGBCBb5Aw"/>
+    <styles xmi:type="style:PapyrusViewStyle" xmi:id="_LkJoA8N2EealSsGBCBb5Aw">
+      <owner xmi:type="uml:Model" href="DICEmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
+    </styles>
+    <element xmi:type="uml:Model" href="DICEmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_LkQ8wMN2EealSsGBCBb5Aw" type="PapyrusUMLComponentDiagram" name="DPIMcomponent" measurementUnit="Pixel">
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_LkQ8wcN2EealSsGBCBb5Aw" name="diagram_compatibility_version" stringValue="1.2.0"/>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_LkQ8wsN2EealSsGBCBb5Aw"/>
+    <styles xmi:type="style:PapyrusViewStyle" xmi:id="_LkQ8w8N2EealSsGBCBb5Aw">
+      <owner xmi:type="uml:Model" href="DICEmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
+    </styles>
+    <element xmi:type="uml:Model" href="DICEmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_LkgNUMN2EealSsGBCBb5Aw" type="PapyrusUMLSequenceDiagram" name="DTSMsequence" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_LkgNUcN2EealSsGBCBb5Aw" type="Interaction_Shape">
+      <children xmi:type="notation:DecorationNode" xmi:id="_LkgNUsN2EealSsGBCBb5Aw" type="Interaction_NameLabel"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_LkgNU8N2EealSsGBCBb5Aw" type="Interaction_SubfragmentCompartment">
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LkgNVMN2EealSsGBCBb5Aw"/>
+      </children>
+      <element xmi:type="uml:Interaction" href="DICEmodel.uml#_LkYRgMN2EealSsGBCBb5Aw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LkgNVcN2EealSsGBCBb5Aw"/>
+    </children>
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_LkgNVsN2EealSsGBCBb5Aw" name="diagram_compatibility_version" stringValue="1.2.0"/>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_LkgNV8N2EealSsGBCBb5Aw"/>
+    <styles xmi:type="style:PapyrusViewStyle" xmi:id="_LkgNWMN2EealSsGBCBb5Aw">
+      <owner xmi:type="uml:Model" href="DICEmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
+    </styles>
+    <element xmi:type="uml:Interaction" href="DICEmodel.uml#_LkYRgMN2EealSsGBCBb5Aw"/>
+  </notation:Diagram>
+</xmi:XMI>

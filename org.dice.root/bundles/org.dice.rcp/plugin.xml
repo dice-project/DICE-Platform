@@ -110,6 +110,18 @@
          point="org.eclipse.ui.navigator.navigatorContent">
       <commonWizard
             type="new"
+            wizardId="org.dice.rcp.wizard.project">
+         <enablement>
+            <with
+                  variable="activeWorkbenchWindow.activePerspective">
+               <equals
+                     value="org.dice.rcp.perspective">
+               </equals>
+            </with>
+         </enablement>
+      </commonWizard>
+      <commonWizard
+            type="new"
             wizardId="org.eclipse.papyrus.uml.diagram.wizards.createproject">
          <enablement>
             <with
@@ -132,5 +144,38 @@
             </with>
          </enablement>
       </commonWizard>
+   </extension>
+   <extension
+         id="diceNature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="org.dice.rcp.project.nature.DiceProjectNature">
+         </run>
+      </runtime>
+   </extension>
+   <extension
+         point="org.eclipse.ui.ide.projectNatureImages">
+      <image
+            icon="project_nature.gif"
+            id="org.dice.rcp.natureImage"
+            natureId="org.dice.rcp.diceNature">
+      </image>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="org.dice.rcp.wizard.category"
+            name="DICE">
+      </category>
+      <wizard
+            category="org.dice.rcp.wizard.category"
+            class="org.dice.rcp.project.DiceNewProjectWizard"
+            finalPerspective="org.dice.rcp.perspective"
+            icon="icons/16.gif"
+            id="org.dice.rcp.wizard.project"
+            name="DICE Project"
+            project="true">
+      </wizard>
    </extension>
 </plugin>
