@@ -28,19 +28,13 @@ We use Apache Storm as target technology for “WikistatsApplication” &lt;&lt;
    	<subitem label="From the bottom panel, select the proper stereotype for each component of the application. The stereotype is chosen according to the kind of the node, that can be either a data source (&lt;&lt;StormSpout&gt;&gt;) or a computational node (&lt;&lt;StormBolt&gt;&gt;)."></subitem>
    	<subitem label="Connect the nodes together through directed associations. Each association defines the subscription relation between two nodes: the subscriber, at the beginning of the arrow, and the subscribed node, at the end of the arrow. "></subitem>
    	<subitem label="The final topology which will be verified with D-VerT."></subitem>
-   	<subitem label="Before running the verification tool, specifies the values of the parameters related to the technology implementing the application."></subitem>
-   	<subitem label="Verify the topology with D-VerT. "></subitem>
    </item>
    <item title="DTSM modeling - specify the stereotype values">
    	<description>Before running the verification tool, specifies the values of the parameters related to the technology implementing the application.</description>
    	<subitem label="Select a node and define, in the bottom panel, all the information needed for the verification. The values that are required to verify the topology are the following: parallelism, alpha, sigma, for the bolts; parallelism, averageEmitRate for the spouts. "></subitem>
    </item>
    <item title="Verify the topology with D-VerT. " dialog="true">
-   	<description>
-   		Verify the topology with D-VerT by clicking on the Run
-   		configurations button. In “Run configuration”, provide the
-   		following informations:
-   	</description>
+   	<description>Verify the topology with D-VerT by clicking on the Run configurations button. In “Run configuration”, provide the following informations</description>
    	<subitem
    		label="The model to be verified (from the Browse menu)">
    	</subitem>
