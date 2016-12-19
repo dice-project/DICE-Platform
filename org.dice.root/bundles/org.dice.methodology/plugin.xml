@@ -173,6 +173,16 @@
             Learn how to deal with the DICE Optimization Tool with this simple Cheat Sheet
          </description>
       </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.tools.category"
+            composite="false"
+            contentFile="cheatsheets/tools/verification.xml"
+            id="org.dice.methodology.cheatsheet.tools.verification"
+            name="Verification Tool">
+         <description>
+            Learn how to deal with the DICE Verification Tool with this simple Cheat Sheet
+         </description>
+      </cheatsheet>
    </extension>
    
    
