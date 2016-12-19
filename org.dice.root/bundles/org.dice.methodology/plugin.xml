@@ -183,6 +183,16 @@
             Learn how to deal with the DICE Verification Tool with this simple Cheat Sheet
          </description>
       </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.tools.category"
+            composite="false"
+            contentFile="cheatsheets/tools/dicer.xml"
+            id="org.dice.methodology.cheatsheet.tools.dicer"
+            name="DICER Tool">
+         <description>
+            Learn how to deal with the DICE DICER Tool with this simple Cheat Sheet
+         </description>
+      </cheatsheet>
    </extension>
    
    

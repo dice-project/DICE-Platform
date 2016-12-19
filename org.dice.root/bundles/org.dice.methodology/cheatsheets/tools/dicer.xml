@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet
+      title="DICER Tool">
+   <intro>
+      <description>This Cheat Sheet brings an example of use of the DICE DICER Tool.</description>
+      </intro>
+   <item title="Prepare a DDSM diagram">
+   	<description>First of all the user is assumed to have prepared the DDSM diagram, in case you didn’t do this, jump to the appropriate Cheat Sheet to do that</description>
+   	<command required="false" serialization="org.eclipse.ui.cheatsheets.openCheatSheet(cheatSheetId=org.dice.methodology.cheatsheet.tools.simulation)"></command></item>
+   <item title="Generate the associated deployable TOSCA blueprint"><description>Following on, a rollout and deployment procedure can ensue exploiting the DICER plugin to generate the associated deployable TOSCA blueprint. In order to do so you right-click on the UML model on the model-navigator pane (usually in the left-hand side of the DICE IDE) and select to run through it a run configuration, specifically pressing the “DICER launcher” run-configuration.</description>
+   	</item>
+   <item title="Configure DICER run">
+   	<description>Pressing the appropriate run-configuration button (“Generate TOSCA Blueprint”) will lead to the run-configuration config: here you can set the URL to contact the DICER service (a local default is always present and pre-configured); you can optionally specify the path to the input model and for the output model to be placed.</description></item>
+   
+   <item title="Run the configuration">
+   	<description>Finally, you can click on the “run” button in the lower-right corner of the run-configuration pop-up window, to generate the TOSCA blueprint; Pressing F5 and refreshing the workspace will reveal the generated blueprint.</description></item>
+   <item title="See the results on the Delivery tool">
+   	<description>The TOSCA blueprint should be submitted that to the DICE Deployment Service for further processing - see the Deployment Service Cheat Sheet</description>
+   	<command required="false" serialization="org.eclipse.ui.cheatsheets.openCheatSheet(cheatSheetId=org.dice.methodology.cheatsheet.tools.delivery)"></command></item>
+
+</cheatsheet>
