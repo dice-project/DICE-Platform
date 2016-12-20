@@ -2,14 +2,14 @@
 <cheatsheet
       title="Optimization Tool">
    <intro>
-      <description>This Cheat Sheet brings an example of use of the DICE Optimization Tool. This tool is currently externally integrated, so the main functionality remains in an external website or server</description>
+      <description>This Cheat Sheet brings an example of use of the DICE Optimization Tool. This tool is currently externally integrated, so the main functionality remains in an external web server</description>
       </intro>
    <item title="Configure the tool" dialog="true">
-   	<description>Before launching the tool, you need to check the connection properties to the external website</description>
+   	<description>Before launching the tool, you need to check the connection properties to the external web server</description>
    	<subitem label="Open the preferences page of the Optimization Tool (Window -&gt; Preferences -&gt; DICE -&gt; Optimization Tool)">
    		<command required="false" serialization="org.eclipse.ui.window.preferences(preferencePageId=org.dice.ui.preferences.optimization)"></command></subitem>
    	<subitem label="Check the attributes of the preferences page and modify the values properly. This values are used when launching the tool"></subitem></item>
-   <item title="Launch the Optimization Service"><description>As the tool is externally integrated, the execution is very easy. Simply click on the menu "DICE Tools -> DICE Optimization Service", and the website will be opened</description><command required="false" serialization="org.dice.ui.optimizationCommand"></command>
+   <item title="Launch the Optimization Service"><description>As the tool is externally integrated, the execution is very easy. Simply click on the menu "DICE Tools -> DICE Optimization Service", and the web server will be opened</description><command required="false" serialization="org.dice.ui.optimizationCommand"></command>
    	</item>
 
 </cheatsheet>

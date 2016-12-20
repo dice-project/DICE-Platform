@@ -2,7 +2,7 @@
 <cheatsheet
       title="Delivery Tool">
    <intro>
-      <description>This Cheat Sheet will help you to deploy a Data Intensive Application in the test bed. This tool is currently externally integrated, so the main functionality remains in an external website or server</description>
+      <description>This Cheat Sheet will help you to deploy a Data Intensive Application in the test bed. This tool is currently externally integrated, so the main functionality remains in an external web server</description>
       </intro>
    <item title="Install the DICE Deployment Service">
    	<description>Before running the Deployment Tool from the IDE, you need to install the DICE deployment service within a server. You can find the full instructions in the following link: https://github.com/dice-project/DICE-Deployment-Service/wiki/Installation</description>
@@ -22,8 +22,8 @@
    	<subitem label="If you're using FCO, take the files from the folder &quot;storm/storm-fco.yaml&quot;">
    		<command required="false" serialization="org.eclipse.ui.browser.openBrowser(url=https://github.com/dice-project/DICE-Deployment-Examples/blob/master/storm/storm-fco.yaml,browserId=storm-fco,name=Storm FCO,tooltip=Storm FCO)"></command></subitem></item>
    <item title="Open a Deployment Service panel">
-   	<description>As the tool is externally integrated, the execution is very easy. Simply click on the menu "Deployment Service -> DICE Deployments Tool UI", and the website will be opened</description>
-   	<subitem label="Open the web browser website">
+   	<description>As the tool is externally integrated, the execution is very easy. Simply click on the menu "Deployment Service -> DICE Deployments Tool UI", and the web server will be opened</description>
+   	<subitem label="Open the web server">
    		<command required="false" serialization="org.dice.ui.deploymentsShowWebUI"></command></subitem>
    	<subitem label="Log into the DICE deployment service using your username and password."></subitem>
    	</item>
