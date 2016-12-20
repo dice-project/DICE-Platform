@@ -178,4 +178,43 @@
             project="true">
       </wizard>
    </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="org.dice.rcp.nature.addDiceNatureActionContribution"
+            objectClass="org.eclipse.core.resources.IProject">
+         <action
+               class="org.dice.rcp.project.nature.DiceProjectSwitchNatureAction"
+               id="org.dice.rcp.nature.addDiceNatureAction"
+               label="Add DICE Nature"
+               menubarPath="org.eclipse.ui.projectConfigure/additions">
+         </action>
+         <visibility>
+            <not>
+               <objectState
+                     name="nature"
+                     value="org.dice.rcp.diceNature">
+               </objectState>
+            </not>
+         </visibility>
+      </objectContribution>
+      <objectContribution
+            adaptable="true"
+            id="org.dice.rcp.nature.removeDiceNatureActionContribution"
+            objectClass="org.eclipse.core.resources.IProject">
+         <action
+               class="org.dice.rcp.project.nature.DiceProjectSwitchNatureAction"
+               id="org.dice.rcp.nature.removeDiceNatureAction"
+               label="Remove DICE Nature"
+               menubarPath="org.eclipse.ui.projectConfigure/additions">
+         </action>
+         <visibility>
+            <objectState
+                  name="nature"
+                  value="org.dice.rcp.diceNature">
+            </objectState>
+         </visibility>
+      </objectContribution>
+   </extension>
 </plugin>

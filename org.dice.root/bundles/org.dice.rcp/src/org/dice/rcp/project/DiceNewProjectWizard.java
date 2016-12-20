@@ -10,12 +10,9 @@ import java.nio.file.Path;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.StandardCopyOption;
 import java.nio.file.attribute.BasicFileAttributes;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 import org.dice.rcp.DiceActivator;
-import org.dice.rcp.project.nature.DiceProjectNature;
+import org.dice.rcp.project.nature.DiceProjectSwitchNatureAction;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectDescription;
 import org.eclipse.core.runtime.CoreException;
@@ -41,7 +38,7 @@ public class DiceNewProjectWizard extends BasicNewProjectResourceWizard {
 		IProject newProject = getNewProject();
 
 		try {
-			addDiceNature(newProject);
+			DiceProjectSwitchNatureAction.switchDiceNature(newProject);
 			copyDiceTemplate(newProject);
 			newProject.refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
 		} catch (CoreException | IOException e) {
@@ -50,19 +47,13 @@ public class DiceNewProjectWizard extends BasicNewProjectResourceWizard {
 		return true;
 	}
 
-	private void addDiceNature(IProject newProject) throws CoreException {
+	public static void addProjectComments(IProject newProject) throws CoreException {
 		IProjectDescription description = newProject.getDescription();
 		if (description == null) {
 			return;
 		}
 
-		List<String> natures = new ArrayList<>();
-		natures.addAll(Arrays.asList(description.getNatureIds()));
-		natures.add(DiceProjectNature.ID);
-
-		description.setNatureIds(natures.toArray(new String[0]));
 		description.setComment("This is a DICE template project created automatically with a sample UML model");
-
 		newProject.setDescription(description, new NullProgressMonitor());
 	}
 
