@@ -224,28 +224,28 @@ litigation
          id="org.eclipse.acceleo.common"
          download-size="0"
          install-size="0"
-         version="3.6.5.201608301456"
+         version="3.6.6.201610060831"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.acceleo.engine"
          download-size="0"
          install-size="0"
-         version="3.6.5.201608301456"
+         version="3.6.6.201610060831"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.acceleo.model"
          download-size="0"
          install-size="0"
-         version="3.6.5.201608301456"
+         version="3.6.6.201610060831"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.acceleo.profiler"
          download-size="0"
          install-size="0"
-         version="3.6.5.201608301456"
+         version="3.6.6.201610060831"
          unpack="false"/>
 
 </feature>

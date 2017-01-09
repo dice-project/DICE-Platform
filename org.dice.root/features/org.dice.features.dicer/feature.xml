@@ -218,10 +218,13 @@ Each party waives its rights to a jury trial in any resulting
 litigation
    </license>
 
+   <includes
+         id="org.eclipse.xsd"
+         version="0.0.0"/>
+
    <requires>
       <import feature="org.dice.features.base" version="4.6.0.qualifier"/>
       <import feature="it.polimi.dice.lwdg.loadDemo.feature" version="1.0.0.201611251843"/>
-      <import feature="it.polimi.dice.lwdg.dependencies.feature" version="1.0.0.201611251843"/>
       <import feature="it.polimi.dice.lwdg.launcher.feature" version="1.0.0.201611251843"/>
    </requires>
 

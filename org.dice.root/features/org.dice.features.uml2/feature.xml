@@ -224,77 +224,77 @@ litigation
          id="org.eclipse.uml2"
          download-size="0"
          install-size="0"
-         version="5.2.0.v20160822-0739"
+         version="5.2.0.v20161114-0827"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.uml2.uml"
          download-size="0"
          install-size="0"
-         version="5.2.1.v20160822-0739"
+         version="5.2.2.v20161114-0827"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.uml2.common"
          download-size="0"
          install-size="0"
-         version="2.1.0.v20160822-0739"
+         version="2.1.0.v20161114-0827"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.uml2.types"
          download-size="0"
          install-size="0"
-         version="2.0.0.v20160822-0739"
+         version="2.0.0.v20161114-0827"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.uml2.uml.edit"
          download-size="0"
          install-size="0"
-         version="5.2.1.v20160822-0739"
+         version="5.2.1.v20161114-0827"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.uml2.common.edit"
          download-size="0"
          install-size="0"
-         version="2.1.0.v20160822-0739"
+         version="2.1.0.v20161114-0827"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.uml2.uml.editor"
          download-size="0"
          install-size="0"
-         version="5.2.0.v20160822-0739"
+         version="5.2.0.v20161114-0827"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.uml2.codegen.ecore"
          download-size="0"
          install-size="0"
-         version="2.2.0.v20160822-0739"
+         version="2.2.0.v20161114-0827"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.uml2.uml.profile.standard"
          download-size="0"
          install-size="0"
-         version="1.0.100.v20160822-0739"
+         version="1.0.100.v20161114-0827"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.uml2.uml.resources"
          download-size="0"
          install-size="0"
-         version="5.2.0.v20160822-0739"
+         version="5.2.0.v20161114-0827"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.uml2.uml.validation"
          download-size="0"
          install-size="0"
-         version="5.0.0.v20160822-0739"
+         version="5.0.0.v20161114-0827"
          unpack="false"/>
 
 </feature>

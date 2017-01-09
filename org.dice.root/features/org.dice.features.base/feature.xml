@@ -299,7 +299,7 @@ litigation
          id="org.eclipse.compare"
          download-size="0"
          install-size="0"
-         version="3.6.0.v20160418-1534"
+         version="3.7.0.v20161024-1724"
          unpack="false"/>
 
    <plugin
@@ -362,7 +362,7 @@ litigation
          id="org.eclipse.core.filesystem"
          download-size="0"
          install-size="0"
-         version="1.6.0.v20160503-1608"
+         version="1.6.1.v20161113-2349"
          unpack="false"/>
 
    <plugin
@@ -405,7 +405,7 @@ litigation
          id="org.eclipse.core.resources"
          download-size="0"
          install-size="0"
-         version="3.11.0.v20160503-1608"
+         version="3.11.1.v20161107-2032"
          unpack="false"/>
 
    <plugin
@@ -493,7 +493,7 @@ litigation
          id="org.eclipse.e4.ui.css.core"
          download-size="0"
          install-size="0"
-         version="0.12.0.v20160505-1310"
+         version="0.12.1.v20161114-0210"
          unpack="false"/>
 
    <plugin
@@ -647,7 +647,7 @@ litigation
          id="org.eclipse.equinox.launcher"
          download-size="0"
          install-size="0"
-         version="1.3.200.v20160318-1642"
+         version="1.3.201.v20161025-1711"
          unpack="false"/>
 
    <plugin
@@ -657,7 +657,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="1.1.400.v20160518-1444"
+         version="1.1.401.v20161122-1740"
          fragment="true"/>
 
    <plugin
@@ -720,21 +720,21 @@ litigation
          id="org.eclipse.jface"
          download-size="0"
          install-size="0"
-         version="3.12.0.v20160518-1929"
+         version="3.12.1.v20160923-1528"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jface.databinding"
          download-size="0"
          install-size="0"
-         version="1.8.0.v20160420-2231"
+         version="1.8.1.v20161026-1531"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jface.text"
          download-size="0"
          install-size="0"
-         version="3.11.1.v20160819-1517"
+         version="3.11.2.v20161113-1700"
          unpack="false"/>
 
    <plugin
@@ -755,7 +755,7 @@ litigation
          id="org.eclipse.osgi"
          download-size="0"
          install-size="0"
-         version="3.11.1.v20160708-1632"
+         version="3.11.2.v20161107-1947"
          unpack="false"/>
 
    <plugin
@@ -777,7 +777,7 @@ litigation
          id="org.eclipse.swt"
          download-size="0"
          install-size="0"
-         version="3.105.1.v20160907-0248"
+         version="3.105.2.v20161122-0613"
          unpack="false"/>
 
    <plugin
@@ -787,7 +787,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="3.105.1.v20160907-0248"
+         version="3.105.2.v20161122-0613"
          fragment="true"
          unpack="false"/>
 
@@ -816,21 +816,21 @@ litigation
          id="org.eclipse.ui"
          download-size="0"
          install-size="0"
-         version="3.108.0.v20160518-1929"
+         version="3.108.1.v20160929-1045"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.console"
          download-size="0"
          install-size="0"
-         version="3.6.200.v20160518-1858"
+         version="3.6.201.v20161107-0337"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.editors"
          download-size="0"
          install-size="0"
-         version="3.10.0.v20160505-0931"
+         version="3.10.1.v20161106-1856"
          unpack="false"/>
 
    <plugin
@@ -851,7 +851,7 @@ litigation
          id="org.eclipse.ui.ide"
          download-size="0"
          install-size="0"
-         version="3.12.1.v20160823-0925"
+         version="3.12.2.v20161115-1450"
          unpack="false"/>
 
    <plugin
@@ -865,28 +865,28 @@ litigation
          id="org.eclipse.ui.intro"
          download-size="0"
          install-size="0"
-         version="3.5.1.v20160829-1558"
+         version="3.5.2.v20161116-1147"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.navigator"
          download-size="0"
          install-size="0"
-         version="3.6.100.v20160518-1929"
+         version="3.6.101.v20161006-1120"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.navigator.resources"
          download-size="0"
          install-size="0"
-         version="3.5.100.v20160518-1929"
+         version="3.5.101.v20161006-0640"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.themes"
          download-size="0"
          install-size="0"
-         version="1.1.200.v20160815-0536"/>
+         version="1.1.300.v20161107-1827"/>
 
    <plugin
          id="org.eclipse.ui.views"
@@ -917,7 +917,7 @@ litigation
          id="org.eclipse.ui.workbench"
          download-size="0"
          install-size="0"
-         version="3.108.1.v20160819-2118"
+         version="3.108.2.v20161025-2029"
          unpack="false"/>
 
    <plugin
@@ -987,7 +987,7 @@ litigation
          id="org.eclipse.debug.ui"
          download-size="0"
          install-size="0"
-         version="3.11.201.v20160825-1412"
+         version="3.11.202.v20161114-0338"
          unpack="false"/>
 
    <plugin
@@ -1050,7 +1050,7 @@ litigation
          id="org.eclipse.equinox.p2.updatechecker"
          download-size="0"
          install-size="0"
-         version="1.1.200.v20131119-0908"
+         version="1.1.300.v20161124-1529"
          unpack="false"/>
 
    <plugin
@@ -1196,7 +1196,7 @@ litigation
          id="org.eclipse.pde.core"
          download-size="0"
          install-size="0"
-         version="3.11.0.v20160510-1223"
+         version="3.11.1.v20161115-1951"
          unpack="false"/>
 
    <plugin
@@ -1224,7 +1224,7 @@ litigation
          id="org.eclipse.pde.launching"
          download-size="0"
          install-size="0"
-         version="3.6.400.v20160121-1248"
+         version="3.6.401.v20161115-0549"
          unpack="false"/>
 
    <plugin
@@ -1252,14 +1252,14 @@ litigation
          id="org.eclipse.pde.ui"
          download-size="0"
          install-size="0"
-         version="3.9.1.v20160813-1107"
+         version="3.9.100.v20161102-0517"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jdt.core"
          download-size="0"
          install-size="0"
-         version="3.12.1.v20160829-0950"
+         version="3.12.2.v20161117-1814"
          unpack="false"/>
 
    <plugin
@@ -1273,28 +1273,28 @@ litigation
          id="org.eclipse.jdt.launching"
          download-size="0"
          install-size="0"
-         version="3.8.100.v20160505-0636"
+         version="3.8.101.v20161111-2014"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jdt.ui"
          download-size="0"
          install-size="0"
-         version="3.12.1.v20160822-0645"
+         version="3.12.2.v20160929-0804"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.pde.api.tools"
          download-size="0"
          install-size="0"
-         version="1.1.1.v20160811-0626"
+         version="1.1.2.v20161115-0549"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.search"
          download-size="0"
          install-size="0"
-         version="3.11.0.v20160519-1501"
+         version="3.11.1.v20161113-1700"
          unpack="false"/>
 
    <plugin
@@ -1349,14 +1349,14 @@ litigation
          id="org.eclipse.ant.launching"
          download-size="0"
          install-size="0"
-         version="1.1.200.v20160418-1631"
+         version="1.1.201.v20161115-1135"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ant.ui"
          download-size="0"
          install-size="0"
-         version="3.6.200.v20160525-1820"
+         version="3.6.201.v20161115-1135"
          unpack="false"/>
 
    <plugin
@@ -1424,14 +1424,14 @@ litigation
          id="org.eclipse.pde"
          download-size="0"
          install-size="0"
-         version="3.12.1.v20160907-1200"
+         version="3.12.2.v20161124-1400"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.help.base"
          download-size="0"
          install-size="0"
-         version="4.1.0.v20160907-1200"
+         version="4.1.1.v20161124-1400"
          unpack="false"/>
 
    <plugin
@@ -1445,7 +1445,7 @@ litigation
          id="org.eclipse.ui.browser"
          download-size="0"
          install-size="0"
-         version="3.5.1.v20160712-0914"
+         version="3.5.2.v20161114-0210"
          unpack="false"/>
 
    <plugin
@@ -1455,7 +1455,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="1.1.400.v20160518-1444"
+         version="1.1.401.v20161122-1740"
          fragment="true"/>
 
    <plugin
@@ -1465,7 +1465,7 @@ litigation
          arch="x86"
          download-size="0"
          install-size="0"
-         version="1.1.400.v20160518-1444"
+         version="1.1.401.v20161122-1740"
          fragment="true"/>
 
    <plugin
@@ -1475,7 +1475,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="1.1.400.v20160518-1444"
+         version="1.1.401.v20161122-1740"
          fragment="true"/>
 
    <plugin
@@ -1485,7 +1485,7 @@ litigation
          arch="x86"
          download-size="0"
          install-size="0"
-         version="1.1.400.v20160518-1444"
+         version="1.1.401.v20161122-1740"
          fragment="true"/>
 
    <plugin
@@ -1495,7 +1495,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="3.105.1.v20160907-0248"
+         version="3.105.2.v20161122-0613"
          fragment="true"
          unpack="false"/>
 
@@ -1506,7 +1506,7 @@ litigation
          arch="x86"
          download-size="0"
          install-size="0"
-         version="3.105.1.v20160907-0248"
+         version="3.105.2.v20161122-0613"
          fragment="true"
          unpack="false"/>
 
@@ -1517,7 +1517,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="3.105.1.v20160907-0248"
+         version="3.105.2.v20161122-0613"
          fragment="true"
          unpack="false"/>
 
@@ -1528,7 +1528,7 @@ litigation
          arch="x86"
          download-size="0"
          install-size="0"
-         version="3.105.1.v20160907-0248"
+         version="3.105.2.v20161122-0613"
          fragment="true"
          unpack="false"/>
 
@@ -1713,7 +1713,7 @@ litigation
          id="org.eclipse.equinox.p2.ui.sdk.scheduler"
          download-size="0"
          install-size="0"
-         version="1.2.200.v20160504-1450"
+         version="1.3.0.v20161124-1529"
          unpack="false"/>
 
    <plugin
@@ -1825,7 +1825,7 @@ litigation
          id="org.eclipse.equinox.p2.transport.ecf"
          download-size="0"
          install-size="0"
-         version="1.1.200.v20160606-1311"
+         version="1.1.201.v20161115-1927"
          unpack="false"/>
 
    <plugin
@@ -1897,7 +1897,7 @@ litigation
          id="org.eclipse.jdt"
          download-size="0"
          install-size="0"
-         version="3.12.1.v20160907-1200"
+         version="3.12.2.v20161124-1400"
          unpack="false"/>
 
    <plugin
@@ -1983,6 +1983,13 @@ litigation
          download-size="0"
          install-size="0"
          version="1.6.0.v201305230611"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.xsd"
+         download-size="0"
+         install-size="0"
+         version="2.12.0.v20160526-0356"
          unpack="false"/>
 
 </feature>
