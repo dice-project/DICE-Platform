@@ -73,7 +73,7 @@
       <packagedElement xmi:type="uml:Dependency" xmi:id="_pAPqsbJAEeauNfMY7ucCOQ" client="_pAPqsLJAEeauNfMY7ucCOQ" supplier="_eBirAOBWEeWNL_YKB8_3iw"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_pVHHcLJAEeauNfMY7ucCOQ" name="Dicer 1.0.0">
-      <packagedElement xmi:type="uml:Dependency" xmi:id="_pVHHcbJAEeauNfMY7ucCOQ" client="_pVHHcLJAEeauNfMY7ucCOQ" supplier="_eBirAOBWEeWNL_YKB8_3iw"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_aJoq4NcjEeaMYpgEHxo6sQ" client="_pVHHcLJAEeauNfMY7ucCOQ" supplier="_Z2hmoOBXEeWNL_YKB8_3iw"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_oCLDcLJBEeauNfMY7ucCOQ" name="Methodology 0.1.3">
       <packagedElement xmi:type="uml:Dependency" xmi:id="_oCLDcbJBEeauNfMY7ucCOQ" client="_oCLDcLJBEeauNfMY7ucCOQ" supplier="_eBirAOBWEeWNL_YKB8_3iw"/>
