@@ -35,7 +35,7 @@
 		<dice-profiles.url>http://dice-project.github.io/DICE-Profiles/updates</dice-profiles.url>
 		<dice-simulation.url>http://dice-project.github.io/DICE-Simulation/updates</dice-simulation.url>
 		<dice-verification.url>http://dice-project.github.io/DICE-Verification/updates</dice-verification.url>
-		<dice-dicer.url>https://dice-project.github.io/DICER/repository</dice-dicer.url>
+		<dice-dicer.url>https://dice-project.github.io/DICER/updates</dice-dicer.url>
 	</properties>
 
 	<repositories>

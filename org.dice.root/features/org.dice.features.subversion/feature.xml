@@ -2,7 +2,7 @@
 <feature
       id="org.dice.features.svn"
       label="DICE Subclipse SVN Feature"
-      version="4.2.1.qualifier"
+      version="4.2.2.qualifier"
       provider-name="DICE Project">
 
    <description url="https://vm-project-dice.doc.ic.ac.uk/redmine/projects/dice">

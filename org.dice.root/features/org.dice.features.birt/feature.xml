@@ -217,7 +217,7 @@ litigation
    </license>
 
    <requires>
-      <import feature="org.dice.features.base" version="4.6.1.qualifier"/>
+      <import feature="org.dice.features.base" version="4.6.2.qualifier"/>
    </requires>
 
    <plugin

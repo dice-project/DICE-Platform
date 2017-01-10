@@ -2,7 +2,7 @@
 <feature
       id="org.dice.features.profiles"
       label="DICE Profiles Feature"
-      version="0.9.0.qualifier"
+      version="0.10.0.qualifier"
       provider-name="DICE Project">
 
    <description url="https://vm-project-dice.doc.ic.ac.uk/redmine/projects/dice">
@@ -219,7 +219,7 @@ litigation
    </license>
 
    <requires>
-      <import feature="org.dice.features.papyrus" version="2.0.0.qualifier"/>
+      <import feature="org.dice.features.papyrus" version="2.0.2.qualifier"/>
       <import feature="com.masdes.dam.profile.feature"/>
       <import feature="com.masdes.dam.profile.ui.feature"/>
       <import feature="es.unizar.disco.dice.profile.feature"/>

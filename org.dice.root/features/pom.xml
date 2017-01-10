@@ -36,7 +36,7 @@
 		<module>org.dice.features.verification</module>
 		<module>org.dice.features.profiles</module>
 		<module>org.dice.features.simulation</module>
-		<!-- <module>org.dice.features.dicer</module> -->
+		<module>org.dice.features.dicer</module>
 	</modules>
 
 </project>

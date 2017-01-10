@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="312">
+<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="314">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.pde.feature.group" version="3.12.2.v20161124-1400"/>
@@ -76,11 +76,6 @@
 <repository location="https://dl.bintray.com/subclipse/releases/subclipse/latest/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="it.polimi.dice.lwdg.loadDemo.feature.feature.group" version="1.0.0.201701021817"/>
-<unit id="it.polimi.dice.lwdg.launcher.feature.feature.group" version="1.0.0.201701021817"/>
-<repository location="https://dice-project.github.io/DICER/repository"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="fr.lip6.pnml.framework.pthlpng.feature.feature.group" version="2.2.12"/>
 <unit id="fr.lip6.pnml.framework.sdk.feature.group" version="2.2.12"/>
 <unit id="fr.lip6.pnml.nupn.toolinfo.feature.feature.group" version="2.2.12"/>
@@ -91,35 +86,6 @@
 <unit id="fr.lip6.pnml.framework.symmetricnet.feature.feature.group" version="2.2.12"/>
 <unit id="fr.lip6.pnml.framework.coremodel.feature.feature.group" version="2.2.12"/>
 <repository location="http://pnml.lip6.fr/pnmlframework/updatesite/2.2.12/"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.apache.lucene.queries" version="3.5.0.v20120725-1805"/>
-<unit id="org.apache.ant" version="1.9.6.v201510161327"/>
-<unit id="com.google.inject" version="3.0.0.v201605172100"/>
-<unit id="org.apache.batik.parser" version="1.7.0.v201011041433"/>
-<unit id="org.apache.lucene.analysis" version="3.5.0.v20120725-1805"/>
-<unit id="org.apache.batik.ext.awt" version="1.7.0.v201011041433"/>
-<unit id="org.apache.batik.xml" version="1.7.0.v201011041433"/>
-<unit id="org.apache.batik.swing" version="1.7.0.v201302011158"/>
-<unit id="org.apache.batik.bridge" version="1.7.0.v201011041433"/>
-<unit id="org.apache.lucene.misc" version="3.5.0.v20120725-1805"/>
-<unit id="org.apache.batik.svggen" version="1.7.0.v201011041433"/>
-<unit id="org.apache.lucene.core" version="5.2.1.v20160301-1110"/>
-<unit id="org.apache.batik.pdf" version="1.6.0.v201105071520"/>
-<unit id="com.google.inject.assistedinject" version="3.0.0.v201402270930"/>
-<unit id="com.google.gson" version="2.2.4.v201311231704"/>
-<unit id="org.apache.batik.transcoder" version="1.7.0.v201011041433"/>
-<unit id="org.apache.commons.io" version="2.2.0.v201405211200"/>
-<unit id="org.apache.batik.dom.svg" version="1.7.0.v201011041433"/>
-<unit id="org.apache.commons.lang3" version="3.1.0.v201403281430"/>
-<unit id="org.apache.batik.css" version="1.7.0.v201011041433"/>
-<unit id="org.apache.batik.util.gui" version="1.7.0.v200903091627"/>
-<unit id="org.apache.batik.util" version="1.7.0.v201011041433"/>
-<unit id="org.apache.lucene" version="3.5.0.v20120725-1805"/>
-<unit id="org.apache.batik.extension" version="1.7.0.v201011041433"/>
-<unit id="org.apache.batik.dom" version="1.7.1.v201505191845"/>
-<unit id="org.apache.commons.codec" version="1.6.0.v201305230611"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20160916162009/repository"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.jst.server_adapters.ext.feature.feature.group" version="3.3.501.v201609071751"/>
@@ -174,6 +140,41 @@
 <unit id="org.eclipse.wst.common.fproj.feature.group" version="3.7.0.v201505072140"/>
 <unit id="org.eclipse.gmf.runtime.notation.sdk.feature.group" version="1.10.0.201606071631"/>
 <repository location="http://download.eclipse.org/releases/neon"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="it.polimi.dice.lwdg.launcher.feature.feature.group" version="1.0.0.201701091600"/>
+<unit id="it.polimi.dice.lwdg.loadDemo.feature.feature.group" version="1.0.0.201701091600"/>
+<repository location="https://dice-project.github.io/DICER/updates"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.apache.lucene.queries" version="3.5.0.v20120725-1805"/>
+<unit id="org.apache.ant" version="1.9.6.v201510161327"/>
+<unit id="com.google.inject" version="3.0.0.v201605172100"/>
+<unit id="org.apache.batik.parser" version="1.7.0.v201011041433"/>
+<unit id="org.apache.lucene.analysis" version="3.5.0.v20120725-1805"/>
+<unit id="org.apache.batik.ext.awt" version="1.7.0.v201011041433"/>
+<unit id="org.apache.batik.xml" version="1.7.0.v201011041433"/>
+<unit id="org.apache.batik.swing" version="1.7.0.v201302011158"/>
+<unit id="org.apache.batik.bridge" version="1.7.0.v201011041433"/>
+<unit id="org.apache.lucene.misc" version="3.5.0.v20120725-1805"/>
+<unit id="org.apache.batik.svggen" version="1.7.0.v201011041433"/>
+<unit id="org.apache.lucene.core" version="5.2.1.v20160301-1110"/>
+<unit id="org.apache.commons.httpclient" version="3.1.0.v201012070820"/>
+<unit id="org.apache.batik.pdf" version="1.6.0.v201105071520"/>
+<unit id="com.google.inject.assistedinject" version="3.0.0.v201402270930"/>
+<unit id="com.google.gson" version="2.2.4.v201311231704"/>
+<unit id="org.apache.batik.transcoder" version="1.7.0.v201011041433"/>
+<unit id="org.apache.commons.io" version="2.2.0.v201405211200"/>
+<unit id="org.apache.batik.dom.svg" version="1.7.0.v201011041433"/>
+<unit id="org.apache.commons.lang3" version="3.1.0.v201403281430"/>
+<unit id="org.apache.batik.css" version="1.7.0.v201011041433"/>
+<unit id="org.apache.batik.util.gui" version="1.7.0.v200903091627"/>
+<unit id="org.apache.batik.util" version="1.7.0.v201011041433"/>
+<unit id="org.apache.lucene" version="3.5.0.v20120725-1805"/>
+<unit id="org.apache.batik.extension" version="1.7.0.v201011041433"/>
+<unit id="org.apache.batik.dom" version="1.7.1.v201505191845"/>
+<unit id="org.apache.commons.codec" version="1.6.0.v201305230611"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20160916162009/repository"/>
 </location>
 </locations>
 <launcherArgs>
