@@ -30,11 +30,9 @@
       <supplier xmi:type="uml:Component" href="simulation.uml#_Psp8gLrFEeaEY8PkEXRd3w"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_6SvfC7rMEeaEY8PkEXRd3w" client="_6SvfAbrMEeaEY8PkEXRd3w" supplier="_6SuQ4LrMEeaEY8PkEXRd3w"/>
-    <packagedElement xmi:type="uml:Dependency" xmi:id="_6SvfDLrMEeaEY8PkEXRd3w" client="_6SvfAbrMEeaEY8PkEXRd3w" supplier="_6SvfE7rMEeaEY8PkEXRd3w"/>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_6SvfDbrMEeaEY8PkEXRd3w" client="_6SvfAbrMEeaEY8PkEXRd3w" supplier="_6SvfFbrMEeaEY8PkEXRd3w"/>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_6SvfEbrMEeaEY8PkEXRd3w" client="_6SvfAbrMEeaEY8PkEXRd3w" supplier="_6SvfErrMEeaEY8PkEXRd3w"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Component" xmi:id="_6SvfErrMEeaEY8PkEXRd3w" name="org.dice.features.base"/>
-  <packagedElement xmi:type="uml:Component" xmi:id="_6SvfE7rMEeaEY8PkEXRd3w" name="it.polimi.dice.lwdg.dependencies.feature"/>
   <packagedElement xmi:type="uml:Component" xmi:id="_6SvfFbrMEeaEY8PkEXRd3w" name="it.polimi.dice.lwdg.launcher.feature"/>
 </uml:Model>
