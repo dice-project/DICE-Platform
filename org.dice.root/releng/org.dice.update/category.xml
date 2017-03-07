@@ -9,7 +9,10 @@
    <feature url="features/org.dice.features.base_4.6.2.qualifier.jar" id="org.dice.features.base" version="4.6.2.qualifier">
       <category name="diceupdate"/>
    </feature>
-   <feature url="features/org.dice.features.deployments_0.1.2.jar" id="org.dice.features.deployments" version="0.1.2">
+   <feature url="features/org.dice.features.birt_4.6.0.qualifier.jar" id="org.dice.features.birt" version="4.6.0.qualifier">
+      <category name="diceupdate"/>
+   </feature>
+   <feature url="features/org.dice.features.datatools_1.13.0.qualifier.jar" id="org.dice.features.datatools" version="1.13.0.qualifier">
       <category name="diceupdate"/>
    </feature>
    <feature url="features/org.dice.features.dicer_1.0.0.qualifier.jar" id="org.dice.features.dicer" version="1.0.0.qualifier">
@@ -27,7 +30,7 @@
    <feature url="features/org.dice.features.jdt_3.12.2.qualifier.jar" id="org.dice.features.jdt" version="3.12.2.qualifier">
       <category name="diceupdate"/>
    </feature>
-   <feature url="features/org.dice.features.methodology_0.1.3.qualifier.jar" id="org.dice.features.methodology" version="0.1.3.qualifier">
+   <feature url="features/org.dice.features.methodology_0.1.4.qualifier.jar" id="org.dice.features.methodology" version="0.1.4.qualifier">
       <category name="diceupdate"/>
    </feature>
    <feature url="features/org.dice.features.monitoring_0.1.1.qualifier.jar" id="org.dice.features.monitoring" version="0.1.1.qualifier">

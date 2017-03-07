@@ -222,7 +222,7 @@ litigation
          id="org.dice.rcp"
          download-size="0"
          install-size="0"
-         version="0.1.3.qualifier"
+         version="0.1.4.qualifier"
          unpack="false"/>
 
    <plugin

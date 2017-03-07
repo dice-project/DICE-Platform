@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="DICE Platform" uid="org.dice.rcp.dice" id="org.dice.rcp.dice" application="org.eclipse.ui.ide.workbench" version="0.1.3.qualifier" useFeatures="true" includeLaunchers="true">
+<product name="DICE Platform" uid="org.dice.rcp.dice" id="org.dice.rcp.dice" application="org.eclipse.ui.ide.workbench" version="0.1.4.qualifier" useFeatures="true" includeLaunchers="true">
 
    <aboutInfo>
       <image path="icons/120.gif"/>
@@ -70,7 +70,7 @@ org.dice.rcp.perspective
       <feature id="org.dice.features.optimization" version="0.1.1.qualifier"/>
       <feature id="org.dice.features.monitoring" version="0.1.1.qualifier"/>
       <feature id="org.dice.features.verification" version="0.1.0.qualifier"/>
-      <feature id="org.dice.features.methodology" version="0.1.3.qualifier"/>
+      <feature id="org.dice.features.methodology" version="0.1.4.qualifier"/>
       <feature id="org.dice.features.dicer" version="1.0.0.qualifier"/>
    </features>
 
