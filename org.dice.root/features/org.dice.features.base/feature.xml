@@ -1846,7 +1846,7 @@ litigation
          id="org.eclipse.ecf"
          download-size="0"
          install-size="0"
-         version="3.8.0.v20161127-2056"
+         version="3.8.0.v20170104-0657"
          unpack="false"/>
 
    <plugin
@@ -1854,13 +1854,6 @@ litigation
          download-size="0"
          install-size="0"
          version="3.8.0.v20161203-2153"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.ecf.console"
-         download-size="0"
-         install-size="0"
-         version="1.0.0.v20160907-0906"
          unpack="false"/>
 
    <plugin
@@ -1982,7 +1975,7 @@ litigation
          id="org.apache.commons.codec"
          download-size="0"
          install-size="0"
-         version="1.6.0.v201305230611"
+         version="1.9.0.v20170208-1614"
          unpack="false"/>
 
    <plugin
@@ -1997,6 +1990,27 @@ litigation
          download-size="0"
          install-size="0"
          version="3.1.0.v201012070820"
+         unpack="false"/>
+
+   <plugin
+         id="com.google.gson"
+         download-size="0"
+         install-size="0"
+         version="2.2.4.v201311231704"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.httpcomponents.httpclient"
+         download-size="0"
+         install-size="0"
+         version="4.5.2.v20170208-1614"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.httpcomponents.httpcore"
+         download-size="0"
+         install-size="0"
+         version="4.4.4.v20161115-1643"
          unpack="false"/>
 
 </feature>

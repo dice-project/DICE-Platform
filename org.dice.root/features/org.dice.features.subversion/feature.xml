@@ -254,7 +254,7 @@ litigation
          arch="x86"
          download-size="0"
          install-size="0"
-         version="1.9.4.201609101344"
+         version="1.9.5.201701181951"
          fragment="true"
          unpack="false"/>
 
@@ -264,7 +264,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="1.9.4.201609101344"
+         version="1.9.5.201701181951"
          fragment="true"
          unpack="false"/>
 

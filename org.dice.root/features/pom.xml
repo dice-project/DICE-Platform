@@ -17,6 +17,7 @@
 		<module>org.dice.features.jdt</module>
 		<module>org.dice.features.subversion</module>
 		<module>org.dice.features.git</module>
+		<module>org.dice.features.datatools</module>
 		<module>org.dice.features.birt</module>
 		<module>org.dice.features.emf</module>
 		<module>org.dice.features.pnml</module>

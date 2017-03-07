@@ -32,22 +32,6 @@
     </styles>
     <element xmi:type="uml:Activity" href="DICEmodel.uml#_LiFLcMN2EealSsGBCBb5Aw"/>
   </notation:Diagram>
-  <notation:Diagram xmi:id="_Lj_P8MN2EealSsGBCBb5Aw" type="PapyrusUMLClassDiagram" name="DTSMclass" measurementUnit="Pixel">
-    <styles xmi:type="notation:StringValueStyle" xmi:id="_Lj_P8cN2EealSsGBCBb5Aw" name="diagram_compatibility_version" stringValue="1.2.0"/>
-    <styles xmi:type="notation:DiagramStyle" xmi:id="_Lj_P8sN2EealSsGBCBb5Aw"/>
-    <styles xmi:type="style:PapyrusViewStyle" xmi:id="_Lj_P88N2EealSsGBCBb5Aw">
-      <owner xmi:type="uml:Model" href="DICEmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
-    </styles>
-    <element xmi:type="uml:Model" href="DICEmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
-  </notation:Diagram>
-  <notation:Diagram xmi:id="_LkJoAMN2EealSsGBCBb5Aw" type="PapyrusUMLDeploymentDiagram" name="DDSMdeployment" measurementUnit="Pixel">
-    <styles xmi:type="notation:StringValueStyle" xmi:id="_LkJoAcN2EealSsGBCBb5Aw" name="diagram_compatibility_version" stringValue="1.2.0"/>
-    <styles xmi:type="notation:DiagramStyle" xmi:id="_LkJoAsN2EealSsGBCBb5Aw"/>
-    <styles xmi:type="style:PapyrusViewStyle" xmi:id="_LkJoA8N2EealSsGBCBb5Aw">
-      <owner xmi:type="uml:Model" href="DICEmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
-    </styles>
-    <element xmi:type="uml:Model" href="DICEmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
-  </notation:Diagram>
   <notation:Diagram xmi:id="_LkQ8wMN2EealSsGBCBb5Aw" type="PapyrusUMLComponentDiagram" name="DPIMcomponent" measurementUnit="Pixel">
     <styles xmi:type="notation:StringValueStyle" xmi:id="_LkQ8wcN2EealSsGBCBb5Aw" name="diagram_compatibility_version" stringValue="1.2.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_LkQ8wsN2EealSsGBCBb5Aw"/>
@@ -55,21 +39,5 @@
       <owner xmi:type="uml:Model" href="DICEmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
     </styles>
     <element xmi:type="uml:Model" href="DICEmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
-  </notation:Diagram>
-  <notation:Diagram xmi:id="_LkgNUMN2EealSsGBCBb5Aw" type="PapyrusUMLSequenceDiagram" name="DTSMsequence" measurementUnit="Pixel">
-    <children xmi:type="notation:Shape" xmi:id="_LkgNUcN2EealSsGBCBb5Aw" type="Interaction_Shape">
-      <children xmi:type="notation:DecorationNode" xmi:id="_LkgNUsN2EealSsGBCBb5Aw" type="Interaction_NameLabel"/>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_LkgNU8N2EealSsGBCBb5Aw" type="Interaction_SubfragmentCompartment">
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LkgNVMN2EealSsGBCBb5Aw"/>
-      </children>
-      <element xmi:type="uml:Interaction" href="DICEmodel.uml#_LkYRgMN2EealSsGBCBb5Aw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LkgNVcN2EealSsGBCBb5Aw"/>
-    </children>
-    <styles xmi:type="notation:StringValueStyle" xmi:id="_LkgNVsN2EealSsGBCBb5Aw" name="diagram_compatibility_version" stringValue="1.2.0"/>
-    <styles xmi:type="notation:DiagramStyle" xmi:id="_LkgNV8N2EealSsGBCBb5Aw"/>
-    <styles xmi:type="style:PapyrusViewStyle" xmi:id="_LkgNWMN2EealSsGBCBb5Aw">
-      <owner xmi:type="uml:Model" href="DICEmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
-    </styles>
-    <element xmi:type="uml:Interaction" href="DICEmodel.uml#_LkYRgMN2EealSsGBCBb5Aw"/>
   </notation:Diagram>
 </xmi:XMI>

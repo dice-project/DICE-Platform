@@ -18,7 +18,7 @@
       <packagedElement xmi:type="uml:Dependency" xmi:id="_Hx8KYOBYEeWNL_YKB8_3iw" client="_JO6UIOBXEeWNL_YKB8_3iw" supplier="_2_SiAOBWEeWNL_YKB8_3iw"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_Om_WoOBYEeWNL_YKB8_3iw" client="_JO6UIOBXEeWNL_YKB8_3iw" supplier="_J5SRYOBYEeWNL_YKB8_3iw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Component" xmi:id="_KW4o0OBXEeWNL_YKB8_3iw" name="DICE 0.10.0 &amp; DAM 0.10.0 Profiles">
+    <packagedElement xmi:type="uml:Component" xmi:id="_KW4o0OBXEeWNL_YKB8_3iw" name="DICE 0.11.0 &amp; DAM 0.11.0 Profiles">
       <packagedElement xmi:type="uml:Dependency" xmi:id="_LKP_cOBXEeWNL_YKB8_3iw" client="_KW4o0OBXEeWNL_YKB8_3iw" supplier="_JO6UIOBXEeWNL_YKB8_3iw"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_OCjCQOBXEeWNL_YKB8_3iw" name="JDT 3.12.2">
@@ -39,7 +39,7 @@
     <packagedElement xmi:type="uml:Component" xmi:id="_mK5F0OBYEeWNL_YKB8_3iw" name="PNML 2.2.12">
       <packagedElement xmi:type="uml:Dependency" xmi:id="_YDPNsA4CEeaaU9FekHx-8w" client="_mK5F0OBYEeWNL_YKB8_3iw" supplier="_js0y0OBWEeWNL_YKB8_3iw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Component" xmi:id="_y7KTUOBYEeWNL_YKB8_3iw" name="Simulation 0.3.5">
+    <packagedElement xmi:type="uml:Component" xmi:id="_y7KTUOBYEeWNL_YKB8_3iw" name="Simulation 0.4.2">
       <packagedElement xmi:type="uml:Dependency" xmi:id="_z_s5gOBYEeWNL_YKB8_3iw" client="_y7KTUOBYEeWNL_YKB8_3iw" supplier="_vIrLEOBWEeWNL_YKB8_3iw"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_0iFN0OBYEeWNL_YKB8_3iw" client="_y7KTUOBYEeWNL_YKB8_3iw" supplier="_mK5F0OBYEeWNL_YKB8_3iw"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_kWqGEBFCEeac_4PS_4DJkw" client="_y7KTUOBYEeWNL_YKB8_3iw" supplier="_KW4o0OBXEeWNL_YKB8_3iw"/>
@@ -79,7 +79,10 @@
       <packagedElement xmi:type="uml:Dependency" xmi:id="_oCLDcbJBEeauNfMY7ucCOQ" client="_oCLDcLJBEeauNfMY7ucCOQ" supplier="_eBirAOBWEeWNL_YKB8_3iw"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_pzRmULxVEeaXAoPfUQl9pQ" name="Birt 4.6.0">
-      <packagedElement xmi:type="uml:Dependency" xmi:id="_2op9ULxVEeaXAoPfUQl9pQ" client="_pzRmULxVEeaXAoPfUQl9pQ" supplier="_eBirAOBWEeWNL_YKB8_3iw"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_7ApQEAMIEeesuc2aXycPmw" client="_pzRmULxVEeaXAoPfUQl9pQ" supplier="_paq34AMIEeesuc2aXycPmw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_paq34AMIEeesuc2aXycPmw" name="Datatools 1.13.0">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_paq34QMIEeesuc2aXycPmw" client="_paq34AMIEeesuc2aXycPmw" supplier="_eBirAOBWEeWNL_YKB8_3iw"/>
     </packagedElement>
   </packagedElement>
 </uml:Model>
