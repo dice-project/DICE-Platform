@@ -22,7 +22,7 @@
 			works with Tycho. Nowadays there are some troubles with Neon -->
 		<eclipse-updates.url>http://download.eclipse.org/eclipse/updates/4.6</eclipse-updates.url>
 		<egit.url>http://download.eclipse.org/egit/updates</egit.url>
-		<jetty.url>http://download.eclipse.org/jetty/updates/jetty-bundles-9.x/9.4.2.v20170220</jetty.url>
+		<jetty.url>http://download.eclipse.org/jetty/updates/jetty-bundles-9.x/9.4.1.v20170120</jetty.url>
 		<ocl.url>http://download.eclipse.org/modeling/mdt/ocl/updates/releases/6.2.2</ocl.url>
 		<papyrus.url>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/neon/</papyrus.url>
 		<eclipse-base.url>http://download.eclipse.org/releases/neon</eclipse-base.url>

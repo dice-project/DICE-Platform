@@ -263,13 +263,6 @@ litigation
          unpack="false"/>
 
    <plugin
-         id="org.mozilla.javascript"
-         download-size="0"
-         install-size="0"
-         version="1.7.5.v201504281450"
-         unpack="false"/>
-
-   <plugin
          id="org.apache.batik.transcoder"
          download-size="0"
          install-size="0"
@@ -567,26 +560,6 @@ litigation
          version="1.4.0.v201411182030"/>
 
    <plugin
-         id="org.eclipse.jetty.osgi.boot"
-         download-size="0"
-         install-size="0"
-         version="9.4.2.v20170220"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.jetty.webapp"
-         download-size="0"
-         install-size="0"
-         version="9.4.2.v20170220"
-         unpack="false"/>
-
-   <plugin
-         id="org.w3c.sac"
-         download-size="0"
-         install-size="0"
-         version="1.3.0.v201606072122"/>
-
-   <plugin
          id="javax.xml.soap"
          download-size="0"
          install-size="0"
@@ -606,59 +579,86 @@ litigation
          version="0.2.0.v201004190315"/>
 
    <plugin
-         id="org.eclipse.jetty.deploy"
+         id="org.mozilla.javascript"
          download-size="0"
          install-size="0"
-         version="9.4.2.v20170220"
+         version="1.7.5.v201504281450"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.jetty.server"
+         id="org.w3c.sac"
          download-size="0"
          install-size="0"
-         version="9.4.2.v20170220"
+         version="1.3.0.v201606072122"/>
+
+   <plugin
+         id="org.eclipse.jetty.osgi.boot"
+         download-size="0"
+         install-size="0"
+         version="9.4.1.v20170120"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jetty.webapp"
+         download-size="0"
+         install-size="0"
+         version="9.4.1.v20170120"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jetty.util"
          download-size="0"
          install-size="0"
-         version="9.4.2.v20170220"
+         version="9.4.1.v20170120"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jetty.xml"
          download-size="0"
          install-size="0"
-         version="9.4.2.v20170220"
+         version="9.4.1.v20170120"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.jetty.http"
+         id="org.eclipse.jetty.deploy"
          download-size="0"
          install-size="0"
-         version="9.4.2.v20170220"
+         version="9.4.1.v20170120"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.jetty.io"
+         id="org.eclipse.jetty.server"
          download-size="0"
          install-size="0"
-         version="9.4.2.v20170220"
+         version="9.4.1.v20170120"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jetty.security"
          download-size="0"
          install-size="0"
-         version="9.4.2.v20170220"
+         version="9.4.1.v20170120"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jetty.io"
+         download-size="0"
+         install-size="0"
+         version="9.4.1.v20170120"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jetty.servlet"
          download-size="0"
          install-size="0"
-         version="9.4.2.v20170220"
+         version="9.4.1.v20170120"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jetty.http"
+         download-size="0"
+         install-size="0"
+         version="9.4.1.v20170120"
          unpack="false"/>
 
 </feature>

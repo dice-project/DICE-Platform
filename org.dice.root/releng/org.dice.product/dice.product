@@ -69,7 +69,7 @@ org.dice.rcp.perspective
       <feature id="org.dice.features.deployments" version="0.1.2"/>
       <feature id="org.dice.features.optimization" version="0.1.1.qualifier"/>
       <feature id="org.dice.features.monitoring" version="0.1.1.qualifier"/>
-      <feature id="org.dice.features.verification" version="0.1.0.qualifier"/>
+      <feature id="org.dice.features.verification" version="0.2.0.qualifier"/>
       <feature id="org.dice.features.methodology" version="0.1.4.qualifier"/>
       <feature id="org.dice.features.dicer" version="1.0.0.qualifier"/>
    </features>

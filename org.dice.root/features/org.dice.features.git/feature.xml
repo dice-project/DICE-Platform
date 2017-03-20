@@ -224,21 +224,21 @@ litigation
          id="org.eclipse.egit"
          download-size="0"
          install-size="0"
-         version="4.6.0.201612231935-r"
+         version="4.6.1.201703071140-r"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.egit.core"
          download-size="0"
          install-size="0"
-         version="4.6.0.201612231935-r"
+         version="4.6.1.201703071140-r"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.egit.ui"
          download-size="0"
          install-size="0"
-         version="4.6.0.201612231935-r"
+         version="4.6.1.201703071140-r"
          unpack="false"/>
 
    <plugin
@@ -266,7 +266,7 @@ litigation
          id="com.jcraft.jsch"
          download-size="0"
          install-size="0"
-         version="0.1.53.v201508180515"
+         version="0.1.54.v20170116-1932"
          unpack="false"/>
 
    <plugin
@@ -280,7 +280,7 @@ litigation
          id="org.eclipse.jgit"
          download-size="0"
          install-size="0"
-         version="4.6.0.201612231935-r"
+         version="4.6.1.201703071140-r"
          unpack="false"/>
 
 </feature>

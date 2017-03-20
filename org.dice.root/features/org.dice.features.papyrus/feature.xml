@@ -2600,56 +2600,56 @@ litigation
          id="org.eclipse.papyrus.marte.properties"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071122"
+         version="1.2.0.201703081153"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.marte.static.profile"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071122"
+         version="1.2.0.201703081153"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.marte.textedit.constraintwithvsl.xtext"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071122"
+         version="1.2.0.201703081153"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.marte.textedit.constraintwithvsl.xtext.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071122"
+         version="1.2.0.201703081153"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.marte.textedit.stereotypeapplicationwithvsl.xtext"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071122"
+         version="1.2.0.201703081153"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.marte.textedit.stereotypeapplicationwithvsl.xtext.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071122"
+         version="1.2.0.201703081153"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.marte.vsl"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071122"
+         version="1.2.0.201703081153"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.marte.vsl.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071122"
+         version="1.2.0.201703081153"
          unpack="false"/>
 
    <plugin
@@ -2664,13 +2664,6 @@ litigation
          download-size="0"
          install-size="0"
          version="2.0.0.201612071107"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.papyrus.uml.textedit.valuespecification.xtext.source"
-         download-size="0"
-         install-size="0"
-         version="1.2.0.201612071107"
          unpack="false"/>
 
 </feature>

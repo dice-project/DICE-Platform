@@ -60,10 +60,10 @@
    <feature url="features/org.dice.features.uml2_5.2.2.qualifier.jar" id="org.dice.features.uml2" version="5.2.2.qualifier">
       <category name="diceupdate"/>
    </feature>
-   <feature url="features/org.dice.features.verification_0.1.0.qualifier.jar" id="org.dice.features.verification" version="0.1.0.qualifier">
+   <feature url="features/org.dice.features.verification_0.2.0.qualifier.jar" id="org.dice.features.verification" version="0.2.0.qualifier">
       <category name="diceupdate"/>
    </feature>
-   <feature url="features/org.dice.features.wst_3.8.0.qualifier.jar" id="org.dice.features.wst" version="3.8.0.qualifier">
+   <feature url="features/org.dice.features.wst_3.8.1.qualifier.jar" id="org.dice.features.wst" version="3.8.1.qualifier">
       <category name="diceupdate"/>
    </feature>
    <feature url="features/org.dice.features.xtext_2.10.0.qualifier.jar" id="org.dice.features.xtext" version="2.10.0.qualifier">
