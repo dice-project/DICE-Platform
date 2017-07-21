@@ -224,63 +224,63 @@ litigation
          id="org.eclipse.egit"
          download-size="0"
          install-size="0"
-         version="4.8.0.201706111038-r"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.egit.core"
          download-size="0"
          install-size="0"
-         version="4.8.0.201706111038-r"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.egit.ui"
          download-size="0"
          install-size="0"
-         version="4.8.0.201706111038-r"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.slf4j.api"
          download-size="0"
          install-size="0"
-         version="1.7.2.v20121108-1250"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jsch.ui"
          download-size="0"
          install-size="0"
-         version="1.3.0.v20160323-1650"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jsch.core"
          download-size="0"
          install-size="0"
-         version="1.3.0.v20160422-1917"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="com.jcraft.jsch"
          download-size="0"
          install-size="0"
-         version="0.1.54.v20170116-1932"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="javaewah"
          download-size="0"
          install-size="0"
-         version="1.1.6.v20160919-1400"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jgit"
          download-size="0"
          install-size="0"
-         version="4.8.0.201706111038-r"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>

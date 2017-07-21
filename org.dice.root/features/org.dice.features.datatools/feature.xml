@@ -220,77 +220,77 @@ litigation
          id="org.eclipse.datatools.connectivity.oda.consumer"
          download-size="0"
          install-size="0"
-         version="3.3.0.201603142002"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.datatools.connectivity.oda.profile"
          download-size="0"
          install-size="0"
-         version="3.3.0.201603142002"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.datatools.connectivity.oda.design"
          download-size="0"
          install-size="0"
-         version="3.4.0.201603142002"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.datatools.connectivity.oda.design.ui"
          download-size="0"
          install-size="0"
-         version="3.3.0.201603142002"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.datatools.connectivity.oda"
          download-size="0"
          install-size="0"
-         version="3.5.0.201603142002"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.datatools.connectivity.ui"
          download-size="0"
          install-size="0"
-         version="1.3.0.201603142002"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.datatools.help"
          download-size="0"
          install-size="0"
-         version="1.6.0.201603142002"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.datatools.connectivity"
          download-size="0"
          install-size="0"
-         version="1.13.0.201603142002"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.datatools.connectivity.sqm.core"
          download-size="0"
          install-size="0"
-         version="1.3.0.201603142002"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.datatools.modelbase.sql"
          download-size="0"
          install-size="0"
-         version="1.1.0.201603142002"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.datatools.modelbase.dbdefinition"
          download-size="0"
          install-size="0"
-         version="1.1.0.201603142002"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>

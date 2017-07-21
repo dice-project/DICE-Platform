@@ -222,147 +222,147 @@ litigation
          id="org.dice.rcp"
          download-size="0"
          install-size="0"
-         version="0.1.5.qualifier"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="com.ibm.icu"
          download-size="0"
          install-size="0"
-         version="56.1.0.v201601250100"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="javax.annotation"
          download-size="0"
          install-size="0"
-         version="1.2.0.v201602091430"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="javax.inject"
          download-size="0"
          install-size="0"
-         version="1.0.0.v20091030"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="javax.servlet"
          download-size="0"
          install-size="0"
-         version="3.1.0.v201410161800"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="javax.xml"
          download-size="0"
          install-size="0"
-         version="1.3.4.v201005080400"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.batik.css"
          download-size="0"
          install-size="0"
-         version="1.7.0.v201011041433"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.batik.util"
          download-size="0"
          install-size="0"
-         version="1.7.0.v201011041433"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.batik.util.gui"
          download-size="0"
          install-size="0"
-         version="1.7.0.v200903091627"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.commons.jxpath"
          download-size="0"
          install-size="0"
-         version="1.3.0.v200911051830"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ant.core"
          download-size="0"
          install-size="0"
-         version="3.4.100.v20160505-0642"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.compare"
          download-size="0"
          install-size="0"
-         version="3.7.0.v20161024-1724"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.compare.core"
          download-size="0"
          install-size="0"
-         version="3.6.0.v20160418-1534"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.core.commands"
          download-size="0"
          install-size="0"
-         version="3.8.0.v20160316-1921"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.core.contenttype"
          download-size="0"
          install-size="0"
-         version="3.5.100.v20160418-1621"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.core.databinding"
          download-size="0"
          install-size="0"
-         version="1.6.0.v20160412-0910"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.core.databinding.observable"
          download-size="0"
          install-size="0"
-         version="1.6.0.v20160511-1747"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.core.databinding.property"
          download-size="0"
          install-size="0"
-         version="1.6.0.v20160427-0852"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.core.expressions"
          download-size="0"
          install-size="0"
-         version="3.5.100.v20160418-1621"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.core.filebuffers"
          download-size="0"
          install-size="0"
-         version="3.6.0.v20160503-1849"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.core.filesystem"
          download-size="0"
          install-size="0"
-         version="1.6.1.v20161113-2349"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -372,7 +372,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="1.4.0.v20140124-1940"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -380,14 +380,14 @@ litigation
          id="org.eclipse.core.jobs"
          download-size="0"
          install-size="0"
-         version="3.8.0.v20160509-0411"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.core.net"
          download-size="0"
          install-size="0"
-         version="1.3.0.v20160418-1534"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -397,7 +397,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="1.1.0.v20160323-1650"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -405,7 +405,7 @@ litigation
          id="org.eclipse.core.resources"
          download-size="0"
          install-size="0"
-         version="3.11.1.v20161107-2032"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -415,7 +415,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="3.5.0.v20140124-1940"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -423,231 +423,231 @@ litigation
          id="org.eclipse.core.runtime"
          download-size="0"
          install-size="0"
-         version="3.12.0.v20160606-1342"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.core.variables"
          download-size="0"
          install-size="0"
-         version="3.3.0.v20160419-1720"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.e4.core.commands"
          download-size="0"
          install-size="0"
-         version="0.11.100.v20160506-0804"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.e4.core.contexts"
          download-size="0"
          install-size="0"
-         version="1.5.0.v20160504-0909"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.e4.core.di"
          download-size="0"
          install-size="0"
-         version="1.6.1.v20160712-0927"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.e4.core.di.annotations"
          download-size="0"
          install-size="0"
-         version="1.5.0.v20151127-1241"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.e4.core.di.extensions"
          download-size="0"
          install-size="0"
-         version="0.14.0.v20160211-1614"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.e4.core.services"
          download-size="0"
          install-size="0"
-         version="2.0.100.v20160509-1032"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.e4.emf.xpath"
          download-size="0"
          install-size="0"
-         version="0.1.200.v20160506-0804"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.e4.ui.bindings"
          download-size="0"
          install-size="0"
-         version="0.11.100.v20160509-1025"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.e4.ui.css.core"
          download-size="0"
          install-size="0"
-         version="0.12.1.v20161114-0210"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.e4.ui.css.swt"
          download-size="0"
          install-size="0"
-         version="0.12.100.v20160517-1505"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.e4.ui.css.swt.theme"
          download-size="0"
          install-size="0"
-         version="0.10.100.v20160523-0836"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.e4.ui.di"
          download-size="0"
          install-size="0"
-         version="1.1.100.v20160506-0759"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.e4.ui.model.workbench"
          download-size="0"
          install-size="0"
-         version="1.2.0.v20160229-1459"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.e4.ui.services"
          download-size="0"
          install-size="0"
-         version="1.2.100.v20160506-0759"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.e4.ui.widgets"
          download-size="0"
          install-size="0"
-         version="1.1.100.v20160506-0759"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.e4.ui.workbench"
          download-size="0"
          install-size="0"
-         version="1.4.0.v20160517-1624"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.e4.ui.workbench.addons.swt"
          download-size="0"
          install-size="0"
-         version="1.2.100.v20160831-1151"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.e4.ui.workbench.renderers.swt"
          download-size="0"
          install-size="0"
-         version="0.14.0.v20160525-0940"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.e4.ui.workbench.swt"
          download-size="0"
          install-size="0"
-         version="0.14.1.v20160829-0832"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.e4.ui.workbench3"
          download-size="0"
          install-size="0"
-         version="0.13.100.v20160506-0759"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.emf.common"
          download-size="0"
          install-size="0"
-         version="2.12.0.v20160420-0247"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.emf.ecore"
          download-size="0"
          install-size="0"
-         version="2.12.0.v20160420-0247"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.emf.ecore.change"
          download-size="0"
          install-size="0"
-         version="2.11.0.v20160420-0247"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.emf.ecore.xmi"
          download-size="0"
          install-size="0"
-         version="2.12.0.v20160420-0247"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.app"
          download-size="0"
          install-size="0"
-         version="1.3.400.v20150715-1528"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.bidi"
          download-size="0"
          install-size="0"
-         version="1.0.0.v20160307-1318"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.common"
          download-size="0"
          install-size="0"
-         version="3.8.0.v20160509-1230"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.console"
          download-size="0"
          install-size="0"
-         version="1.1.200.v20150929-1405"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.ds"
          download-size="0"
          install-size="0"
-         version="1.4.400.v20160226-2036"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.event"
          download-size="0"
          install-size="0"
-         version="1.3.200.v20160324-1850"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.launcher"
          download-size="0"
          install-size="0"
-         version="1.3.201.v20161025-1711"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -657,112 +657,112 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="1.1.401.v20161122-1740"
+         version="0.0.0"
          fragment="true"/>
 
    <plugin
          id="org.eclipse.equinox.p2.core"
          download-size="0"
          install-size="0"
-         version="2.4.100.v20160419-0834"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.metadata"
          download-size="0"
          install-size="0"
-         version="2.3.100.v20160427-2220"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.metadata.repository"
          download-size="0"
          install-size="0"
-         version="1.2.300.v20160419-0834"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.repository"
          download-size="0"
          install-size="0"
-         version="2.3.200.v20160421-0324"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.preferences"
          download-size="0"
          install-size="0"
-         version="3.6.1.v20160815-1406"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.registry"
          download-size="0"
          install-size="0"
-         version="3.6.100.v20160223-2218"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.security"
          download-size="0"
          install-size="0"
-         version="1.2.200.v20150715-1528"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.help"
          download-size="0"
          install-size="0"
-         version="3.7.0.v20160602-1307"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jface"
          download-size="0"
          install-size="0"
-         version="3.12.1.v20160923-1528"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jface.databinding"
          download-size="0"
          install-size="0"
-         version="1.8.1.v20161026-1531"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jface.text"
          download-size="0"
          install-size="0"
-         version="3.11.2.v20161113-1700"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ltk.core.refactoring"
          download-size="0"
          install-size="0"
-         version="3.7.0.v20160419-0705"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ltk.ui.refactoring"
          download-size="0"
          install-size="0"
-         version="3.8.0.v20160518-1817"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.osgi"
          download-size="0"
          install-size="0"
-         version="3.11.2.v20161107-1947"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.osgi.compatibility.state"
          download-size="0"
          install-size="0"
-         version="1.0.200.v20160504-1419"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -770,14 +770,14 @@ litigation
          id="org.eclipse.osgi.services"
          download-size="0"
          install-size="0"
-         version="3.5.100.v20160504-1419"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.swt"
          download-size="0"
          install-size="0"
-         version="3.105.2.v20161122-0613"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -787,7 +787,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="3.105.2.v20161122-0613"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -795,111 +795,111 @@ litigation
          id="org.eclipse.team.core"
          download-size="0"
          install-size="0"
-         version="3.8.0.v20160418-1534"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.team.ui"
          download-size="0"
          install-size="0"
-         version="3.8.0.v20160518-1906"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.text"
          download-size="0"
          install-size="0"
-         version="3.6.0.v20160503-1849"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui"
          download-size="0"
          install-size="0"
-         version="3.108.1.v20160929-1045"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.console"
          download-size="0"
          install-size="0"
-         version="3.6.201.v20161107-0337"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.editors"
          download-size="0"
          install-size="0"
-         version="3.10.1.v20161106-1856"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.externaltools"
          download-size="0"
          install-size="0"
-         version="3.3.100.v20160518-1858"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.forms"
          download-size="0"
          install-size="0"
-         version="3.7.0.v20160518-1929"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.ide"
          download-size="0"
          install-size="0"
-         version="3.12.2.v20161115-1450"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.ide.application"
          download-size="0"
          install-size="0"
-         version="1.1.101.v20160829-0827"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.intro"
          download-size="0"
          install-size="0"
-         version="3.5.2.v20161116-1147"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.navigator"
          download-size="0"
          install-size="0"
-         version="3.6.101.v20161006-1120"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.navigator.resources"
          download-size="0"
          install-size="0"
-         version="3.5.101.v20161006-0640"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.themes"
          download-size="0"
          install-size="0"
-         version="1.1.300.v20161107-1827"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.eclipse.ui.views"
          download-size="0"
          install-size="0"
-         version="3.8.101.v20160816-1954"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.views.properties.tabbed"
          download-size="0"
          install-size="0"
-         version="3.7.0.v20160310-0903"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -909,7 +909,7 @@ litigation
          arch="x86,x86_64"
          download-size="0"
          install-size="0"
-         version="3.3.0.v20160505-1310"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -917,535 +917,535 @@ litigation
          id="org.eclipse.ui.workbench"
          download-size="0"
          install-size="0"
-         version="3.108.2.v20161025-2029"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.workbench.texteditor"
          download-size="0"
          install-size="0"
-         version="3.10.1.v20160818-1626"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.tukaani.xz"
          download-size="0"
          install-size="0"
-         version="1.3.0.v201308270617"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.w3c.css.sac"
          download-size="0"
          install-size="0"
-         version="1.3.1.v200903091627"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.w3c.dom.events"
          download-size="0"
          install-size="0"
-         version="3.0.0.draft20060413_v201105210656"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.w3c.dom.smil"
          download-size="0"
          install-size="0"
-         version="1.0.1.v200903091627"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.w3c.dom.svg"
          download-size="0"
          install-size="0"
-         version="1.1.0.v201011041433"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.felix.gogo.runtime"
          download-size="0"
          install-size="0"
-         version="0.10.0.v201209301036"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.core.externaltools"
          download-size="0"
          install-size="0"
-         version="1.0.400.v20160509-1057"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.debug.core"
          download-size="0"
          install-size="0"
-         version="3.10.100.v20160419-1720"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.debug.ui"
          download-size="0"
          install-size="0"
-         version="3.11.202.v20161114-0338"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.engine"
          download-size="0"
          install-size="0"
-         version="2.4.100.v20160419-0834"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.util"
          download-size="0"
          install-size="0"
-         version="1.0.500.v20130404-1337"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.console"
          download-size="0"
          install-size="0"
-         version="1.0.500.v20160504-1450"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.director"
          download-size="0"
          install-size="0"
-         version="2.3.300.v20160504-1450"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.extensionlocation"
          download-size="0"
          install-size="0"
-         version="1.2.300.v20160419-0834"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.garbagecollector"
          download-size="0"
          install-size="0"
-         version="1.0.300.v20160504-1450"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.ui"
          download-size="0"
          install-size="0"
-         version="2.4.100.v20160419-0834"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.ui.importexport"
          download-size="0"
          install-size="0"
-         version="1.1.200.v20160521-1138"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.updatechecker"
          download-size="0"
          install-size="0"
-         version="1.1.300.v20161124-1529"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.updatesite"
          download-size="0"
          install-size="0"
-         version="1.0.600.v20160504-1450"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.sat4j.core"
          download-size="0"
          install-size="0"
-         version="2.3.5.v201308161310"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.sat4j.pb"
          download-size="0"
          install-size="0"
-         version="2.3.5.v201404071733"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.security.ui"
          download-size="0"
          install-size="0"
-         version="1.1.300.v20150803-1225"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.artifact.repository"
          download-size="0"
          install-size="0"
-         version="1.1.500.v20160419-0834"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.publisher"
          download-size="0"
          install-size="0"
-         version="1.4.100.v20160504-1450"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.publisher.eclipse"
          download-size="0"
          install-size="0"
-         version="1.2.100.v20160504-1450"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.jarprocessor"
          download-size="0"
          install-size="0"
-         version="1.0.500.v20160504-1450"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.simpleconfigurator"
          download-size="0"
          install-size="0"
-         version="1.1.200.v20160504-1450"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.update.configurator"
          download-size="0"
          install-size="0"
-         version="3.3.400.v20160506-0750"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.touchpoint.eclipse"
          download-size="0"
          install-size="0"
-         version="2.1.400.v20160419-0834"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.frameworkadmin"
          download-size="0"
          install-size="0"
-         version="2.0.300.v20160504-1450"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.frameworkadmin.equinox"
          download-size="0"
          install-size="0"
-         version="1.0.700.v20160102-2223"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.operations"
          download-size="0"
          install-size="0"
-         version="2.4.200.v20160504-1450"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.directorywatcher"
          download-size="0"
          install-size="0"
-         version="1.1.100.v20150423-1455"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.simpleconfigurator.manipulator"
          download-size="0"
          install-size="0"
-         version="2.0.200.v20160504-1450"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.felix.gogo.command"
          download-size="0"
          install-size="0"
-         version="0.10.0.v201209301215"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.felix.gogo.shell"
          download-size="0"
          install-size="0"
-         version="0.10.0.v201212101605"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.pde.api.tools.ui"
          download-size="0"
          install-size="0"
-         version="1.1.0.v20160519-0701"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.pde.build"
          download-size="0"
          install-size="0"
-         version="3.9.200.v20160204-0642"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.eclipse.pde.core"
          download-size="0"
          install-size="0"
-         version="3.11.1.v20161115-1951"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.pde.ds.core"
          download-size="0"
          install-size="0"
-         version="1.1.0.v20151201-1325"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.pde.ds.ui"
          download-size="0"
          install-size="0"
-         version="1.1.0.v20160518-1843"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.pde.junit.runtime"
          download-size="0"
          install-size="0"
-         version="3.5.0.v20151013-0625"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.pde.launching"
          download-size="0"
          install-size="0"
-         version="3.6.401.v20161115-0549"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.pde.runtime"
          download-size="0"
          install-size="0"
-         version="3.5.0.v20160418-1724"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.pde.ua.core"
          download-size="0"
          install-size="0"
-         version="1.0.500.v20160204-0642"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.pde.ua.ui"
          download-size="0"
          install-size="0"
-         version="1.1.0.v20160518-1843"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.pde.ui"
          download-size="0"
          install-size="0"
-         version="3.9.100.v20161102-0517"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jdt.core"
          download-size="0"
          install-size="0"
-         version="3.12.2.v20161117-1814"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jdt.core.manipulation"
          download-size="0"
          install-size="0"
-         version="1.7.0.v20160419-0705"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jdt.launching"
          download-size="0"
          install-size="0"
-         version="3.8.101.v20161111-2014"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jdt.ui"
          download-size="0"
          install-size="0"
-         version="3.12.2.v20160929-0804"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.pde.api.tools"
          download-size="0"
          install-size="0"
-         version="1.1.2.v20161115-0549"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.search"
          download-size="0"
          install-size="0"
-         version="3.11.1.v20161113-1700"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.trace"
          download-size="0"
          install-size="0"
-         version="1.0.400.v20160509-1055"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.director.app"
          download-size="0"
          install-size="0"
-         version="1.0.500.v20160419-0834"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.repository.tools"
          download-size="0"
          install-size="0"
-         version="2.1.300.v20160421-0324"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jdt.junit.runtime"
          download-size="0"
          install-size="0"
-         version="3.4.600.v20160505-0715"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jdt.debug"
          download-size="0"
          install-size="0"
-         version="3.10.1.v20160811-0441"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.eclipse.jdt.junit.core"
          download-size="0"
          install-size="0"
-         version="3.8.0.v20160421-1701"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.cheatsheets"
          download-size="0"
          install-size="0"
-         version="3.5.0.v20160504-0839"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ant.launching"
          download-size="0"
          install-size="0"
-         version="1.1.201.v20161115-1135"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ant.ui"
          download-size="0"
          install-size="0"
-         version="3.6.201.v20161115-1135"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.views.log"
          download-size="0"
          install-size="0"
-         version="1.2.1.v20160829-0826"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.ant"
          download-size="0"
          install-size="0"
-         version="1.9.6.v201510161327"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.eclipse.jdt.debug.ui"
          download-size="0"
          install-size="0"
-         version="3.7.201.v20160811-0450"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jdt.junit"
          download-size="0"
          install-size="0"
-         version="3.9.0.v20160421-1701"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.junit"
          download-size="0"
          install-size="0"
-         version="4.12.0.v201504281640"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.objectweb.asm"
          download-size="0"
          install-size="0"
-         version="5.0.1.v201404251740"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.objectweb.asm.tree"
          download-size="0"
          install-size="0"
-         version="5.0.1.v201404251740"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.hamcrest.core"
          download-size="0"
          install-size="0"
-         version="1.3.0.v201303031735"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.core.databinding.beans"
          download-size="0"
          install-size="0"
-         version="1.3.100.v20160509-1025"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.pde"
          download-size="0"
          install-size="0"
-         version="3.12.2.v20161124-1400"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.help.base"
          download-size="0"
          install-size="0"
-         version="4.1.1.v20161124-1400"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.osgi.util"
          download-size="0"
          install-size="0"
-         version="3.3.100.v20150423-1351"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.browser"
          download-size="0"
          install-size="0"
-         version="3.5.2.v20161114-0210"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -1455,7 +1455,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="1.1.401.v20161122-1740"
+         version="0.0.0"
          fragment="true"/>
 
    <plugin
@@ -1465,7 +1465,7 @@ litigation
          arch="x86"
          download-size="0"
          install-size="0"
-         version="1.1.401.v20161122-1740"
+         version="0.0.0"
          fragment="true"/>
 
    <plugin
@@ -1475,7 +1475,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="1.1.401.v20161122-1740"
+         version="0.0.0"
          fragment="true"/>
 
    <plugin
@@ -1485,7 +1485,7 @@ litigation
          arch="x86"
          download-size="0"
          install-size="0"
-         version="1.1.401.v20161122-1740"
+         version="0.0.0"
          fragment="true"/>
 
    <plugin
@@ -1495,7 +1495,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="3.105.2.v20161122-0613"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -1506,7 +1506,7 @@ litigation
          arch="x86"
          download-size="0"
          install-size="0"
-         version="3.105.2.v20161122-0613"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -1517,7 +1517,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="3.105.2.v20161122-0613"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -1528,7 +1528,7 @@ litigation
          arch="x86"
          download-size="0"
          install-size="0"
-         version="3.105.2.v20161122-0613"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -1539,7 +1539,7 @@ litigation
          arch="x86"
          download-size="0"
          install-size="0"
-         version="1.4.200.v20140124-1940"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -1550,7 +1550,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="1.2.200.v20140124-1940"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -1561,7 +1561,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="1.3.0.v20140124-1940"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -1572,7 +1572,7 @@ litigation
          arch="x86"
          download-size="0"
          install-size="0"
-         version="1.4.0.v20140124-1940"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -1583,7 +1583,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="1.100.200.v20130327-1442"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -1594,7 +1594,7 @@ litigation
          arch="x86"
          download-size="0"
          install-size="0"
-         version="1.0.300.v20130327-1442"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -1605,7 +1605,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="1.0.100.v20130327-1442"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -1616,7 +1616,7 @@ litigation
          arch="x86"
          download-size="0"
          install-size="0"
-         version="1.1.0.v20160323-1650"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -1627,7 +1627,7 @@ litigation
          arch="x86"
          download-size="0"
          install-size="0"
-         version="3.5.100.v20140124-1940"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -1638,7 +1638,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="1.1.100.v20151202-1450"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -1649,7 +1649,7 @@ litigation
          arch="x86,x86_64"
          download-size="0"
          install-size="0"
-         version="1.1.0.v20160418-1534"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -1659,7 +1659,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="0.11.300.v20160330-1418"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -1670,7 +1670,7 @@ litigation
          arch="x86,x86_64"
          download-size="0"
          install-size="0"
-         version="1.0.100.v20160301-1001"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -1678,203 +1678,203 @@ litigation
          id="org.dice.ui"
          download-size="0"
          install-size="0"
-         version="0.1.5.qualifier"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.reconciler.dropins"
          download-size="0"
          install-size="0"
-         version="1.1.400.v20160504-1450"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.ui.sdk"
          download-size="0"
          install-size="0"
-         version="1.0.400.v20150423-1455"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.lucene.analysis"
          download-size="0"
          install-size="0"
-         version="3.5.0.v20120725-1805"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.lucene.core"
          download-size="0"
          install-size="0"
-         version="3.5.0.v20120725-1805"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.ui.sdk.scheduler"
          download-size="0"
          install-size="0"
-         version="1.3.0.v20161124-1529"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.touchpoint.natives"
          download-size="0"
          install-size="0"
-         version="1.2.100.v20160419-0834"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl"
          download-size="0"
          install-size="0"
-         version="3.6.100.v20160613-1351"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl.common"
          download-size="0"
          install-size="0"
-         version="1.4.100.v20160613-1351"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="lpg.runtime.java"
          download-size="0"
          install-size="0"
-         version="2.0.17.v201004271640"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.log4j"
          download-size="0"
          install-size="0"
-         version="1.2.15.v201012070815"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="com.google.inject"
          download-size="0"
          install-size="0"
-         version="3.0.0.v201605172100"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.draw2d"
          download-size="0"
          install-size="0"
-         version="3.10.100.201606061308"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.xerces"
          download-size="0"
          install-size="0"
-         version="2.9.0.v201101211617"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.xml.resolver"
          download-size="0"
          install-size="0"
-         version="1.2.0.v201005080400"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.xml.serializer"
          download-size="0"
          install-size="0"
-         version="2.7.1.v201005080400"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.commons.lang"
          download-size="0"
          install-size="0"
-         version="2.6.0.v201404270220"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.gef"
          download-size="0"
          install-size="0"
-         version="3.11.0.201606061308"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="com.google.guava"
          download-size="0"
          install-size="0"
-         version="15.0.0.v201403281430"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl.common.ui"
          download-size="0"
          install-size="0"
-         version="1.3.100.v20160613-1351"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl.ecore"
          download-size="0"
          install-size="0"
-         version="3.6.100.v20160613-1351"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.equinox.p2.transport.ecf"
          download-size="0"
          install-size="0"
-         version="1.1.201.v20161115-1927"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jdt.annotation"
          download-size="0"
          install-size="0"
-         version="2.1.0.v20160418-1457"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.intro.quicklinks"
          download-size="0"
          install-size="0"
-         version="1.0.0.v20160515-0255"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ecf"
          download-size="0"
          install-size="0"
-         version="3.8.0.v20170104-0657"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ecf.identity"
          download-size="0"
          install-size="0"
-         version="3.8.0.v20161203-2153"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ecf.provider.filetransfer"
          download-size="0"
          install-size="0"
-         version="3.2.300.v20161203-1840"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ecf.filetransfer"
          download-size="0"
          install-size="0"
-         version="5.0.0.v20160817-1024"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ecf.ssl"
          download-size="0"
          install-size="0"
-         version="1.2.0.v20160817-1024"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -1882,7 +1882,7 @@ litigation
          id="org.eclipse.ecf.provider.filetransfer.ssl"
          download-size="0"
          install-size="0"
-         version="1.0.0.v20160817-1024"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -1890,28 +1890,28 @@ litigation
          id="org.eclipse.jdt"
          download-size="0"
          install-size="0"
-         version="3.12.2.v20161124-1400"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jdt.apt.core"
          download-size="0"
          install-size="0"
-         version="3.4.100.v20160525-0952"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jdt.apt.pluggable.core"
          download-size="0"
          install-size="0"
-         version="1.1.100.v20160418-1457"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jdt.compiler.apt"
          download-size="0"
          install-size="0"
-         version="1.2.100.v20160418-1457"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -1919,7 +1919,7 @@ litigation
          id="org.eclipse.jdt.compiler.tool"
          download-size="0"
          install-size="0"
-         version="1.1.100.v20160418-1457"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -1927,7 +1927,7 @@ litigation
          id="org.eclipse.jdt.junit4.runtime"
          download-size="0"
          install-size="0"
-         version="1.1.600.v20160505-0715"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -1937,7 +1937,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="3.3.0.v20160418-1524"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -1947,77 +1947,77 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="1.1.0.v20160418-1524"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.intro.universal"
          download-size="0"
          install-size="0"
-         version="3.3.1.v20160829-1558"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.commons.io"
          download-size="0"
          install-size="0"
-         version="2.2.0.v201405211200"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.commons.lang3"
          download-size="0"
          install-size="0"
-         version="3.1.0.v201403281430"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.commons.codec"
          download-size="0"
          install-size="0"
-         version="1.9.0.v20170208-1614"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xsd"
          download-size="0"
          install-size="0"
-         version="2.12.0.v20160526-0356"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.commons.httpclient"
          download-size="0"
          install-size="0"
-         version="3.1.0.v201012070820"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="com.google.gson"
          download-size="0"
          install-size="0"
-         version="2.2.4.v201311231704"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.httpcomponents.httpclient"
          download-size="0"
          install-size="0"
-         version="4.5.2.v20170210-0925"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.httpcomponents.httpcore"
          download-size="0"
          install-size="0"
-         version="4.4.6.v20170210-0925"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.commons.compress"
          download-size="0"
          install-size="0"
-         version="1.6.0.v201310281400"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>

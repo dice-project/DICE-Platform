@@ -232,7 +232,7 @@ litigation
          id="org.dice.verification"
          download-size="0"
          install-size="0"
-         version="0.1.5.qualifier"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>

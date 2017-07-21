@@ -224,28 +224,28 @@ litigation
          id="org.tigris.subversion.clientadapter.svnkit"
          download-size="0"
          install-size="0"
-         version="1.8.12.1"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.tmatesoft.svnkit"
          download-size="0"
          install-size="0"
-         version="1.8.12.r10533_v20160129_0158"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.tigris.subversion.clientadapter"
          download-size="0"
          install-size="0"
-         version="1.9.4.2"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.tigris.subversion.clientadapter.javahl"
          download-size="0"
          install-size="0"
-         version="1.9.4.1"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -254,7 +254,7 @@ litigation
          arch="x86"
          download-size="0"
          install-size="0"
-         version="1.9.6.201707071926"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -264,7 +264,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="1.9.6.201707071926"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -272,35 +272,35 @@ litigation
          id="org.tigris.subversion.subclipse.core"
          download-size="0"
          install-size="0"
-         version="4.2.3.201707071932"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.tigris.subversion.subclipse.graph"
          download-size="0"
          install-size="0"
-         version="4.2.0.1"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.tigris.subversion.subclipse.ui"
          download-size="0"
          install-size="0"
-         version="4.2.3.201707071932"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="com.trilead.ssh2"
          download-size="0"
          install-size="0"
-         version="1.0.0.build220_r167_v20150618_1733"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.tmatesoft.sqljet"
          download-size="0"
          install-size="0"
-         version="1.1.10.r1317_v20140121_0107"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>

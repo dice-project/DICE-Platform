@@ -224,91 +224,91 @@ litigation
          id="org.eclipse.wst.xml.core"
          download-size="0"
          install-size="0"
-         version="1.1.1000.v201605120036"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.wst.common.core"
          download-size="0"
          install-size="0"
-         version="1.2.0.v200908251833"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.wst.common.uriresolver"
          download-size="0"
          install-size="0"
-         version="1.2.200.v201505132009"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.wst.sse.core"
          download-size="0"
          install-size="0"
-         version="1.1.1000.v201608061842"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.wst.sse.ui"
          download-size="0"
          install-size="0"
-         version="1.3.500.v201605120129"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.wst.xml.ui"
          download-size="0"
          install-size="0"
-         version="1.1.700.v201604272318"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.wst.validation"
          download-size="0"
          install-size="0"
-         version="1.2.700.v201508251749"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.wst.common.ui"
          download-size="0"
          install-size="0"
-         version="1.1.500.v200911182011"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.wst.validation.ui"
          download-size="0"
          install-size="0"
-         version="1.2.500.v201310231452"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.wst.common.frameworks"
          download-size="0"
          install-size="0"
-         version="1.2.200.v201304241450"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.wst.common.frameworks.ui"
          download-size="0"
          install-size="0"
-         version="1.2.400.v201504292002"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.wst.common.project.facet.core"
          download-size="0"
          install-size="0"
-         version="1.4.300.v201111030423"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.wst.common.environment"
          download-size="0"
          install-size="0"
-         version="1.0.400.v200912181831"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>

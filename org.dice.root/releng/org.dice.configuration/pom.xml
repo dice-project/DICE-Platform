@@ -12,6 +12,8 @@
 		<maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+		<!-- This properties are used in other files (about.mappings in org.dice.rcp 
+			plugin), so don't remove them -->
 		<dice.version>0.1.5</dice.version>
 		<dice.timestamp>${maven.build.timestamp}</dice.timestamp>
 		<dice.eclipse_base_version>Based on Eclipse Neon 4.6.2</dice.eclipse_base_version>
@@ -20,12 +22,12 @@
 
 		<!-- The repositories tend to be removed some day when the target platform 
 			works with Tycho. Nowadays there are some troubles with Neon -->
-		<eclipse-updates.url>http://download.eclipse.org/eclipse/updates/4.6</eclipse-updates.url>
+		<eclipse-updates.url>http://download.eclipse.org/eclipse/updates/4.6/R-4.6.2-201611241400</eclipse-updates.url>
 		<egit.url>http://download.eclipse.org/egit/updates</egit.url>
 		<jetty.url>http://download.eclipse.org/jetty/updates/jetty-bundles-9.x/9.4.1.v20170120</jetty.url>
 		<ocl.url>http://download.eclipse.org/modeling/mdt/ocl/updates/releases/6.2.2</ocl.url>
 		<papyrus.url>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/neon/</papyrus.url>
-		<eclipse-base.url>http://download.eclipse.org/releases/neon</eclipse-base.url>
+		<eclipse-base.url>http://download.eclipse.org/releases/neon/201610111000/</eclipse-base.url>
 		<ecf.url>http://download.eclipse.org/rt/ecf/latest/site.p2</ecf.url>
 		<orbit.url>http://download.eclipse.org/tools/orbit/downloads/drops/R20160520211859/repository</orbit.url>
 		<pnml.url>http://pnml.lip6.fr/pnmlframework/updatesite/2.2.12/</pnml.url>

@@ -224,252 +224,252 @@ litigation
          id="org.eclipse.emf.mwe.core"
          download-size="0"
          install-size="0"
-         version="1.3.20.v201605261103"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.emf.mwe.utils"
          download-size="0"
          install-size="0"
-         version="1.3.20.v201605261103"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.emf.mwe2.lib"
          download-size="0"
          install-size="0"
-         version="2.9.0.v201605261103"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.emf.mwe2.launch"
          download-size="0"
          install-size="0"
-         version="2.9.0.v201605261103"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.commons.cli"
          download-size="0"
          install-size="0"
-         version="1.2.0.v201404270220"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.emf.mwe2.runtime"
          download-size="0"
          install-size="0"
-         version="2.9.0.v201605261103"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.emf.mwe2.language"
          download-size="0"
          install-size="0"
-         version="2.9.0.v201605261103"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.commons.logging"
          download-size="0"
          install-size="0"
-         version="1.1.1.v201101211721"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xpand"
          download-size="0"
          install-size="0"
-         version="2.2.0.v201605260315"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.antlr.runtime"
          download-size="0"
          install-size="0"
-         version="3.2.0.v201101311130"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtend"
          download-size="0"
          install-size="0"
-         version="2.2.0.v201605260315"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtend.lib"
          download-size="0"
          install-size="0"
-         version="2.10.0.v201605250459"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtend.lib.macro"
          download-size="0"
          install-size="0"
-         version="2.10.0.v201605250459"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtend.typesystem.emf"
          download-size="0"
          install-size="0"
-         version="2.2.0.v201605260315"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtext"
          download-size="0"
          install-size="0"
-         version="2.10.0.v201605250459"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtext.builder"
          download-size="0"
          install-size="0"
-         version="2.10.0.v201605250459"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtext.builder.standalone"
          download-size="0"
          install-size="0"
-         version="2.10.0.v201605250459"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtext.common.types"
          download-size="0"
          install-size="0"
-         version="2.10.0.v201605250459"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtext.common.types.edit"
          download-size="0"
          install-size="0"
-         version="2.10.0.v201605250459"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtext.common.types.ui"
          download-size="0"
          install-size="0"
-         version="2.10.0.v201605250459"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtext.ecore"
          download-size="0"
          install-size="0"
-         version="2.10.0.v201605250459"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtext.generator"
          download-size="0"
          install-size="0"
-         version="2.10.0.v201605250459"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtext.ide"
          download-size="0"
          install-size="0"
-         version="2.10.0.v201605250459"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtext.junit4"
          download-size="0"
          install-size="0"
-         version="2.10.0.v201605250459"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtext.smap"
          download-size="0"
          install-size="0"
-         version="2.10.0.v201605250459"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtext.ui"
          download-size="0"
          install-size="0"
-         version="2.10.0.v201605250459"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtext.ui.codetemplates"
          download-size="0"
          install-size="0"
-         version="2.10.0.v201605250459"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtext.ui.codetemplates.ui"
          download-size="0"
          install-size="0"
-         version="2.10.0.v201605250459"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtext.ui.shared"
          download-size="0"
          install-size="0"
-         version="2.10.0.v201605250459"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtext.util"
          download-size="0"
          install-size="0"
-         version="2.10.0.v201605250459"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtext.xbase.lib"
          download-size="0"
          install-size="0"
-         version="2.10.0.v201605250459"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtext.xtext.generator"
          download-size="0"
          install-size="0"
-         version="2.10.0.v201605250459"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xpand.ui"
          download-size="0"
          install-size="0"
-         version="2.2.0.v201605260315"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtend.shared.ui"
          download-size="0"
          install-size="0"
-         version="2.2.0.v201605260315"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xtend.ui"
          download-size="0"
          install-size="0"
-         version="2.2.0.v201605260315"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.emf.mwe.ui"
          download-size="0"
          install-size="0"
-         version="1.3.20.v201605261103"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>

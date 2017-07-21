@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="343">
+<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="344">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.pde.feature.group" version="3.12.2.v20161124-1400"/>
@@ -10,7 +10,7 @@
 <unit id="org.eclipse.platform.ide" version="4.6.2.M20161124-1400"/>
 <unit id="org.eclipse.rcp.feature.group" version="4.6.2.v20161124-1400"/>
 <unit id="org.eclipse.equinox.sdk.feature.group" version="3.12.0.v20161122-1740"/>
-<repository location="http://download.eclipse.org/eclipse/updates/4.6"/>
+<repository location="http://download.eclipse.org/eclipse/updates/4.6/R-4.6.2-201611241400"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.ocl.master.feature.group" version="6.2.2.v20161111-1848"/>
@@ -32,19 +32,19 @@
 <unit id="org.eclipse.jst.server_adapters.ext.feature.feature.group" version="3.3.501.v201609071751"/>
 <unit id="org.eclipse.jst.webpageeditor.feature.feature.group" version="2.8.0.v201605262035"/>
 <unit id="org.eclipse.emf.transaction.sdk.feature.group" version="1.10.0.201606071900"/>
-<unit id="org.eclipse.papyrus.sdk.feature.feature.group" version="2.0.2.201612071107"/>
+<unit id="org.eclipse.papyrus.sdk.feature.feature.group" version="2.0.1.201609141603"/>
 <unit id="org.eclipse.xpand.sdk.feature.group" version="2.2.0.v201605260315"/>
 <unit id="org.eclipse.emf.sdk.feature.group" version="2.12.0.v20160526-0356"/>
 <unit id="org.eclipse.jsf.feature.feature.group" version="3.9.0.v201605262035"/>
 <unit id="org.eclipse.birt.feature.group" version="4.6.0.v201606072122"/>
-<unit id="org.eclipse.graphiti.export.feature.feature.group" version="0.13.2.v20161129-0820"/>
+<unit id="org.eclipse.graphiti.export.feature.feature.group" version="0.13.1.v20160830-1309"/>
 <unit id="org.eclipse.m2e.wtp.jaxrs.feature.feature.group" version="1.3.1.20160831-1005"/>
-<unit id="org.eclipse.ocl.examples.feature.group" version="6.1.2.v20161111-1812"/>
+<unit id="org.eclipse.ocl.examples.feature.group" version="6.1.1.v20160808-1615"/>
 <unit id="org.eclipse.emf.validation.sdk.feature.group" version="1.10.0.201606071713"/>
 <unit id="org.eclipse.wst.web_ui.feature.feature.group" version="3.8.1.v201609072018"/>
 <unit id="org.eclipse.datatools.enablement.sdk.feature.feature.group" version="1.13.0.201603142002"/>
 <unit id="org.eclipse.gef.sdk.feature.group" version="3.11.0.201606061308"/>
-<unit id="org.eclipse.uml2.sdk.feature.group" version="5.2.2.v20161114-0827"/>
+<unit id="org.eclipse.uml2.sdk.feature.group" version="5.2.1.v20160822-0739"/>
 <unit id="org.eclipse.xtend.sdk.feature.group" version="2.10.0.v201605250459"/>
 <unit id="org.eclipse.gmf.feature.group" version="1.10.0.201606071959"/>
 <unit id="org.eclipse.jpt.jaxb.feature.feature.group" version="1.5.100.v201603180253"/>
@@ -70,17 +70,17 @@
 <unit id="org.eclipse.jpt.jpa.eclipselink.feature.feature.group" version="3.4.100.v201603180253"/>
 <unit id="org.eclipse.m2e.wtp.jpa.feature.feature.group" version="1.3.1.20160831-1005"/>
 <unit id="org.eclipse.emf.mwe2.language.sdk.feature.group" version="2.9.0.v201605261103"/>
-<unit id="org.eclipse.graphiti.feature.feature.group" version="0.13.2.v20161129-0820"/>
+<unit id="org.eclipse.graphiti.feature.feature.group" version="0.13.1.v20160830-1309"/>
 <unit id="org.eclipse.ocl.all.sdk.feature.group" version="5.2.0.v20160523-1914"/>
-<unit id="org.eclipse.acceleo.feature.group" version="3.6.6.201610060831"/>
+<unit id="org.eclipse.acceleo.feature.group" version="3.6.5.201608301456"/>
 <unit id="org.eclipse.datatools.sdk.feature.feature.group" version="1.13.0.201603142002"/>
-<unit id="org.eclipse.graphiti.feature.tools.feature.group" version="0.13.2.v20161129-0820"/>
+<unit id="org.eclipse.graphiti.feature.tools.feature.group" version="0.13.1.v20160830-1309"/>
 <unit id="org.eclipse.gmf.tooling.feature.group" version="3.3.1.201509291144"/>
 <unit id="org.eclipse.jst.common.fproj.enablement.jdt.feature.group" version="3.8.0.v201603091933"/>
 <unit id="org.eclipse.m2m.atl.sdk.feature.group" version="3.6.0.v201505180909"/>
 <unit id="org.eclipse.wst.common.fproj.feature.group" version="3.7.0.v201505072140"/>
 <unit id="org.eclipse.gmf.runtime.notation.sdk.feature.group" version="1.10.0.201606071631"/>
-<repository location="http://download.eclipse.org/releases/neon"/>
+<repository location="http://download.eclipse.org/releases/neon/201610111000/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.papyrus.extra.marte.properties.feature.feature.group" version="1.2.0.201703081153"/>

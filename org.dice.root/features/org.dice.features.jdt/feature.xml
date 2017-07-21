@@ -224,28 +224,28 @@ litigation
          id="org.eclipse.jdt"
          download-size="0"
          install-size="0"
-         version="3.12.2.v20161124-1400"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jdt.apt.core"
          download-size="0"
          install-size="0"
-         version="3.4.100.v20160525-0952"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jdt.apt.pluggable.core"
          download-size="0"
          install-size="0"
-         version="1.1.100.v20160418-1457"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jdt.compiler.apt"
          download-size="0"
          install-size="0"
-         version="1.2.100.v20160418-1457"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -253,7 +253,7 @@ litigation
          id="org.eclipse.jdt.compiler.tool"
          download-size="0"
          install-size="0"
-         version="1.1.100.v20160418-1457"
+         version="0.0.0"
          fragment="true"
          unpack="false"/>
 
@@ -261,7 +261,7 @@ litigation
          id="org.eclipse.jdt.junit4.runtime"
          download-size="0"
          install-size="0"
-         version="1.1.600.v20160505-0715"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -271,7 +271,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="3.3.0.v20160418-1524"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -281,7 +281,7 @@ litigation
          arch="x86_64"
          download-size="0"
          install-size="0"
-         version="1.1.0.v20160418-1524"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>

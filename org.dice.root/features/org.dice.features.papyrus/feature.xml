@@ -228,2442 +228,2442 @@ litigation
          id="org.eclipse.papyrus.cdo.ui.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.copypaste.ui.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.customization.palette"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.customization.paletteconfiguration"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.customization.properties"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.customization.properties.generation"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.customization.properties.model.xwt"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.dsml.validation.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.eclipse.project.editors"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.editor"
          download-size="0"
          install-size="0"
-         version="1.3.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.aggregate.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.common.core"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.common.sdk.core"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.common.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.custom.core"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.custom.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.custom.metamodel"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.custom.metamodel.edit"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.custom.metamodel.editor.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.custom.sdk.core"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.custom.sdk.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.custom.ui"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.efacet"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.efacet.catalog"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.efacet.core"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.efacet.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.efacet.edit"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.efacet.editor"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.efacet.metamodel"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.efacet.metamodel.edit"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.efacet.sdk.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.efacet.ui"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.query.java"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.query.java.core"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.query.java.metamodel"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.query.java.sdk.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.query.ocl.core"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.query.ocl.metamodel"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.query.ocl.sdk.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.util.core"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.util.emf.catalog"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.util.emf.core"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.util.emf.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.util.emf.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.util.jface.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.util.pde.core"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.util.swt"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.util.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.widgets"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.widgets.celleditors"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.widgets.celleditors.ecore"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.extensionpoints.editors"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.constraints"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.constraints.edit"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.constraints.editor"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.core"
          download-size="0"
          install-size="0"
-         version="2.1.1.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.core.log"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.core.pluginexplorer"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.core.sasheditor"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.core.sasheditor.di"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.discovery"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.discovery.ui"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.discovery.ui.menu"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.emf"
          download-size="0"
          install-size="0"
-         version="2.1.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.emf.appearance"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.emf.diagram.common"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.emf.nattable"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.emf.readonly"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.filters"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.filters.edit"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.assistant"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.assistant.edit"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.assistant.editor"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.assistant.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.canonical"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.commands"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.common"
          download-size="0"
          install-size="0"
-         version="2.0.2.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.common.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.controlmode"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.css"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.css.configuration"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.css.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.css.model"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.css.properties"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.css.theme"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.css3.xtext"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.css3.xtext.ui"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.dnd"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.expansion.edit"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.expansion.editor"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.export"
          download-size="0"
          install-size="0"
-         version="1.2.1.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.gmfmenu.filter"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.hyperlink"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.menu"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.modelexplorer"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.navigation"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.outline"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.preferences"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.properties"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.viewersearcher"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.widgets"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.hyperlink"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.nattable"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.nattable.common"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.nattable.controlmode"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.nattable.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.nattable.model"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.nattable.model.edit"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.nattable.model.editor"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.nattable.modelexplorer"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.nattable.properties"
          download-size="0"
          install-size="0"
-         version="2.1.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.nattable.views.config"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.nattable.views.editor"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.newchild"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.newchild.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.newchild.edit"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.onefile"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.psf"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.services.controlmode"
          download-size="0"
          install-size="0"
-         version="1.3.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.services.controlmode.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.services.controlmode.history"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.services.decoration"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.services.edit"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.services.labelprovider"
          download-size="0"
          install-size="0"
-         version="1.2.1.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.services.localizer"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.services.markerlistener"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.services.navigation"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.services.openelement"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.services.resourceloading"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.services.semantic"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.services.validation"
          download-size="0"
          install-size="0"
-         version="2.0.1.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.services.viewersearch"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.services.viewlabelprovider"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.sync"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.tools"
          download-size="0"
          install-size="0"
-         version="2.0.1.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.ui"
          download-size="0"
          install-size="0"
-         version="1.3.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.ui.resources"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.viewpoints.configuration"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.viewpoints.configuration.edit"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.viewpoints.configuration.editor"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.viewpoints.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.viewpoints.iso42010"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.viewpoints.iso42010.edit"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.viewpoints.policy"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.viewpoints.preferences"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.widgets"
          download-size="0"
          install-size="0"
-         version="2.0.1.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.widgets.toolbox"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.layers.documentation"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.req.reqif.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.alf"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.alf.common"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.alf.common.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.alf.libraries"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.alf.to.fuml"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.alf.ui"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.appearance"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.commands"
          download-size="0"
          install-size="0"
-         version="1.2.1.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.controlmode.profile"
          download-size="0"
          install-size="0"
-         version="1.2.1.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.decoratormodel"
          download-size="0"
          install-size="0"
-         version="1.2.1.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.decoratormodel.controlmode"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.decoratormodel.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.decoratormodel.properties"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.decoratormodel.ui"
          download-size="0"
          install-size="0"
-         version="1.2.1.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.activity"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.clazz"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.common"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.common.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.common.groups"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.common.palette.customaction"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.communication"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.component"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.composite"
          download-size="0"
          install-size="0"
-         version="2.0.1.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.css"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.deployment"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.dnd"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.icons"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.interactionoverview"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.menu"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.modelexplorer"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.navigation"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.paletteconfiguration"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.paletteconfiguration.edit"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.profile"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.profile.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.sequence"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.statemachine"
          download-size="0"
          install-size="0"
-         version="2.0.100.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.stereotype.edition"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.symbols"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.symbols.properties"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.timing"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.usecase"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.wizards"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.documentation.profile"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.extensionpoints"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.filters"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.filters.edit"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.icons"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.import"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.modelexplorer"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.modelexplorer.widgets"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.modelrepair"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.modelrepair.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.nattable"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.nattable.clazz.config"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.nattable.generic"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.nattable.generic.config"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.nattable.menu"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.nattable.stereotype.display"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.nattable.xtext.integration"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.nattable.xtext.valuespecification"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.navigation"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.oclconstraintevaluation"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.perspective"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.profile"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.profile.assistants.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.profile.assistants.generator"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.profile.assistants.generator.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.profile.drafter"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.properties"
          download-size="0"
          install-size="0"
-         version="2.1.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.properties.xtext"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.resourceloading.profile"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.search.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.search.ui.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.service.types"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.service.validation"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.services.decoration"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.templaterepository"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.collaborationuse.xtext"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.collaborationuse.xtext.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.common.xtext"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.common.xtext.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.connectionpointreference.xtext"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.connectionpointreference.xtext.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.constraintwithessentialocl.xtext"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.javaconstraint"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.message.xtext"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.message.xtext.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.parameter.xtext"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.parameter.xtext.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.port.xtext"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.port.xtext.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.property.xtext"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.property.xtext.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.state.xtext"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.state.xtext.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.stereotypeproperty.xtext"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.stereotypeproperty.xtext.ui"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.transition.xtext"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.transition.xtext.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.valuespecification.xtext"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.valuespecification.xtext.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.textedit.valuespecification.xtext.utils"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.tools"
          download-size="0"
          install-size="0"
-         version="2.0.2.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.tools.utils"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.xtext.integration.core"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.xtext.integration.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.xtext.integration.validation"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.views.modelexplorer"
          download-size="0"
          install-size="0"
-         version="2.1.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.views.modelexplorer.newchild"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.views.modelexplorer.resourceloading"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.views.modelexplorer.widgets"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.views.properties"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.views.properties.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.views.search"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.views.validation"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="ca.odell.glazedlists"
          download-size="0"
          install-size="0"
-         version="1.9.0.v201303080712"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.nebula.widgets.nattable.core"
          download-size="0"
          install-size="0"
-         version="1.4.0.201606011907"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.nebula.widgets.nattable.extension.glazedlists"
          download-size="0"
          install-size="0"
-         version="1.4.0.201606011907"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.batik.dom"
          download-size="0"
          install-size="0"
-         version="1.7.1.v201505191845"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.batik.dom.svg"
          download-size="0"
          install-size="0"
-         version="1.7.0.v201011041433"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.batik.svggen"
          download-size="0"
          install-size="0"
-         version="1.7.0.v201011041433"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.batik.xml"
          download-size="0"
          install-size="0"
-         version="1.7.0.v201011041433"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.batik.parser"
          download-size="0"
          install-size="0"
-         version="1.7.0.v201011041433"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.batik.ext.awt"
          download-size="0"
          install-size="0"
-         version="1.7.0.v201011041433"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.commons.logging"
          download-size="0"
          install-size="0"
-         version="1.1.1.v201101211721"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.antlr.runtime"
          download-size="0"
          install-size="0"
-         version="3.2.0.v201101311130"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.xwt"
          download-size="0"
          install-size="0"
-         version="1.2.0.v20160502-1019"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl.pivot.uml"
          download-size="0"
          install-size="0"
-         version="1.2.2.v20161111-1848"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl.pivot"
          download-size="0"
          install-size="0"
-         version="1.2.1.v20160808-1652"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl.examples.xtext.console"
          download-size="0"
          install-size="0"
-         version="4.2.0.v20160613-1351"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl.pivot.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.v20160613-1351"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl.examples.debug"
          download-size="0"
          install-size="0"
-         version="2.1.100.v20160613-1351"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl.examples.debug.vm.ui"
          download-size="0"
          install-size="0"
-         version="2.1.100.v20160613-1351"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl.xtext.oclstdlib.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.v20160613-1351"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl.examples.debug.vm"
          download-size="0"
          install-size="0"
-         version="2.1.100.v20160613-1351"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl.xtext.completeocl"
          download-size="0"
          install-size="0"
-         version="1.2.1.v20160808-1652"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl.xtext.oclinecore"
          download-size="0"
          install-size="0"
-         version="1.2.0.v20160613-1351"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl.xtext.oclstdlib"
          download-size="0"
          install-size="0"
-         version="1.2.0.v20160613-1351"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl.xtext.base"
          download-size="0"
          install-size="0"
-         version="1.2.0.v20160613-1351"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl.xtext.essentialocl.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.v20160613-1351"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl.xtext.completeocl.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.v20160613-1351"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl.xtext.essentialocl"
          download-size="0"
          install-size="0"
-         version="1.2.0.v20160613-1351"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl.xtext.oclinecore.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.v20160613-1351"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl.xtext.markup.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.v20160613-1351"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl.xtext.base.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.v20160613-1351"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl.xtext.markup"
          download-size="0"
          install-size="0"
-         version="1.2.0.v20160613-1351"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ocl.examples.ui"
          download-size="0"
          install-size="0"
-         version="1.4.100.v20160613-1351"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.constraints.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.properties.edit"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.core.sashwindows.di"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.emf.gmf"
          download-size="0"
          install-size="0"
-         version="1.2.1.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.services.edit.ui"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.types.core"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.properties"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.properties.ui"
          download-size="0"
          install-size="0"
-         version="1.2.1.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.ui.emf"
          download-size="0"
          install-size="0"
-         version="1.2.1.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.types"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.nebula.widgets.richtext"
          download-size="0"
          install-size="0"
-         version="1.1.0.201609231530"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.service.types.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.profile.types.generator"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.customization.nattableconfiguration"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.emf.facet.custom.metamodel.editor"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.editor.welcome"
          download-size="0"
          install-size="0"
-         version="1.2.1.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.editor.welcome.nattable"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.emf.types"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.emf.types.ui"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.gef"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.gmfdiag.welcome"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.newchild.ui"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.onefile.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.properties.editor"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.services.resourceloading.ui"
          download-size="0"
          install-size="0"
-         version="1.2.1.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.types.doc"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.types.edit"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.types.editor"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.types.rulebased"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.types.ui"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.css.palette"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.diagram.linklf"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.nattable.richtext"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.profile.types.generator.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.types.core"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.uml.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.views.references"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.views.references.doc"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.nebula.widgets.nattable.extension.nebula"
          download-size="0"
          install-size="0"
-         version="1.0.0.201606011907"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.marte.properties"
          download-size="0"
          install-size="0"
-         version="1.2.0.201703081153"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.marte.static.profile"
          download-size="0"
          install-size="0"
-         version="1.2.0.201703081153"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.marte.textedit.constraintwithvsl.xtext"
          download-size="0"
          install-size="0"
-         version="1.2.0.201703081153"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.marte.textedit.constraintwithvsl.xtext.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201703081153"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.marte.textedit.stereotypeapplicationwithvsl.xtext"
          download-size="0"
          install-size="0"
-         version="1.2.0.201703081153"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.marte.textedit.stereotypeapplicationwithvsl.xtext.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201703081153"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.marte.vsl"
          download-size="0"
          install-size="0"
-         version="1.2.0.201703081153"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.marte.vsl.ui"
          download-size="0"
          install-size="0"
-         version="1.2.0.201703081153"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.infra.nattable.gmfdiag"
          download-size="0"
          install-size="0"
-         version="1.2.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.sdk"
          download-size="0"
          install-size="0"
-         version="2.0.0.201612071107"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>

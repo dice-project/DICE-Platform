@@ -48,30 +48,30 @@ org.dice.rcp.perspective
    </plugins>
 
    <features>
-      <feature id="org.dice.features.base" version="4.6.2.qualifier"/>
-      <feature id="org.dice.features.emf" version="2.12.0.qualifier"/>
-      <feature id="org.dice.features.gmf" version="1.10.0.qualifier"/>
-      <feature id="org.dice.features.uml2" version="5.2.2.qualifier"/>
-      <feature id="org.dice.features.wst" version="3.8.1.qualifier"/>
-      <feature id="org.dice.features.jdt" version="3.12.2.qualifier"/>
-      <feature id="org.dice.features.acceleo" version="3.6.6.qualifier"/>
-      <feature id="org.dice.features.papyrus" version="2.0.2.qualifier"/>
-      <feature id="org.dice.features.xtext" version="2.10.0.qualifier"/>
-      <feature id="org.dice.features.qvto" version="3.6.0.qualifier"/>
-      <feature id="org.dice.features.pnml" version="2.2.12.qualifier"/>
-      <feature id="org.dice.features.atl" version="3.6.0.qualifier"/>
-      <feature id="org.dice.features.svn" version="4.2.3.qualifier"/>
-      <feature id="org.dice.features.git" version="4.8.0.qualifier"/>
-      <feature id="org.dice.features.datatools" version="1.13.0.qualifier"/>
-      <feature id="org.dice.features.birt" version="4.6.0.qualifier"/>
-      <feature id="org.dice.features.profiles" version="0.12.6.qualifier"/>
-      <feature id="org.dice.features.simulation" version="0.6.0.qualifier"/>
-      <feature id="org.dice.features.deployments" version="0.3.0.qualifier"/>
-      <feature id="org.dice.features.optimization" version="0.0.1.qualifier"/>
-      <feature id="org.dice.features.monitoring" version="0.1.5.qualifier"/>
-      <feature id="org.dice.features.verification" version="0.2.0.qualifier"/>
-      <feature id="org.dice.features.methodology" version="0.1.5.qualifier"/>
-      <feature id="org.dice.features.dicer" version="1.0.0.qualifier"/>
+      <feature id="org.dice.features.base"/>
+      <feature id="org.dice.features.emf"/>
+      <feature id="org.dice.features.gmf"/>
+      <feature id="org.dice.features.uml2"/>
+      <feature id="org.dice.features.wst"/>
+      <feature id="org.dice.features.jdt"/>
+      <feature id="org.dice.features.acceleo"/>
+      <feature id="org.dice.features.papyrus"/>
+      <feature id="org.dice.features.xtext"/>
+      <feature id="org.dice.features.qvto"/>
+      <feature id="org.dice.features.pnml"/>
+      <feature id="org.dice.features.atl"/>
+      <feature id="org.dice.features.svn"/>
+      <feature id="org.dice.features.git"/>
+      <feature id="org.dice.features.datatools"/>
+      <feature id="org.dice.features.birt"/>
+      <feature id="org.dice.features.profiles"/>
+      <feature id="org.dice.features.simulation"/>
+      <feature id="org.dice.features.deployments"/>
+      <feature id="org.dice.features.optimization"/>
+      <feature id="org.dice.features.monitoring"/>
+      <feature id="org.dice.features.verification"/>
+      <feature id="org.dice.features.methodology"/>
+      <feature id="org.dice.features.dicer"/>
    </features>
 
    <configurations>

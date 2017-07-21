@@ -8,8 +8,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.debug.ui,
  org.eclipse.papyrus.uml.tools,
- it.polimi.dice.verification;bundle-version="0.1.0",
- it.polimi.dice.verification.ui;bundle-version="0.1.0"
+ it.polimi.dice.verification,
+ it.polimi.dice.verification.ui
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: DICE Project
