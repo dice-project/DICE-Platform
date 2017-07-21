@@ -2,7 +2,7 @@
 <feature
       id="org.dice.features.git"
       label="DICE EGIT Feature"
-      version="4.6.0.qualifier"
+      version="4.8.0.qualifier"
       provider-name="DICE Project">
 
    <description url="https://vm-project-dice.doc.ic.ac.uk/redmine/projects/dice">
@@ -224,21 +224,21 @@ litigation
          id="org.eclipse.egit"
          download-size="0"
          install-size="0"
-         version="4.6.1.201703071140-r"
+         version="4.8.0.201706111038-r"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.egit.core"
          download-size="0"
          install-size="0"
-         version="4.6.1.201703071140-r"
+         version="4.8.0.201706111038-r"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.egit.ui"
          download-size="0"
          install-size="0"
-         version="4.6.1.201703071140-r"
+         version="4.8.0.201706111038-r"
          unpack="false"/>
 
    <plugin
@@ -280,7 +280,7 @@ litigation
          id="org.eclipse.jgit"
          download-size="0"
          install-size="0"
-         version="4.6.1.201703071140-r"
+         version="4.8.0.201706111038-r"
          unpack="false"/>
 
 </feature>

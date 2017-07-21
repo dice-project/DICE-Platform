@@ -2,7 +2,7 @@
 <feature
       id="org.dice.features.monitoring"
       label="DICE Monitoring Feature"
-      version="0.1.1.qualifier"
+      version="0.1.5.qualifier"
       provider-name="DICE Project">
 
    <description url="https://vm-project-dice.doc.ic.ac.uk/redmine/projects/dice">
@@ -226,7 +226,7 @@ litigation
          id="org.dice.monitoring"
          download-size="0"
          install-size="0"
-         version="0.1.1.qualifier"
+         version="0.1.5.qualifier"
          unpack="false"/>
 
 </feature>

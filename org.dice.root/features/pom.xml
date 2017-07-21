@@ -34,6 +34,7 @@
 
 		<module>org.dice.features.optimization</module>
 		<module>org.dice.features.monitoring</module>
+		<module>org.dice.features.deployments</module>
 		<module>org.dice.features.verification</module>
 		<module>org.dice.features.profiles</module>
 		<module>org.dice.features.simulation</module>

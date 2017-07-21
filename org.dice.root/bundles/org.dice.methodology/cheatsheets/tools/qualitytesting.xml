@@ -1,0 +1,56 @@
+<cheatsheet
+      title="Quality Testing Tool">
+   <intro>
+      <description>This Cheat Sheet describes the methodological steps that the DICE user follows for verifying DICE UML models with D-VerT, the verification tool of the DICE platform.
+<br></br>
+D-VerT is useful for assessing the temporal behavior of a DIA. The validation is carried out at the DTSM level to either:
+<br></br>* verify the presence of bottleneck node in a Storm application, or<br></br>
+* verify the temporal feasibility of a Spark job.
+<br></br>The goal of the guide is showing how to model a simple DIA called WikiStats, which analyzes web pages from the popular Wikimedia website (“source node”) and stores the result of the analysis into a database (“storage node”).</description>
+      </intro>
+   <item title="DIA design and verification in practice" dialog="true">
+   	<description>First step is to create the UML project and initialize the Class Diagram</description>
+   	<subitem label="Create a new Papyrus UML project (select the “Class diagram”).">
+   		<command required="false" serialization="org.eclipse.ui.newWizard(newWizardId=org.eclipse.papyrus.uml.diagram.wizards.createproject)"></command></subitem>
+   	<subitem label="Open the class diagram and instantiate two packages, one for the DPIM model and another for the DTSM model and applies on the packages the DICE::DPIM and the DICE:DTSM UML profiles respectively. Specifically, as this guide exemplifies the creation of a Storm application, add to the project the “Core” and the “Storm” metamodels/profile that can be found in the DTSM entry."></subitem></item>
+   <item title="DPIM modeling"><description>In the DPIM package, the user models the high level architecture of the DIA, as a class diagram representing the computations over various data sources. To this end, you need to perform the following steps</description>
+   	<subitem label="Instantiate a new class and applies the &lt;&lt;DPIMComputationNode&gt;&gt; stereotype on it"></subitem>
+   	<subitem label="Model the data sources, which can be either profiled by using the &lt;&lt;DPIMSourceNode&gt;&gt; of the &lt;&lt;DPIMStorageNode&gt;&gt; stereotypes, depending on the kind of data source"></subitem>
+   	<subitem label="Finally, associate the computation nodes to the available data sources."></subitem>
+   </item>
+   <item title="DTSM modeling">
+   	<description>
+In the DTSM package, the user specifies which technologies implement the various components of the DIA. In particular, the user models the actual implementation of the computations declared in the DPIM, plus all the required technology-specific details.
+<br></br>
+We use Apache Storm as target technology for “WikistatsApplication” &lt;&lt;DiceComputationNode&gt;&gt;
+</description>
+   	<subitem label="By drag-and-drop from right panel, add to the design all the nodes defining the application."></subitem>
+   	<subitem label="From the bottom panel, select the proper stereotype for each component of the application. The stereotype is chosen according to the kind of the node, that can be either a data source (&lt;&lt;StormSpout&gt;&gt;) or a computational node (&lt;&lt;StormBolt&gt;&gt;)."></subitem>
+   	<subitem label="Connect the nodes together through directed associations. Each association defines the subscription relation between two nodes: the subscriber, at the beginning of the arrow, and the subscribed node, at the end of the arrow. "></subitem>
+   	<subitem label="The final topology which will be verified with D-VerT."></subitem>
+   </item>
+   <item title="DTSM modeling - specify the stereotype values">
+   	<description>Before running the verification tool, specifies the values of the parameters related to the technology implementing the application.</description>
+   	<subitem label="Select a node and define, in the bottom panel, all the information needed for the verification. The values that are required to verify the topology are the following: parallelism, alpha, sigma, for the bolts; parallelism, averageEmitRate for the spouts. "></subitem>
+   </item>
+   <item title="Verify the topology with D-VerT. " dialog="true">
+   	<description>Verify the topology with D-VerT by clicking on the Run configurations button. In “Run configuration”, provide the following informations</description>
+   	<subitem
+   		label="The model to be verified (from the Browse menu)">
+   	</subitem>
+   	<subitem
+   		label="The number of time positions to be used in the verification process (time bound) ">
+   	</subitem>
+   	<subitem
+   		label="The plugin that D-VerT uses to verify the model">
+   	</subitem>
+   	<subitem
+   		label="The bolts that the user wants to test for undesired behaviors.">
+   	</subitem>
+   </item>
+   <item title="Run D-VerT and monitor running">
+   	<description>Run D-VerT and monitor running on the server in the D-VerT dashboard. The following informations are available:</description>
+   	<subitem label="The result of the verification, that is SAT, if anomalies are observed, or UNSAT."></subitem>
+   	<subitem label="In case of SAT, the output trace produced by the model-checker shows the temporal evolution of all the model elements in detail and the graphical representation of the verification outcome shows the anomalies for a qualitative inspection."></subitem></item>
+
+</cheatsheet>

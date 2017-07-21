@@ -12,7 +12,7 @@
 		<maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-		<dice.version>0.1.4</dice.version>
+		<dice.version>0.1.5</dice.version>
 		<dice.timestamp>${maven.build.timestamp}</dice.timestamp>
 		<dice.eclipse_base_version>Based on Eclipse Neon 4.6.2</dice.eclipse_base_version>
 
@@ -27,16 +27,17 @@
 		<papyrus.url>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/neon/</papyrus.url>
 		<eclipse-base.url>http://download.eclipse.org/releases/neon</eclipse-base.url>
 		<ecf.url>http://download.eclipse.org/rt/ecf/latest/site.p2</ecf.url>
-		<orbit.url>http://download.eclipse.org/tools/orbit/downloads/drops/S20160916162009/repository</orbit.url>
+		<orbit.url>http://download.eclipse.org/tools/orbit/downloads/drops/R20160520211859/repository</orbit.url>
 		<pnml.url>http://pnml.lip6.fr/pnmlframework/updatesite/2.2.12/</pnml.url>
 		<svn.url>https://dl.bintray.com/subclipse/releases/subclipse/latest/</svn.url>
 
 		<!-- DICE Tools -->
-		<dice-deployment.url>http://dice-project.github.io/DICE-Deployment-IDE-Plugin</dice-deployment.url>
+		<dice-deployment.url>http://dice-project.github.io/DICE-Deployment-IDE-Plugin/updates</dice-deployment.url>
 		<dice-profiles.url>http://dice-project.github.io/DICE-Profiles/updates</dice-profiles.url>
 		<dice-simulation.url>http://dice-project.github.io/DICE-Simulation/updates</dice-simulation.url>
 		<dice-verification.url>http://dice-project.github.io/DICE-Verification/updates</dice-verification.url>
 		<dice-dicer.url>https://dice-project.github.io/DICER/updates</dice-dicer.url>
+		<dice-optimization.url>http://MarcoIeni.github.io/diceH2020-space4cloud-plugin/updates</dice-optimization.url>
 	</properties>
 
 	<repositories>
@@ -117,6 +118,11 @@
 			<id>dicer</id>
 			<layout>p2</layout>
 			<url>${dice-dicer.url}</url>
+		</repository>
+		<repository>
+			<id>optimization</id>
+			<layout>p2</layout>
+			<url>${dice-optimization.url}</url>
 		</repository>
 	</repositories>
 

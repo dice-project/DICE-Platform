@@ -222,7 +222,7 @@ litigation
          id="org.dice.rcp"
          download-size="0"
          install-size="0"
-         version="0.1.4.qualifier"
+         version="0.1.5.qualifier"
          unpack="false"/>
 
    <plugin
@@ -1678,7 +1678,7 @@ litigation
          id="org.dice.ui"
          download-size="0"
          install-size="0"
-         version="0.1.1.qualifier"
+         version="0.1.5.qualifier"
          unpack="false"/>
 
    <plugin
@@ -1706,7 +1706,7 @@ litigation
          id="org.apache.lucene.core"
          download-size="0"
          install-size="0"
-         version="5.2.1.v20160301-1110"
+         version="3.5.0.v20120725-1805"
          unpack="false"/>
 
    <plugin
@@ -2003,14 +2003,21 @@ litigation
          id="org.apache.httpcomponents.httpclient"
          download-size="0"
          install-size="0"
-         version="4.5.2.v20170208-1614"
+         version="4.5.2.v20170210-0925"
          unpack="false"/>
 
    <plugin
          id="org.apache.httpcomponents.httpcore"
          download-size="0"
          install-size="0"
-         version="4.4.4.v20161115-1643"
+         version="4.4.6.v20170210-0925"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.commons.compress"
+         download-size="0"
+         install-size="0"
+         version="1.6.0.v201310281400"
          unpack="false"/>
 
 </feature>

@@ -2,7 +2,7 @@
 <feature
       id="org.dice.features.simulation"
       label="DICE Simulation Feature"
-      version="0.3.5.qualifier"
+      version="0.6.0.qualifier"
       provider-name="DICE Project">
 
    <description url="https://vm-project-dice.doc.ic.ac.uk/redmine/projects/dice">
@@ -236,7 +236,7 @@ litigation
          id="org.dice.simulation"
          download-size="0"
          install-size="0"
-         version="0.1.1.qualifier"
+         version="0.1.5.qualifier"
          unpack="false"/>
 
 </feature>
