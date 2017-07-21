@@ -64,6 +64,7 @@ org.dice.rcp.perspective
       <feature id="org.dice.features.git"/>
       <feature id="org.dice.features.datatools"/>
       <feature id="org.dice.features.birt"/>
+      <feature id="org.dice.features.m2e"/>
       <feature id="org.dice.features.profiles"/>
       <feature id="org.dice.features.simulation"/>
       <feature id="org.dice.features.deployments"/>

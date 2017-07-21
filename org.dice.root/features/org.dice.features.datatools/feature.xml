@@ -216,6 +216,10 @@ Each party waives its rights to a jury trial in any resulting
 litigation
    </license>
 
+   <requires>
+      <import feature="org.dice.features.base" version="4.6.2.qualifier"/>
+   </requires>
+
    <plugin
          id="org.eclipse.datatools.connectivity.oda.consumer"
          download-size="0"

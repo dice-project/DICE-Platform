@@ -66,9 +66,6 @@
     <packagedElement xmi:type="uml:Component" xmi:id="_WoA10KwDEeakmfIVdYS-eQ" name="Papyrus Marte 1.2.0">
       <packagedElement xmi:type="uml:Dependency" xmi:id="_aCMdsKwDEeakmfIVdYS-eQ" client="_WoA10KwDEeakmfIVdYS-eQ" supplier="_JO6UIOBXEeWNL_YKB8_3iw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Component" xmi:id="_pAPqsLJAEeauNfMY7ucCOQ" name="CopyOf_Deployments 0.1.2_1">
-      <packagedElement xmi:type="uml:Dependency" xmi:id="_pAPqsbJAEeauNfMY7ucCOQ" client="_pAPqsLJAEeauNfMY7ucCOQ" supplier="_eBirAOBWEeWNL_YKB8_3iw"/>
-    </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_pVHHcLJAEeauNfMY7ucCOQ" name="Dicer 1.0.0">
       <packagedElement xmi:type="uml:Dependency" xmi:id="_aJoq4NcjEeaMYpgEHxo6sQ" client="_pVHHcLJAEeauNfMY7ucCOQ" supplier="_Z2hmoOBXEeWNL_YKB8_3iw"/>
     </packagedElement>
@@ -83,6 +80,9 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_PdFD0FpEEeeHHZFFnLVIFA" name="Optimization 0.0.1">
       <packagedElement xmi:type="uml:Dependency" xmi:id="_Spt-8FpEEeeHHZFFnLVIFA" client="_PdFD0FpEEeeHHZFFnLVIFA" supplier="_y7KTUOBYEeWNL_YKB8_3iw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="__HyV8G4DEee-2pFlIsT02Q" name="M2E 1.7.0">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_EKaiUG4EEee-2pFlIsT02Q" client="__HyV8G4DEee-2pFlIsT02Q" supplier="_eBirAOBWEeWNL_YKB8_3iw"/>
     </packagedElement>
   </packagedElement>
 </uml:Model>

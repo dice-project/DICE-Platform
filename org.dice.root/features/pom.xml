@@ -29,6 +29,7 @@
 		<module>org.dice.features.wst</module>
 		<module>org.dice.features.atl</module>
 		<module>org.dice.features.papyrus</module>
+		<module>org.dice.features.m2e</module>
 
 		<module>org.dice.features.methodology</module>
 

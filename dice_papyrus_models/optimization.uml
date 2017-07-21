@@ -47,6 +47,8 @@
       <supplier xmi:type="uml:Component" href="verification.uml#_QaTQMLrGEeaEY8PkEXRd3w"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_0ryacLrIEeaEY8PkEXRd3w" client="_0ryaYLrIEeaEY8PkEXRd3w" supplier="_0ryacbrIEeaEY8PkEXRd3w"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_SKS_kG3uEee-2pFlIsT02Q" client="_0ryaYLrIEeaEY8PkEXRd3w" supplier="_PuSQIG3uEee-2pFlIsT02Q"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Component" xmi:id="_0ryacbrIEeaEY8PkEXRd3w" name="org.dice.features.base"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_PuSQIG3uEee-2pFlIsT02Q" name="it.polimi.diceH2020.feature"/>
 </uml:Model>

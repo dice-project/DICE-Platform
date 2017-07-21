@@ -24,6 +24,18 @@
     <element xmi:type="uml:Component" href="optimization.uml#_0ryaYLrIEeaEY8PkEXRd3w"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ryakrrIEeaEY8PkEXRd3w" x="430" y="265"/>
   </children>
+  <children xmi:type="notation:Shape" xmi:id="_PuTeQG3uEee-2pFlIsT02Q" type="Component_PackagedElementShape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_PuTeQW3uEee-2pFlIsT02Q" type="Component_NameLabel"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_PuTeQm3uEee-2pFlIsT02Q" type="Component_FloatingNameLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_PuTeQ23uEee-2pFlIsT02Q" y="5"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_PuTeRG3uEee-2pFlIsT02Q" type="Component_StructureCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_PuTeRW3uEee-2pFlIsT02Q"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PuTeRm3uEee-2pFlIsT02Q"/>
+    </children>
+    <element xmi:type="uml:Component" href="optimization.uml#_PuSQIG3uEee-2pFlIsT02Q"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PuTeSm3uEee-2pFlIsT02Q" x="158" y="263"/>
+  </children>
   <styles xmi:type="notation:StringValueStyle" xmi:id="_z-wVQbrIEeaEY8PkEXRd3w" name="diagram_compatibility_version" stringValue="1.2.0"/>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_z-wVQrrIEeaEY8PkEXRd3w"/>
   <styles xmi:type="style:PapyrusViewStyle" xmi:id="_z-wVQ7rIEeaEY8PkEXRd3w">
@@ -44,5 +56,18 @@
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0ryahbrIEeaEY8PkEXRd3w" points="[628, 290, -643984, -643984]$[718, 290, -643984, -643984]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0ryahrrIEeaEY8PkEXRd3w" id="(1.0,0.4857142857142857)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0ryah7rIEeaEY8PkEXRd3w" id="(0.0,0.4714285714285714)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_SKWp8G3uEee-2pFlIsT02Q" type="Dependency_Edge" source="_0ryaiLrIEeaEY8PkEXRd3w" target="_PuTeQG3uEee-2pFlIsT02Q" routing="Rectilinear">
+    <children xmi:type="notation:DecorationNode" xmi:id="_SKXRAG3uEee-2pFlIsT02Q" type="Dependency_NameLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_SKXRAW3uEee-2pFlIsT02Q" y="40"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_SKXRAm3uEee-2pFlIsT02Q" type="Dependency_StereotypeLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_SKXRA23uEee-2pFlIsT02Q" y="60"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_SKWp8W3uEee-2pFlIsT02Q"/>
+    <element xmi:type="uml:Dependency" href="optimization.uml#_SKS_kG3uEee-2pFlIsT02Q"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SKWp8m3uEee-2pFlIsT02Q" points="[430, 295, -643984, -643984]$[358, 295, -643984, -643984]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SKiQIG3uEee-2pFlIsT02Q" id="(0.0,0.42857142857142855)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SKiQIW3uEee-2pFlIsT02Q" id="(1.0,0.45714285714285713)"/>
   </edges>
 </notation:Diagram>
