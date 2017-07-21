@@ -193,6 +193,16 @@
             Learn how to deal with the DICE DICER Tool with this simple Cheat Sheet
          </description>
       </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.tools.category"
+            composite="false"
+            contentFile="cheatsheets/tools/qualitytesting.xml"
+            id="org.dice.methodology.cheatsheet.tools.qualitytesting"
+            name="Quality Testing Tool">
+         <description>
+            Learn how to deal with the DICE Quality Testing Tool with this simple Cheat Sheet
+         </description>
+      </cheatsheet>
    </extension>
    
    
