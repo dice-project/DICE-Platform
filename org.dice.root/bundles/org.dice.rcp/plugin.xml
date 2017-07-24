@@ -173,8 +173,17 @@
             class="org.dice.rcp.project.DiceNewProjectWizard"
             finalPerspective="org.dice.rcp.perspective"
             icon="icons/16.gif"
-            id="org.dice.rcp.wizard.project"
-            name="DICE Project"
+            id="org.dice.rcp.wizard.project.generic"
+            name="DICE Generic Project"
+            project="true">
+      </wizard>
+      <wizard
+            category="org.dice.rcp.wizard.category"
+            class="org.dice.rcp.project.QualityTestingNewProjectWizard"
+            finalPerspective="org.dice.rcp.perspective"
+            icon="icons/16.gif"
+            id="org.dice.rcp.wizard.project.qualitytesting"
+            name="DICE Quality Testing Project"
             project="true">
       </wizard>
    </extension>

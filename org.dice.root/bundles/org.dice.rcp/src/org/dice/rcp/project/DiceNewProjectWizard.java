@@ -14,7 +14,6 @@ import java.nio.file.attribute.BasicFileAttributes;
 import org.dice.rcp.DiceActivator;
 import org.dice.rcp.project.nature.DiceProjectSwitchNatureAction;
 import org.eclipse.core.resources.IProject;
-import org.eclipse.core.resources.IProjectDescription;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.NullProgressMonitor;
@@ -45,16 +44,6 @@ public class DiceNewProjectWizard extends BasicNewProjectResourceWizard {
 		}
 
 		return true;
-	}
-
-	public static void addProjectComments(IProject newProject) throws CoreException {
-		IProjectDescription description = newProject.getDescription();
-		if (description == null) {
-			return;
-		}
-
-		description.setComment("This is a DICE template project created automatically with a sample UML model");
-		newProject.setDescription(description, new NullProgressMonitor());
 	}
 
 	private void copyDiceTemplate(IProject newProject) throws IOException {

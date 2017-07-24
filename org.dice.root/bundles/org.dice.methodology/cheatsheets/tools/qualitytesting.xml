@@ -1,11 +1,11 @@
 <cheatsheet
       title="Quality Testing Tool">
    <intro>
-		<description>The Quality Testing tool is not integrated within the IDE, but using an external Java library that can be attached to your working project. You can do it by two ways:
+		<description>The Quality Testing tool is an external Java library that can be included in your working project. You can do it by two ways:
 <br/>
 - Using Maven dependencies
 <br/>
-- Attaching directly the JAR to your project</description>
+- Including directly the JAR in the project</description>
    </intro>
    <item title="Using Maven" dialog="true">
    	<description>If you use Maven with your project, you can automatically include QT-LIB in your project.</description>
