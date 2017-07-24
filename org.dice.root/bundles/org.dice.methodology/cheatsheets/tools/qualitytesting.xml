@@ -3,10 +3,27 @@
    <intro>
 		<description>The Quality Testing tool is an external Java library that can be included in your working project. You can do it by two ways:
 <br/>
+- Using the Project Wizard for Quality Testing tool
+<br/>
 - Using Maven dependencies
 <br/>
-- Including directly the JAR in the project</description>
+- Including directly the JAR in the project
+</description>
    </intro>
+   <item title="Using the Project Wizard for Quality Testing tool" dialog="true">
+   <description>You can create a new project for Quality Testing tool simply by using the specific Project Wizard of Maven for this tool</description>
+   	<subitem label="Open the new Project Creation Wizard)">
+   		<command
+             required="false"
+             serialization="org.eclipse.ui.newWizard(newWizardId=org.dice.rcp.wizard.project.qualitytesting)"/>
+   	</subitem>
+   	<subitem label="Select 'Create a simple project (skip archetype selection)', and click Next">
+   	</subitem>
+   	<subitem label="Fill the Maven information, like the Group ID, Artifact ID, Version..., and click Finish">
+   	</subitem>
+   	<subitem label="The project will be created, including the QT-LIB dependency">
+   	</subitem>
+   </item>
    <item title="Using Maven" dialog="true">
    	<description>If you use Maven with your project, you can automatically include QT-LIB in your project.</description>
    	<subitem label="Go to Maven central">
