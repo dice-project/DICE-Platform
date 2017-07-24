@@ -15,7 +15,8 @@ public class DicePerspective implements IPerspectiveFactory {
 
 	private void defineActions(IPageLayout layout) {
 		// Add File New Item
-		layout.addNewWizardShortcut("org.dice.rcp.wizard.project");
+		layout.addNewWizardShortcut("org.dice.rcp.wizard.project.generic");
+		layout.addNewWizardShortcut("org.dice.rcp.wizard.project.qualitytesting");
 		layout.addNewWizardShortcut("org.eclipse.papyrus.uml.diagram.wizards.createproject");
 		layout.addNewWizardShortcut("org.eclipse.papyrus.uml.diagram.wizards.createmodel");
 
