@@ -65,14 +65,19 @@ org.dice.rcp.perspective
       <feature id="org.dice.features.datatools"/>
       <feature id="org.dice.features.birt"/>
       <feature id="org.dice.features.m2e"/>
-      <feature id="org.dice.features.profiles"/>
+      <feature id="org.dice.features.epsilon"/>
       <feature id="org.dice.features.simulation"/>
+      <feature id="org.dice.features.verification"/>
+      <feature id="org.dice.features.monitoring"/>
       <feature id="org.dice.features.deployments"/>
       <feature id="org.dice.features.optimization"/>
-      <feature id="org.dice.features.monitoring"/>
-      <feature id="org.dice.features.verification"/>
-      <feature id="org.dice.features.methodology"/>
+      <feature id="org.dice.features.trace_checking"/>
+      <feature id="org.dice.features.enhancement"/>
+      <feature id="org.dice.features.configuration_optimization"/>
+      <feature id="org.dice.features.quality_testing"/>
       <feature id="org.dice.features.dicer"/>
+      <feature id="org.dice.features.profiles"/>
+      <feature id="org.dice.features.methodology"/>
    </features>
 
    <configurations>

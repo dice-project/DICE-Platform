@@ -30,6 +30,7 @@
 		<module>org.dice.features.atl</module>
 		<module>org.dice.features.papyrus</module>
 		<module>org.dice.features.m2e</module>
+		<module>org.dice.features.epsilon</module>
 
 		<module>org.dice.features.methodology</module>
 
@@ -37,6 +38,11 @@
 		<module>org.dice.features.monitoring</module>
 		<module>org.dice.features.deployments</module>
 		<module>org.dice.features.verification</module>
+		<module>org.dice.features.enhancement</module>
+		<module>org.dice.features.configuration_optimization</module>
+		<module>org.dice.features.trace_checking</module>
+		<module>org.dice.features.anomaly_detection</module>
+		<module>org.dice.features.quality_testing</module>
 		<module>org.dice.features.profiles</module>
 		<module>org.dice.features.simulation</module>
 		<module>org.dice.features.dicer</module>

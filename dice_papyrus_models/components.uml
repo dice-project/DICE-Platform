@@ -84,5 +84,17 @@
     <packagedElement xmi:type="uml:Component" xmi:id="__HyV8G4DEee-2pFlIsT02Q" name="M2E 1.7.0">
       <packagedElement xmi:type="uml:Dependency" xmi:id="_EKaiUG4EEee-2pFlIsT02Q" client="__HyV8G4DEee-2pFlIsT02Q" supplier="_eBirAOBWEeWNL_YKB8_3iw"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_1ik94HEyEeeTB424yHWZ2g" name="Epsilon 1.4.0">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="__FxLYHEyEeeTB424yHWZ2g" client="_1ik94HEyEeeTB424yHWZ2g" supplier="_js0y0OBWEeWNL_YKB8_3iw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_5ggMAHEyEeeTB424yHWZ2g" name="Enhancement 0.1.0">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="__sYfcHEyEeeTB424yHWZ2g" client="_5ggMAHEyEeeTB424yHWZ2g" supplier="_1ik94HEyEeeTB424yHWZ2g"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_TihjcHEzEeeTB424yHWZ2g" name="Configuration Optiomization 1.0.0">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_bxJxwHEzEeeTB424yHWZ2g" client="_TihjcHEzEeeTB424yHWZ2g" supplier="_eBirAOBWEeWNL_YKB8_3iw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_5rBY4HIBEeeTB424yHWZ2g" name="Quality Testing 1.0.0">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_5rBY4XIBEeeTB424yHWZ2g" client="_5rBY4HIBEeeTB424yHWZ2g" supplier="_eBirAOBWEeWNL_YKB8_3iw"/>
+    </packagedElement>
   </packagedElement>
 </uml:Model>

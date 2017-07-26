@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_btph0LrIEeaEY8PkEXRd3w" name="RootElement">
+  <packagedElement xmi:type="uml:Component" xmi:id="_cMDVELrIEeaEY8PkEXRd3w" name="org.dice.features.trace_checking">
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_cMDVILrIEeaEY8PkEXRd3w" client="_cMDVELrIEeaEY8PkEXRd3w">
+      <supplier xmi:type="uml:Component" href="monitoring.uml#_oN39sbrHEeaEY8PkEXRd3w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_xtddoG3pEee-2pFlIsT02Q" client="_cMDVELrIEeaEY8PkEXRd3w" supplier="_lN2iUG3pEee-2pFlIsT02Q"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_vUKeYHEzEeeTB424yHWZ2g" client="_cMDVELrIEeaEY8PkEXRd3w" supplier="_sl7jIG3pEee-2pFlIsT02Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_lN2iUG3pEee-2pFlIsT02Q" name="it.polimi.dice.tracechecking.feature"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_sl7jIG3pEee-2pFlIsT02Q" name="org.dice.features.uml2"/>
+</uml:Model>

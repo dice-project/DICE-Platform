@@ -1,4 +1,4 @@
-package org.dice.rcp.project;
+package org.dice.quality_testing;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
