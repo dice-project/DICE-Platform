@@ -96,5 +96,8 @@
     <packagedElement xmi:type="uml:Component" xmi:id="_5rBY4HIBEeeTB424yHWZ2g" name="Quality Testing 1.0.0">
       <packagedElement xmi:type="uml:Dependency" xmi:id="_5rBY4XIBEeeTB424yHWZ2g" client="_5rBY4HIBEeeTB424yHWZ2g" supplier="_eBirAOBWEeWNL_YKB8_3iw"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_H2tWEHKzEeeTB424yHWZ2g" name="Anomaly Detection 1.0.0">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_H2tWEXKzEeeTB424yHWZ2g" client="_H2tWEHKzEeeTB424yHWZ2g" supplier="_eBirAOBWEeWNL_YKB8_3iw"/>
+    </packagedElement>
   </packagedElement>
 </uml:Model>

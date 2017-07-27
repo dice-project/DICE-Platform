@@ -7,6 +7,6 @@
     <packagedElement xmi:type="uml:Dependency" xmi:id="_xtddoG3pEee-2pFlIsT02Q" client="_cMDVELrIEeaEY8PkEXRd3w" supplier="_lN2iUG3pEee-2pFlIsT02Q"/>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_vUKeYHEzEeeTB424yHWZ2g" client="_cMDVELrIEeaEY8PkEXRd3w" supplier="_sl7jIG3pEee-2pFlIsT02Q"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Component" xmi:id="_lN2iUG3pEee-2pFlIsT02Q" name="ro.ieat.dice.ADT_IDE"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_lN2iUG3pEee-2pFlIsT02Q" name="ro.ieat.dice.adt.feature"/>
   <packagedElement xmi:type="uml:Component" xmi:id="_sl7jIG3pEee-2pFlIsT02Q" name="org.dice.features.base"/>
 </uml:Model>

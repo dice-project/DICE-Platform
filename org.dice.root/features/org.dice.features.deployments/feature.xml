@@ -217,7 +217,6 @@ litigation
       <import feature="org.dice.deployments.client.feature" version="0.3.0.201704131952"/>
       <import feature="org.dice.deployments.datastore.feature" version="0.3.0.201704131952"/>
       <import feature="org.dice.deployments.ui.feature" version="0.3.0.201704131952"/>
-      <import feature="org.dice.compat.feature" version="0.1.0.201704131952"/>
    </requires>
 
 </feature>
