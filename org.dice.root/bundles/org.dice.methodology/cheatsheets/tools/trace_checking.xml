@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet
+      title="Trace Checking Tool">
+   <intro>
+      <description>This Cheat Sheet is mainly based on those ones for D-VerT (verification tool). The procedure to build a Storm topology follows the same lines of the one for D-VerT, briefly summarized hereafter and completed with DICE-TraCT related informationl</description>
+   </intro>
+   <item title="DIA design and verification in practice">
+   	<description>The user creates the UML project and initialize a Class Diagram (DTSM) to model a Storm Topology</description>
+   </item>
+   <item title="DTSM modeling">
+   	<description>In the DTSM package, the user specifies which technologies implement the various components of the DIA. In particular, the user models the actual implementation of the computations declared in the DPIM, plus all the required technology-specific details</description>
+      <subitem
+            label="Storm Modeling. Via drag-and-drop from right panel, the user adds to the design all the nodes defining the application (spouts and bolts). Then, from the bottom panel, he/she selects the proper stereotype for each component (&lt;&lt;StormSpout&gt;&gt; or &lt;&lt;StormBolt&gt;&gt;). Finally, the user connects the nodes together through directed associations. Each one defines the subscription relation between two nodes: the subscriber, at the beginning of the arrow, and the subscribed node, at the end of the arrow">
+      </subitem>
+   </item>
+   <item title="Run trace-checking with DICE-TraCT">
+   	<description>The user activates a “Run configurations” button and in the “Run configuration” window, he/she provide the following informations</description>
+      <subitem
+            label="The xml descriptor of the model to be verified (from the Browse menu)">
+      </subitem>
+      <subitem
+            label="The IP:port of the Dmon platform which is currently monitoring the topology">
+      </subitem>
+      <subitem
+            label="The bolt/spouts nodes that will be examined, the parameter (in the current version, sigma and emit rate only) to analyze, the method that the trace-checker engine will employ to calculate the parameter values, the length of time window where the analysis is carried out and the threshold which is compared with the calculated value from the logs with the relation specified in the form">
+      </subitem>
+      <subitem
+            label="The IP:port of an active DICE-TraCT service">
+      </subitem>
+   </item>
+
+</cheatsheet>

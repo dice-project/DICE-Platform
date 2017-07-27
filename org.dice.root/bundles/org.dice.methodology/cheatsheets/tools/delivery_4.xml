@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet
+      title="Delivery Tool - Create deploy configuration">
+   <intro>
+      <description>This Cheat Sheet will help you creating new run configuration that can be used to deploy selected blueprint</description>
+      </intro>
+   <item title="Open run configurations dialog">
+   	<description>From the DICE Tools menu we select DICE Tools -> Delivery Tool, which will open the configuration dialog</description>
+   </item>
+   <item title="Create new configuration">
+   	<description>To create new deploy configuration, we must select DICE Deploy in the left selector and then click the new button</description>
+   </item>
+   <item title="Add deploy data">
+   	<description>First, we need to pick a sensible name for deploy. Right now, we might just as well call it test, since this is its purpose. Next, we need to select our blueprint and resources folder we created earlier. Deployment service part should be already configured correctly, but we can modify it if we wish. We can save the deploy by pressing Apply button</description>
+   </item>
+
+</cheatsheet>

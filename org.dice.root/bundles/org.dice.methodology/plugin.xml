@@ -156,9 +156,49 @@
       <cheatsheet
             category="org.dice.methodology.tools.category"
             composite="false"
-            contentFile="cheatsheets/tools/delivery.xml"
-            id="org.dice.methodology.cheatsheet.tools.delivery"
-            name="Delivery Tool">
+            contentFile="cheatsheets/tools/delivery_1.xml"
+            id="org.dice.methodology.cheatsheet.tools.delivery_1"
+            name="Delivery Tool (1) - Registering deployment service">
+         <description>
+            Learn how to deal with the DICE Delivery Tool with this simple Cheat Sheet
+         </description>
+      </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.tools.category"
+            composite="false"
+            contentFile="cheatsheets/tools/delivery_2.xml"
+            id="org.dice.methodology.cheatsheet.tools.delivery_2"
+            name="Delivery Tool (2) - Registering deployment service that uses self signed certificate">
+         <description>
+            Learn how to deal with the DICE Delivery Tool with this simple Cheat Sheet
+         </description>
+      </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.tools.category"
+            composite="false"
+            contentFile="cheatsheets/tools/delivery_3.xml"
+            id="org.dice.methodology.cheatsheet.tools.delivery_3"
+            name="Delivery Tool (3) - Create blueprint">
+         <description>
+            Learn how to deal with the DICE Delivery Tool with this simple Cheat Sheet
+         </description>
+      </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.tools.category"
+            composite="false"
+            contentFile="cheatsheets/tools/delivery_4.xml"
+            id="org.dice.methodology.cheatsheet.tools.delivery_4"
+            name="Delivery Tool (4) - Create deploy configuration">
+         <description>
+            Learn how to deal with the DICE Delivery Tool with this simple Cheat Sheet
+         </description>
+      </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.tools.category"
+            composite="false"
+            contentFile="cheatsheets/tools/delivery_5.xml"
+            id="org.dice.methodology.cheatsheet.tools.delivery_5"
+            name="Delivery Tool (5) - Deploy blueprint">
          <description>
             Learn how to deal with the DICE Delivery Tool with this simple Cheat Sheet
          </description>
@@ -196,11 +236,51 @@
       <cheatsheet
             category="org.dice.methodology.tools.category"
             composite="false"
-            contentFile="cheatsheets/tools/qualitytesting.xml"
-            id="org.dice.methodology.cheatsheet.tools.qualitytesting"
+            contentFile="cheatsheets/tools/quality_testing.xml"
+            id="org.dice.methodology.cheatsheet.tools.quality_testing"
             name="Quality Testing Tool">
          <description>
             Learn how to deal with the DICE Quality Testing Tool with this simple Cheat Sheet
+         </description>
+      </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.tools.category"
+            composite="false"
+            contentFile="cheatsheets/tools/trace_checking.xml"
+            id="org.dice.methodology.cheatsheet.tools.trace_checking"
+            name="Trace Checking Tool">
+         <description>
+            Learn how to deal with the DICE Trace Checking Tool with this simple Cheat Sheet
+         </description>
+      </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.tools.category"
+            composite="false"
+            contentFile="cheatsheets/tools/enhancement.xml"
+            id="org.dice.methodology.cheatsheet.tools.enhancement"
+            name="Enhancement Tool">
+         <description>
+            Learn how to deal with the DICE Enhancement Tool with this simple Cheat Sheet
+         </description>
+      </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.tools.category"
+            composite="false"
+            contentFile="cheatsheets/tools/configuration_optimization.xml"
+            id="org.dice.methodology.cheatsheet.tools.configuration_optimization"
+            name="Configuration Optimization Tool">
+         <description>
+            Learn how to deal with the DICE Configuration Optimization Tool with this simple Cheat Sheet
+         </description>
+      </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.tools.category"
+            composite="false"
+            contentFile="cheatsheets/tools/anomaly_detection.xml"
+            id="org.dice.methodology.cheatsheet.tools.anomaly_detection"
+            name="Anomaly Detection Tool">
+         <description>
+            Learn how to deal with the DICE Anomaly Detection Tool with this simple Cheat Sheet
          </description>
       </cheatsheet>
    </extension>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet
+      title="Configuration Optimization Tool">
+   <intro>
+      <description>This Cheat Sheet will help you to start working with the tool</description>
+   </intro>
+   <item title="Open the View of the tool">
+   	<description>There is a view dedicated to the tool, where the user can interact with it and execute the service over Jenkins. The name of the view is "DICE Configuration View"</description>
+   </item>
+   <item title="Further information in the GitHub website">
+   	<description>The user will find further information about how to use the tool in the GitHub website: https://github.com/dice-project/DICE-Configuration-BO4CO/wiki/Getting-Started</description>
+   </item>
+
+</cheatsheet>

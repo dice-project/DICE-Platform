@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet
+      title="Anomaly Detection Tool">
+   <intro>
+      <description>This Cheat Sheet will help you to start working with the tool</description>
+      </intro>
+   <item title="Configuring and executing the tool">
+   	<description>The tool is available via two menu entries:</description>
+      <subitem
+            label="You can configure the tool using the menu DICE Tools --&gt; ADT Configure">
+      </subitem>
+      <subitem
+            label="You can run the tool using the menu DICE Tools --&gt; ADT Launch">
+      </subitem>
+
+   </item>
+
+</cheatsheet>
