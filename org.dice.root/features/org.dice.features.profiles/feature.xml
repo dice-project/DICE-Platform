@@ -223,6 +223,7 @@ litigation
       <import feature="com.masdes.dam.profile.feature"/>
       <import feature="com.masdes.dam.profile.ui.feature"/>
       <import feature="es.unizar.disco.dice.profile.feature"/>
+      <import feature="ro.ieat.secureuml.profile.feature" version="0.12.6.201706271234"/>
    </requires>
 
 </feature>
