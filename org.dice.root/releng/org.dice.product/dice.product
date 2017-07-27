@@ -71,6 +71,7 @@ org.dice.rcp.perspective
       <feature id="org.dice.features.monitoring"/>
       <feature id="org.dice.features.deployments"/>
       <feature id="org.dice.features.optimization"/>
+      <feature id="org.dice.features.anomaly_detection"/>
       <feature id="org.dice.features.trace_checking"/>
       <feature id="org.dice.features.enhancement"/>
       <feature id="org.dice.features.configuration_optimization"/>

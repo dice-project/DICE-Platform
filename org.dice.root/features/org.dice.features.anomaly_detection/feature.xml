@@ -220,6 +220,7 @@ litigation
 
    <requires>
       <import feature="org.dice.features.base" version="4.6.2.qualifier"/>
+      <import feature="ro.ieat.dice.adt.feature" version="1.0.0.qualifier"/>
    </requires>
 
 </feature>
