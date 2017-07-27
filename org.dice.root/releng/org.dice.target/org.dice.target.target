@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="364">
+<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="365">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.dice.deployments.datastore.feature.feature.group" version="0.3.0.201704131952"/>
@@ -210,6 +210,10 @@
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="it.polimi.dice.tracechecking.feature.feature.group" version="0.1.0.201707251514"/>
 <repository location="http://dice-project.github.io/DICE-Trace-Checking/updates"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="ro.ieat.dice.adt.feature.feature.group" version="1.0.0.201707271132"/>
+<repository location="http://dice-project.github.io/DICE-Anomaly-Detection-IDE/updates"/>
 </location>
 </locations>
 <launcherArgs>
