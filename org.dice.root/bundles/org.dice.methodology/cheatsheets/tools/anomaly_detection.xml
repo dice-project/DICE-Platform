@@ -4,15 +4,45 @@
    <intro>
       <description>This Cheat Sheet will help you to start working with the tool</description>
       </intro>
-   <item title="Configuring and executing the tool">
-   	<description>The tool is available via two menu entries:</description>
+   <item title="Prerequisites of the tool">
+   	<description>The following steps are for the  prerequisites that need to be installed in order to run the Anomaly Detection Tool:</description>
       <subitem
-            label="You can configure the tool using the menu DICE Tools --&gt; ADT Configure">
+            label="git 2.9.3 or above">
       </subitem>
       <subitem
-            label="You can run the tool using the menu DICE Tools --&gt; ADT Launch">
+            label="Freetype font engine: i) For linux install libfreetype6-dev libxft-dev. ii) For Windows installation instructions available on the official site (http://gnuwin32.sourceforge.net/packages/freetype.htm)">
       </subitem>
-
+	  <subitem
+            label="Python 2.7.x: i) Including pip. Windows 10 comes packaged with Python and pip, detailed instructions for older versions available at the official pip site (https://pip.pypa.io/en/stable/installing/). ii) Including virtualenv. pip install virtualenv">
+      </subitem>
+	  <subitem
+            label="Security (optional): pip install pyopenssl ndg-httpsclient pyasn1">
+      </subitem>
+   </item>
+   <item title="Start application procedure">
+   	<description>Once all of the prerequisites are correctly installed and configured it is now possible to start the installation procedure. In most of the prerequisites are already satisfied on most development desktops and are only required for a fresh install. After the prerequisites are satisfied we must clone the github repository into a directory:</description>
+    <subitem
+            label="In case of Linux distributions we recommend cloning it in /opt:">
+    </subitem>
+    <subitem
+            label="$ cd /opt">
+    </subitem>
+    <subitem
+            label="$ git clone https://github.com/dice-project/DICE-Anomaly-Detection-Tool.git">
+    </subitem>
+    <subitem
+            label="In the case of a Windows installation clone the repository can be user specified as long as it is set in system PATH (i.e. ...\dmon-adp\dmonadp.py).">
+    </subitem>
+   </item>
+   <item title="Install required python modules using pip">
+   	<description>The next step is to install all required python modules using pip:
+   	<br/>pip install -r requirements.txt</description>
+    <subitem
+            label="Once this is complete ADT should be operational. Keep in mind o set the environment path to dmonadp.">
+    </subitem>
+   </item>
+   <item title="Running ADT from the IDE">
+   	<description>For running the ADT from DICE IDE one can either use the predefined arguments for the tool or change the arguments before running it. In the first case, launching ADT is a matter of clicking the Launch ADT button from the DICE menu whereas for the second option, one can specify either a user created configuration file or pass the options as command line arguments for ADT. More details about how the configuration file and what are the available options for ADT can be found on the official Github ADT Wiki page ( https://github.com/dice-project/DICE-Anomaly-Detection-Tool/wiki/Getting-Started).</description>
    </item>
 
 </cheatsheet>
