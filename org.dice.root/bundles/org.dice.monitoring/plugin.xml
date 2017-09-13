@@ -6,18 +6,22 @@
       <menuContribution
             allPopups="false"
             locationURI="menu:org.dice.menu.tools">
-         <command
-               commandId="org.dice.ui.monitoringCommand"
-               icon="icons/monitoring.png"
-               label="DICE Monitoring Service"
-               style="push">
-         </command>
-         <command
-               commandId="org.dice.ui.monitoringVisualizationCommand"
-               icon="icons/monitoring.png"
-               label="DICE Monitoring Service Visualization UI"
-               style="push">
-         </command>
+         <menu
+               id="org.dice.monitoring.menu"
+               label="DICE Monitoning">
+            <command
+                  commandId="org.dice.ui.monitoringCommand"
+                  icon="icons/monitoring.png"
+                  label="Service"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.dice.ui.monitoringVisualizationCommand"
+                  icon="icons/monitoring.png"
+                  label="Service Visualization UI"
+                  style="push">
+            </command>
+         </menu>
       </menuContribution>
    </extension>
    <extension

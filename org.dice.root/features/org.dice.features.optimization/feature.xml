@@ -223,7 +223,7 @@ litigation
          version="0.0.0"/>
 
    <requires>
-      <import feature="org.dice.features.base" version="4.6.2.qualifier"/>
+      <import feature="it.polimi.diceH2020.D-SPACE4Cloud-plugin.features.feature" version="0.2.0.201707271618"/>
    </requires>
 
    <plugin
