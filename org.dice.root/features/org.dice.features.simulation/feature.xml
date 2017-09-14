@@ -224,7 +224,6 @@ litigation
       <import feature="org.dice.features.profiles" version="0.10.0.qualifier"/>
       <import feature="es.unizar.disco.simulation.feature"/>
       <import feature="es.unizar.disco.simulation.greatspn.feature"/>
-      <import feature="es.unizar.disco.simulation.quickstart.feature"/>
       <import feature="es.unizar.disco.simulation.ui.feature"/>
       <import feature="es.unizar.disco.ssh.feature"/>
       <import feature="com.hierynomus.sshj.feature"/>
