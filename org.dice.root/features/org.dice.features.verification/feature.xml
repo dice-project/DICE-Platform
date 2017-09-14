@@ -220,19 +220,9 @@ litigation
 
    <requires>
       <import feature="org.dice.features.base" version="4.6.2.qualifier"/>
-      <import plugin="it.polimi.dice.core"/>
-      <import plugin="it.polimi.dice.core.ui"/>
-      <import plugin="it.polimi.dice.verification"/>
-      <import plugin="it.polimi.dice.verification.ui"/>
-      <import plugin="it.polimi.dice.verification.uml2json"/>
-      <import plugin="it.polimi.dice.vtconfig"/>
+      <import feature="it.polimi.dice.verification.feature" version="0.3.0.201709141328"/>
+      <import feature="it.polimi.dice.verification.ui.feature" version="0.3.0.201709141328"/>
+      <import feature="it.polimi.dice.verification.uml2json.feature" version="0.3.0.201709141328"/>
    </requires>
-
-   <plugin
-         id="org.dice.verification"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
 
 </feature>

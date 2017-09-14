@@ -231,11 +231,4 @@ litigation
       <import feature="org.dice.features.birt" version="4.6.0.qualifier"/>
    </requires>
 
-   <plugin
-         id="org.dice.simulation"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
 </feature>

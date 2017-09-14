@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="374">
+<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="378">
 <locations>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="it.polimi.dice.verification.feature.feature.group" version="0.2.0.201703181946"/>
-<unit id="it.polimi.dice.verification.uml2json.feature.feature.group" version="0.2.0.201703181946"/>
-<unit id="it.polimi.dice.verification.ui.feature.feature.group" version="0.2.0.201703181946"/>
-<repository location="http://dice-project.github.io/DICE-Verification/updates"/>
-</location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.jst.webpageeditor.feature.feature.group" version="2.8.0.v201605262035"/>
 <unit id="org.eclipse.jst.server_adapters.ext.feature.feature.group" version="3.3.501.v201609071751"/>
@@ -180,14 +174,10 @@
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20160520211859/repository"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.dice.deployments.datastore.feature.feature.group" version="0.3.1.201708010738"/>
-<unit id="org.dice.deployments.ui.feature.feature.group" version="0.3.1.201708010738"/>
-<unit id="org.dice.deployments.client.feature.feature.group" version="0.3.1.201708010738"/>
+<unit id="org.dice.deployments.datastore.feature.feature.group" version="0.3.1.201709141159"/>
+<unit id="org.dice.deployments.ui.feature.feature.group" version="0.3.1.201709141159"/>
+<unit id="org.dice.deployments.client.feature.feature.group" version="0.3.1.201709141159"/>
 <repository location="http://dice-project.github.io/DICE-Deployment-IDE-Plugin/updates"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="uk.ac.ic.lqn.feature.feature.group" version="0.1.0.201709131621"/>
-<repository location="http://dice-project.github.io/DICE-Enhancement-APR/updates"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="it.polimi.dice.tracechecking.feature.feature.group" version="0.2.0.201709130822"/>
@@ -212,6 +202,16 @@
 <unit id="org.eclipse.ecf.core.ssl.feature.feature.group" version="1.1.0.v20170110-1317"/>
 <unit id="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature.feature.group" version="1.1.0.v20170110-1317"/>
 <repository location="http://download.eclipse.org/rt/ecf/latest/site.p2"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="uk.ac.ic.lqn.feature.feature.group" version="0.1.0.201709141400"/>
+<repository location="http://dice-project.github.io/DICE-Enhancement-APR/updates"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="it.polimi.dice.verification.uml2json.feature.feature.group" version="0.3.0.201709141328"/>
+<unit id="it.polimi.dice.verification.ui.feature.feature.group" version="0.3.0.201709141328"/>
+<unit id="it.polimi.dice.verification.feature.feature.group" version="0.3.0.201709141328"/>
+<repository location="http://dice-project.github.io/DICE-Verification/updates"/>
 </location>
 </locations>
 <launcherArgs>

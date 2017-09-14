@@ -18,8 +18,6 @@
 		<module>org.dice.methodology</module>
 		<module>org.dice.monitoring</module>
 		<module>org.dice.quality_testing</module>
-		<module>org.dice.simulation</module>
-		<module>org.dice.verification</module>
 	</modules>
 
 </project>
