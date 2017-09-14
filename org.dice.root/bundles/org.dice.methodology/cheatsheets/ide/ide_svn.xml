@@ -4,7 +4,7 @@
       <description>Here you will learn how to deal with SVN in the IDE. You can configure some repositories and import the projects you need</description>
    </intro>
    <item title="Open SVN Perspective">
-      <description>First of all, we need to open the SVN Perspective using the menu "Window->Perspective->Open Perspective->Other" and select "SVN Perspective"</description>
+      <description>First of all, we need to open the SVN Perspective using the menu "Window->Perspective->Open Perspective->Other" and select "SVN Repository Exploring" perspective</description>
       <command
             required="false"
             serialization="org.eclipse.ui.perspectives.showPerspective(org.eclipse.ui.perspectives.showPerspective.perspectiveId=org.tigris.subversion.subclipse.ui.svnPerspective,org.eclipse.ui.perspectives.showPerspective.newWindow=false)"/>

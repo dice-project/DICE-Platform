@@ -4,7 +4,7 @@
       <description>Here you will learn how to deal with GIT in the IDE. You can configure some repositories and import the projects you need</description>
    </intro>
    <item title="Open GIT Perspective">
-      <description>First of all, we need to open the SVN Perspective using the menu "Window->Perspective->Open Perspective->Other" and select "SVN Perspective"</description>
+      <description>First of all, we need to open the GIT Perspective using the menu "Window->Perspective->Open Perspective->Other" and select "Git" perspective</description>
       <command required="false" serialization="org.eclipse.ui.perspectives.showPerspective(org.eclipse.ui.perspectives.showPerspective.perspectiveId=org.eclipse.egit.ui.GitRepositoryExploring,org.eclipse.ui.perspectives.showPerspective.newWindow=false)"></command>
       </item>
    <item title="Clone an existing Repository from a URL">

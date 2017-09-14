@@ -15,10 +15,10 @@
       <subitem label="Select the Papyrus entry in the tree. Here you can modify parameters of the Papyrus diagrams elements">
       	<command required="false" serialization="org.eclipse.ui.window.preferences(preferencePageId=org.eclipse.papyrus.infra.core.sasheditor.preferences.generalcategory)"></command>
       </subitem>
-      <subitem label="Select the Java entry in the tree. In this section, you can modify some attributes of Java, like the JDK or JRE to be used, etc...">
+      <subitem label="Select the Java entry in the tree. In this section, you can modify some attributes of Java, like the JDK or JRE to be used (both are valid, but not necessary if you're not going to program), etc...">
       	<command required="false" serialization="org.eclipse.ui.window.preferences(preferencePageId=org.eclipse.jdt.ui.preferences.JavaBasePreferencePage)"></command>
       </subitem>
-      <subitem label="Select the DICE entry in the tree. In this section, you can modify some parameters of each DICE Tool, most of them mandatory to use them">
+      <subitem label="Select the DICE entry in the tree. In this section, you can modify some parameters of each DICE Tool (most of them are mandatory)">
       	<command required="false" serialization="org.eclipse.ui.window.preferences(preferencePageId=org.dice.ui.preferences)"></command>
       </subitem>
    </item>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet
+      title="Create blueprint">
+   <intro>
+      <description>
+         In this task, we will create minimal blueprint project that can be deployed.
+      </description>
+   </intro>
+   <item
+         title="Create new project">
+      <description>
+         Each blueprint that we would like to deploy needs to live in a project. To satisfy this condition we must first create new project.
+      </description>
+      <command
+            required="false"
+            serialization="org.eclipse.ui.newWizard(newWizardId=org.eclipse.ui.wizards.new.project)"/>
+   </item>
+   <item
+         title="Create blueprint">
+      <description>
+         Now we need to actually produce valid blueprint. In order to speed up the process, we can simply download sample blueprint from DICE deployment service&apos;s repository and place it into project we created in previous step.
+      </description>
+      <command
+            required="false"
+            serialization="org.eclipse.ui.browser.openBrowser(url=https://github.com/dice-project/DICE-Deployment-Service/blob/develop/example/test-setup.yaml)"/>
+   </item>
+   <item
+         title="Create resources folder">
+      <description>
+         In order to be able to send additional data along with the blueprint, we need to create a folder in our project that will hold those additional resources.
+      </description>
+      <command
+            required="false"
+            serialization="org.eclipse.ui.newWizard(newWizardId=org.eclipse.ui.wizards.new.folder)"/>
+   </item>
+</cheatsheet>

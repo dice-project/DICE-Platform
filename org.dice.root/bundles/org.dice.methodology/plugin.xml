@@ -233,6 +233,16 @@
             Learn how to deal with the DICE Anomaly Detection Tool with this simple Cheat Sheet
          </description>
       </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.tools.category"
+            composite="true"
+            contentFile="cheatsheets/tools/deployment/main.xml"
+            id="org.dice.methodology.cheatsheet.tools.depoyment"
+            name="Delivery Tool">
+         <description>
+            Learn how to use the DICE Delivery Tool
+         </description>
+      </cheatsheet>
    </extension>
    
    
