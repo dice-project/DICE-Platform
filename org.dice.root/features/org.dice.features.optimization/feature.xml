@@ -218,10 +218,6 @@ Each party waives its rights to a jury trial in any resulting
 litigation
    </license>
 
-   <includes
-         id="it.polimi.diceH2020.feature"
-         version="0.0.0"/>
-
    <requires>
       <import feature="it.polimi.diceH2020.D-SPACE4Cloud-plugin.features.feature" version="0.2.0.201707271618"/>
    </requires>
