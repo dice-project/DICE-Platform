@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="378">
+<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="379">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.jst.webpageeditor.feature.feature.group" version="2.8.0.v201605262035"/>
@@ -208,9 +208,9 @@
 <repository location="http://dice-project.github.io/DICE-Enhancement-APR/updates"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="it.polimi.dice.verification.uml2json.feature.feature.group" version="0.3.0.201709141328"/>
-<unit id="it.polimi.dice.verification.ui.feature.feature.group" version="0.3.0.201709141328"/>
-<unit id="it.polimi.dice.verification.feature.feature.group" version="0.3.0.201709141328"/>
+<unit id="it.polimi.dice.verification.uml2json.feature.feature.group" version="0.3.0.201709141507"/>
+<unit id="it.polimi.dice.verification.ui.feature.feature.group" version="0.3.0.201709141507"/>
+<unit id="it.polimi.dice.verification.feature.feature.group" version="0.3.0.201709141507"/>
 <repository location="http://dice-project.github.io/DICE-Verification/updates"/>
 </location>
 </locations>
