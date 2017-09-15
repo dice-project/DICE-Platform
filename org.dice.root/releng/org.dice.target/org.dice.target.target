@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="379">
+<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="382">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.jst.webpageeditor.feature.feature.group" version="2.8.0.v201605262035"/>
@@ -59,12 +59,6 @@
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="uk.ic.dice.ide.co.feature.feature.group" version="1.0.0.201707251328"/>
 <repository location="http://dice-project.github.io/DICE-Configuration-IDE-Plugin/updates"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.papyrus.extra.marte.properties.feature.feature.group" version="1.2.0.201703081153"/>
-<unit id="org.eclipse.papyrus.extra.marte.feature.feature.group" version="1.2.0.201703081153"/>
-<unit id="org.eclipse.papyrus.extra.marte.textedit.feature.feature.group" version="1.2.0.201703081153"/>
-<repository location="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/neon/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.platform.ide" version="4.6.2.M20161124-1400"/>
@@ -208,10 +202,16 @@
 <repository location="http://dice-project.github.io/DICE-Enhancement-APR/updates"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="it.polimi.dice.verification.uml2json.feature.feature.group" version="0.3.0.201709141507"/>
-<unit id="it.polimi.dice.verification.ui.feature.feature.group" version="0.3.0.201709141507"/>
-<unit id="it.polimi.dice.verification.feature.feature.group" version="0.3.0.201709141507"/>
+<unit id="it.polimi.dice.verification.feature.feature.group" version="0.3.0.201709150810"/>
+<unit id="it.polimi.dice.verification.uml2json.feature.feature.group" version="0.3.0.201709150810"/>
+<unit id="it.polimi.dice.verification.ui.feature.feature.group" version="0.3.0.201709150810"/>
 <repository location="http://dice-project.github.io/DICE-Verification/updates"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.papyrus.extra.marte.feature.feature.group" version="1.2.0.201612071122"/>
+<unit id="org.eclipse.papyrus.extra.marte.textedit.feature.feature.group" version="1.2.0.201612071122"/>
+<unit id="org.eclipse.papyrus.extra.marte.properties.feature.feature.group" version="1.2.0.201612071122"/>
+<repository location="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/neon/2.0.2"/>
 </location>
 </locations>
 <launcherArgs>
