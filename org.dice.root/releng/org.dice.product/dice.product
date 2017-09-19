@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="DICE Platform" uid="org.dice.rcp.dice" id="org.dice.rcp.dice" application="org.eclipse.ui.ide.workbench" version="0.1.5.qualifier" useFeatures="true" includeLaunchers="true">
+<product name="DICE Platform" uid="org.dice.rcp.dice" id="org.dice.rcp.dice" application="org.eclipse.ui.ide.workbench" version="0.1.6.qualifier" useFeatures="true" includeLaunchers="true">
 
    <aboutInfo>
       <image path="icons/120.gif"/>

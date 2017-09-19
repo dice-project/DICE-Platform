@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="389">
+<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="392">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.jst.webpageeditor.feature.feature.group" version="2.8.0.v201605262035"/>
@@ -109,10 +109,6 @@
 <repository location="http://pnml.lip6.fr/pnmlframework/updatesite/2.2.12/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="ro.ieat.dice.adt.feature.feature.group" version="1.0.0.201707271132"/>
-<repository location="http://dice-project.github.io/DICE-Anomaly-Detection-IDE/updates"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="com.masdes.dam.profile.ui.feature.feature.group" version="0.12.6.201706271234"/>
 <unit id="es.unizar.disco.dice.profile.feature.feature.group" version="0.12.6.201706271234"/>
 <unit id="com.masdes.dam.profile.feature.feature.group" version="0.12.6.201706271234"/>
@@ -212,6 +208,10 @@
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="it.polimi.diceH2020.D-SPACE4Cloud-plugin.features.feature.feature.group" version="0.2.2"/>
 <repository location="https://dice-project.github.io/DICE-Optimisation-Plugin/updates"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="ro.ieat.dice.adt.feature.feature.group" version="1.0.0.201709191106"/>
+<repository location="http://dice-project.github.io/DICE-Anomaly-Detection-IDE/updates"/>
 </location>
 </locations>
 <launcherArgs>

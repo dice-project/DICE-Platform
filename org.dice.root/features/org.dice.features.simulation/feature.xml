@@ -219,7 +219,7 @@ litigation
    </license>
 
    <requires>
-      <import feature="org.dice.features.acceleo" version="3.6.6.qualifier"/>
+      <import feature="org.dice.features.acceleo" version="3.6.5.qualifier"/>
       <import feature="org.dice.features.pnml" version="2.2.12.qualifier"/>
       <import feature="org.dice.features.profiles" version="0.10.0.qualifier"/>
       <import feature="es.unizar.disco.simulation.feature"/>

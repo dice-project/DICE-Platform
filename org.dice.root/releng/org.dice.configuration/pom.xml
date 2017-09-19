@@ -14,7 +14,7 @@
 
 		<!-- This properties are used in other files (about.mappings in org.dice.rcp 
 			plugin), so don't remove them -->
-		<dice.version>0.1.5</dice.version>
+		<dice.version>0.1.6</dice.version>
 		<dice.timestamp>${maven.build.timestamp}</dice.timestamp>
 		<dice.eclipse_base_version>Based on Eclipse Neon 4.6.2</dice.eclipse_base_version>
 

@@ -219,7 +219,7 @@ litigation
    </license>
 
    <requires>
-      <import feature="org.dice.features.papyrus" version="2.0.2.qualifier"/>
+      <import feature="org.dice.features.papyrus" version="2.0.1.qualifier"/>
       <import feature="com.masdes.dam.profile.feature"/>
       <import feature="com.masdes.dam.profile.ui.feature"/>
       <import feature="es.unizar.disco.dice.profile.feature"/>

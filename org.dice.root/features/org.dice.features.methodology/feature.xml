@@ -2,7 +2,7 @@
 <feature
       id="org.dice.features.methodology"
       label="DICE Methodology Feature"
-      version="0.1.5.qualifier"
+      version="0.1.6.qualifier"
       provider-name="DICE Project">
 
    <description url="https://vm-project-dice.doc.ic.ac.uk/redmine/projects/dice">
