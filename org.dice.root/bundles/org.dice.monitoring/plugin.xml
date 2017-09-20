@@ -9,7 +9,7 @@
          <menu
                icon="icons/monitoring.png"
                id="org.dice.monitoring.menu"
-               label="DICE Monitoning">
+               label="DICE Monitoring">
             <command
                   commandId="org.dice.ui.monitoringCommand"
                   icon="icons/monitoring.png"
