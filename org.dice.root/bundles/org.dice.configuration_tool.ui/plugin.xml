@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.dice.menu.tools">
+         <command
+               commandId="org.dice.ui.configtool.command"
+               icon="icons/configuration.png"
+               label="DICE Configuration"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.dice.configuration_tool.ui.handlers.ConfigurationToolHandler"
+            id="org.dice.ui.configtool.command"
+            name="DICE Configuration">
+      </command>
+   </extension>
+</plugin>

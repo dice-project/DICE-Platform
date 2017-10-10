@@ -30,7 +30,7 @@
    <feature url="features/org.dice.features.jdt_3.12.2.qualifier.jar" id="org.dice.features.jdt" version="3.12.2.qualifier">
       <category name="diceupdate"/>
    </feature>
-   <feature url="features/org.dice.features.methodology_0.1.6.qualifier.jar" id="org.dice.features.methodology" version="0.1.6.qualifier">
+   <feature url="features/org.dice.features.methodology_1.0.0.qualifier.jar" id="org.dice.features.methodology" version="1.0.0.qualifier">
       <category name="diceupdate"/>
    </feature>
    <feature url="features/org.dice.features.monitoring_0.1.1.qualifier.jar" id="org.dice.features.monitoring" version="0.1.1.qualifier">

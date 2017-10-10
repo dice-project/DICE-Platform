@@ -18,6 +18,7 @@
 		<module>org.dice.methodology</module>
 		<module>org.dice.monitoring</module>
 		<module>org.dice.quality_testing</module>
+		<module>org.dice.configuration_tool.ui</module>
 	</modules>
 
 </project>

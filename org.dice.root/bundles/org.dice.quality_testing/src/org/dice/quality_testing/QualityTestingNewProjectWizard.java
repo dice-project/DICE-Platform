@@ -2,11 +2,24 @@ package org.dice.quality_testing;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URI;
+import java.util.ArrayList;
+import java.util.List;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.utils.URIBuilder;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.message.BasicNameValuePair;
 import org.apache.maven.model.Dependency;
 import org.apache.maven.model.Model;
 import org.apache.maven.model.io.xpp3.MavenXpp3Writer;
 import org.apache.maven.project.MavenProject;
+import org.codehaus.plexus.util.IOUtil;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.IWorkspaceRoot;
@@ -26,12 +39,18 @@ import org.eclipse.m2e.core.project.configurator.ILifecycleMapping;
 import org.eclipse.m2e.core.project.configurator.ProjectConfigurationRequest;
 import org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizard;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 /**
  * The Class creates a new DICE project resource in the workspace that contains
  * the DICE template model
  */
 @SuppressWarnings("restriction")
 public class QualityTestingNewProjectWizard extends MavenProjectWizard {
+
+	private final String groupId = "com.github.dice-project";
+	private final String artifactId = "qt-lib";
 
 	@Override
 	public boolean performFinish() {
@@ -84,10 +103,12 @@ public class QualityTestingNewProjectWizard extends MavenProjectWizard {
 	 * Add the Maven dependency to the new created project
 	 */
 	private void addDependency(Model model, IMavenProjectFacade facade) {
+		String latestVersion = getLatestVersion();
+
 		Dependency dependency = new Dependency();
-		dependency.setGroupId("com.github.dice-project");
-		dependency.setArtifactId("qt-lib");
-		dependency.setVersion("1.0.0");
+		dependency.setGroupId(groupId);
+		dependency.setArtifactId(artifactId);
+		dependency.setVersion(latestVersion);
 
 		model.addDependency(dependency);
 
@@ -95,6 +116,44 @@ public class QualityTestingNewProjectWizard extends MavenProjectWizard {
 			FileOutputStream fos = new FileOutputStream(facade.getPomFile());
 			new MavenXpp3Writer().write(fos, model);
 		} catch (IOException e) {
+		}
+	}
+
+	private String getLatestVersion() {
+		String url = "http://search.maven.org/solrsearch/select";
+		String param = "g:\"_groupid_\" AND a:\"_artifactid_\"";
+		param = param.replace("_groupid_", groupId).replace("_artifactid_", artifactId);
+
+		try {
+			List<NameValuePair> paramList = new ArrayList<>();
+			NameValuePair nvp1 = new BasicNameValuePair("q", param);
+			paramList.add(nvp1);
+			NameValuePair nvp2 = new BasicNameValuePair("wt", "json");
+			paramList.add(nvp2);
+
+			HttpClient client = HttpClientBuilder.create().build();
+			HttpGet request = new HttpGet(url);
+			URI uri = new URIBuilder(request.getURI()).addParameters(paramList).build();
+			request.setURI(uri);
+
+			HttpResponse response = client.execute(request);
+			if (response.getStatusLine().getStatusCode() != 200) {
+				return "1.0.0";
+			}
+
+			HttpEntity entity = response.getEntity();
+			InputStream is = entity.getContent();
+			String res = IOUtil.toString(is);
+
+			Gson gson = new GsonBuilder().create();
+			MavenResponse mavenResponse = gson.fromJson(res, MavenResponse.class);
+			if (mavenResponse.response.docs == null || mavenResponse.response.docs.isEmpty()) {
+				return "1.0.0";
+			}
+
+			return mavenResponse.response.docs.get(0).latestVersion;
+		} catch (Exception e) {
+			return "1.0.0";
 		}
 	}
 
@@ -123,6 +182,27 @@ public class QualityTestingNewProjectWizard extends MavenProjectWizard {
 			}, new NullProgressMonitor());
 		} catch (CoreException e) {
 			e.printStackTrace();
+		}
+	}
+
+	@SuppressWarnings("unused")
+	private class MavenResponse {
+		private Response response;
+
+		private class Response {
+			private Integer numFound;
+			private List<Document> docs;
+		}
+
+		private class Document {
+			private String id;
+			private String g;
+			private String a;
+			private String latestVersion;
+			private String repositoryId;
+			private String p;
+			private String timestamp;
+			private String versionCount;
 		}
 	}
 

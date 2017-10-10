@@ -22,22 +22,22 @@
       <children xmi:type="notation:BasicCompartment" xmi:id="_LjlAUMN2EealSsGBCBb5Aw" type="Activity_ActivityNodeCompartment">
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LjlAUcN2EealSsGBCBb5Aw"/>
       </children>
-      <element xmi:type="uml:Activity" href="DICEmodel.uml#_LiFLcMN2EealSsGBCBb5Aw"/>
+      <element xmi:type="uml:Activity" href="DPIMmodel.uml#_LiFLcMN2EealSsGBCBb5Aw"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LjlAUsN2EealSsGBCBb5Aw"/>
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_LjlAU8N2EealSsGBCBb5Aw" name="diagram_compatibility_version" stringValue="1.2.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_LjlAVMN2EealSsGBCBb5Aw"/>
     <styles xmi:type="style:PapyrusViewStyle" xmi:id="_LjlAVcN2EealSsGBCBb5Aw">
-      <owner xmi:type="uml:Model" href="DICEmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
+      <owner xmi:type="uml:Model" href="DPIMmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
     </styles>
-    <element xmi:type="uml:Activity" href="DICEmodel.uml#_LiFLcMN2EealSsGBCBb5Aw"/>
+    <element xmi:type="uml:Activity" href="DPIMmodel.uml#_LiFLcMN2EealSsGBCBb5Aw"/>
   </notation:Diagram>
   <notation:Diagram xmi:id="_LkQ8wMN2EealSsGBCBb5Aw" type="PapyrusUMLComponentDiagram" name="DPIMcomponent" measurementUnit="Pixel">
     <styles xmi:type="notation:StringValueStyle" xmi:id="_LkQ8wcN2EealSsGBCBb5Aw" name="diagram_compatibility_version" stringValue="1.2.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_LkQ8wsN2EealSsGBCBb5Aw"/>
     <styles xmi:type="style:PapyrusViewStyle" xmi:id="_LkQ8w8N2EealSsGBCBb5Aw">
-      <owner xmi:type="uml:Model" href="DICEmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
+      <owner xmi:type="uml:Model" href="DPIMmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
     </styles>
-    <element xmi:type="uml:Model" href="DICEmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
+    <element xmi:type="uml:Model" href="DPIMmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
   </notation:Diagram>
 </xmi:XMI>

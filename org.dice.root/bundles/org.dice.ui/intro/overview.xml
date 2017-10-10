@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<introContent>
+  	<extensionContent id="org.eclipse.ui.workbench" style="css/style.css" name="dice_quicklinks" path="qroot/extra-group2/anchor">
+		<group style-id="content-group" id="abcd">
+       		<link 
+       			label="Create a DICE Project" 
+       			url="http://org.eclipse.ui.intro/execute?command=org.eclipse.ui.newWizard(newWizardId%3Dorg.dice.rcp.wizard.project.generic)&amp;decode=true"
+       			id="wizard-link" 
+       			style-id="content-link">
+          		<text>Opens a wizard to create a new DICE Project to get started</text>
+       		</link>
+       	</group>
+  	</extensionContent>
+</introContent>

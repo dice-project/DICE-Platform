@@ -3,7 +3,7 @@
   <styles xmi:type="notation:StringValueStyle" xmi:id="_LkJoAcN2EealSsGBCBb5Aw" name="diagram_compatibility_version" stringValue="1.2.0"/>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_LkJoAsN2EealSsGBCBb5Aw"/>
   <styles xmi:type="style:PapyrusViewStyle" xmi:id="_LkJoA8N2EealSsGBCBb5Aw">
-    <owner xmi:type="uml:Model" href="DICEmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
+    <owner xmi:type="uml:Model" href="DDSMmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
   </styles>
-  <element xmi:type="uml:Model" href="DICEmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
+  <element xmi:type="uml:Model" href="DDSMmodel.uml#_Lf7PUMN2EealSsGBCBb5Aw"/>
 </notation:Diagram>

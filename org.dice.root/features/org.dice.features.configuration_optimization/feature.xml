@@ -223,4 +223,11 @@ litigation
       <import feature="uk.ic.dice.ide.co.feature" version="1.0.0.201707251035"/>
    </requires>
 
+   <plugin
+         id="org.dice.configuration_tool.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
 </feature>

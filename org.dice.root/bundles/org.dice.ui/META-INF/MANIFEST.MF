@@ -2,10 +2,14 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: DICE UI
 Bundle-SymbolicName: org.dice.ui;singleton:=true
-Bundle-Version: 0.1.6.qualifier
+Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.dice.ui.DiceUIActivator
 Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime
+ org.eclipse.core.runtime,
+ org.eclipse.debug.ui,
+ org.eclipse.ui.cheatsheets,
+ org.eclipse.ui.intro.quicklinks,
+ org.dice.rcp
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: DICE Project

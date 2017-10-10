@@ -29,6 +29,7 @@ public class DicePerspective implements IPerspectiveFactory {
 		layout.addShowViewShortcut("org.tigris.subversion.subclipse.ui.repository.RepositoriesView");
 		layout.addShowViewShortcut("org.eclipse.egit.ui.RepositoriesView");
 		layout.addShowViewShortcut("es.unizar.disco.simulation.ui.views.InvocationsView");
+		layout.addShowViewShortcut("DICE-Configuration-IDE-View");
 		layout.addShowViewShortcut("org.eclipse.ui.cheatsheets.views.CheatSheetView");
 
 		// Add Perspectives
@@ -52,6 +53,7 @@ public class DicePerspective implements IPerspectiveFactory {
 		bottomTabs.addView("org.tigris.subversion.subclipse.ui.repository.RepositoriesView");
 		bottomTabs.addView("org.eclipse.egit.ui.RepositoriesView");
 		bottomTabs.addView("es.unizar.disco.simulation.ui.views.InvocationsView");
+		bottomTabs.addView("DICE-Configuration-IDE-View");
 		bottomTabs.addView("org.eclipse.ui.cheatsheets.views.CheatSheetView");
 	}
 }
