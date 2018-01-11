@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: DICE RCP
 Bundle-SymbolicName: org.dice.rcp;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 1.0.1.qualifier
 Bundle-Activator: org.dice.rcp.DiceActivator
 Bundle-Vendor: DICE Project
 Require-Bundle: javax.inject,
