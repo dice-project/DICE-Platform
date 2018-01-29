@@ -19,6 +19,8 @@
 		<module>org.dice.monitoring</module>
 		<module>org.dice.quality_testing</module>
 		<module>org.dice.configuration_tool.ui</module>
+
+		<module>org.dice.velocity.rcp</module>
 	</modules>
 
 </project>
