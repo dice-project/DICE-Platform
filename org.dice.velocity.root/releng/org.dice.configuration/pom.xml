@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.dice</groupId>
+	<artifactId>org.dice.configuration</artifactId>
+	<version>${dice.version}</version>
+	<name>DICE Velocity IDE - Configuration</name>
+	<packaging>pom</packaging>
+
+	<properties>
+		<maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<!-- This properties are used in other files (about.mappings in org.dice.rcp 
+			plugin), so don't remove them -->
+		<dice.version>1.0.1</dice.version>
+		<dice.timestamp>${maven.build.timestamp}</dice.timestamp>
+		<dice.eclipse_base_version>Based on Eclipse Neon 4.6.2</dice.eclipse_base_version>
+
+		<tycho.version>1.0.0</tycho.version>
+
+		<!-- The repositories tend to be removed some day when the target platform 
+			works with Tycho. Nowadays there are some troubles with Neon -->
+		<eclipse-updates.url>http://download.eclipse.org/eclipse/updates/4.6/R-4.6.2-201611241400</eclipse-updates.url>
+		<egit.url>http://download.eclipse.org/egit/updates</egit.url>
+		<jetty.url>http://download.eclipse.org/jetty/updates/jetty-bundles-9.x/9.4.1.v20170120</jetty.url>
+		<ocl.url>http://download.eclipse.org/modeling/mdt/ocl/updates/releases/6.2.2</ocl.url>
+		<papyrus.url>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/neon/</papyrus.url>
+		<eclipse-base.url>http://download.eclipse.org/releases/neon/201610111000/</eclipse-base.url>
+		<ecf.url>http://download.eclipse.org/rt/ecf/latest/site.p2</ecf.url>
+		<orbit.url>http://download.eclipse.org/tools/orbit/downloads/drops/R20160520211859/repository</orbit.url>
+		<svn.url>https://dl.bintray.com/subclipse/releases/subclipse/latest/</svn.url>
+		<epsilon.url>http://download.eclipse.org/epsilon/updates/</epsilon.url>
+
+		<!-- DICE Tools -->
+		<dice-deployment.url>http://dice-project.github.io/DICE-Deployment-IDE-Plugin/updates</dice-deployment.url>
+		<dice-profiles.url>http://dice-project.github.io/DICE-Profiles/updates</dice-profiles.url>
+		<dice-verification.url>http://dice-project.github.io/DICE-Verification/updates</dice-verification.url>
+		<dice-dicer.url>https://dice-project.github.io/DICER/updates</dice-dicer.url>
+		<dice-enhancement.url>http://dice-project.github.io/DICE-Enhancement-APR/updates</dice-enhancement.url>
+	</properties>
+
+	<repositories>
+		<!-- DICE dependencies -->
+		<repository>
+			<id>eclipse-updates</id>
+			<layout>p2</layout>
+			<url>${eclipse-updates.url}</url>
+		</repository>
+		<repository>
+			<id>egit</id>
+			<layout>p2</layout>
+			<url>${egit.url}</url>
+		</repository>
+		<repository>
+			<id>jetty</id>
+			<layout>p2</layout>
+			<url>${jetty.url}</url>
+		</repository>
+		<repository>
+			<id>ocl</id>
+			<layout>p2</layout>
+			<url>${ocl.url}</url>
+		</repository>
+		<repository>
+			<id>papyrus</id>
+			<layout>p2</layout>
+			<url>${papyrus.url}</url>
+		</repository>
+		<repository>
+			<id>eclipse-base</id>
+			<layout>p2</layout>
+			<url>${eclipse-base.url}</url>
+		</repository>
+		<repository>
+			<id>ecf</id>
+			<layout>p2</layout>
+			<url>${ecf.url}</url>
+		</repository>
+		<repository>
+			<id>orbit</id>
+			<layout>p2</layout>
+			<url>${orbit.url}</url>
+		</repository>
+		<repository>
+			<id>svn</id>
+			<layout>p2</layout>
+			<url>${svn.url}</url>
+		</repository>
+		<repository>
+			<id>epsilon</id>
+			<layout>p2</layout>
+			<url>${epsilon.url}</url>
+		</repository>
+
+		<!-- DICE projects -->
+		<repository>
+			<id>deployments</id>
+			<layout>p2</layout>
+			<url>${dice-deployment.url}</url>
+		</repository>
+		<repository>
+			<id>profiles</id>
+			<layout>p2</layout>
+			<url>${dice-profiles.url}</url>
+		</repository>
+		<repository>
+			<id>verification</id>
+			<layout>p2</layout>
+			<url>${dice-verification.url}</url>
+		</repository>
+		<repository>
+			<id>dicer</id>
+			<layout>p2</layout>
+			<url>${dice-dicer.url}</url>
+		</repository>
+		<repository>
+			<id>enhancement</id>
+			<layout>p2</layout>
+			<url>${dice-enhancement.url}</url>
+		</repository>
+	</repositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho.version}</version>
+				<extensions>true</extensions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho.version}</version>
+				<configuration>
+					<!-- <target> <artifact> <groupId>org.dice</groupId> <artifactId>org.dice.target</artifactId> 
+						<version>${dice.version}</version> </artifact> </target> -->
+					<environments>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86</arch>
+						</environment>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86</arch>
+						</environment>
+					</environments>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

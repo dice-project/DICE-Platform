@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compositeCheatsheet name="Delivery Tool">
+   <taskGroup kind="set" name="Delivery Tool" skip="false">
+      <intro>
+         <b>Introduction</b>
+      </intro>
+      <onCompletion>
+         <b>Conclusion</b>
+      </onCompletion>
+      <task kind="cheatsheet" name="Registering deployment service" skip="false">
+         <intro>
+            <b>Introduction</b>
+         </intro>
+         <onCompletion>
+            <b>Conclusion</b>
+         </onCompletion>
+         <param name="path" value="add_http_endpoint.xml">
+         </param>
+      </task>
+      <task kind="cheatsheet" name="Registering deployment service that uses self signed certificate" skip="true">
+         <intro>
+            <b>Introduction</b>
+         </intro>
+         <onCompletion>
+            <b>Conclusion</b>
+         </onCompletion>
+         <param name="path" value="add_https_endpoint.xml">
+         </param>
+      </task>
+      <task kind="cheatsheet" name="Create blueprint" skip="false">
+         <intro>
+            <b>Introduction</b>
+         </intro>
+         <onCompletion>
+            <b>Conclusion</b>
+         </onCompletion>
+         <param name="path" value="create_blueprint.xml">
+         </param>
+      </task>
+      <task kind="cheatsheet" name="Create deploy configuration" skip="false">
+         <intro>
+            <b>Introduction</b>
+         </intro>
+         <onCompletion>
+            <b>Conclusion</b>
+         </onCompletion>
+         <param name="path" value="create_run_configuration.xml">
+         </param>
+      </task>
+      <task kind="cheatsheet" name="Deploy blueprint" skip="false">
+         <intro>
+            <b>Introduction</b>
+         </intro>
+         <onCompletion>
+            <b>Conclusion</b>
+         </onCompletion>
+         <param name="path" value="deploy_blueprint.xml">
+         </param>
+      </task>
+   </taskGroup>
+</compositeCheatsheet>

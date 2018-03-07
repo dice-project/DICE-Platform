@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet title="Install new third party software">
+   <intro>
+      <description>Here we're going to see how to install new third party software in order to provide more functionality to the IDE. At this moment, the only way to install new components on DICE is using the Update Sites approach</description>
+   </intro>
+   <item title="Open the Update Sites wizard from the menu &quot;Help-&gt;Install new software&quot;" dialog="true">
+   	<description>In this dialog, you can install software given a URL that points to a repository.</description>
+    <command required="false" serialization="org.eclipse.equinox.p2.ui.sdk.install"/>
+   </item>
+   <item title="Set the URL of the repository">
+   	<description>In the "Work with:" field, type the URL of the repository and click on Add button. Then specify a label for the repository</description></item>
+   <item title="Select the software to be installed">
+   	<description>Once added, the list will be filled with the available software. Please select those you want to install</description></item>
+   <item title="Filter the view">
+   	<description>You can filter the view with the buttons at the bottom of the view. You can show only the latest versions of the items, group them by category, hide the installed items...</description></item>
+   <item title="Install the selected items">
+   	<description>Once selected the desired software, click on Next button to accept the licenses. Finally, you can complete the wizard by clicking on Finish. When asked, you must to restart the IDE in order to apply the changes</description></item>
+</cheatsheet>

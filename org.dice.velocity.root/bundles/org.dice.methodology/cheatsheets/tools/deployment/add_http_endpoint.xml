@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet
+      title="Registering deployment service">
+   <intro>
+      <description>
+         In this section, we will register DICE Deployment Service that is accessible over HTTP or uses valid certificate over HTTPS.
+      </description>
+   </intro>
+   <item
+         title="Obtain service registration data">
+      <description>
+         If we would like to register new deployment service into delivery tool, we need to obtain the following pieces of information from administrator, responsible for maintaining the service: <b>service address</b>, <b>username</b> and <b>password</b>.
+      </description>
+   </item>
+   <item
+         title="Open deployment tool preferences">
+      <description>
+         If we would like to register new service, we must first open the preferences page.
+      </description>
+      <command
+            required="false"
+            serialization="org.eclipse.ui.window.preferences(preferencePageId=org.dice.deployments.ui.preferences.pages.Main)"/>
+   </item>
+   <item
+         title="Open dialog for adding new service">
+      <description>
+         To start service registration, we must press <b>Add</b> button that will open dialog with service entry fields.
+      </description>
+   </item>
+   <item
+         title="Enter service data">
+      <description>
+         When we have dialog open, we can enter the service information. Address, username and password should contain the data administrator supplied. Name field should contain short, descriptive name that we will use to identify this service in other dialogs. Keystore related fields can be left empty in this scenario.
+
+If the data we entered is valid, last field in the dialog will be auto-populated for us with some default value that we can change if we wish.
+
+If we make any error while entering the data, the error will be displayed at the top of the dialog.
+
+When we are done, we press <b>Ok</b>.
+
+If the data we entered is valid, last field in the dialog will be auto-populated for us with some default value that we can change if we wish.
+
+If we make any error while entering the data, the error will be displayed at the top of the dialog.
+      </description>
+   </item>
+   <item
+         title="Save configuration">
+      <description>
+         This far, we only have data in temporary buffers. To save it, we press <b>OK</b> and we are done with configuration.
+      </description>
+   </item>
+   <item
+         skip="true"
+         title="Adding more services">
+      <description>
+         If we would like to add more services, we simply repeat the last two steps for each additional service.
+      </description>
+   </item>
+   <item
+         title="Saving changes">
+      <description>
+         All of the changes that we made this far only persist in memory. In order to save them, we must press <b>OK</b> button that will close the preferences and save the values.
+      </description>
+   </item>
+</cheatsheet>

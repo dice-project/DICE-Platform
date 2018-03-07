@@ -1,0 +1,53 @@
+<cheatsheet
+      title="Verification Tool">
+   <intro>
+      <description>This Cheat Sheet describes the methodological steps that the DICE user follows for verifying DICE UML models with D-VerT, the verification tool of the DICE platform.
+<br></br>
+D-VerT is useful for assessing the temporal behavior of a DIA. The validation is carried out at the DTSM level to either:
+<br></br>* verify the presence of bottleneck node in a Storm application, or<br></br>
+* verify the temporal feasibility of a Spark job.</description>
+      </intro>
+   <item title="DIA design and verification in practice" dialog="true">
+   	<description>The first step is to create the UML project and initialize:
+a Class Diagram, in case you want to model a Storm Topology, a Class Diagram (DPIM) and an Activity Diagram (DTSM) in case you want to model a Spark Application.</description>
+   	<subitem label="Create a new Papyrus UML project.  Select only  'Class diagram' for Storm design. Select both 'Activity diagram' (DTSM) and 'Class diagram' for (DPIM) for Spark design.am (DTSM) and 'Class diagram' (DPIM) for Spark design">
+   		<command required="false" serialization="org.eclipse.ui.newWizard(newWizardId=org.eclipse.papyrus.uml.diagram.wizards.createproject)"></command>
+   	</subitem>
+   	<subitem label="For Storm applications, open the class diagram and instantiate two packages, one for the DPIM model and another for the DTSM model and applies on the packages the DICE::DPIM and the DICE:DTSM UML profiles respectively. Specifically, select the “Core” and the “Storm” metamodels/profile that can be found in the DTSM entry">
+   	</subitem>
+   	<subitem label="For Spark applications, open the activity diagram and instantiate two packages, one for the DPIM model and another for the DTSM model and applies on the packages the DICE::DPIM and the DICE:DTSM UML profiles respectively.  Specifically, select the “Core” and the “Spark” metamodels/profile that can be found in the DTSM entry">
+   	</subitem>
+   </item>
+   <item title="DPIM modeling"><description>In the DPIM package, the user models the high level architecture of the DIA, as a class diagram representing the computations over various data sources. To this end, you need to perform the following steps</description>
+   	<subitem label="Instantiate a new class and applies the &lt;&lt;DPIMComputationNode&gt;&gt; stereotype on it"></subitem>
+   	<subitem label="Model the data sources, which can be either profiled by using the &lt;&lt;DPIMSourceNode&gt;&gt; of the &lt;&lt;DPIMStorageNode&gt;&gt; stereotypes, depending on the kind of data source"></subitem>
+   	<subitem label="Finally, associate the computation nodes to the available data sources."></subitem>
+   </item>
+   <item title="DTSM modeling">
+   	<description>
+In the DTSM package, the user specifies which technologies implement the various components of the DIA. In particular, the user models the actual implementation of the computations declared in the DPIM, plus all the required technology-specific details
+</description>
+   	<subitem label="Storm Modeling. A Storm application consists in a DAG composed of two kind of nodes: source nodes, also called spouts, and computation nodes, also called bolts. Each of these nodes are represented by class instances that are properly annotated and connected by means of associations. To design a Storm application follow these steps: i) Via drag-and-drop from right panel, add to the design all the nodes (Class nodes) defining the application. ii) From the bottom panel, select the proper stereotype for each component of the application. The stereotype is chosen according to the kind of the node, that can be either a data source (&lt;&lt;StormSpout&gt;&gt;) or a computational node (&lt;&lt;StormBolt&gt;&gt;). iii) Connect the nodes together through directed associations. Each association defines the subscription relation between two nodes: the subscriber, at the beginning of the arrow, and the subscribed node, at the end of the arrow. iv) The final topology which will be verified with D-VerT."></subitem>
+   	<subitem label="Spark Modeling. A Spark application consists in a DAG whose nodes are the operations performed over data. There are two main kind of operations that are performed: transformations and actions.. Each node (operation) is represented as a properly annotated opaque action in the activity diagram. To design a Spark application, follow these steps: i) Make sure to have an activity node in the editor (should be added by default when an activity diagram is created). If it is not present, add an activity  node to the editor via drag-and-drop from the right panel. ii) Via drag-and-drop from the right panel, add to the main activity node all the nodes constituting the DAG of operations (Opaque Action nodes). iii) Connect the operation nodes by means of Control Flow edges. Each first operation on a starting RDD must be preceded by a Start Node. The last operation must be followed by an End Node. iv) From the bottom panel, select the proper stereotype for each component of the application. The stereotype is chosen according to the kind of the node: for Opaque Action nodes it can be either a transformation (&lt;&lt;SparkMap&gt;&gt;) or an action (&lt;&lt;SparkReduce&gt;&gt;). Select the  &lt;&lt;SparkScenario&gt;&gt; stereotype  to annotate the main activity."></subitem>
+   </item>
+   <item title="DTSM modeling - specify the stereotype values">
+   	<description>Before running the verification tool, specifies the values of the parameters related to the technology implementing the application.</description>
+   	<subitem label="For Storm applications, select each node and define, in the bottom panel, all the information needed for the verification. The values that are required to verify the topology are the following: i) parallelism, alpha, sigma, for the bolts. ii) parallelism, averageEmitRate"></subitem>
+   	<subitem label="For Spark applications, select each operation and define, in the bottom panel, all the information needed for the verification. The values that are required to verify the application are the following: i) duration, MapType, numTasks (optional), for transformations (&lt;&lt;SparkMap&gt;&gt;);  ii) duration, ReduceType and numTasks (optional) for actions (&lt;&lt;SparkReduce&gt;&gt;); iii) nAssignedCores, sparkDefaultParallelism and nAssignedMemory for the main activity node (&lt;&lt;SparkScenario&gt;&gt;)"></subitem>
+   </item>
+   <item title="Verify the topology with D-VerT. " dialog="true">
+   	<description>Verify the topology with D-VerT by clicking on the Run configurations button. In “Run configuration”, provide the following informations</description>
+   	<subitem
+   		label="For Storm applications: i) The model to be verified (from the Browse menu). ii) The number of time positions to be used in the verification process (time bound). iii) The plugin that D-VerT uses to verify the model. iv) The bolts that the user wants to test for undesired behaviors.">
+   	</subitem>
+   	<subitem
+   		label="For Spark applications: i) The model to be verified (from the Browse menu). ii) The kind of analysis to be performed (feasibility or boundedness). Only feasibility analysis is currently supported. iii) The deadline against which perform the analysis. iv) The number of time positions to be used in the verification process (time bound)">
+   	</subitem>
+   </item>
+   <item title="Run D-VerT and monitor running">
+   	<description>Run D-VerT and monitor running on the server in the D-VerT dashboard. The following informations are available:</description>
+   	<subitem label="The result of the verification. For Storm the result is SAT if anomalies are observed, otherwise UNSAT. For the feasibility analysis of Spark applications, the result is either FEASIBLE or UNFEASIBLE. For boundedness analysis of Spark applications, the result is either BOUNDED or NOT BOUNDED"></subitem>
+   	<subitem label="In case of SAT  (or, respectively FEASIBLE and NOT BOUNDED), the output trace produced by the model-checker shows the temporal evolution of all the model elements in detail and the graphical representation of the verification outcome shows the anomalies (Storm bottleneck analysis and Spark boundedness analysis) or a feasible trace (Spark feasibility analysis) for a qualitative inspection"></subitem>
+   </item>
+
+</cheatsheet>

@@ -1,0 +1,1 @@
+This folder is a replica of "org.dice.root/bundles/org.dice.rcp/icons/" folder, so maintain it synchronized

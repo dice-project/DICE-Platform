@@ -16,8 +16,6 @@
 		<!-- <module>org.dice.update</module> -->
 		<module>org.dice.product</module>
 		<!-- <module>org.dice.target</module> -->
-
-		<module>org.dice.velocity.product</module>
 	</modules>
 
 </project>

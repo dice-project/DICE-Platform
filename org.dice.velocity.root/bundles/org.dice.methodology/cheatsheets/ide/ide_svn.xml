@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet title="Configure a SVN Repository">
+   <intro>
+      <description>Here you will learn how to deal with SVN in the IDE. You can configure some repositories and import the projects you need</description>
+   </intro>
+   <item title="Open SVN Perspective">
+      <description>First of all, we need to open the SVN Perspective using the menu "Window->Perspective->Open Perspective->Other" and select "SVN Repository Exploring" perspective</description>
+      <command
+            required="false"
+            serialization="org.eclipse.ui.perspectives.showPerspective(org.eclipse.ui.perspectives.showPerspective.perspectiveId=org.tigris.subversion.subclipse.ui.svnPerspective,org.eclipse.ui.perspectives.showPerspective.newWindow=false)"/>
+   </item>
+   <item title="Add a new Repository">
+   	<description>In the "SVN Repositories" view, right click there and click on "New->Repository Location" menu</description>
+    <subitem
+          label="Fill the URL field and click on Finish. If the URL is valid, the repository will be added automatically">
+    </subitem></item>
+   <item title="Import an existing Project into the Workspace">
+   	<description>Browse the added repository and select the folder you want to import. Right click on it and select "Checkout" action. Follow the steps in the wizard in order to create a new Project (if the folder is not an Eclipse Project) or import it (if the folder is yet an Eclipse Project)</description></item>
+</cheatsheet>

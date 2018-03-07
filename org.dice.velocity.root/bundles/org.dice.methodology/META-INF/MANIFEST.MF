@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DICE Methodology
+Bundle-SymbolicName: org.dice.methodology;singleton:=true
+Bundle-Version: 1.0.1.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: DICE Project
+Require-Bundle: org.eclipse.help,
+ org.eclipse.ui,
+ org.eclipse.ui.cheatsheets,
+ org.eclipse.core.runtime,
+ org.eclipse.papyrus.uml.diagram.wizards

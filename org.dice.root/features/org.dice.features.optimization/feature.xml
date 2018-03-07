@@ -2,7 +2,7 @@
 <feature
       id="org.dice.features.optimization"
       label="DICE Optimization Feature"
-      version="0.0.1.qualifier"
+      version="0.2.4.qualifier"
       provider-name="DICE Project">
 
    <description url="https://vm-project-dice.doc.ic.ac.uk/redmine/projects/dice">

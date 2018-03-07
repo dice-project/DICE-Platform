@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="org.eclipse.ui.cheatsheets.actionSet"
+            label="Cheat Sheets"
+            visible="true">
+         <action
+               class="org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction"
+               id="org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction"
+               label="&amp;Cheat Sheets..."
+               menubarPath="help/group.tutorials">
+         </action>
+      </actionSet>
+   </extension>
+   <extension
+         id="org.dice.cheatsheet.main"
+         name="DICE Cheat Sheet Main"
+         point="org.eclipse.ui.cheatsheets.cheatSheetContent">
+      <category
+            id="org.dice.methodology.category"
+            name="DICE Framework">
+      </category>
+   </extension>
+   <extension
+         id="org.dice.cheatsheet.ide"
+         name="DICE Cheat Sheet IDE"
+         point="org.eclipse.ui.cheatsheets.cheatSheetContent">
+      <category
+            id="org.dice.methodology.ide.category"
+            name="DICE IDE"
+            parentCategory="org.dice.methodology.category">
+      </category>
+      <cheatsheet
+            category="org.dice.methodology.ide.category"
+            composite="false"
+            contentFile="cheatsheets/ide/ide_configure.xml"
+            id="org.dice.methodology.cheatsheet.ide.configuration"
+            name="IDE Initial configuration">
+         <description>
+            Configure your IDE property on the first run to have a good experience working with DICE
+         </description>
+      </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.ide.category"
+            composite="false"
+            contentFile="cheatsheets/ide/ide_update.xml"
+            id="org.dice.methodology.cheatsheet.ide.update"
+            name="IDE Update components">
+         <description>
+            Keep your IDE updated. How to update it automatically or manually
+         </description>
+      </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.ide.category"
+            composite="false"
+            contentFile="cheatsheets/ide/ide_install.xml"
+            id="org.dice.methodology.cheatsheet.ide.install"
+            name="IDE Install new software">
+         <description>
+            Install new third party software using the Eclipse techniques
+         </description>
+      </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.ide.category"
+            composite="false"
+            contentFile="cheatsheets/ide/ide_git.xml"
+            id="org.dice.methodology.cheatsheet.ide.git"
+            name="IDE Connect to GIT">
+         <description>
+            Configure a GIT repository with the IDE
+         </description>
+      </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.ide.category"
+            composite="false"
+            contentFile="cheatsheets/ide/ide_svn.xml"
+            id="org.dice.methodology.cheatsheet.ide.svn"
+            name="IDE Connect to SVN">
+         <description>
+            Configure a SVN repository with the IDE
+         </description>
+      </cheatsheet>
+   </extension>
+   <extension
+         id="org.dice.cheatsheet.papyrus"
+         name="DICE Cheat Sheet Papyrus"
+         point="org.eclipse.ui.cheatsheets.cheatSheetContent">
+      <category
+            id="org.dice.methodology.papyrus.category"
+            name="DICE Papyrus"
+            parentCategory="org.dice.methodology.category">
+      </category>
+      <cheatsheet
+            category="org.dice.methodology.papyrus.category"
+            composite="false"
+            contentFile="cheatsheets/papyrus/papyrus_create.xml"
+            id="org.dice.methodology.cheatsheet.papyrus.create"
+            name="Create a Papyrus project and model">
+         <description>
+            Start working with Papyrus on DICE: create a new project and a new model and start modeling
+         </description>
+      </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.papyrus.category"
+            composite="false"
+            contentFile="cheatsheets/papyrus/papyrus_profile.xml"
+            id="org.dice.methodology.cheatsheet.papyrus.profile"
+            name="Profile and Stereotype Papyrus models">
+         <description>
+            Apply profiles and stereotype the elements of the Papyrus UML models
+         </description>
+      </cheatsheet>
+   </extension>
+   <extension
+         id="org.dice.cheatsheet.tools"
+         name="DICE Cheat Sheet Tools"
+         point="org.eclipse.ui.cheatsheets.cheatSheetContent">
+      <category
+            id="org.dice.methodology.tools.category"
+            name="DICE Tools"
+            parentCategory="org.dice.methodology.category">
+      </category>
+      <cheatsheet
+            category="org.dice.methodology.tools.category"
+            composite="false"
+            contentFile="cheatsheets/tools/profiles.xml"
+            id="org.dice.methodology.cheatsheet.tools.profiles"
+            name="DICE Profiles">
+         <description>
+            If you want to know how to use DICE Profiles, this is your Cheat Sheet!
+         </description>
+      </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.tools.category"
+            composite="false"
+            contentFile="cheatsheets/tools/verification.xml"
+            id="org.dice.methodology.cheatsheet.tools.verification"
+            name="Verification Tool">
+         <description>
+            Learn how to deal with the DICE Verification Tool with this simple Cheat Sheet
+         </description>
+      </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.tools.category"
+            composite="false"
+            contentFile="cheatsheets/tools/dicer.xml"
+            id="org.dice.methodology.cheatsheet.tools.dicer"
+            name="DICER Tool">
+         <description>
+            Learn how to deal with the DICE DICER Tool with this simple Cheat Sheet
+         </description>
+      </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.tools.category"
+            composite="false"
+            contentFile="cheatsheets/tools/quality_testing.xml"
+            id="org.dice.methodology.cheatsheet.tools.quality_testing"
+            name="Quality Testing Tool">
+         <description>
+            Learn how to deal with the DICE Quality Testing Tool with this simple Cheat Sheet
+         </description>
+      </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.tools.category"
+            composite="false"
+            contentFile="cheatsheets/tools/enhancement.xml"
+            id="org.dice.methodology.cheatsheet.tools.enhancement"
+            name="Enhancement Tool">
+         <description>
+            Learn how to deal with the DICE Enhancement Tool with this simple Cheat Sheet
+         </description>
+      </cheatsheet>
+      <cheatsheet
+            category="org.dice.methodology.tools.category"
+            composite="true"
+            contentFile="cheatsheets/tools/deployment/main.xml"
+            id="org.dice.methodology.cheatsheet.tools.depoyment"
+            name="Delivery Tool">
+         <description>
+            Learn how to use the DICE Delivery Tool
+         </description>
+      </cheatsheet>
+   </extension>
+   
+   
+
+</plugin>

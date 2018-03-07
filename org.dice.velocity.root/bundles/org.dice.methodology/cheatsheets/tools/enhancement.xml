@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet
+      title="Enhancement Tool">
+   <intro>
+      <description>This Cheat Sheet describes the steps that the DICE user follows for using DICE Enhancement tool in DICE IDE</description>
+      </intro>
+   <item title="Install Matlab Compiler Runtime (MCR) 2015a">
+   	<description>Install Matlab Compiler Runtime (MCR) 2015a. This is a royalty-free runtime that does not require owning a Matlab license</description>
+   </item>
+   <item title="Configure the Matlab Runtime Environment">
+   	<description>After installed the MCR, user needs to ensure that  Java environment, Classpath, system path are properly configured. For example, if user installed R2015a(8.5)-64bit in the Windows Operating System under path “C:\MATLAB\MATLAB Runtime”</description>
+    <subitem
+          label="Configure CLASSPATH: to use the compiled classes, user needs to include a file called javabuilder.jar on the Java class path. User needs to add “C:\MATLAB\MATLAB Runtime\v85\toolbox\javabuilder\jar” to CLASSPATH">
+    </subitem>
+    <subitem
+          label="Configure system PATH: user needs to add the MCR runtime path “C:\MATLAB\MATLAB Runtime\v85\runtime\win64” to the system PATH">
+    </subitem>
+    <subitem
+          label="The Enhancement tool needs to read two configuration files, DICE-FG-Configuration.xml and DICE-APR-Configuration.xml, to obtain the related parameters for running. User can download the sample configuration files from the following Github page: https://github.com/dice-project/DICE-Enhancement-APR/tree/master/Plugin/doc">
+    </subitem>
+    <subitem
+          label="User needs to put configuration files under the same folder of the target UML model and set the corresponding parameters. The more details of the meaning of those parameters can be found at the following  Github page: https://github.com/dice-project/DICE-Enhancement-APR/tree/master/Plugin/doc/Configuration%20Files">
+    </subitem>
+   </item>
+
+</cheatsheet>

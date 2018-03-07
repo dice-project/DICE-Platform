@@ -1,0 +1,49 @@
+<cheatsheet
+      title="Quality Testing Tool">
+   <intro>
+		<description>The Quality Testing tool is an external Java library that can be included in your working project. You can do it by two ways:
+<br/>
+- Using the Project Wizard for Quality Testing tool
+<br/>
+- Using Maven dependencies
+<br/>
+- Including directly the JAR in the project
+</description>
+   </intro>
+   <item title="Using the Project Wizard for Quality Testing tool" dialog="true">
+   <description>You can create a new project for Quality Testing tool simply by using the specific Project Wizard of Maven for this tool</description>
+   	<subitem label="Open the new Project Creation Wizard)">
+   		<command
+             required="false"
+             serialization="org.eclipse.ui.newWizard(newWizardId=org.dice.rcp.wizard.project.qualitytesting)"/>
+   	</subitem>
+   	<subitem label="Select 'Create a simple project (skip archetype selection)', and click Next">
+   	</subitem>
+   	<subitem label="Fill the Maven information, like the Group ID, Artifact ID, Version..., and click Finish">
+   	</subitem>
+   	<subitem label="The project will be created, including the QT-LIB dependency">
+   	</subitem>
+   </item>
+   <item title="Using Maven" dialog="true">
+   	<description>If you use Maven with your project, you can automatically include QT-LIB in your project.</description>
+   	<subitem label="Go to Maven central">
+   		<command required="true" serialization="org.eclipse.ui.browser.openBrowser(url=https://mvnrepository.com/artifact/com.github.dice-project/qt-lib/,browserId=maven-qt-tool,name=Quality Testing Maven,tooltip=Quality Testing Tool in Maven Central Repository)"></command>
+   	</subitem>
+   	<subitem label="Click on the latest version of QT-LIB, e.g., 1.0.0.">
+   	</subitem>
+   	<subitem label="Copy an paste the dependency in your pom.xml">
+   	</subitem>
+   </item>
+   <item title="Without using Maven">
+   <description>If you do not use Maven, you can manually include QT-LIB by adding the latest JAR file to your Eclipse Project Classpath.</description>
+   	<subitem label="Go to Maven central">
+   		<command required="true" serialization="org.eclipse.ui.browser.openBrowser(url=https://mvnrepository.com/artifact/com.github.dice-project/qt-lib/,browserId=maven-qt-tool,name=Quality Testing Maven,tooltip=Quality Testing Tool in Maven Central Repository)"></command>
+   	</subitem>
+   	<subitem label="Click on the latest version of QT-LIB, e.g., 1.0.0.">
+   	</subitem>
+   	<subitem label="Download the latest version of the QT-LIB jar, e.g., http://central.maven.org/maven2/com/github/dice-project/qt-lib/1.0.0/qt-lib-1.0.0.jar">
+   	</subitem>
+   	<subitem label="Include the jar in your project classpath">
+   	</subitem>
+   </item>
+</cheatsheet>

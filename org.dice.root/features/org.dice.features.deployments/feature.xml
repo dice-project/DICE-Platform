@@ -2,7 +2,7 @@
 <feature
       id="org.dice.features.deployments"
       label="DICE Deployments Feature"
-      version="0.3.1.qualifier"
+      version="0.3.2.qualifier"
       provider-name="DICE Project">
 
    <description url="https://github.com/dice-project/DICE-Deployment-IDE-Plugin">

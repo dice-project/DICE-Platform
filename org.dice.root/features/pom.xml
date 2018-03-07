@@ -46,8 +46,6 @@
 		<module>org.dice.features.profiles</module>
 		<module>org.dice.features.simulation</module>
 		<module>org.dice.features.dicer</module>
-
-		<module>org.dice.velocity.features.base</module>
 	</modules>
 
 </project>
