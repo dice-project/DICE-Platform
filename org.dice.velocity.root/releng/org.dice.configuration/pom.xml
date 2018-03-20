@@ -30,15 +30,21 @@
 		<eclipse-base.url>http://download.eclipse.org/releases/neon/201610111000/</eclipse-base.url>
 		<ecf.url>http://download.eclipse.org/rt/ecf/latest/site.p2</ecf.url>
 		<orbit.url>http://download.eclipse.org/tools/orbit/downloads/drops/R20160520211859/repository</orbit.url>
+		<pnml.url>http://pnml.lip6.fr/pnmlframework/updatesite/2.2.12/</pnml.url>
 		<svn.url>https://dl.bintray.com/subclipse/releases/subclipse/latest/</svn.url>
 		<epsilon.url>http://download.eclipse.org/epsilon/updates/</epsilon.url>
 
 		<!-- DICE Tools -->
 		<dice-deployment.url>http://dice-project.github.io/DICE-Deployment-IDE-Plugin/updates</dice-deployment.url>
 		<dice-profiles.url>http://dice-project.github.io/DICE-Profiles/updates</dice-profiles.url>
+		<dice-simulation.url>http://dice-project.github.io/DICE-Simulation/updates</dice-simulation.url>
 		<dice-verification.url>http://dice-project.github.io/DICE-Verification/updates</dice-verification.url>
 		<dice-dicer.url>https://dice-project.github.io/DICER/updates</dice-dicer.url>
+		<dice-optimization.url>https://dice-project.github.io/DICE-Optimisation-Plugin/updates</dice-optimization.url>
 		<dice-enhancement.url>http://dice-project.github.io/DICE-Enhancement-APR/updates</dice-enhancement.url>
+		<dice-configuration_optimization.url>http://dice-project.github.io/DICE-Configuration-IDE-Plugin/updates</dice-configuration_optimization.url>
+		<dice-trace_checking.url>http://dice-project.github.io/DICE-Trace-Checking/updates</dice-trace_checking.url>
+		<dice-anomaly_detection.url>http://dice-project.github.io/DICE-Anomaly-Detection-IDE/updates</dice-anomaly_detection.url>
 	</properties>
 
 	<repositories>
@@ -84,6 +90,11 @@
 			<url>${orbit.url}</url>
 		</repository>
 		<repository>
+			<id>pnml</id>
+			<layout>p2</layout>
+			<url>${pnml.url}</url>
+		</repository>
+		<repository>
 			<id>svn</id>
 			<layout>p2</layout>
 			<url>${svn.url}</url>
@@ -106,6 +117,11 @@
 			<url>${dice-profiles.url}</url>
 		</repository>
 		<repository>
+			<id>simulation</id>
+			<layout>p2</layout>
+			<url>${dice-simulation.url}</url>
+		</repository>
+		<repository>
 			<id>verification</id>
 			<layout>p2</layout>
 			<url>${dice-verification.url}</url>
@@ -116,9 +132,29 @@
 			<url>${dice-dicer.url}</url>
 		</repository>
 		<repository>
+			<id>optimization</id>
+			<layout>p2</layout>
+			<url>${dice-optimization.url}</url>
+		</repository>
+		<repository>
 			<id>enhancement</id>
 			<layout>p2</layout>
 			<url>${dice-enhancement.url}</url>
+		</repository>
+		<repository>
+			<id>configuration_optimization</id>
+			<layout>p2</layout>
+			<url>${dice-configuration_optimization.url}</url>
+		</repository>
+		<repository>
+			<id>trace_checking</id>
+			<layout>p2</layout>
+			<url>${dice-trace_checking.url}</url>
+		</repository>
+		<repository>
+			<id>anomaly_detection</id>
+			<layout>p2</layout>
+			<url>${dice-anomaly_detection.url}</url>
 		</repository>
 	</repositories>
 
