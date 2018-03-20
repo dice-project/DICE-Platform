@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet
+      title="DICE Profiles">
+   <intro>
+      <description>The DICE Profiles are an extension of DAM and MARTE profiles. This Cheat Sheet is intended to teach how to apply and use them in your UML models</description>
+      </intro>
+   <item title="Apply the DICE Profiles to an existing UML model"><description>The process of applying a profiles to an UML model is the same whichever it was the source. So if you want to apply a profile, you can have a look at the Cheat Sheet "DICE Framework -> DICE Papyrus -> Profile and Stereotype Papyrus models" in order to learn how to do it. Simply remember to use the DICE profiles when asked about which profiles apply.</description><command required="false" serialization="org.eclipse.ui.cheatsheets.openCheatSheet(cheatSheetId=org.dice.methodology.cheatsheet.papyrus.profile)"></command>
+   	</item>
+
+</cheatsheet>

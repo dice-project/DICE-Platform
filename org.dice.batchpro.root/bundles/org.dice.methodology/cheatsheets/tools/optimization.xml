@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet
+      title="Optimization Tool">
+   <intro>
+      <description>describes the methodological steps that DICE users follow for identifying the configuration of minimum cost with the D-SPACE4Cloud tool</description>
+      </intro>
+   <item title="Start the optimization wizard" dialog="true">
+   	<description>The optimization process is supported by a five step wizard, which starts by pressing the corresponding button or by selecting the entry Optimization Wizard from the D-SPACE4Cloud plug-in menu.
+   	</description>
+   </item>
+   <item title="Select classes, technology and cloud deployment">
+   	<description> Specify the number of classes,  the DIA target technology and the deployment (public or private).
+   	</description>
+   </item>
+   <item title="Select optimization alternatives and DTSMs">
+   	<description> For each class, specify the optimization alternatives selecting, possibly, multiple VM types at different providers candidate for the final deployment. For each VM type, select the corresponding DTSM model.
+   	</description>
+   </item>
+   <item title="Select DDSM including the deployment model">
+   	<description>For each class, select the DDSM model, which includes the deployment model of the DIA, which will be updated by D-SPACE4Cloud with the optimal solution found. 
+   	</description>
+   </item>
+   <item title="Select Optimization constraints">
+   	<description>At this step optimization constraints are specified and are technology specific. In particular, for Spark and Hadoop MapReduce, specify the minimum and maximum number of concurrent users, the DIA end users’ think time and the DIA deadline (job penalty cost can be specified only on the private cloud case). For Storm, specify the cluster maximum utilization.
+   	</description>
+   </item>
+   <item title="Download the results">
+   	<description>When the optimization engine finishes, the DDSM introduced at step 4 is  updated and can be used as input by the DICER tool to finally deploy the optimal solution.
+   	</description>
+   </item>
+
+</cheatsheet>

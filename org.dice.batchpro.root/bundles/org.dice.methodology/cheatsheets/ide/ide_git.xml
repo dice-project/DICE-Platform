@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet title="Configure a GIT Repository">
+   <intro>
+      <description>Here you will learn how to deal with GIT in the IDE. You can configure some repositories and import the projects you need</description>
+   </intro>
+   <item title="Open GIT Perspective">
+      <description>First of all, we need to open the GIT Perspective using the menu "Window->Perspective->Open Perspective->Other" and select "Git" perspective</description>
+      <command required="false" serialization="org.eclipse.ui.perspectives.showPerspective(org.eclipse.ui.perspectives.showPerspective.perspectiveId=org.eclipse.egit.ui.GitRepositoryExploring,org.eclipse.ui.perspectives.showPerspective.newWindow=false)"></command>
+      </item>
+   <item title="Clone an existing Repository from a URL">
+   	<description>In the &quot;Git Repositories&quot; view, click on the button &quot;Clone a Git Repository and add the clone to this view&quot;. This will open a dialog where you can type the URL and provide authentication if needed for the connection</description>
+   	<command required="false" serialization="org.eclipse.egit.ui.RepositoriesViewClone"></command></item>
+   <item title="Import an existing Project into the Workspace">
+   	<description>Browse the added repository (the "Working Tree" leaf) and select the folder you want to import. Right click on it and select "Import projects" action. Follow the steps in the wizard in order to import the existing Eclipse Projects to the Workspace</description></item>
+</cheatsheet>

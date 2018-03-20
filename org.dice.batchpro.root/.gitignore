@@ -1,0 +1,6 @@
+.settings/
+.polyglot*
+target/
+bin/
+products/
+workspace/

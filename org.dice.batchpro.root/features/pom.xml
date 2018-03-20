@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>org.dice.features</artifactId>
+	<name>DICE BatchPro IDE - Features</name>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>org.dice</groupId>
+		<artifactId>org.dice.root</artifactId>
+		<version>${dice.version}</version>
+	</parent>
+
+	<modules>
+		<module>org.dice.features.base</module>
+
+		<module>org.dice.features.datatools</module>
+		<module>org.dice.features.git</module>
+		<module>org.dice.features.svn</module>
+		<module>org.dice.features.jdt</module>
+		<module>org.dice.features.m2e</module>
+		<module>org.dice.features.emf</module>
+		<module>org.dice.features.birt</module>
+
+		<module>org.dice.features.pnml</module>
+		<module>org.dice.features.acceleo</module>
+		<module>org.dice.features.qvto</module>
+		<module>org.dice.features.uml2</module>
+		<module>org.dice.features.xtext</module>
+		<module>org.dice.features.wst</module>
+		<module>org.dice.features.atl</module>
+		<module>org.dice.features.gmf</module>
+		<module>org.dice.features.papyrus</module>
+
+		<module>org.dice.features.methodology</module>
+
+		<module>org.dice.features.deployments</module>
+		<module>org.dice.features.monitoring</module>
+		<module>org.dice.features.simulation</module>
+		<module>org.dice.features.optimization</module>
+		<module>org.dice.features.profiles</module>
+		<module>org.dice.features.dicer</module>
+	</modules>
+
+</project>

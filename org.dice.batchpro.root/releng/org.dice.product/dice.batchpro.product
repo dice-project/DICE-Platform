@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="DICE BatchPro Platform" uid="org.dice.batchpro.rcp" id="org.dice.rcp.dice" application="org.eclipse.ui.ide.workbench" version="1.0.2.qualifier" useFeatures="true" includeLaunchers="true">
+
+   <aboutInfo>
+      <image path="icons/120.gif"/>
+      <text>
+         %productBlurb
+      </text>
+   </aboutInfo>
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <programArgs>-perspective
+org.dice.rcp.perspective
+      </programArgs>
+      <vmArgs>-Xms256m
+-Xmx1024m
+      </vmArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
+      </vmArgsMac>
+   </launcherArgs>
+
+   <windowImages i16="icons/16.gif" i32="icons/32.gif" i48="icons/48.gif" i64="icons/64.gif" i128="icons/128.gif" i256="icons/256.gif"/>
+
+   <splash
+      location="org.dice.rcp"
+      startupProgressRect="5,145,570,15"
+      startupMessageRect="5,125,570,20"
+      startupForegroundColor="FFFF80" />
+   <launcher name="BatchPro">
+      <linux icon="/org.dice.product/icons/icon.xpm"/>
+      <macosx icon="/org.dice.product/icons/icon.icns"/>
+      <solaris/>
+      <win useIco="true">
+         <ico path="/org.dice.product/icons/icon.ico"/>
+         <bmp/>
+      </win>
+   </launcher>
+
+   <intro introId="org.eclipse.ui.intro.universal"/>
+
+   <vm>
+   </vm>
+
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="org.dice.features.base"/>
+      <feature id="org.dice.features.emf"/>
+      <feature id="org.dice.features.gmf"/>
+      <feature id="org.dice.features.uml2"/>
+      <feature id="org.dice.features.wst"/>
+      <feature id="org.dice.features.jdt"/>
+      <feature id="org.dice.features.papyrus"/>
+      <feature id="org.dice.features.xtext"/>
+      <feature id="org.dice.features.qvto"/>
+      <feature id="org.dice.features.atl"/>
+      <feature id="org.dice.features.svn"/>
+      <feature id="org.dice.features.git"/>
+      <feature id="org.dice.features.m2e"/>
+      <feature id="org.dice.features.methodology"/>
+      <feature id="org.dice.features.deployments"/>
+      <feature id="org.dice.features.dicer"/>
+      <feature id="org.dice.features.profiles"/>
+      <feature id="org.dice.features.datatools"/>
+      <feature id="org.dice.features.birt"/>
+      <feature id="org.dice.features.pnml"/>
+      <feature id="org.dice.features.acceleo"/>
+      <feature id="org.dice.features.monitoring"/>
+      <feature id="org.dice.features.simulation"/>
+      <feature id="org.dice.features.optimization"/>
+   </features>
+
+   <configurations>
+      <plugin id="org.dice.rcp" autoStart="false" startLevel="5" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.p2.reconciler.dropins" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+   </configurations>
+
+   <repositories>
+      <repository location="http://dice-project.github.io/DICE-Profiles/updates" enabled="true" />
+      <repository location="http://dice-project.github.io/DICE-Verification/updates" enabled="true" />
+      <repository location="http://dice-project.github.io/DICE-Deployment-IDE-Plugin/updates" enabled="true" />
+      <repository location="http://dice-project.github.io/DICER/updates" enabled="true" />
+      <repository location="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/neon/" enabled="true" />
+      <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20160916162009/repository" enabled="true" />
+      <repository location="http://download.eclipse.org/releases/neon" enabled="true" />
+      <repository location="http://download.eclipse.org/eclipse/updates/4.6" enabled="true" />
+      <repository location="http://download.eclipse.org/modeling/mdt/ocl/updates/releases/6.2.1" enabled="true" />
+      <repository location="http://download.eclipse.org/egit/updates" enabled="true" />
+      <repository location="http://download.eclipse.org/rt/ecf/latest/site.p2" enabled="true" />
+      <repository location="https://dl.bintray.com/subclipse/releases/subclipse/latest/" enabled="true" />
+   </repositories>
+
+   <preferencesInfo>
+      <targetfile overwrite="false"/>
+   </preferencesInfo>
+
+   <cssInfo>
+   </cssInfo>
+
+</product>

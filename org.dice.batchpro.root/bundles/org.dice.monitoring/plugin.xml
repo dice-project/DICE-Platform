@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.dice.menu.tools">
+         <menu
+               icon="icons/monitoring.png"
+               id="org.dice.monitoring.menu"
+               label="DICE Monitoring">
+            <command
+                  commandId="org.dice.ui.monitoringCommand"
+                  icon="icons/monitoring.png"
+                  label="Service"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.dice.ui.monitoringVisualizationCommand"
+                  icon="icons/monitoring.png"
+                  label="Service Visualization UI"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.dice.monitoring.handlers.MonitoringHandler"
+            id="org.dice.ui.monitoringCommand"
+            name="DICE Monitoring Service">
+      </command>
+      <command
+            defaultHandler="org.dice.monitoring.handlers.MonitoringVisualizationHandler"
+            id="org.dice.ui.monitoringVisualizationCommand"
+            name="DICE Monitoring Service Visualization UI">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="org.dice.ui.preferences"
+            class="org.dice.monitoring.preferences.pages.MonitoringPreferencesPage"
+            id="org.dice.ui.preferences.monitoring"
+            name="Monitoring Tools">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.dice.monitoring.preferences.MonitoringPreferenceInitializer">
+      </initializer>
+   </extension>
+
+</plugin>

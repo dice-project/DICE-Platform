@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet title="Update the IDE">
+   <intro>
+      <description>
+      Here you will learn how you can update your IDE and keep all the components updated
+      </description>
+   </intro>
+   <item title="Configure the Preferences" dialog="true">
+      <description>
+      FFirst action is to configure properly the Preferences of the IDE in order to set the used Update Sites and the IDE to indicate the updating period
+      </description>
+      <subitem label="Select &quot;Window-&gt;Preferences&quot; from the main menu and select the &quot;Install/Update&quot; entry. Here you can decide to see only the latest versions of all of them.">
+         <command required="false" serialization="org.eclipse.ui.window.preferences(preferencePageId=org.eclipse.equinox.internal.p2.ui.sdk.ProvisioningPreferencePage)"></command>
+      </subitem>
+      <subitem label="Inside this entry, you can find the &quot;Automatic Updates&quot;. You can choose if you want that the IDE check automatically if there is any available update. Also you can specify when you want that the IDE check it, and what to do: show only a notification or download it automatically">
+      	<command required="false" serialization="org.eclipse.ui.window.preferences(preferencePageId=org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdatesPreferencePage)"></command>
+      </subitem>
+      <subitem label="At the same level of above step, you can find the &quot;Available Software Sites&quot;. Here are listed all used repositories where the IDE will look for the updates. When you install a new third party software, its repository will be included there automatically. Nevertheless, you can add them manually.">
+      	<command required="false" serialization="org.eclipse.ui.window.preferences(preferencePageId=org.eclipse.equinox.internal.p2.ui.sdk.SitesPreferencePage)"></command>
+      </subitem>
+   </item>
+   <item title="Update the IDE manually">
+   	<description>You can always check if there are any update using the "Help->Check for updates" menu entry</description>
+   		<command required="false" serialization="org.eclipse.equinox.p2.ui.sdk.update"></command>
+   	</item>
+</cheatsheet>

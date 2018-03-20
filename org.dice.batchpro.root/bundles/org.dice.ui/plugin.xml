@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               id="org.dice.menu.tools"
+               label="DICE Tools">
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.dice.menu.tools?before=it.polimi.dice.lwdg.loadDemo.menus.lwdgMenu">
+         <command
+               commandId="org.dice.ui.configureToolsCommand"
+               icon="icons/menuentry.png"
+               id="1"
+               label="Configure DICE tools"
+               style="push">
+         </command>
+         <separator
+               name="org.dice.ui.configureToolsCommand.separator"
+               visible="true">
+         </separator>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.dice.ui.handlers.ConfigureToolsHandler"
+            id="org.dice.ui.configureToolsCommand"
+            name="Configure DICE tools">
+      </command>
+      <command
+            categoryId="org.eclipse.ui.category.help"
+            defaultHandler="org.eclipse.ui.internal.cheatsheets.handlers.OpenCheatSheetHandler"
+            description="Learn how to use the DICE methodology and get started."
+            id="org.eclipse.ui.cheatsheets.openCheatSheet"
+            name="Open DICE IDE Cheat Sheet">
+         <commandParameter
+               id="cheatSheetId"
+               name="Identifier"
+               optional="true"
+               values="org.eclipse.ui.internal.cheatsheets.registry.CheatSheetParameterValues">
+         </commandParameter>
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.dice.ui.preferences.pages.DicePreferencesPage"
+            id="org.dice.ui.preferences"
+            name="DICE">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.dice.ui.preferences.DicePreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="org.dice.ui.views.category"
+            name="DICE Views">
+      </category>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro.configExtension">
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="intro/overview.xml">
+      </configExtension>
+   </extension>
+
+</plugin>

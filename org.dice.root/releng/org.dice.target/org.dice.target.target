@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="412">
+<?pde version="3.8"?><target name="DICE Target Platform" sequenceNumber="421">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.jst.webpageeditor.feature.feature.group" version="2.8.0.v201605262035"/>
@@ -178,11 +178,6 @@
 <repository location="http://dice-project.github.io/DICE-Anomaly-Detection-IDE/updates"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.jgit.feature.group" version="4.10.0.201712302008-r"/>
-<unit id="org.eclipse.egit.feature.group" version="4.10.0.201712302008-r"/>
-<repository location="http://download.eclipse.org/egit/updates"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.tigris.subversion.clientadapter.javahl.feature.feature.group" version="1.9.7.201802052103"/>
 <unit id="org.tigris.subversion.subclipse.graph.feature.feature.group" version="4.2.0.1"/>
 <unit id="org.tmatesoft.svnkit.feature.group" version="1.8.12.r10533_v20160129_0158"/>
@@ -213,7 +208,18 @@
 <unit id="ro.ieat.secureuml.profile.feature.feature.group" version="0.13.1.201801221725"/>
 <repository location="http://dice-project.github.io/DICE-Profiles/updates"/>
 </location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.jgit.feature.group" version="4.11.0.201803080745-r"/>
+<unit id="org.eclipse.egit.feature.group" version="4.11.0.201803080745-r"/>
+<repository location="http://download.eclipse.org/egit/updates"/>
+</location>
 </locations>
+<environment>
+<os>linux</os>
+<ws>gtk</ws>
+<arch>x86_64</arch>
+<nl>en</nl>
+</environment>
 <launcherArgs>
 <vmArgs>-Dosgi.requiredJavaVersion=1.8 -Xms256m -Xmx1024m</vmArgs>
 </launcherArgs>

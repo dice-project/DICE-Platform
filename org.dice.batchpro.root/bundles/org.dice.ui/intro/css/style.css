@@ -1,0 +1,6 @@
+a#wizard-link img { 
+	background-image : url(graphics/dice.png);
+}
+a#wizard-link:hover img {
+	background-image : url(graphics/dice.png);
+}
